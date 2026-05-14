@@ -1,0 +1,9 @@
+export { default as Hero } from "./Hero-section/Hero";
+export { default as Top_Destinations } from "./Top-Destinations-section/Top_Destinations";
+export { default as Start_About } from "./Start-About-section/Start_About";
+export { default as Popular_Tours } from "./Popular-Tours-section/Popular_Tours";
+export { default as Full_Video } from "./Full-Video-section/Full_Video";
+export { default as Perfect_Travel_Planner } from "./Perfect-Travel-Planner-section/Perfect_Travel_Planner";
+export { default as Why_Choose_Us } from "./Why-Choose-Us-section/Why_Choose_Us";
+export { default as Start_Testimonial } from "./Start-Testimonial-section/Start_Testimonial";
+export { default as Latest_Blog_News } from "./Latest-Blog-News-section/Latest_Blog_News";

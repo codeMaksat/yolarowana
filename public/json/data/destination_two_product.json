@@ -1,0 +1,89 @@
+[
+    {
+        "product": [
+            {
+                "slug": "/destination-detail",
+                "title": "Europe",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/popular-tours-img1.jpg",
+                "alt": "blog-img1",
+                "count": 3,
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "/destination-detail",
+                "title": "Polar",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/stephan-valentin-img.jpg",
+                "alt": "stephan-valentin-img",
+                "count": 3,
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "/destination-detail",
+                "title": "Africa",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/special-offers-img6.jpg",
+                "alt": "blog-img-3",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "/destination-detail",
+                "title": "Middle asia",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/popular-tours-img4.jpg",
+                "alt": "blog-img-4",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "/destination-detail",
+                "title": "Scandinavia",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/popular-tours-img3.jpg",
+                "alt": "blog-img-7",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "/destination-detail",
+                "title": "Dream cruise",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/special-offers-img7.jpg",
+                "alt": "blog-img-8",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "/destination-detail",
+                "title": "London",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/popular-tours-img2.jpg",
+                "alt": "blog-img-9",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "/destination-detail",
+                "title": "Turkey",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/special-offers-img3.jpg",
+                "alt": "blog-img-10",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "/destination-detail",
+                "title": "Western Europe",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/special-offers-img8.jpg",
+                "alt": "blog-img-11",
+                "count": 5,
+                "btn_label": "Read more"
+            }
+        ],
+        "btn_label": "Load more",
+        "btn_slug": "/destination"
+    }
+]

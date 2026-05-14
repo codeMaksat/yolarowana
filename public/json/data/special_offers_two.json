@@ -1,0 +1,66 @@
+[
+    {
+        "title": "Special offers & Discounts",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore .",
+        "btn_slug": "tour",
+        "btn_label": "View all",
+        "product": [
+            {
+                "id": 1,
+                "slug": "/tour-detail",
+                "title": "Greece",
+                "short_des": "Lorem ipsum dolor sit amet",
+                "description": "",
+                "image": "/assets/images/special-offers-img1.jpg",
+                "alt": "special-offers-img1",
+                "date": "10 Jan",
+                "day": 4,
+                "rating": "4.8",
+                "price": 457,
+                "old_price": 523
+            },
+            {
+                "id": 2,
+                "slug": "/tour-detail",
+                "title": "India",
+                "short_des": "Lorem ipsum dolor sit amet",
+                "description": "",
+                "image": "/assets/images/special-offers-img2.jpg",
+                "alt": "special-offers-img2",
+                "date": "20 Jan",
+                "day": 8,
+                "rating": "4.0",
+                "price": 523,
+                "old_price": 600
+            },
+            {
+                "id": 3,
+                "slug": "/tour-detail",
+                "title": "Itali",
+                "short_des": "Lorem ipsum dolor sit amet",
+                "description": "",
+                "image": "/assets/images/special-offers-img3.jpg",
+                "alt": "special-offers-img3",
+                "date": "6 Oct",
+                "day": 6,
+                "rating": "4.8",
+                "price": 340,
+                "old_price": 500
+            },
+            {
+                "id": 4,
+                "slug": "/tour-detail",
+                "title": "Sri Lanka",
+                "short_des": "Lorem ipsum dolor sit amet",
+                "description": "",
+                "image": "/assets/images/popular-tours-img7.jpg",
+                "alt": "popular-tours-img7",
+                "date": "4 Mar",
+                "day": 7,
+                "rating": "5.0",
+                "price": 457,
+                "old_price": 523
+            }
+        ]
+    }
+]

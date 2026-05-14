@@ -1,0 +1,25 @@
+[
+    {
+        "image": "/assets/images/customer-reviews-img.jpg",
+        "alt": "customer-reviews-img",
+        "video_url": "https://www.youtube.com/",
+        "title": "It's time to travel again",
+        "paragraphs": [
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo Link diam sollicitudin tempor id eu."
+        ],
+        "contactLinks": [
+            {
+                "href": "tel:+12345455454",
+                "text": "+1 23 456 456 2346",
+                "icon": "fa-phone"
+            },
+            {
+                "href": "mailto:journeya@gmail.com",
+                "text": "journeya@gmail.com",
+                "icon": "fa-envelope"
+            }
+        ],
+        "readMoreLink": "about"
+    }
+]

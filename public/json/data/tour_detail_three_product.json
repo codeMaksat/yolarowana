@@ -1,0 +1,79 @@
+[
+    {
+        "title": "Africa – Amazing African Safari",
+        "price": 250,
+        "image": "/assets/images/tour-product-detail-img.jpg",
+        "alt": "tour-product-detail-img",
+        "description": [
+            {
+                "title": "Description",
+                "details": [
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis. Odio tempor orci dapibus ultrices. Magna fringilla urna porttitor rhoncus dolor purus non. Ac ut consequat semper viverra nam libero justo laoreet. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. Libero id faucibus nisl tincidunt eget nullam non nisi. Tellus molestie nunc non blandit massa. Quam quisque id diam vel quam. Ac tortor vitae purus faucibus. Ultrices tincidunt arcu non sodales. Amet nisl purus in mollis. Volutpat est velit egestas dui id ornare arcu odio ut. Enim facilisis gravida neque convallis.",
+                    "Sit amet nisl suscipit adipiscing bibendum. Tortor pretium viverra suspendisse potenti. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Quam adipiscing vitae proin sagittis nisl. Duis at tellus at urna condimentum mattis pellentesque id nibh. Et leo duis ut diam quam nulla. Nascetur ridiculus mus mauris vitae ultricies leo. Morbi tristique senectus et netus et malesuada. Egestas pretium aenean pharetra magna ac placerat vestibulum. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Velit scelerisque in dictum non consectetur."
+                ]
+            }
+        ],
+        "information": [
+            {
+                "title": "Destination",
+                "content": "NYC International Airport"
+            },
+            {
+                "title": "Departure",
+                "content": "Yes Required"
+            },
+            {
+                "title": "Departure Time",
+                "content": "01 January, 2023 10.00AM"
+            },
+            {
+                "title": "Return Time",
+                "content": "08 January, 2023 10.00AM"
+            },
+            {
+                "title": "Included",
+                "content": [
+                    "Specilaized Bilingual Guide",
+                    "Private Transport",
+                    "Entrance Fees",
+                    "Box Lunch,Water,Dinner and Snacks"
+                ]
+            },
+            {
+                "title": "Excluded",
+                "content": [
+                    "Additional Services",
+                    "Insurance",
+                    "Drink",
+                    "Tickets"
+                ]
+            }
+        ],
+        "info" : [
+            {
+              "title": "From",
+              "content": "$250.00",
+              "icon": "/assets/images/dollar.svg",
+              "iconWidth": "29"
+            },
+            {
+              "title": "Duration",
+              "content": "10 Days, 11 Nights",
+              "icon": "/assets/images/clock-large.svg",
+              "iconWidth": "25"
+            },
+            {
+              "title": "Location",
+              "content": "Madrid, Spain",
+              "icon": "/assets/images/map-marker-line.svg",
+              "iconWidth": "31"
+            },
+            {
+              "title": "Group Size",
+              "content": "50+ People",
+              "icon": "/assets/images/users_curved.svg",
+              "iconWidth": "27"
+            }
+          ]
+    }
+]

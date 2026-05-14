@@ -1,0 +1,78 @@
+[
+    {
+        "search": [
+            {
+                "title": "Search Tour",
+                "btn_label": "Search"
+            }
+        ],
+        "category": [
+            {
+                "title": "Category Types",
+                "sub_category": [
+                    {
+                        "label": "Tours",
+                        "value": 98
+                    },
+                    {
+                        "label": "Attractions",
+                        "value": 89
+                    },
+                    {
+                        "label": "Day Trips",
+                        "value": 67
+                    },
+                    {
+                        "label": "Outdoor Activities",
+                        "value": 10
+                    },
+                    {
+                        "label": "Concerts & Shows",
+                        "value": 45
+                    }
+                ]
+            }
+        ],
+        "other": [
+            {
+                "title": "Other",
+                "sub_other": [
+                    {
+                        "label": "Free Cancelation",
+                        "value": 45
+                    }
+                ]
+            }
+        ],
+        "duration": [
+            {
+                "title": "Duration",
+                "sub_duration": [
+                    {
+                        "label": "Up to 1 day",
+                        "value": 68
+                    },
+                    {
+                        "label": "1 to 4 days",
+                        "value": 45
+                    },
+                    {
+                        "label": "4 to 7 days",
+                        "value": 90
+                    },
+                    {
+                        "label": "Upto 8 days",
+                        "value": 12
+                    }
+                ]
+            }
+        ],
+        "price": [
+            {
+                "title": "Price",
+                "minPrice": 0,
+                "maxPrice": 900
+            }
+        ]
+    }
+]

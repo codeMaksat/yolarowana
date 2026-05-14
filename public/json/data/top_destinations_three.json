@@ -1,0 +1,49 @@
+[
+    {
+        "title": "Top Destinations",
+        "product": [
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/top-destinations-img-2.jpg",
+                "alt": "categories img 1",
+                "title": "Europe",
+                "tour": 4
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/customer-reviews-img.jpg",
+                "alt": "categories img 1",
+                "title": "Singapor",
+                "tour": 9
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/top-destinations-img-4.jpg",
+                "alt": "categories img 1",
+                "title": "Egypt",
+                "tour": 5
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/portfolio-img2.jpg",
+                "alt": "categories img 1",
+                "title": "Desert",
+                "tour": 6
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/popular-tours-img10.jpg",
+                "alt": "categories img 1",
+                "title": "Paris",
+                "tour": 4
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/last-minute-deals-img4.jpg",
+                "alt": "categories img 1",
+                "title": "Iceland",
+                "tour": 3
+            }
+        ]
+    }
+]

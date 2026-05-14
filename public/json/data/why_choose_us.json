@@ -1,0 +1,64 @@
+[
+    {
+        "bg_image": "/assets/images/why-choose-us-bg.svg",
+        "bg_alt": "why-choose-us-bg",
+        "title": "Why choose us?",
+        "label": "We are a local travel company with deep experience across Central Asia. Our tours are designed to give you real cultural experiences, smooth logistics, and complete peace of mind from start to finish.",
+        "service": [
+            {
+                "title": "Local Experts",
+                "label": "Local experts with on-the-ground knowledge",
+                "image": "/assets/images/world-tour-icon.svg",
+                "alt": "world-tour-icon"
+            },
+            {
+                "title": "Smart Planning",
+                "label": "Carefully planned itineraries, no stress for you",
+                "image": "/assets/images/travelling-icon.svg",
+                "alt": "travelling-icon"
+            },
+            {
+                "title": "Best Guide",
+                "label": "Trusted guides and reliable partners",
+                "image": "/assets/images/best-guide-icon.svg",
+                "alt": "best-guide-icon"
+            },
+            {
+                "title": "Support 24/7",
+                "label": "We’re here for you anytime during your trip",
+                "image": "/assets/images/support-icon.svg",
+                "alt": "support-icon"
+            },
+            {
+                "title": "Quality Service",
+                "label": "High service standards",
+                "image": "/assets/images/luxary-hotel-icon.svg",
+                "alt": "luxary-hotel-icon"
+            },
+            {
+                "title": "Flexible Tours",
+                "label": "Flexible tours based on your interests",
+                "image": "/assets/images/easy-booking-icon.svg",
+                "alt": "easy-booking-icon"
+            }
+        ],
+        "offers": [
+            {
+                "slug": "/tour-detail-2",
+                "title": "Group tours",
+                "label": "Upto 15% off",
+                "image": "/assets/images/weekly-flash-deels-img.jpg",
+                "alt": "weekly-flash-deels-img",
+                "btn_label": "View deals"
+            },
+            {
+                "slug": "/tour-detail-2",
+                "title": "Tailor made tour",
+                "label": "Plan your next trip with us.",
+                "image": "/assets/images/summer-escaps-img.png",
+                "alt": "summer-escaps-img",
+                "btn_label": "View deals"
+            }
+        ]
+    }
+]

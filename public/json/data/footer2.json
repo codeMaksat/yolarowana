@@ -1,0 +1,89 @@
+[
+    {
+        "customerCarePhone": "+1 43 678 6363",
+        "supportEmail": "journea@gmail.com",
+        "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "socialMediaLinks": [
+            {
+                "icon": "facebook",
+                "url": "https://www.facebook.com/"
+            },
+            {
+                "icon": "twitter",
+                "url": "https://twitter.com/"
+            },
+            {
+                "icon": "youtube",
+                "url": "https://www.youtube.com/"
+            },
+            {
+                "icon": "instagram",
+                "url": "https://www.instagram.com/"
+            }
+        ],
+        "footerLinks": [
+            {
+                "title": "Company",
+                "links": [
+                    {
+                        "text": "About Us",
+                        "url": "about"
+                    },
+                    {
+                        "text": "Tour",
+                        "url": "tour"
+                    },
+                    {
+                        "text": "Destinations",
+                        "url": "destination"
+                    },
+                    {
+                        "text": "Blog",
+                        "url": "blog-grid"
+                    },
+                    {
+                        "text": "Contact Us",
+                        "url": "contact"
+                    }
+                ]
+            },
+            {
+                "title": "Services",
+                "links": [
+                    {
+                        "text": "Tours",
+                        "url": "tour"
+                    },
+                    {
+                        "text": "Hotels",
+                        "url": "hotels"
+                    },
+                    {
+                        "text": "Offer Tours",
+                        "url": "tour-grid"
+                    }
+                ]
+            },
+            {
+                "title": "Support",
+                "links": [
+                    {
+                        "text": "Privacy policy",
+                        "url": "#"
+                    },
+                    {
+                        "text": "Terms & Conditions",
+                        "url": "#"
+                    },
+                    {
+                        "text": "Rules & Regulations",
+                        "url": "#"
+                    }
+                ]
+            }
+        ],
+        "copyrightText": "Copyright 2023",
+        "companyName": "Journeya",
+        "designerName": "Webbytemplate"
+    }
+]

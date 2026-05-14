@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Top destinations",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "product": [
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/top-destinations-img-1.jpg",
+                "title": "Europe",
+                "alt": "top-destinations-img",
+                "tourCount": 3,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/top-destinations-img-2.jpg",
+                "title": "Polar",
+                "alt": "top-destinations-img",
+                "tourCount": 3,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/top-destinations-img-3.jpg",
+                "title": "Africa",
+                "alt": "top-destinations-img",
+                "tourCount": 3,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/top-destinations-img-4.jpg",
+                "title": "Middle Asia",
+                "alt": "top-destinations-img",
+                "tourCount": 3,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/top-destinations-img-5.jpg",
+                "title": "North America",
+                "alt": "top-destinations-img",
+                "tourCount": 3,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            {
+                "slug": "/destination-detail",
+                "image": "/assets/images/top-destinations-img-6.jpg",
+                "title": "Balkan",
+                "alt": "top-destinations-img",
+                "tourCount": 3,
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            }
+        ]
+    }
+]

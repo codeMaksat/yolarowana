@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Why Choose us?",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "product": [
+            {
+                "title": "Flexible bookings",
+                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.",
+                "image": "/assets/images/choose-booking-icon.svg",
+                "alt": "blog-img1"
+            },
+            {
+                "title": "Safe travels",
+                "label": "Scelerisque varius morbi enim nunc faucibus. Sit amet aliquam diam.",
+                "image": "/assets/images/passport-icon.svg",
+                "alt": "blog-img1"
+            },
+            {
+                "title": "The right trip for you",
+                "label": "Orci phasellus egestas tellus rutrum tellus pellentesque. Molestie ac",
+                "image": "/assets/images/insurance-icon.svg",
+                "alt": "blog-img1"
+            },
+            {
+                "title": "Locally based guides",
+                "label": "Arcu cursus euismod quis viverra nibh cras pulvinar. Nunc consequat interdum",
+                "image": "/assets/images/tour-guide-icon.svg",
+                "alt": "blog-img1"
+            }
+        ]
+    }
+]

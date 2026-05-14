@@ -1,0 +1,31 @@
+[
+    {
+        "image": "/assets/images/customer-reviews-img.jpg",
+        "alt": "customer-reviews-img",
+        "video_slug": "#",
+        "title": "Customer Reviews",
+        "testimonial": [
+            {
+                "text": "Tincidunt augue interdum velit euismod in pellentesque massa. Ultricies mi quis hendrerit dolor magna eget est lorem. Integer vitae justo eget magna fermentum iaculis eu non. In metus vulputate eu scelerisque felis imperdiet proin fermentum.",
+                "image": "/assets/images/testimonial-img1.jpg",
+                "alt": "testimonial-img",
+                "author": "Brooklin Simmon",
+                "company": "CEO Manque Services"
+            },
+            {
+                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took Link galley of type and scrambled it to make Link type specimen book.",
+                "image": "/assets/images/testimonial-img1.png",
+                "alt": "testimonial-img",
+                "author": "Why do we use",
+                "company": "Manque Services"
+            },
+            {
+                "text": "It is Link long established fact that Link reader will be distracted by the readable content of Link page when looking at its layout. The point of using Lorem Ipsum is that it has Link more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                "image": "/assets/images/testimonial-img2.png",
+                "alt": "testimonial-img",
+                "author": "Where can I get some",
+                "company": "Services"
+            }
+        ]
+    }
+]

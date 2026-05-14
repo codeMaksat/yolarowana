@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Popular Tours",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "product": [
+            {
+                "slug": "/tour-detail",
+                "title": "Discover islands kayaking tour",
+                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit tempor incididunt",
+                "image": "/assets/images/top-destinations-img-7.jpg",
+                "alt": "blog-img1",
+                "day": 5,
+                "price": 450.00,
+                "city": "Soldue",
+                "country": "Andorra"
+            },
+            {
+                "slug": "/tour-detail",
+                "title": "Stonehenge, Windsor Castle",
+                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit tempor incididunt",
+                "image": "/assets/images/popular-tours-img12.jpg",
+                "alt": "blog-img1",
+                "day": 7,
+                "price": 1250.00,
+                "city": "Windsor",
+                "country": ""
+            },
+            {
+                "slug": "/tour-detail",
+                "title": "Edinburgh Sky to Sea Tour",
+                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit tempor incididunt",
+                "image": "/assets/images/top-destinations-img-8.jpg",
+                "alt": "blog-img1",
+                "day": 5,
+                "price": 450.00,
+                "city": "Ciutat Vella",
+                "country": "Barcelona"
+            },
+            {
+                "slug": "/tour-detail",
+                "title": "Stonehenge, Windsor Castle",
+                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit tempor incididunt",
+                "image": "/assets/images/popular-tours-img12.jpg",
+                "alt": "blog-img1",
+                "day": 7,
+                "price": 1250.00,
+                "city": "Windsor",
+                "country": ""
+            }
+        ]
+    }
+]

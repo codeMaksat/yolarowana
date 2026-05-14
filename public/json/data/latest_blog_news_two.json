@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Get inspiration for your next trip",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "btn_slug": "blog-grid",
+        "btn_label": "View all",
+        "product": [
+            {
+                "slug": "/blog-detail-1",
+                "image": "/assets/images/blog-img5.jpg",
+                "alt": "blog-img",
+                "title": "Change your place and get the fresh air",
+                "date": "Jan 10, 2023",
+                "summary": "Quis commodo odio aenean sed adipiscing. Non sodales neque sodales ut etiam sit amet nisl"
+            },
+            {
+                "slug": "/blog-detail-2",
+                "image": "/assets/images/blog-img6.jpg",
+                "alt": "blog-img",
+                "title": "Another Blog Title",
+                "date": "Feb 15, 2023",
+                "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero."
+            },
+            {
+                "slug": "/blog-detail-1",
+                "image": "/assets/images/blog-img7.jpg",
+                "alt": "blog-img",
+                "title": "Yet Another Blog Title",
+                "date": "Mar 20, 2023",
+                "summary": "Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi."
+            }
+        ]
+    }
+]

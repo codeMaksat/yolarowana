@@ -1,0 +1,57 @@
+[
+    {
+        "title": "Choose Tour Types",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+        "btn_slug": "/tour",
+        "details": [
+            {
+                "id": 1,
+                "name": "Wildlife Tour",
+                "image": "/assets/images/tour-types-icon-1.svg",
+                "alt": "tour-types-icon",
+                "price": 440,
+                "tours": 4
+            },
+            {
+                "id": 2,
+                "name": "Adventure Tour",
+                "image": "/assets/images/tour-types-icon-2.svg",
+                "alt": "tour-types-icon",
+                "price": 880,
+                "tours": 5
+            },
+            {
+                "id": 3,
+                "name": "City Tour",
+                "image": "/assets/images/tour-types-icon-3.svg",
+                "alt": "tour-types-icon",
+                "price": 599,
+                "tours": 10
+            },
+            {
+                "id": 4,
+                "name": "Museum Tour",
+                "image": "/assets/images/tour-types-icon-4.svg",
+                "alt": "tour-types-icon",
+                "price": 800,
+                "tours": 6
+            },
+            {
+                "id": 5,
+                "name": "Beach Tour",
+                "image": "/assets/images/tour-types-icon-5.svg",
+                "alt": "tour-types-icon",
+                "price": 455,
+                "tours": 9
+            },
+            {
+                "id": 6,
+                "name": "Trekking Tour",
+                "image": "/assets/images/tour-types-icon-6.svg",
+                "alt": "tour-types-icon",
+                "price": 1099,
+                "tours": 3
+            }
+        ]
+    }
+]

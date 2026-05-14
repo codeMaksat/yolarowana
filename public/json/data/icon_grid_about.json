@@ -1,0 +1,40 @@
+[
+    {
+        "title": "We Are Travel Point",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+        "product": [
+            {
+                "value": 678,
+                "label": "Destinations Place",
+                "image": "/assets/images/destinations-icon1.svg",
+                "alt": "destinations-icon1",
+                "width": 82,
+                "height": 81
+            },
+            {
+                "value": 2547,
+                "label": "Amazing Tours",
+                "image": "/assets/images/destinations-icon2.svg",
+                "alt": "destinations-icon2",
+                "width": 82,
+                "height": 85
+            },
+            {
+                "value": 98,
+                "label": "Tour Types",
+                "image": "/assets/images/destinations-icon3.svg",
+                "alt": "destinations-icon3",
+                "width": 82,
+                "height": 80
+            },
+            {
+                "value": "12,567",
+                "label": "Happy Customer",
+                "image": "/assets/images/destinations-icon4.svg",
+                "alt": "destinations-icon4",
+                "width": 82,
+                "height": 86
+            }
+        ]
+    }
+]

@@ -1,0 +1,40 @@
+[
+    {
+        "title": "CA Expert Advice & Latest Updates",
+        "label": "Travel tips, destination guides, and the latest updates from Central Asia",
+        "product": [
+            {
+                "slug": "blog-detail-1",
+                "image": "/assets/images/blog-img1.jpg",
+                "alt": "blog-img1",
+                "date": "Jan 10, 2023",
+                "title": "Change your place and get the fresh air",
+                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt..."
+            },
+            {
+                "slug": "blog-detail-2",
+                "image": "/assets/images/blog-img2.jpg",
+                "alt": "blog-img2",
+                "date": "Feb 3, 2023",
+                "title": "How to travel with paper map",
+                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt..."
+            },
+            {
+                "slug": "blog-detail-1",
+                "image": "/assets/images/blog-img3.jpg",
+                "alt": "blog-img3",
+                "date": "Dec 12, 2022",
+                "title": "How to get cheaper and better flight",
+                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt..."
+            },
+            {
+                "slug": "blog-detail-1",
+                "image": "/assets/images/blog-img4.jpg",
+                "alt": "blog-img4",
+                "date": "Nov 25, 2022",
+                "title": "Passport and documents requirments for travel",
+                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt..."
+            }
+        ]
+    }
+]

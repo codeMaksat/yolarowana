@@ -1,0 +1,42 @@
+[
+    {
+        "title": "What our Travelers are saying",
+        "label": "Check our google/tripadvisor/trustpilot reviews",
+        "review": [
+            {
+                "user_name": "John Borthe",
+                "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
+                "comment": "“I enjoyed my tour in Turkmenistan very well organised. I appreciated very much Merdan our guide so professional, patient and kind. I thanks Yola Rowan for the great opportunity it gives to a single traveller to book a tour, guaranteeing the departure of the tour at a fixed fare rate, even if no other people join the group.”",
+                "alt": "profile picture",
+                "rating": 5,
+                "country": "Newzealand-NZ"
+            },
+            {
+                "user_name": "John Borthe",
+                "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
+                "comment": "“Yola Rowana organized an incredible 5-country Central Asia tour for my group. They did a spectacular job, from early communication and throughout the entire journey. We truly had the best experience because of the expertise of Yola Rowana. I recommend them highly!”",
+                "alt": "profile picture",
+                "rating": 5,
+                "country": "Newzealand-NZ"
+            },
+            {
+                "user_name": "John Borthe",
+                "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
+                "comment": "“We had the opportunity to be guests with this excellent tour company. Our 10 days from 20th December till 30th December 2025 was indeed and truly educational and enjoyable trip.”",
+                "alt": "profile picture",
+                "rating": 5,
+                "country": "Newzealand-NZ"
+            }
+        ],
+        "bg_image": [
+            {
+                "image": "/assets/images/testimonial-left-img.svg",
+                "alt": "testimonial-left-img"
+            },
+            {
+                "image": "/assets/images/testimonial-right-img.svg",
+                "alt": "testimonial-right-img"
+            }
+        ]
+    }
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "title": "Why Central Asia?",
+        "label": "Discover a world where ancient trade routes meet untouched natural wonders and timeless hospitality.",
+        "first_image": "/assets/images/about-img1.jpg",
+        "first_alt": "about img 1",
+        "second_image": "/assets/images/about-img2.jpg",
+        "second_alt": "about img 2",
+        "third_image": "/assets/images/about-img3.jpg",
+        "third_alt": "about img 3",
+        "points": [
+            {
+                "label": "Ancient Silk Road cities rich in history and architecture"
+            },
+            {
+                "label": "Diverse landscapes — deserts, mountains, and vast steppes"
+            },
+            {
+                "label": "Connect with local people and genuine hospitality"
+            },
+            {
+                "label": "Authentic culture and traditions still alive today"
+            },
+            {
+                "label": "Less crowded destinations for a more unique experience"
+            }
+        ],
+        "contect": [
+            {
+                "slug": "tel:+993 61691909",
+                "icon": "fa-solid fa-phone",
+                "label": "+993 61691909"
+            },
+            {
+                "slug": "mailto:journeya@gmail.com",
+                "icon": "fa-solid fa-phone",
+                "label": "journeya@gmail.com"
+            }
+        ]
+    }
+]

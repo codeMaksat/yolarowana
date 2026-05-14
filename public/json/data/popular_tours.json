@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Popular Tours",
+        "label": "Discover our most booked and highly recommended journeys across Central Asia. Each tour is carefully designed to combine culture, history, and unforgettable landscapes.",
+        "product": [
+            {
+                "id": 7,
+                "slug": "/tour",
+                "image": "/assets/images/popular-tours-img1.jpg",
+                "alt": "popular-tours img 1",
+                "title": "Austrlia - 6 days in Vienna, Hallstatt",
+                "rating": 3,
+                "old_price": "2100.00",
+                "price": "1200.00",
+                "night": 5,
+                "day": 6
+            },
+            {
+                "id": 8,
+                "slug": "/tour",
+                "image": "/assets/images/popular-tours-img2.jpg",
+                "alt": "popular-tours img 2",
+                "title": "Asia",
+                "rating": 4,
+                "old_price": "2100.00",
+                "price": "1200.00",
+                "night": 5,
+                "day": 5
+            },
+            {
+                "id": 9,
+                "slug": "/tour",
+                "image": "/assets/images/popular-tours-img3.jpg",
+                "alt": "popular-tours img 3",
+                "title": "Italy",
+                "rating": 5,
+                "old_price": "2100.00",
+                "price": "1200.00",
+                "night": 2,
+                "day": 2
+            },
+            {
+                "id": 10,
+                "slug": "/tour",
+                "image": "/assets/images/popular-tours-img4.jpg",
+                "alt": "popular-tours img 4",
+                "title": "Thailand",
+                "rating": 4,
+                "old_price": "2100.00",
+                "price": "1200.00",
+                "night": 8,
+                "day": 8
+            },
+            {
+                "id": 11,
+                "slug": "/tour",
+                "image": "/assets/images/popular-tours-img5.jpg",
+                "alt": "popular-tours img 5",
+                "title": "Egypt",
+                "rating": 3,
+                "old_price": "2100.00",
+                "price": "1200.00",
+                "night": 3,
+                "day": 3
+            }
+        ]
+    }
+]

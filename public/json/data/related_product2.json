@@ -1,0 +1,40 @@
+[
+    {
+        "title": "Related Tour",
+        "product": [
+            {
+                "slug": "blog-detail-1",
+                "image": "/assets/images/top-destinations-img-7.jpg",
+                "alt": "top-destinations-img-7",
+                "date": "4 Mar",
+                "day": 7,
+                "rating": 5.0,
+                "title": "Sri Lanka",
+                "price": 1200,
+                "description": "Lorem ipsum dolor sit amet"
+            },
+            {
+                "slug": "blog-detail-2",
+                "image": "/assets/images/top-destinations-img-8.jpg",
+                "alt": "top-destinations-img-8",
+                "title": "Singapor Cruise",
+                "date": "26 Mar",
+                "day": 12,
+                "rating": 4.4,
+                "price": 599,
+                "description": "Lorem ipsum dolor sit amet"
+            },
+            {
+                "slug": "blog-detail-1",
+                "image": "/assets/images/top-destinations-img-2.jpg",
+                "alt": "top-destinations-img-2",
+                "title": "Austria",
+                "date": "10 Nov",
+                "day": 9,
+                "rating": 4.2,
+                "price": 3440,
+                "description": "Lorem ipsum dolor sit amet"
+            }
+        ]
+    }
+]

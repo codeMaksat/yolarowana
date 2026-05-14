@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Our Team",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+        "details": [
+            {
+                "slug": "/team-detail",
+                "user_name": "Alexa Bowers",
+                "position": "CEO",
+                "image": "/assets/images/team-pearson-img2.jpg",
+                "alt": "blog-img2"
+            },
+            {
+                "slug": "/team-detail",
+                "user_name": "Bruce Pearson",
+                "position": "Travel Guide",
+                "image": "/assets/images/team-pearson-img1.jpg",
+                "alt": "blog-img1"
+            },
+            {
+                "slug": "/team-detail",
+                "user_name": "Amber Griffin",
+                "position": "TManager",
+                "image": "/assets/images/team-pearson-img3.jpg",
+                "alt": "blog-img3"
+            }
+        ]
+    }
+]

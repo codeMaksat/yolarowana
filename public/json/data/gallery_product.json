@@ -1,0 +1,68 @@
+[
+    {
+        "product": [
+            {
+                "id": 1,
+                "image": "/assets/images/top-destinations-img-1.jpg",
+                "alt": "blog-img1"
+            },
+            {
+                "id": 2,
+                "image": "/assets/images/top-destinations-img-2.jpg",
+                "alt": "blog-img2"
+            },
+            {
+                "id": 3,
+                "image": "/assets/images/top-destinations-img-3.jpg",
+                "alt": "blog-img-3"
+            },
+            {
+                "id": 4,
+                "image": "/assets/images/top-destinations-img-4.jpg",
+                "alt": "blog-img-4"
+            },
+            {
+                "id": 5,
+                "image": "/assets/images/top-destinations-img-7.jpg",
+                "alt": "blog-img-7"
+            },
+            {
+                "id": 6,
+                "image": "/assets/images/top-destinations-img-8.jpg",
+                "alt": "blog-img-8"
+            },
+            {
+                "id": 7,
+                "image": "/assets/images/top-destinations-img-9.jpg",
+                "alt": "blog-img-9"
+            },
+            {
+                "id": 8,
+                "image": "/assets/images/top-destinations-img-10.jpg",
+                "alt": "blog-img-10"
+            },
+            {
+                "id": 9,
+                "image": "/assets/images/top-destinations-img-11.jpg",
+                "alt": "blog-img-11"
+            },
+            {
+                "id": 10,
+                "image": "/assets/images/top-destinations-img-12.jpg",
+                "alt": "blog-img-12"
+            },
+            {
+                "id": 11,
+                "image": "/assets/images/top-destinations-img-13.jpg",
+                "alt": "blog-img-13"
+            },
+            {
+                "id": 12,
+                "image": "/assets/images/top-destinations-img-14.jpg",
+                "alt": "blog-img-14"
+            }
+        ],
+        "btn_label": "Load more",
+        "btn_slug": "/gallery"
+    }
+]

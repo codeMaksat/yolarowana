@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Bruce Pearson",
+        "position": "Chief Executive Officer",
+        "image": "/assets/images/team-pearson-img1.jpg",
+        "alt": "team pearson img",
+        "facebook_link": "https://www.facebook.com/",
+        "twitter_link": "https://twitter.com/i/flow/login",
+        "instagram_link": "https://www.instagram.com/accounts/login/",
+        "youtube_link": "https://www.youtube.com/",
+        "skype_link": "https://www.skype.com/en/",
+        "skill_label": "Skills",
+        "chronology_label": "Chronology",
+        "progress": [
+            {
+                "category": "Business",
+                "percentage": 80
+            },
+            {
+                "category": "Consultant",
+                "percentage": 90
+            },
+            {
+                "category": "Finance",
+                "percentage": 55
+            },
+            {
+                "category": "Experience",
+                "percentage": 80
+            }
+        ],
+        "experience": [
+            {
+                "period": "2013-Present",
+                "title": "CTO, Senior Software Engineer",
+                "company": "Apple Co."
+            },
+            {
+                "period": "2008-2013",
+                "title": "Senior Software Development, Project Manager",
+                "company": "Cisco Network"
+            },
+            {
+                "period": "2000-2008",
+                "title": "Team Leader, Software Design and Development",
+                "company": "Asus"
+            },
+            {
+                "period": "1997-2000",
+                "title": "Computer Engineering",
+                "company": "Massachusetts Institute of Technology"
+            }
+        ],
+        "mainContent": "Accumsan in nisl nisi scelerisque eu. Massa id neque aliquam vestibulum morbi blandit cursus. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit. Lacus suspendisse faucibus interdum posuere lorem ipsum dolor.",
+        "listItems": [
+            "Experienced Attorneys Professional.",
+            "Experienced Attorneys Approach.",
+            "Independence Makes Difference.",
+            "Committed To Helping Our Clients."
+        ],
+        "additionalContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet bibendum enim facilisis gravida neque convallis cras. Pellentesque nec nam aliquam sem et tortor consequat id. Quam quisque id diam vel quam elementum pulvinar. Lacus sed turpis tincidunt id aliquet risus feugiat. Morbi quis commodo odio aenean sed. Nunc vel risus commodo viverra maecenas. At risus viverra adipiscing at. Dictum at tempor commodo ullamcorper."
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Top Destinations",
+        "label": "Explore the most iconic places across Central Asia — from ancient Silk Road cities to breathtaking natural landscapes",
+        "product": [
+            {
+                "id": 1,
+                "slug": "/destination",
+                "image": "/assets/images/categories-img-1.jpg",
+                "alt": "turkmenistan img 1",
+                "title": "Turkmenistan",
+                "count": 3
+            },
+            {
+                "id": 2,
+                "slug": "/destination",
+                "image": "/assets/images/categories-img-2.jpg",
+                "alt": "uzbekistan img 2",
+                "title": "Uzbekistan",
+                "count": 5
+            },
+            {
+                "id": 3,
+                "slug": "/destination",
+                "image": "/assets/images/categories-img-3.jpg",
+                "alt": "Tajikistan img 3",
+                "title": "Tajikistan",
+                "count": 2
+            },
+            {
+                "id": 4,
+                "slug": "/destination",
+                "image": "/assets/images/categories-img-4.jpg",
+                "alt": "Kyrgyzstan img 4",
+                "title": "Kyrgyzstan",
+                "count": 8
+            },
+            {
+                "id": 5,
+                "slug": "/destination",
+                "image": "/assets/images/categories-img-5.jpg",
+                "alt": "Kazakhstan img 5",
+                "title": "Kazakhstan",
+                "count": 3
+            },
+            {
+                "id": 6,
+                "slug": "/destination",
+                "image": "/assets/images/categories-img-6.jpg",
+                "alt": "Azerbaijan img 6",
+                "title": "Azerbaijan",
+                "count": 6
+            }
+        ]
+    }
+]

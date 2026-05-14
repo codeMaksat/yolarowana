@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Get In Touch!",
+        "inqure_title": "Leave us your info",
+        "inqure_label": "and we will get back to you.",
+        "submit_btn_label": "Post Comment",
+        "location": [
+            {
+                "title": "London",
+                "bg_image": "/assets/images/contact-info-bg-img.jpg",
+                "street": "4 apt. Flawing Street.",
+                "city": "The Grand Avenue.",
+                "state": "Liverpool",
+                "country": "UK",
+                "pin_code": "33342",
+                "tel_title": "Tel",
+                "tel_label": "44-20-2355-3456",
+                "tel_slug": "tel:+44-20-2355-3456",
+                "mail_title": "Email",
+                "mail_label": "London@InfiniteWP.com",
+                "mail_slug": "mailto:London@InfiniteWP.com",
+                "location_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.3627286409564!2d-2.9941019729998484!3d53.40833877008291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b21321ee5323b%3A0x6102d7c38c2c128f!2sGOODLAYERS!5e0!3m2!1sen!2sin!4v1694050457568!5m2!1sen!2sin"
+            }
+        ]
+    }
+]

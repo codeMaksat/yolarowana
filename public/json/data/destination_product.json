@@ -1,0 +1,128 @@
+[
+    {
+        "product": [
+            {
+                "id": 1,
+                "slug": "/destination-detail",
+                "title": "Europe",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-1.jpg",
+                "alt": "blog-img1",
+                "count": 3,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 2,
+                "slug": "/destination-detail",
+                "title": "Polar",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-2.jpg",
+                "alt": "blog-img2",
+                "count": 3,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 3,
+                "slug": "/destination-detail",
+                "title": "Africa",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-3.jpg",
+                "alt": "blog-img-3",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 4,
+                "slug": "/destination-detail",
+                "title": "Middle asia",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-4.jpg",
+                "alt": "blog-img-4",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 5,
+                "slug": "/destination-detail",
+                "title": "Scandinavia",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-7.jpg",
+                "alt": "blog-img-7",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 6,
+                "slug": "/destination-detail",
+                "title": "Dream cruise",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-8.jpg",
+                "alt": "blog-img-8",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 7,
+                "slug": "/destination-detail",
+                "title": "London",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-9.jpg",
+                "alt": "blog-img-9",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 8,
+                "slug": "/destination-detail",
+                "title": "Turkey",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-10.jpg",
+                "alt": "blog-img-10",
+                "count": 4,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 9,
+                "slug": "/destination-detail",
+                "title": "Western Europe",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-11.jpg",
+                "alt": "blog-img-11",
+                "count": 5,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 10,
+                "slug": "/destination-detail",
+                "title": "Thailand",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-12.jpg",
+                "alt": "blog-img-12",
+                "count": 3,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 11,
+                "slug": "/destination-detail",
+                "title": "India",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-13.jpg",
+                "alt": "blog-img-13",
+                "count": 2,
+                "btn_label": "Read more"
+            },
+            {
+                "id": 12,
+                "slug": "/destination-detail",
+                "title": "Northan lights",
+                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "/assets/images/top-destinations-img-14.jpg",
+                "alt": "blog-img-14",
+                "count": 4,
+                "btn_label": "Read more"
+            }
+        ],
+        "btn_label": "Load more",
+        "btn_slug": "/destination-two"
+    }
+]

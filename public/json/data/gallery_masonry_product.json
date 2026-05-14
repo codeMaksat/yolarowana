@@ -1,0 +1,62 @@
+[
+    {
+        "product": [
+            {
+                "id": 1,
+                "slug": "/gallery",
+                "image": "/assets/images/tour-product-detail-img.jpg",
+                "alt": "blog-img1"
+            },
+            {
+                "id": 2,
+                "slug": "/gallery",
+                "image": "/assets/images/portfolio-img3.jpg",
+                "alt": "blog-img-3"
+            },
+            {
+                "id": 3,
+                "slug": "/gallery",
+                "image": "/assets/images/blog-img21.jpg",
+                "alt": "blog-img-4"
+            },
+            {
+                "id": 4,
+                "slug": "/gallery",
+                "image": "/assets/images/top-destinations-img-7.jpg",
+                "alt": "blog-img-7"
+            },
+            {
+                "id": 5,
+                "slug": "/gallery",
+                "image": "/assets/images/portfolio-img2.jpg",
+                "alt": "blog-img-8"
+            },
+            {
+                "id": 6,
+                "slug": "/gallery",
+                "image": "/assets/images/portfolio-img4.jpg",
+                "alt": "blog-img-9"
+            },
+            {
+                "id": 7,
+                "slug": "/gallery",
+                "image": "/assets/images/popular-tours-img10.jpg",
+                "alt": "blog-img-10"
+            },
+            {
+                "id": 8,
+                "slug": "/gallery",
+                "image": "/assets/images/portfolio-img6.jpg",
+                "alt": "blog-img-11"
+            },
+            {
+                "id": 9,
+                "slug": "/gallery",
+                "image": "/assets/images/top-destinations-img-10.jpg",
+                "alt": "blog-img-12"
+            }
+        ],
+        "btn_label": "Load more",
+        "btn_slug": "/grid-masonary"
+    }
+]

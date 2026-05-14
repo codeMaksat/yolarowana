@@ -1,0 +1,11 @@
+[
+    {
+        "image": "/assets/images/404-Journey-img.svg",
+        "alt": "404-Journey-img",
+        "title": "404",
+        "label": "Oops! It looks like you're lost.",
+        "description": "The page you're looking for isn't available. Try to search again or use the go to.",
+        "btn_slug":"/",
+        "btn_label":"Go back to Home"
+    }
+]

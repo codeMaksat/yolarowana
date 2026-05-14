@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Related Tour",
+        "product": [
+            {
+                "slug": "blog-detail-1",
+                "image": "/assets/images/top-destinations-img-2.jpg",
+                "alt": "top-destinations-img-2",
+                "title": "Change your place and get the fresh air",
+                "date": "April 20, 2023",
+                "description": "Quis commodo odio aenean sed adipiscing. Non sodales neque sodales ut etiam sit amet nisl",
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "blog-detail-2",
+                "image": "/assets/images/popular-tours-img12.jpg",
+                "alt": "popular-tours-img12",
+                "title": "Get Italy’s full info before visiting",
+                "date": "April 24, 2022",
+                "description": "Quis commodo odio aenean sed adipiscing. Non sodales neque sodales ut etiam sit amet nisl",
+                "btn_label": "Read more"
+            },
+            {
+                "slug": "blog-detail-1",
+                "image": "/assets/images/blog-img20.jpg",
+                "alt": "blog-img20",
+                "title": "Trekking benefits: 10 points to remember",
+                "date": "Nov 11, 2022",
+                "description": "Quis commodo odio aenean sed adipiscing. Non sodales neque sodales ut etiam sit amet nisl",
+                "btn_label": "Read more"
+            }
+        ]
+    }
+]

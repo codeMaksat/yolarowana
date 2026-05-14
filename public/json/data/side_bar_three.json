@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Book This Tour",
+        "product": [
+            {
+                "image": "/assets/images/last-minute-deals-img1.jpg",
+                "alt": "last-minute-deals-img1",
+                "slug": "tour-detail-2",
+                "title": "Brooklyn Christmas Lights",
+                "price": 250
+            },
+            {
+                "image": "/assets/images/last-minute-deals-img2.jpg",
+                "alt": "last-minute-deals-img2",
+                "slug": "tour-detail",
+                "title": "Pak Nam Chumphon Town Tour",
+                "price": 2250
+            },
+            {
+                "image": "/assets/images/last-minute-deals-img3.jpg",
+                "alt": "last-minute-deals-img3",
+                "slug": "tour-detail-2",
+                "title": "Java & Bali One Life Adventure",
+                "price": 500
+            },
+            {
+                "image": "/assets/images/last-minute-deals-img4.jpg",
+                "alt": "last-minute-deals-img4",
+                "slug": "tour-detail-1",
+                "title": "Places To Travel In November",
+                "price": 599
+            }
+        ]
+    }
+]

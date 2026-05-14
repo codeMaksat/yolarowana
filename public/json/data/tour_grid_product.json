@@ -1,0 +1,82 @@
+[
+    {
+        "product": [
+            {
+                "id": 12,
+                "slug": "/destination",
+                "image": "/assets/images/popular-tours-img1.jpg",
+                "alt": "popular-tours img 1",
+                "title": "Austrlia - 6 days in Vienna, Hallstatt",
+                "rating": 3,
+                "old_price": "2100.00",
+                "price": "1200.00",
+                "review": 2,
+                "night": 5,
+                "day": 6
+            },
+            {
+                "id": 13,
+                "slug": "/destination",
+                "image": "/assets/images/popular-tours-img2.jpg",
+                "alt": "popular-tours img 2",
+                "title": "Cusco & Sallkantay beach",
+                "rating": 4,
+                "old_price": "4300.00",
+                "price": "3200.00",
+                "review": 2,
+                "night": 8,
+                "day": 7
+            },
+            {
+                "id": 14,
+                "slug": "/destination",
+                "image": "/assets/images/popular-tours-img3.jpg",
+                "alt": "popular-tours img 3",
+                "title": "Thailand - Bali tour",
+                "rating": 5,
+                "price": "300.00",
+                "review": 2,
+                "night": 3,
+                "day": 4
+            },
+            {
+                "id": 15,
+                "slug": "/destination",
+                "image": "/assets/images/popular-tours-img12.jpg",
+                "alt": "popular-tours-img12",
+                "title": "Molokini and Turtle Arches Snorkeling Trip",
+                "rating": 3,
+                "price": "1300.00",
+                "review": 5 ,
+                "night": 7,
+                "day": 6
+            },
+            {
+                "id": 16,
+                "slug": "/destination",
+                "image": "/assets/images/popular-tours-img13.jpg",
+                "alt": "popular-tours-img13",
+                "title": "Dubai – All Stunning Places",
+                "rating": 5,
+                "price": "450.00",
+                "review": 8,
+                "night": 5,
+                "day": 7
+            },
+            {
+                "id": 17,
+                "slug": "/destination",
+                "image": "/assets/images/top-destinations-img-1.jpg",
+                "alt": "top-destinations-img-1",
+                "title": "Venice, Rome and Milan",
+                "rating": 5,
+                "price": "5300.00",
+                "review": 10,
+                "night": 7,
+                "day": 6
+            }
+        ],
+        "btn_label": "Load more",
+        "btn_slug": "/tour"
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "left_contain": [
+            {
+                "title": "Best-Selling Tour",
+                "label": "Explore our most popular journeys across Central Asia — carefully designed and trusted by travelers from around the world",
+                "customer_img": [
+                    {
+                        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+                        "alt": "user img 1"
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+                        "alt": "user img 2"
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80",
+                        "alt": "user img 3"
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+                        "alt": "user img 4"
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+                        "alt": "user img 5"
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80",
+                        "alt": "user img 6"
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1256&q=80",
+                        "alt": "user img 7"
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+                        "alt": "user img 8"
+                    },
+                    {
+                        "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+                        "alt": "user img 9"
+                    }
+                ],
+                "count": 500,
+                "count_label": "Happy Customer"
+            }
+        ],
+        "mid_contain": [
+            {
+                "image": "/assets/images/stephan-valentin-img.jpg",
+                "alt": "stephan-valentin-img",
+                "round_label": "* Explore the world * Journea - Tours"
+            }
+        ],
+        "right_contain": [
+            {
+                "title": "Central Asia Highlights Tour",
+                "label": "Discover our best-selling tours across Central Asia",
+                "review": [
+                    {
+                        "label": "Days",
+                        "value": 15
+                    },
+                    {
+                        "label": "Countries",
+                        "value": 5
+                    },
+                    {
+                        "label": "Tour Type",
+                        "value": "Guided"
+                    }
+                ],
+                "btn_slug":"/about",
+                "btn_label":"Check the tour",
+                "btn_icon":"fa-regular fa-arrow-right"
+            }
+        ]
+    }
+]

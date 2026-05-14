@@ -1,0 +1,98 @@
+[
+    {
+        "menu": [
+            {
+                "slug": "*",
+                "label": "All"
+            },
+            {
+                "slug": "beach",
+                "label": "Beach"
+            },
+            {
+                "slug": "city",
+                "label": "City"
+            },
+            {
+                "slug": "nature",
+                "label": "Nature"
+            }
+        ],
+        "product": [
+            {
+                "slug": "/tour-detail",
+                "image": "/assets/images/portfolio-img1.jpg",
+                "alt": "portfolio-img1",
+                "title": "Porta Justo",
+                "label": "Adventure / Tour",
+                "category": "beach"
+            },
+            {
+                "slug": "/tour-detail",
+                "image": "/assets/images/portfolio-img2.jpg",
+                "alt": "portfolio-img2",
+                "title": "Tortor Vehicula Inceptos",
+                "label": "Adventure / Desert",
+                "category": "beach"
+            },
+            {
+                "slug": "/tour-detail",
+                "image": "/assets/images/portfolio-img3.jpg",
+                "alt": "portfolio-img3",
+                "title": "Sea Cruise",
+                "label": "Adventure / Tour",
+                "category": "city"
+            },
+            {
+                "slug": "/tour-detail",
+                "image": "/assets/images/portfolio-img4.jpg",
+                "alt": "portfolio-img4",
+                "title": "Paris Group trip",
+                "label": "Adventure / Nature",
+                "category": "nature"
+            },
+            {
+                "slug": "/tour-detail",
+                "image": "/assets/images/portfolio-img5.jpg",
+                "alt": "portfolio-img5",
+                "title": "Tour of Mont Blanc - Self Guide",
+                "label": "Adventure / Nature",
+                "category": "city"
+            },
+            {
+                "slug": "/tour-detail",
+                "image": "/assets/images/portfolio-img6.jpg",
+                "alt": "portfolio-img6",
+                "title": "Osa Peninsula to Dominical",
+                "label": "Adventure / Nature",
+                "category": "nature"
+            },
+            {
+                "slug": "/tour-detail",
+                "image": "/assets/images/portfolio-img7.jpg",
+                "alt": "portfolio-img7",
+                "title": "Mountevrest",
+                "label": "Adventure / Mountain",
+                "category": "nature"
+            },
+            {
+                "slug": "/tour-detail",
+                "image": "/assets/images/portfolio-img8.jpg",
+                "alt": "portfolio-img8",
+                "title": "Maldivs luxury villas",
+                "label": "Adventure / Sea",
+                "category": "nature"
+            },
+            {
+                "slug": "/tour-detail",
+                "image": "/assets/images/portfolio-img9.jpg",
+                "alt": "portfolio-img9",
+                "title": "Zermatt Switzerland",
+                "label": "Adventure / Nature",
+                "category": "city"
+            }
+        ],
+        "btn_label": "Load more",
+        "btn_slug": "/portfolio"
+    }
+]

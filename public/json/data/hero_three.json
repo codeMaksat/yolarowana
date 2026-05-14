@@ -1,0 +1,74 @@
+[
+    {
+        "product": [
+            {
+                "image": "/assets/images/home-slider-img1.jpg",
+                "alt": "hero img",
+                "title": "Hot places",
+                "label": "Mykonos",
+                "label2": "island",
+                "youtube_link": "http://www.youtube.com/watch?v=0O2aH4XLbto",
+                "tour": [
+                    {
+                        "label": "Price",
+                        "value": "1288",
+                        "description": "6 Days tour for 2 persons"
+                    },
+                    {
+                        "label": "5 Star",
+                        "value": "Hotel",
+                        "description": "Hotels on choice"
+                    },
+                    {
+                        "label": "Flight",
+                        "value": "15th",
+                        "description": "December or later"
+                    }
+                ]
+            },
+            {
+                "image": "/assets/images/hero-bg-img.jpg",
+                "alt": "hero img",
+                "title": "Hot places",
+                "label": "Let’s travel",
+                "label2": "and explore",
+                "youtube_link": "http://www.youtube.com/watch?v=0O2aH4XLbto",
+                "tour": [
+                    {
+                        "label": "Price",
+                        "value": "1277",
+                        "description": "6 Days tour for 2 persons"
+                    },
+                    {
+                        "label": "5 Star",
+                        "value": "Hotel",
+                        "description": "Hotels on choice"
+                    },
+                    {
+                        "label": "Flight",
+                        "value": "15th",
+                        "description": "December or later"
+                    }
+                ]
+            }
+        ],
+        "social_media": [
+            {
+                "platform": "Facebook",
+                "link": "https://www.facebook.com/"
+            },
+            {
+                "platform": "Twitter",
+                "link": "https://twitter.com/"
+            },
+            {
+                "platform": "YouTube",
+                "link": "https://www.youtube.com/"
+            },
+            {
+                "platform": "Instagram",
+                "link": "https://www.instagram.com/"
+            }
+        ]
+    }
+]

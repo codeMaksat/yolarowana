@@ -1,0 +1,116 @@
+[
+    {
+        "product": [
+            {
+                "id": 1,
+                "slug": "/hotels-detail",
+                "title": "Standard Deluxe",
+                "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                "image": "/assets/images/hotel-img1.jpg",
+                "alt": "hotel-img1",
+                "rating": 4,
+                "review": 5,
+                "day": 3,
+                "price": 1200
+            },
+            {
+                "id": 2,
+                "slug": "/hotels-detail",
+                "title": "The Penthouse",
+                "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                "image": "/assets/images/hotel-img2.jpg",
+                "alt": "hotel-img2",
+                "rating": 2,
+                "review": 4,
+                "day": 4,
+                "price": 1566
+            },
+            {
+                "id": 3,
+                "slug": "/hotels-detail",
+                "title": "Junior Suite Room",
+                "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                "image": "/assets/images/hotel-img3.jpg",
+                "alt": "hotel-img3",
+                "rating": 4,
+                "review": 5,
+                "day": 2,
+                "price": 1100
+            },
+            {
+                "id": 4,
+                "slug": "/hotels-detail",
+                "title": "The green villa resort",
+                "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                "image": "/assets/images/hotel-img4.jpg",
+                "alt": "hotel-img4",
+                "rating": 4,
+                "review": 7,
+                "day": 3,
+                "price": 1560
+            },
+            {
+                "id": 5,
+                "slug": "/hotels-detail",
+                "title": "Great Northern Hotel, Link Tribute PortfolioHotel, London",
+                "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                "image": "/assets/images/hotel-img5.jpg",
+                "alt": "hotel-img5",
+                "rating": 5,
+                "review": 8,
+                "day": 4,
+                "price": 1600
+            },
+            {
+                "id": 6,
+                "slug": "/hotels-detail",
+                "title": "Personal swimming pull hotel",
+                "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                "image": "/assets/images/hotel-img6.jpg",
+                "alt": "hotel-img6",
+                "rating": 5,
+                "review": 3,
+                "day": 6,
+                "price": 2200
+            },
+            {
+                "id": 7,
+                "slug": "/hotels-detail",
+                "title": "Warwick Allerton Hotel Chicago",
+                "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                "image": "/assets/images/hotel-img7.jpg",
+                "alt": "hotel-img7",
+                "rating": 4,
+                "review": 5,
+                "day": 3,
+                "price": 2650
+            },
+            {
+                "id": 8,
+                "slug": "/hotels-detail",
+                "title": "Deluxe King Room",
+                "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                "image": "/assets/images/hotel-img8.jpg",
+                "alt": "hotel-img8",
+                "rating": 4,
+                "review": 6,
+                "day": 2,
+                "price": 1298
+            },
+            {
+                "id": 9,
+                "slug": "/hotels-detail",
+                "title": "Avalon the star hotel",
+                "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                "image": "/assets/images/hotel-img9.jpg",
+                "alt": "hotel-img9",
+                "rating": 5,
+                "review": 8,
+                "day": 5,
+                "price": 1980
+            }
+        ],
+        "btn_label": "Load more",
+        "btn_slug": "/hotels"
+    }
+]

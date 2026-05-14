@@ -1,0 +1,88 @@
+[
+    {
+        "title": "Trending Attractions",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "product": [
+            {
+                "slug": "tour-detail",
+                "image": "/assets/images/portfolio-img3.jpg",
+                "alt": "portfolio-img3",
+                "icon": "/assets/images/beach-tours-icon-2.svg",
+                "icon_alt": "beach-tours-icon-2",
+                "title": "Beach tours",
+                "price": 440,
+                "tour": 10
+            },
+            {
+                "slug": "tour-detail",
+                "image": "/assets/images/portfolio-img2.jpg",
+                "alt": "portfolio-img2",
+                "icon": "/assets/images/beach-tours-icon-1.svg",
+                "icon_alt": "beach-tours-icon-1",
+                "title": "Desert Tours",
+                "price": 550,
+                "tour": 5
+            },
+            {
+                "slug": "tour-detail",
+                "image": "/assets/images/portfolio-img8.jpg",
+                "alt": "portfolio-img8",
+                "icon": "/assets/images/beach-tours-icon-4.svg",
+                "icon_alt": "beach-tours-icon-4",
+                "title": "Maldivs Tours",
+                "price": 1050,
+                "tour": 4
+            },
+            {
+                "slug": "tour-detail",
+                "image": "/assets/images/top-destinations-img-3.jpg",
+                "alt": "top-destinations-img-3",
+                "icon": "/assets/images/beach-tours-icon-3.svg",
+                "icon_alt": "beach-tours-icon-3",
+                "title": "Mountains Tours",
+                "price": 780,
+                "tour": 7
+            },
+            {
+                "slug": "tour-detail",
+                "image": "/assets/images/portfolio-img3.jpg",
+                "alt": "portfolio-img3",
+                "icon": "/assets/images/beach-tours-icon-2.svg",
+                "icon_alt": "beach-tours-icon-2",
+                "title": "Beach tours",
+                "price": 440,
+                "tour": 10
+            },
+            {
+                "slug": "tour-detail",
+                "image": "/assets/images/portfolio-img2.jpg",
+                "alt": "portfolio-img2",
+                "icon": "/assets/images/beach-tours-icon-1.svg",
+                "icon_alt": "beach-tours-icon-1",
+                "title": "Desert Tours",
+                "price": 550,
+                "tour": 5
+            },
+            {
+                "slug": "tour-detail",
+                "image": "/assets/images/portfolio-img8.jpg",
+                "alt": "portfolio-img8",
+                "icon": "/assets/images/beach-tours-icon-4.svg",
+                "icon_alt": "beach-tours-icon-4",
+                "title": "Maldivs Tours",
+                "price": 1050,
+                "tour": 4
+            },
+            {
+                "slug": "tour-detail",
+                "image": "/assets/images/top-destinations-img-3.jpg",
+                "alt": "top-destinations-img-3",
+                "icon": "/assets/images/beach-tours-icon-3.svg",
+                "icon_alt": "beach-tours-icon-3",
+                "title": "Mountains Tours",
+                "price": 780,
+                "tour": 7
+            }
+        ]
+    }
+]

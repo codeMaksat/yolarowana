@@ -1,0 +1,136 @@
+[
+    {
+        "title": "Amsterdam",
+        "icon": "fa-solid fa-location-dot",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Praesent elementum facilisis leo vel fringilla est. Sem nulla pharetra diam sit. Quam pellentesque nec nam aliquam sem et tortor consequat. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Felis bibendum ut tristique et. Cras pulvinar mattis nunc sed bland Adipiscing tristique risus nec feugiat in fermentum. Pellentesque nec nam aliquam sem et tortor consequat id. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Egestas purus viverra accumsan in nisl. Consectetur libero id faucibus nisl tincidunt eget nullam.",
+        "description1": "Nunc sed blandit libero volutpat sed cras ornare arcu dui. Dictumst vestibulum rhoncus est pellentesque elit. Risus feugiat in ante metus dictum at. Risus nullam eget felis eget nunc lobortis mattis. Tempor commodo ullamcorper Link lacus.",
+        "title1": "Hiking",
+        "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Praesent elementum facilisis leo vel fringilla est. Sem nulla pharetra diam sit. Quam pellentesque nec nam aliquam sem et tortor consequat. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Felis bibendum ut tristique et. Cras pulvinar mattis nunc sed bland Adipiscing tristique risus nec feugiat in fermentum. Pellentesque nec nam aliquam sem et tortor consequat id. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Egestas purus viverra accumsan in nisl. Consectetur libero id faucibus nisl tincidunt eget nullam.",
+        "description3": "Nunc sed blandit libero volutpat sed cras ornare arcu dui. Dictumst vestibulum rhoncus est pellentesque elit. Risus feugiat in ante metus dictum at. Risus nullam eget felis eget nunc lobortis mattis. Tempor commodo ullamcorper Link lacus.",
+        "description4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Praesent elementum facilisis leo vel fringilla est. Sem nulla pharetra diam sit. Quam pellentesque nec nam aliquam sem et tortor consequat. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Felis bibendum ut tristique et. Cras pulvinar mattis nunc sed bland Adipiscing tristique risus nec feugiat in fermentum. Pellentesque nec nam aliquam sem et tortor consequat id. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Egestas purus viverra accumsan in nisl. Consectetur libero id faucibus nisl tincidunt eget nullam.",
+        "description5": "Nunc sed blandit libero volutpat sed cras ornare arcu dui. Dictumst vestibulum rhoncus est pellentesque elit. Risus feugiat in ante metus dictum at. Risus nullam eget felis eget nunc lobortis mattis. Tempor commodo ullamcorper Link lacus.",
+        "activitie": [
+            {
+                "title": "Hot Air Ballon",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Praesent elementum facilisis leo vel fringilla est. Sem nulla pharetra diam sit. Quam pellentesque nec nam aliquam sem et tortor consequat. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Felis bibendum ut tristique et. Cras pulvinar mattis nunc sed bland Adipiscing tristique risus nec feugiat in fermentum. Pellentesque nec nam aliquam sem et tortor consequat id. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Egestas purus viverra accumsan in nisl. Consectetur libero id faucibus nisl tincidunt eget nullam.",
+                "short_des": "Nunc sed blandit libero volutpat sed cras ornare arcu dui. Dictumst vestibulum rhoncus est pellentesque elit. Risus feugiat in ante metus dictum at. Risus nullam eget felis eget nunc lobortis mattis. Tempor commodo ullamcorper Link lacus."
+            }
+        ],
+        "flights": [
+            {
+                "details": [
+                    {
+                        "title": "Name",
+                        "label": "India to paris"
+                    },
+                    {
+                        "title": "Flight Name",
+                        "label": "Air India"
+                    },
+                    {
+                        "title": "Distance",
+                        "label": "300,000 km2"
+                    },
+                    {
+                        "title": "Depart Date",
+                        "label": "25 Jan 2022"
+                    },
+                    {
+                        "title": "Return Date",
+                        "label": "3 Feb 2022"
+                    }
+                ]
+            }
+        ],
+        "hotel": [
+            {
+                "product": [
+                    {
+                        "id": 1,
+                        "slug": "/hotels-detail",
+                        "title": "Standard Deluxe",
+                        "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                        "image": "/assets/images/hotel-img1.jpg",
+                        "alt": "hotel-img1",
+                        "rating": 3,
+                        "review": 5,
+                        "day": 3,
+                        "price": 1200
+                    },
+                    {
+                        "id": 2,
+                        "slug": "/hotels-detail",
+                        "title": "The Penthouse",
+                        "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                        "image": "/assets/images/hotel-img2.jpg",
+                        "alt": "hotel-img2",
+                        "rating": 2,
+                        "review": 4,
+                        "day": 4,
+                        "price": 1566
+                    },
+                    {
+                        "id": 3,
+                        "slug": "/hotels-detail",
+                        "title": "Junior Suite Room",
+                        "short_des": "Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.",
+                        "image": "/assets/images/hotel-img3.jpg",
+                        "alt": "hotel-img3",
+                        "rating": 4,
+                        "review": 5,
+                        "day": 2,
+                        "price": 1100
+                    }
+                ]
+            }
+        ],
+        "tour": [
+            {
+                "product": [
+                    {
+                        "id": 1,
+                        "slug": "/tour-detail",
+                        "title": "Greece",
+                        "short_des": "Lorem ipsum dolor sit amet",
+                        "description": "",
+                        "image": "/assets/images/special-offers-img1.jpg",
+                        "alt": "special-offers-img1",
+                        "date": "10 Jan",
+                        "day": 4,
+                        "rating": "4.8",
+                        "price": 457,
+                        "old_price": 523
+                    },
+                    {
+                        "id": 2,
+                        "slug": "/tour-detail",
+                        "title": "India",
+                        "short_des": "Lorem ipsum dolor sit amet",
+                        "description": "",
+                        "image": "/assets/images/special-offers-img2.jpg",
+                        "alt": "special-offers-img2",
+                        "date": "20 Jan",
+                        "day": 8,
+                        "rating": "4.0",
+                        "price": 523,
+                        "old_price": 600
+                    },
+                    {
+                        "id": 3,
+                        "slug": "/tour-detail",
+                        "title": "Itali",
+                        "short_des": "Lorem ipsum dolor sit amet",
+                        "description": "",
+                        "image": "/assets/images/special-offers-img3.jpg",
+                        "alt": "special-offers-img3",
+                        "date": "6 Oct",
+                        "day": 6,
+                        "rating": "4.8",
+                        "price": 340,
+                        "old_price": 500
+                    }
+                ]
+            }
+        ]
+    }
+]

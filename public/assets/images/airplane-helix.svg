@@ -1,0 +1,16 @@
+<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="airplane-helix" clip-path="url(#clip0_43_68)">
+<g id="Group">
+<path id="Vector" d="M15 18.75C15.9946 18.75 16.9484 18.3549 17.6517 17.6517C18.3549 16.9484 18.75 15.9946 18.75 15C18.75 14.0054 18.3549 13.0516 17.6517 12.3483C16.9484 11.6451 15.9946 11.25 15 11.25C14.0054 11.25 13.0516 11.6451 12.3483 12.3483C11.6451 13.0516 11.25 14.0054 11.25 15C11.25 15.9946 11.6451 16.9484 12.3483 17.6517C13.0516 18.3549 14.0054 18.75 15 18.75Z" stroke="#645CBB" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M15 11.25C15 11.25 12.515 8.78125 12.5 6.25C12.5013 3.75875 12.4375 1.24875 15 1.25C17.435 1.25125 17.4962 3.72 17.5 6.25C17.5038 8.73125 15 11.25 15 11.25Z" stroke="#645CBB" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M18.75 15C18.75 15 21.2187 12.515 23.75 12.5C26.2413 12.5013 28.7513 12.4375 28.75 15C28.7487 17.435 26.28 17.4962 23.75 17.5C21.2687 17.5038 18.75 15 18.75 15Z" stroke="#645CBB" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M11.25 15C11.25 15 8.78125 17.485 6.25 17.5C3.75875 17.4988 1.24875 17.5625 1.25 15C1.25125 12.565 3.72 12.5038 6.25 12.5C8.73125 12.4963 11.25 15 11.25 15Z" stroke="#645CBB" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M15 18.75C15 18.75 17.485 21.2187 17.5 23.75C17.4988 26.2413 17.5625 28.7513 15 28.75C12.565 28.7487 12.5038 26.28 12.5 23.75C12.4963 21.2687 15 18.75 15 18.75Z" stroke="#645CBB" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_43_68">
+<rect width="30" height="30" fill="white"/>
+</clipPath>
+</defs>
+</svg>

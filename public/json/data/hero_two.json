@@ -1,0 +1,12 @@
+[
+    {
+        "image": "/assets/images/home-2-hero-img.jpg",
+        "alt": "hero img",
+        "title": "Explore our",
+        "label": "Wonderful",
+        "label2": "trips",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "btn_slug": "/destination",
+        "btn_label": "Book now"
+    }
+]

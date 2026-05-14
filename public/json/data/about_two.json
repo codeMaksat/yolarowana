@@ -1,0 +1,21 @@
+[
+    {
+        "image": "/assets/images/get-about-us-img.svg",
+        "alt": "get-about-us-imgi",
+        "title": "Get About Us",
+        "label": "We create the trips you love",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed viverra tellus in hac. Ut faucibus pulvinar elementum integer.",
+        "items": [
+            {
+                "title": "24 Years Experience",
+                "description": "Feugiat scelerisque varius morbi enim nunc faucibus a."
+            },
+            {
+                "title": "Best Travel Agents",
+                "description": "Feugiat scelerisque varius morbi enim nunc faucibus a."
+            }
+        ],
+        "btn_slug": "about",
+        "btn_label": "Know more"
+    }
+]

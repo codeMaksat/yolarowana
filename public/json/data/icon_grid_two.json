@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "/assets/images/destinations-icon1.svg",
+        "alt": "destinations-icon",
+        "value": 678,
+        "label": "Destinations Place"
+    },
+    {
+        "icon": "/assets/images/destinations-icon2.svg",
+        "alt": "destinations-icon",
+        "value": 2547,
+        "label": "Amazing Tours"
+    },
+    {
+        "icon": "/assets/images/destinations-icon3.svg",
+        "alt": "destinations-icon",
+        "value": 98,
+        "label": "Tour Types"
+    },
+    {
+        "icon": "/assets/images/destinations-icon4.svg",
+        "alt": "destinations-icon",
+        "value": 12567,
+        "label": "Happy Customers"
+    }
+]

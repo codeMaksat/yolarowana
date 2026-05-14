@@ -1,0 +1,150 @@
+[
+    {
+        "sign_up_mail": [
+            {
+                "title": "Sign up for our newsletter",
+                "label": "Save up to 50% on tours and trips. Get instant access to lower prices.",
+                "btn_label": "Submit"
+            }
+        ],
+        "mid_data": [
+            {
+                "logo": [
+                    {
+                        "slug": "/",
+                        "img": "/assets/images/logo-dark.svg",
+                        "alt": "logo-dark"
+                    }
+                ],
+                "details": "We create unforgettable journeys across Central Asia, offering authentic experiences, expert planning, and trusted local support.",
+                "icons": [
+                    {
+                        "slug": "https://www.facebook.com/",
+                        "icon": "fa-brands fa-facebook"
+                    },
+                    {
+                        "slug": "https://twitter.com/",
+                        "icon": "fa-brands fa-twitter"
+                    },
+                    {
+                        "slug": "https://www.youtube.com/",
+                        "icon": "fa-brands fa-youtube"
+                    },
+                    {
+                        "slug": "https://www.instagram.com/",
+                        "icon": "fa-brands fa-instagram"
+                    }
+                ]
+            }
+        ],
+        "page_list": {
+            "quick_links": [
+                {
+                    "title": "Quick Links",
+                    "menu": [
+                        {
+                            "slug": "/about",
+                            "label": "About Us"
+                        },
+                        {
+                            "slug": "/tour",
+                            "label": "Tour"
+                        },
+                        {
+                            "slug": "/destinations",
+                            "label": "Destinations"
+                        },
+                        {
+                            "slug": "/blog",
+                            "label": "Blog"
+                        },
+                        {
+                            "slug": "/contact",
+                            "label": "Contact Us"
+                        }
+                    ]
+                }
+            ],
+            "contact_us": [
+                {
+                    "title": "Contact Us",
+                    "menu": [
+                        {
+                            "img": "/assets/images/pin.svg",
+                            "alt": "call-sharp",
+                            "label": "57 Gurtly, Ashgabat, Turkmenistan"
+                        },
+                        {
+                            "img": "/assets/images/call-sharp.svg",
+                            "alt": "call-sharp",
+                            "slug": "tel:+993 61691909",
+                            "label": "+993 61691909"
+                        },
+                        {
+                            "img": "/assets/images/mail-unread.svg",
+                            "alt": "mail-sharp",
+                            "slug": "mailto:journeya@gmail.com",
+                            "label": "journeya@gmail.com"
+                        }
+                    ]
+                }
+            ],
+            "gallery": [
+                {
+                    "title": "Gallery",
+                    "menu": [
+                        {
+                            "slug": "/gallery",
+                            "img": "/assets/images/footer-gallery-img1.jpg",
+                            "alt": "footer-gallery-img1"
+                        },
+                        {
+                            "slug": "/gallery",
+                            "img": "/assets/images/footer-gallery-img2.jpg",
+                            "alt": "footer-gallery-img2"
+                        },
+                        {
+                            "slug": "/gallery",
+                            "img": "/assets/images/footer-gallery-img3.jpg",
+                            "alt": "footer-gallery-img3"
+                        },
+                        {
+                            "slug": "/gallery",
+                            "img": "/assets/images/footer-gallery-img4.jpg",
+                            "alt": "footer-gallery-img4"
+                        },
+                        {
+                            "slug": "/gallery",
+                            "img": "/assets/images/footer-gallery-img4.jpg",
+                            "alt": "footer-gallery-img4"
+                        },
+                        {
+                            "slug": "/gallery",
+                            "img": "/assets/images/footer-gallery-img6.jpg",
+                            "alt": "footer-gallery-img6"
+                        },
+                        {
+                            "slug": "/gallery",
+                            "img": "/assets/images/footer-gallery-img7.jpg",
+                            "alt": "footer-gallery-img7"
+                        },
+                        {
+                            "slug": "/gallery",
+                            "img": "/assets/images/footer-gallery-img8.jpg",
+                            "alt": "footer-gallery-img8"
+                        }
+                    ]
+                }
+            ]
+        },
+        "last_data": [
+            {
+                "label": "Copyright 2026",
+                "label1": "Yola Rowan",
+                "label2": ". All Rights Reserved."
+            }
+        ],
+        "bg_image": "/assets/images/footer-bg-img.jpg",
+        "bg_alt": "/assets/images/footer-bg-img.jpg"
+    }
+]

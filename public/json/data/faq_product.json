@@ -1,0 +1,72 @@
+[
+    {
+        "title": "Payment",
+        "questions": [
+            {
+                "id": 1,
+                "question": "Are there any extra fees that I will have to pay on top of the listed price?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            },
+            {
+                "id": 2,
+                "question": "Are there any extra fees that I will have to pay on top of the listed price?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            },
+            {
+                "id": 3,
+                "question": "Are there any extra fees that I will have to pay on top of the listed price?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            },
+            {
+                "id": 4,
+                "question": "Are there any extra fees that I will have to pay on top of the listed price?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            }
+        ]
+    },
+    {
+        "title": "Reservation",
+        "questions": [
+            {
+                "id": 5,
+                "question": "What will the food be like?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            },
+            {
+                "id": 6,
+                "question": "When is the Best Time to go on a Machu Picchu Tour?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            }
+        ]
+    },
+    {
+        "title": "Other",
+        "questions": [
+            {
+                "id": 7,
+                "question": "Will there be other people on the tour?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            },
+            {
+                "id": 8,
+                "question": "I Am Traveling by Myself. Can I Take Your Tour?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            },
+            {
+                "id": 9,
+                "question": "What is the Policy for Children on the Tour?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            },
+            {
+                "id": 10,
+                "question": "What is the Passenger Weight Limitation?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            },
+            {
+                "id": 11,
+                "question": "What if Our Flight Gets Canceled Due to Weather?",
+                "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dignissim diam quis enim lobortis scelerisque fermentum dui."
+            }
+        ]
+    }
+]

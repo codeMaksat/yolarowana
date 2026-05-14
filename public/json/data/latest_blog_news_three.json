@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Latest Travel Guides",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "btn_slug": "/blog-grid",
+        "single_item": [
+            {
+                "slug": "/blog-detail-2",
+                "date": "Jan 10, 2023",
+                "author": "admin",
+                "title": "Change your place and get the fresh air",
+                "label": "Dolor magna eget est lorem ipsum. Nibh nisl condimentum id venenatis Link condimentum vitae sapien. Tortor condimentum lacinia quis vel eros. Massa massa ultricies mi quis hendrerit dolor magna."
+            }
+        ],
+        "product": [
+            {
+                "slug": "/blog-detail-2",
+                "image": "/assets/images/top-destinations-img-4.jpg",
+                "alt": "blog-img1",
+                "title": "Pack wisely before traveling",
+                "author": "admin",
+                "date": "5 Mar 2022"
+            },
+            {
+                "slug": "/blog-detail-2",
+                "image": "/assets/images/blog-img20.jpg",
+                "alt": "blog-img20",
+                "title": "Even the all-powerful Pointing",
+                "author": "admin",
+                "date": "23 Oct 2022"
+            },
+            {
+                "slug": "/blog-detail-2",
+                "image": "/assets/images/blog-detail-img2.jpg",
+                "alt": "blog-detail-img2",
+                "title": "Separated they live in Bookmarksgrove",
+                "author": "admin",
+                "date": "14 Nov 2022"
+            }
+        ]
+    }
+]

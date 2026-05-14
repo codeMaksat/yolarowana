@@ -1,0 +1,345 @@
+[
+    {
+        "title": "Warwick Allerton Hotel Chicago",
+        "label": "Moscow Road, Kensington and Chelsea, London, W2 4EL, United Kingdom",
+        "location_icon": "/assets/images/map-marker-line.svg",
+        "location_alt": "map-marker-line",
+        "location_label": "Show map",
+        "location_slug": "https://www.google.com/maps/place/GOODLAYERS/@53.4083,-2.991482,16z/data=!4m6!3m5!1s0x487b21321ee5323b:0x6102d7c38c2c128f!8m2!3d53.4082998!4d-2.9914816!16s%2Fg%2F11fm3cw0v_?hl=en&entry=ttu",
+        "price": 1200,
+        "images": [
+            {
+                "image": "/assets/images/hotel-detail-img1.jpg",
+                "alt": "hotel-detail-img1"
+            },
+            {
+                "image": "/assets/images/hotel-detail-img2.jpg",
+                "alt": "hotel-detail-img2"
+            },
+            {
+                "image": "/assets/images/hotel-detail-img3.jpg",
+                "alt": "hotel-detail-img3"
+            },
+            {
+                "image": "/assets/images/hotel-detail-img4.jpg",
+                "alt": "hotel-detail-img4"
+            },
+            {
+                "image": "/assets/images/hotel-detail-img5.jpg",
+                "alt": "hotel-detail-img5"
+            }
+        ],
+        "overview": [
+            {
+                "title": "Overview",
+                "details": [
+                    {
+                        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis. Odio tempor orci dapibus ultrices. Magna fringilla urna porttitor rhoncus dolor purus non. Ac ut consequat semper viverra nam libero justo laoreet. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. Libero id faucibus nisl tincidunt eget nullam non nisi. Tellus molestie nunc non blandit massa. Quam quisque id diam vel quam. Ac tortor vitae purus faucibus. Ultrices tincidunt arcu non sodales. Amet nisl purus in mollis. Volutpat est velit egestas dui id ornare arcu odio ut. Enim facilisis gravida neque convallis."
+                    },
+                    {
+                        "label": "Convallis Link cras semper auctor neque vitae tempus quam pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Velit dignissim sodales ut eu sem integer. Adipiscing bibendum est ultricies integer. Nisl nunc mi ipsum faucibus vitae aliquet nec. Auctor eu augue ut lectus arcu bibendum at varius. Tristique et egestas quis ipsum suspendisse. Vulputate mi sit amet mauris."
+                    }
+                ]
+            }
+        ],
+        "facilities": [
+            {
+                "title": "Most Popular Facilities",
+                "details": [
+                    {
+                        "image": "/assets/images/smoke-free.svg",
+                        "alt": "smoke-free",
+                        "label": "Non-smoking rooms"
+                    },
+                    {
+                        "image": "/assets/images/kitchen-cooker.svg",
+                        "alt": "kitchen-cooker",
+                        "label": "Kitchen"
+                    },
+                    {
+                        "image": "/assets/images/wifi.svg",
+                        "alt": "wifi",
+                        "label": "Free WiFi"
+                    },
+                    {
+                        "image": "/assets/images/living-area.svg",
+                        "alt": "living-area",
+                        "label": "Living Area"
+                    },
+                    {
+                        "image": "/assets/images/car.svg",
+                        "alt": "car",
+                        "label": "Parking"
+                    },
+                    {
+                        "image": "/assets/images/security.svg",
+                        "alt": "security",
+                        "label": "Safety & security"
+                    }
+                ]
+            }
+        ],
+        "available_rooms": [
+            {
+                "title": "Available Rooms",
+                "details": [
+                    {
+                        "title": "Standard twin room",
+                        "room_type": [
+                            {
+                                "title": "Room Type",
+                                "sub_detail": [
+                                    {
+                                        "image": "/assets/images/smoke-free.svg",
+                                        "alt": "smoke-free",
+                                        "label": "Non-smoking rooms"
+                                    },
+                                    {
+                                        "image": "/assets/images/wifi.svg",
+                                        "alt": "wifi",
+                                        "label": "Free WiFi"
+                                    },
+                                    {
+                                        "image": "/assets/images/living-area.svg",
+                                        "alt": "living-area",
+                                        "label": "Living Area"
+                                    },
+                                    {
+                                        "image": "/assets/images/car.svg",
+                                        "alt": "car",
+                                        "label": "Parking"
+                                    },
+                                    {
+                                        "image": "/assets/images/security.svg",
+                                        "alt": "security",
+                                        "label": "Safety & security"
+                                    }
+                                ]
+                            }
+                        ],
+                        "benefit": [
+                            {
+                                "title": "Benefit",
+                                "sub_detail": [
+                                    {
+                                        "label": "Your price includes:"
+                                    },
+                                    {
+                                        "label": "Pay at the hotel"
+                                    },
+                                    {
+                                        "label": "Pay nothing until March 30, 202"
+                                    },
+                                    {
+                                        "label": "Free cancellation before April 1, 2022"
+                                    }
+                                ]
+                            }
+                        ],
+                        "sleep": [
+                            {
+                                "title": "Sleeps",
+                                "image": "/assets/images/sleeps-icon.svg",
+                                "alt": "icon"
+                            }
+                        ],
+                        "pricing": [
+                            {
+                                "title": "Price for 5 nights",
+                                "price": 1200,
+                                "label": "Includes taxes and charges"
+                            }
+                        ],
+                        "room_select": [
+                            {
+                                "title": "Select Rooms",
+                                "selecter": [
+                                    {
+                                        "label": "1 (US $1200)"
+                                    },
+                                    {
+                                        "label": "2 (US $1200)"
+                                    },
+                                    {
+                                        "label": "3 (US $1200)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "totel": [
+                            {
+                                "title": "Totel",
+                                "room_label": "2 Rooms",
+                                "btn_label": "Reserve Now",
+                                "price": 1900
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Deluxe King Room",
+                        "room_type": [
+                            {
+                                "title": "Room Type",
+                                "sub_detail": [
+                                    {
+                                        "image": "/assets/images/smoke-free.svg",
+                                        "alt": "smoke-free",
+                                        "label": "Non-smoking rooms"
+                                    },
+                                    {
+                                        "image": "/assets/images/wifi.svg",
+                                        "alt": "wifi",
+                                        "label": "Free WiFi"
+                                    },
+                                    {
+                                        "image": "/assets/images/living-area.svg",
+                                        "alt": "living-area",
+                                        "label": "Living Area"
+                                    },
+                                    {
+                                        "image": "/assets/images/car.svg",
+                                        "alt": "car",
+                                        "label": "Parking"
+                                    },
+                                    {
+                                        "image": "/assets/images/security.svg",
+                                        "alt": "security",
+                                        "label": "Safety & security"
+                                    }
+                                ]
+                            }
+                        ],
+                        "benefit": [
+                            {
+                                "title": "Benefit",
+                                "sub_detail": [
+                                    {
+                                        "label": "Your price includes:"
+                                    },
+                                    {
+                                        "label": "Pay at the hotel"
+                                    },
+                                    {
+                                        "label": "Pay nothing until March 30, 202"
+                                    },
+                                    {
+                                        "label": "Free cancellation before April 1, 2022"
+                                    }
+                                ]
+                            }
+                        ],
+                        "sleep": [
+                            {
+                                "title": "Sleeps",
+                                "image": "/assets/images/sleeps-icon.svg",
+                                "alt": "icon"
+                            }
+                        ],
+                        "pricing": [
+                            {
+                                "title": "Price for 5 nights",
+                                "price": 1800,
+                                "label": "Includes taxes and charges"
+                            }
+                        ],
+                        "room_select": [
+                            {
+                                "title": "Select Rooms",
+                                "selecter": [
+                                    {
+                                        "label": "1 (US $1200)"
+                                    },
+                                    {
+                                        "label": "2 (US $1200)"
+                                    },
+                                    {
+                                        "label": "3 (US $1200)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "totel": [
+                            {
+                                "title": "Totel",
+                                "room_label": "5 Rooms",
+                                "btn_label": "Reserve Now",
+                                "price": 3600
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reviews": [
+            {
+                "title": "Guest reviews",
+                "review": [
+                    {
+                        "user_name": "Tonko Mory",
+                        "image": "/assets/images/testimonial-img2.png",
+                        "alt": "testimonial-img2",
+                        "label": "Nice two level apartment in great London location. Located in quiet small street, but just 50 meters from main street and bus stop. Tube station is short walk, just like two grocery stores.",
+                        "rating": 3,
+                        "review": "5.2",
+                        "date": "March 2022"
+                    },
+                    {
+                        "user_name": "Tyler Bailey",
+                        "image": "/assets/images/team-pearson-img3.jpg",
+                        "alt": "team-pearson-img3",
+                        "label": "Nice two level apartment in great London location. Located in quiet small street, but just 50 meters from main street and bus stop. Tube station is short walk, just like two grocery stores.",
+                        "rating": 4,
+                        "review": "4.8",
+                        "date": "March 2022"
+                    }
+                ],
+                "exceptional": [
+                    {
+                        "review": "5.0",
+                        "title": "Exceptional",
+                        "total_review": "3,014",
+                        "details": [
+                            {
+                                "title": "Location",
+                                "value": 4.6,
+                                "rating": {
+                                    "width": "90%"
+                                }
+                            },
+                            {
+                                "title": "Staff",
+                                "value": 4.2,
+                                "rating": {
+                                    "width": "80%"
+                                }
+                            },
+                            {
+                                "title": "Cleanliness",
+                                "value": 4.2,
+                                "rating": {
+                                    "width": "90%"
+                                }
+                            },
+                            {
+                                "title": "Value for money",
+                                "value": "5.0",
+                                "rating": {
+                                    "width": "85%"
+                                }
+                            },
+                            {
+                                "title": "Comfort",
+                                "value": 4.8,
+                                "rating": {
+                                    "width": "87%"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "reviews_label": "Leave Link Reply",
+        "reviews_btn_label": "Leave Link Reply"
+    }
+]

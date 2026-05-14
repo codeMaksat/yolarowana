@@ -1,0 +1,56 @@
+[
+    {
+        "title": "What our Travelers are saying",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+        "review": [
+            {
+                "rating": 4,
+                "comment": "Sed faucibus turpis in eu mi bibendum. Senectus et netus et malesuada fames ac turpis egestas. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Potenti nullam ac tortor vitae purus. Scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt.",
+                "image": "/assets/images/testimonial-img1.png",
+                "alt": "testimonial-img1",
+                "name": "John Borthe",
+                "location": "Newzealand-NZ"
+            },
+            {
+                "rating": 3,
+                "comment": "Nulla aliquet porttitor lacus luctus accumsan. Pharetra et ultrices neque ornare aenean euismod elementum nisi. Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt.",
+                "image": "/assets/images/testimonial-img2.png",
+                "alt": "testimonial-img2",
+                "name": "Brittany Clark",
+                "location": "San Francisco"
+            },
+            {
+                "rating": 4,
+                "comment": "Risus ultricies tristique nulla aliquet enim tortor at auctor. In aliquam sem fringilla ut morbi tincidunt augue. In nibh mauris cursus mattis molestie a iaculis at erat. Fusce ut placerat orci nulla. Condimentum mattis pellentesque id nibh tortor id aliquet.",
+                "image": "/assets/images/testimonial-img3.png",
+                "alt": "testimonial-img3",
+                "name": "Rome Shoue",
+                "location": "Antanio"
+            },
+            {
+                "rating": 5,
+                "comment": "Diam phasellus vestibulum lorem sed risus ultricies tristique. Sit amet nulla facilisi morbi tempus. Faucibus in ornare quam viverra orci sagittis eu volutpat. Tortor dignissim convallis aenean et tortor at risus viverra adipiscing. Lacinia at quis risus sed vulputate odio.",
+                "image": "/assets/images/testimonial-img4.png",
+                "alt": "testimonial-img4",
+                "name": "Leela clerk",
+                "location": "London"
+            },
+            {
+                "rating": 4,
+                "comment": "Pellentesque dignissim enim sit amet venenatis urna cursus. Tempus imperdiet nulla malesuada pellentesque elit. Sed tempus urna et pharetra. Sit amet cursus sit amet dictum sit. Sollicitudin nibh sit amet commodo.",
+                "image": "/assets/images/testimonial-img5.png",
+                "alt": "testimonial-img5",
+                "name": "Urna neque",
+                "location": "Spain"
+            },
+            {
+                "rating": 4,
+                "comment": "Ultricies integer quis auctor elit sed vulputate. Faucibus turpis in eu mi bibendum neque egestas congue quisque.",
+                "image": "/assets/images/testimonial-img6.png",
+                "alt": "testimonial-img6",
+                "name": "Christin churc",
+                "location": "Georgea"
+            }
+        ]
+    }
+]

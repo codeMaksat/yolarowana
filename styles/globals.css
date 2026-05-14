@@ -1,0 +1,823 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
+
+
+@layer base {
+
+    .btn {
+        @apply rounded-6xl flex font-red-hat-display items-center justify-center md:min-w-[155px] text-md md:text-lg font-semibold tracking-[0.04em] py-3 px-7 transition-all duration-500 max-w-max;
+    }
+
+    .btn-primary {
+        @apply bg-primary-900 text-white hover:bg-dark-900 hover:text-white;
+    }
+
+    .btn-light {
+        @apply bg-white text-dark-900 hover:bg-black hover:text-white;
+    }
+
+    .btn-md {
+        @apply py-2 px-4 text-md
+    }
+
+    .btn-lg {
+        @apply py-2.5 px-8 text-md
+    }
+
+    .btn-sm {
+        @apply py-2 px-5 text-sm
+    }
+
+    .btn-outline-primary {
+        @apply border border-primary-900 bg-transparent text-primary-900 hover:bg-primary-900 hover:text-white;
+    }
+
+    .link {
+        @apply text-primary-900 text-sm underline hover:text-dark-900 hover:no-underline;
+    }
+
+    .title {
+        @apply text-6xl leading-6xl
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-red-hat-display text-dark-900 font-bold mb-4;
+    }
+
+    h1 {
+        @apply text-3xl leading-3xl md:text-4xl lg:text-6xl md:leading-4xl lg:leading-6xl
+    }
+
+    h2 {
+        @apply text-30 leading-3xl md:text-3xl md:leading-3xl lg:text-4xl lg:leading-4xl
+    }
+
+    h3 {
+        @apply text-30 leading-3xl md:text-3xl md:leading-3xl lg:text-4xl lg:leading-4xl
+    }
+
+    h4 {
+        @apply text-xl leading-xl md:text-2xl md:leading-2xl lg:text-3xl lg:leading-3xl
+    }
+
+    h5 {
+        @apply text-xl leading-xl lg:text-1xl lg:leading-2xl
+    }
+
+    h6 {
+        @apply text-xl leading-xl
+    }
+
+    body {
+        @apply font-normal font-red-hat-display
+    }
+
+    p {
+        @apply text-md md:text-lg md:leading-[26px] mb-6 font-normal
+    }
+
+    .preloader {
+        @apply z-50 fixed top-0 left-0 w-full h-full bg-primary-900 flex items-center justify-center
+    }
+
+    .booking-form .form-control {
+        @apply text-md font-normal text-dark-800 w-full py-4 md:py-1 leading-2xl md:h-[40px] focus:outline-0;
+    }
+
+    .booking-2 .form-control {
+        @apply bg-gray-200 border border-primary-800 px-3 h-[50px];
+    }
+
+    section {
+        @apply py-10 md:py-16
+    }
+
+    .header.sticky-header {
+        @apply sticky top-0 left-0 w-full bg-white z-5 border-b border-gray-100
+    }
+
+    .search-popup.open {
+        @apply top-0
+    }
+
+    .main-menu>ul>li {
+        @apply py-2 lg:py-5
+    }
+
+    .main-menu>ul>li>a {
+        @apply border border-transparent rounded-6xl py-2 px-3 lg:px-4 block
+    }
+
+    .main-menu>ul>li .sub-menu-list li {
+        @apply border-0
+    }
+
+    .main-menu>ul>li .sub-menu-list li a {
+        @apply font-normal lg:leading-[40px] hover:text-primary-900 px-0 py-3 lg:p-0;
+    }
+
+    .main-menu>ul>li .sub-menu-list:before {
+        @apply hidden lg:block absolute -top-2.5 left-8
+    }
+
+    .main-menu>ul>li .sub-menu-list:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+    }
+
+    .main-menu ul li.active>a {
+        @apply border-primary-900
+    }
+
+    .main-menu ul li ul li.active>a {
+        @apply text-primary-900
+    }
+
+    .mega-menu ul li a {
+        @apply font-normal lg:leading-[40px] hover:text-primary-900
+    }
+
+    .hero-content-slider select.form-control {
+        background-image: url('../public/assets/images/arrow-down-fill.svg');
+        background-repeat: no-repeat;
+        background-size: 13px;
+        background-position: right center;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    .category-box {
+        @apply before:pt-[70%] before:block
+    }
+
+    .category-box img {
+        @apply absolute top-0 left-0 w-full h-full object-cover
+    }
+
+    .category-box .categories-detail {
+        @apply absolute top-0 left-0 w-full h-full
+    }
+
+    .category-box .categories-detail a {
+        @apply w-full h-full grid content-end text-center text-white p-3 md:p-6
+    }
+
+    .category-box h4 {
+        @apply text-white text-md md:text-2xl mb-3
+    }
+
+    .tours-btn {
+        @apply py-0 px-2 md:px-5 font-extrabold tracking-[0.08em] uppercase py-[1px] mx-auto bg-primary-900 inline-block max-w-fit text-[10px] sm:text-[12px] rounded-full md:rounded-md
+    }
+
+    .top-destinations-section-three .categories-detail a {
+        @apply text-left
+    }
+
+    .about-section {
+        background: linear-gradient(254.3deg, #FAF2F9 3.21%, #F3EEFD 60.97%);
+    }
+
+    .ul-list li,
+    .list li {
+        @apply mb-3
+    }
+
+    .ul-list li:before {
+        background: url('../public/assets/images/check-icon.svg') no-repeat 0 0;
+    }
+
+    .list li:before {
+        background: url('../public/assets/images/check-icon.svg') no-repeat 0 0;
+    }
+
+    .ul-list li,
+    .list li,
+    .list-style-2 li,
+    .ul-included li {
+        @apply pl-10 relative before:w-[21px] before:h-[12px] before:absolute before:top-2 before:left-0 before:text-primary-900;
+    }
+
+    .list li {
+        @apply before:top-3
+    }
+
+    .ul-included li {
+        @apply pl-8
+    }
+
+    .ul-included li:before {
+        background: url('../public/assets/images/check-single.svg') no-repeat 0 0;
+    }
+
+    .ul-included li:before {
+        @apply w-[22px] h-[22px] top-1
+    }
+
+    .list-excluded li {
+        @apply pl-8
+    }
+
+    .ul-included li:last-child,
+    .list-excluded li:last-child {
+        @apply mb-0
+    }
+
+    .list-excluded li:before {
+        background: url('../public/assets/images/cross_duotone-icon.svg') no-repeat 0 0;
+        background-size: 100%;
+    }
+
+    .list-excluded li:before {
+        @apply w-5 h-5 top-1
+    }
+
+    .list-style-2 li {
+        @apply pl-8 mb-2
+    }
+
+    .list-style-2 li:before {
+        background: url('../public/assets/images/check-full.svg') no-repeat 0 0;
+    }
+
+    .list-style-2 li:before {
+        @apply w-[18px] h-[18px] top-1
+    }
+
+    .testimonial-section {
+        background: linear-gradient(180deg, #F3EEFD 0%, #F8F1F9 100%);
+    }
+
+    .slider-arrow {
+        @apply flex items-center justify-end gap-3
+    }
+
+    .slider-all .arrow,
+    .slider-arrow .arrow {
+        box-shadow: 0px 2px 5px rgba(100, 92, 187, 0.16);
+    }
+
+    .slider-all .arrow {
+        @apply m-0 w-9 h-9 -mt-4 text-white transition-all rounded-full bg-white/60 flex items-center justify-center opacity-100 hover:bg-primary-900 hover:text-white;
+    }
+
+    .slider-arrow .arrow {
+        @apply static m-0 w-9 h-9 text-primary-900 transition-all rounded-full bg-white flex items-center justify-center opacity-100 hover:bg-primary-900 hover:text-white;
+    }
+
+    .slider-all .arrow.swiper-button-disabled,
+    .slider-arrow .arrow.swiper-button-disabled {
+        @apply opacity-50
+    }
+
+    .slider-all .arrow:after,
+    .slider-arrow .arrow:after {
+        @apply text-md font-bold
+    }
+
+    .footer-bg:before {
+        content: '';
+        background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%);
+    }
+
+    .footer-bg:before {
+        @apply absolute bottom-0 left-0 w-full h-full
+    }
+
+    .footer-title {
+        @apply text-dark-900 mb-4 text-md font-bold leading-normal
+    }
+
+    .footer-title:after {
+        content: '';
+        background: url('../public/assets/images/footer-title-shape.svg') no-repeat 0 0;
+        background-size: 23px;
+    }
+
+    .footer-title:after {
+        @apply block w-6 h-[3px] mt-2
+    }
+
+    .about-section2 .ul-list li:before {
+        background: url('../public/assets/images/airplane-helix.svg') no-repeat 0 0;
+        background-size: 30px;
+    }
+
+    .about-section2 .ul-list li {
+        @apply pl-12 relative before:w-[30px] before:h-[30px] before:absolute before:top-2 before:left-0 before:text-primary-900;
+    }
+
+    .customer-reviews-slider .swiper-pagination .swiper-pagination-bullet {
+        @apply w-3 h-3 rounded-full bg-primary-900 border border-primary-900 opacity-100
+    }
+
+    .customer-reviews-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        @apply bg-transparent border-primary-900
+    }
+
+    .form .form-control {
+        @apply w-full border border-primary-800 bg-[#F8F4FF] rounded-full py-3 sm:py-4 px-5 md:px-7 text-black text-md md:text-xl hover:border-primary-900;
+    }
+
+    .footer-part input::-webkit-input-placeholder,
+    .form-control::-webkit-input-placeholder {
+        @apply text-dark-800
+    }
+
+    .footer-part input::-moz-placeholder,
+    .form-control::-moz-placeholder {
+        @apply text-dark-800
+    }
+
+    .footer-part input:-ms-input-placeholder,
+    .form-control:-ms-input-placeholder {
+        @apply text-dark-800
+    }
+
+    .footer-part input:-moz-placeholder,
+    .form-control:-moz-placeholder {
+        @apply text-dark-800
+    }
+
+    .special-offers-discounts .slider-arrow .arrow {
+        @apply bg-transparent border border-primary-800/30 text-white hover:bg-white hover:text-primary-900;
+    }
+
+    .hero-arrow .swiper-pagination .swiper-pagination-current:before,
+    .hero-arrow .swiper-pagination .swiper-pagination-total:before {
+        content: '0';
+        display: inline-block;
+    }
+
+    .hero-arrow .swiper-pagination .swiper-pagination-current {
+        @apply text-25 md:text-3xl
+    }
+
+    .hero-slider-section .swiper h6,
+    .hero-slider-section .swiper h1 {
+        transform: translateY(300px);
+        transition: all 1s ease;
+    }
+
+    .hero-slider-section .swiper h1 {
+        transition-delay: 0.1s;
+    }
+
+    .hero-slider-section .swiper .swiper-slide.swiper-slide-active h6,
+    .hero-slider-section .swiper .swiper-slide.swiper-slide-active h1 {
+        transform: translateY(0px);
+    }
+
+
+    .form textarea.form-control {
+        @apply rounded-5xl resize-none h-[100px]
+    }
+
+    .checkcontainer {
+        @apply text-dark-800 relative pl-8 text-md block cursor-pointer
+    }
+
+    .checkcontainer input {
+        @apply absolute opacity-0
+    }
+
+    .checkcontainer .checkmark {
+        @apply absolute top-1.5 left-0 w-5 h-5 border border-primary-800 bg-[#F8F4FF] rounded-sm
+    }
+
+    .checkcontainer .checkmark:after {
+        content: '';
+        position: absolute;
+        left: 6px;
+        top: 3px;
+        width: 6px;
+        height: 10px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        display: none;
+    }
+
+    .checkcontainer input:checked~.checkmark {
+        @apply bg-primary-900 border-primary-900
+    }
+
+    .checkcontainer input:checked~.checkmark:after {
+        @apply block;
+    }
+
+    .checkcontainer .radiobtn {
+        @apply absolute top-1.5 left-2 w-[13px] h-[13px] border border-primary-800 bg-white rounded-full
+    }
+
+    .checkcontainer .radiobtn:after {
+        content: '';
+        display: none;
+    }
+
+    .checkcontainer .radiobtn:after {
+        @apply absolute top-0.5 left-0.5 w-[7px] h-[7px] rounded-full bg-primary-900
+    }
+
+    .checkcontainer input:checked~.radiobtn {
+        @apply border-primary-900
+    }
+
+    .checkcontainer input:checked~.radiobtn:after {
+        @apply block;
+    }
+
+    .form .btn {
+        @apply min-w-[185px]
+    }
+
+    .category-checkbox .checkmark {
+        @apply top-0.5;
+    }
+
+    .select-box {
+        @apply w-full shadow-select-box rounded-full py-3 px-8 text-sm font-normal border border-white outline-0 hover:border-primary-900;
+    }
+
+    .select-box {
+        background: url('../public/assets/images/arrow-down.svg') no-repeat center right 12px #fff;
+        background-size: 12px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    select {
+        @apply outline-none
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    .select-box-style-2 {
+        background-color: #EAE4F6;
+        border-color: #EAE4F6;
+        box-shadow: none;
+    }
+
+    .search-location .form-control {
+        @apply w-full shadow-select-box rounded-full py-3 px-9 text-sm font-normal border border-white outline-0 hover:border-primary-900
+    }
+
+    .faqs-list .accordion-list h5:before {
+        content: '+';
+    }
+
+    .faqs-list .accordion-list h5.active:before {
+        content: '-';
+    }
+
+    .faqs-list .accordion-list h5:before {
+        @apply absolute top-1/2 -translate-y-1/2 left-0 text-25 font-bold
+    }
+
+    .search-location textarea.form-control {
+        @apply rounded-5xl resize-none h-32
+    }
+
+    .blog-detail p {
+        @apply text-md md:text-lg leading-normal mb-6 text-dark-800
+    }
+
+    .blog-detail ul {
+        @apply mb-8 pl-5
+    }
+
+    .blog-detail ul li {
+        @apply list-disc
+    }
+
+    .related-post-section:before {
+        background: linear-gradient(180deg, #EAE4F6 0%, rgba(234, 228, 246, 0.00) 100%);
+    }
+
+    .dashboard-list {
+        @apply m-0 space-y-3 md:space-y-4 p-0 text-lg font-semibold text-dark-900
+    }
+
+    .dashboard-list li a {
+        @apply block py-3 px-3 flex items-center gap-3 rounded-lg text-dark-900 hover:text-primary-900 hover:bg-primary-800;
+    }
+
+    .dashboard-list li.active a {
+        @apply text-primary-900 bg-primary-800
+    }
+
+    .dashboard-list li a span {
+        @apply w-6
+    }
+
+    .table-list {
+        @apply w-full text-left text-15
+    }
+
+    .table-list tr th {
+        @apply border-b border-dashed border-primary-800 font-semibold text-dark-900 whitespace-nowrap py-3 px-3
+    }
+
+    .table-list tr td {
+        @apply py-3 px-3 border-b border-primary-800 whitespace-normal align-top leading-normal
+    }
+
+    .table-list tr:last-child td {
+        @apply border-0
+    }
+
+    .table-history tr:last-child td {
+        @apply border-b
+    }
+
+    .table-history tr th {
+        @apply bg-primary-800 leading-[21px]
+    }
+
+    .table-history tr td {
+        @apply py-3 md:py-6
+    }
+
+    .payment-list-link {
+        @apply sm:flex justify-between space-y-12 sm:space-y-0 mb-10 md:mb-20 relative before:w-0.5 before:sm:w-[calc(100%-80px)] before:h-[calc(100%-50px)] before:sm:h-0.5 before:bg-gray-300 before:absolute before:top-7 before:-mt-0.5 before:left-6 before:sm:left-8;
+    }
+
+    .payment-list-link li {
+        @apply relative
+    }
+
+    .payment-list-link li a {
+        @apply flex items-center gap-7 sm:block sm:text-center block text-xl font-bold text-gray-300
+    }
+
+    .payment-list-link li a span {
+        @apply w-[50px] h-[50px] rounded-full flex items-center justify-center sm:mx-auto sm:mb-2.5 text-white bg-gray-300
+    }
+
+    .payment-list-link li.active a {
+        @apply text-primary-900 text-black
+    }
+
+    .payment-list-link li.active a span {
+        @apply bg-primary-900
+    }
+
+    .contact-details-form .form-control {
+        @apply text-md md:text-lg rounded-[3px] px-5 py-2
+    }
+
+    .contact-details-form textarea.form-control {
+        @apply text-md md:text-lg rounded-[3px] px-5 py-2
+    }
+
+    .mfp-close-btn-in .mfp-close {
+        background: url('../public/assets/images/close.svg') no-repeat center;
+        background-size: contain;
+    }
+
+    .mfp-close-btn-in .dark-close .mfp-close {
+        background: url('../public/assets/images/close-dark.svg') no-repeat center;
+        background-size: contain;
+    }
+
+    .mfp-close-btn-in .mfp-close {
+        @apply text-white flex text-[0px] right-2 top-3 hover:text-black w-9 h-9 opacity-100 items-center justify-center hover:opacity-75
+    }
+
+    .mfp-close:active {
+        @apply top-3
+    }
+
+    .mfp-close-btn-in .hotel-popup .mfp-close,
+    .mfp-close-btn-in .tour-popup .mfp-close {
+        @apply top-1
+    }
+
+    .portfolio-list li.current a {
+        @apply !bg-primary-900 !text-white
+    }
+
+    .trending-attractions-slider .pagination-dotte .swiper-pagination-progressbar-fill {
+        @apply bg-primary-900
+    }
+
+    .popular-tours-slider .pagination-dotte .swiper-pagination-bullet,
+    .testimonial-full-slider .swiper-pagination .swiper-pagination-bullet {
+        @apply w-[10px] h-[10px] bg-transparent border border-primary-900
+    }
+
+    .popular-tours-slider .pagination-dotte .swiper-pagination-bullet.swiper-pagination-bullet-active,
+    .testimonial-full-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        @apply bg-primary-900
+    }
+    .MuiSlider-colorPrimary.MuiSlider-sizeMedium.css-187mznn-MuiSlider-root{
+        @apply text-primary-900
+    }
+    .trending-attractions-slider .swiper-pagination {
+      @apply bg-primary-800 
+    }
+    .trending-attractions-slider .swiper-pagination .swiper-pagination-progressbar-fill {
+    @apply bg-primary-900
+    }
+
+    .header-style3.sticky-header {
+        @apply bg-dark-900 border-dark-900 fixed
+    }
+
+    .header-style3 .main-menu ul li.menu-item-has-children>a:after {
+        filter: invert(100);
+    }
+
+    .header-style3 .main-menu ul>li:hover>a {
+        @apply lg:text-white
+    }
+
+    .header-style3 .main-menu ul li ul li:hover>a {
+        @apply text-primary-900
+    }
+
+    .loader_circle_1 {
+        animation: rotateClockwise 1.5s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+
+    .loader_circle_2 {
+        animation: rotateClockwise 2.5s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+
+    .loader_circle_3 {
+        animation: rotateClockwise 3.5s linear infinite;
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+
+    @keyframes rotateClockwise {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .preloader-inner svg .shape-3,
+    .preloader-inner svg .shape-4,
+    .preloader-inner svg .shape-5,
+    .preloader-inner svg .shape-6,
+    .preloader-inner svg .shape-7 {
+        animation: scrolling 2s linear infinite;
+    }
+
+    .preloader-inner svg .shape-8,
+    .preloader-inner svg .shape-9 {
+        animation: scrolling1 3s linear infinite;
+    }
+
+    @keyframes scrolling {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(-100px);
+        }
+    }
+
+    @keyframes scrolling1 {
+        0% {
+            opacity: 0;
+            transform: translateX(60px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(-60px);
+        }
+    }
+
+    .mfp-gallery .mfp-close {
+        @apply top-1
+    }
+
+    @media (min-width: 992px) {
+        .main-menu ul li:hover>a {
+            @apply text-primary-900
+        }
+
+        .main-menu ul li:hover .mega-menu {
+            @apply block
+        }
+
+        .main-menu ul li.menu-item-has-children>a {
+            @apply flex items-center gap-1
+        }
+
+        .main-menu ul li.menu-item-has-children>a:after {
+            content: '';
+            background: url('../public/assets/images/arrow-down.svg') no-repeat center;
+            width: 15px;
+            height: 11px;
+            background-size: 100%;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .main-menu {
+            @apply fixed top-0 -left-full transition-all w-full h-full z-50 bg-white py-10 max-w-[300px]
+        }
+
+        .main-menu ul {
+            @apply overflow-y-auto h-full w-full;
+        }
+
+        .main-menu ul li {
+            @apply px-5 border-b border-primary-800 relative
+        }
+
+        .main-menu>ul>li>a {
+            @apply max-w-fit text-md
+        }
+
+        .main-menu ul li .mega-menu h4 {
+            @apply text-md
+        }
+
+        .main-menu ul li .mega-menu ul {
+            @apply mb-5
+        }
+
+        .main-menu ul li .mega-menu ul li {
+            @apply border-0
+        }
+
+        .main-menu ul li ul li a {
+            @apply py-1 block text-md
+        }
+
+        .main-menu ul li .caret-arrow {
+            @apply absolute top-0 right-2 w-10 h-[55px] flex justify-center items-center
+        }
+
+        .main-menu ul li .caret-arrow:before {
+            content: '';
+            display: block;
+            background: url('../public/assets/images/menu-arrow.svg') no-repeat center center;
+            background-size: 16px;
+            width: 18px;
+            height: 10px;
+        }
+
+        .main-menu ul li .caret-arrow.sub-active:before {
+            @apply rotate-180
+        }
+
+        .header-open .overlay {
+            @apply fixed top-0 left-0 w-full h-full bg-black/80
+        }
+
+        .header-open .main-menu {
+            @apply left-0
+        }
+    }
+
+    @media (max-width: 767px) {
+        .special-offers-section .shape-bg {
+            @apply rounded-4xl
+        }
+
+        .popular-tours-grid .swiper-pagination1 {
+            @apply w-auto
+        }
+    }
+
+
+    @media (max-width: 639px) {
+        .cart-table thead {
+            @apply hidden
+        }
+
+        .cart-table tr td {
+            @apply block py-3
+        }
+    }
+
+}

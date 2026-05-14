@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Adventure & Activity",
+        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+        "product": [
+            {
+                "icon": "/assets/images/hiking-icon.svg",
+                "title": "Trakking",
+                "subtitle": "5 Tours from $660.00",
+                "tours": [
+                    {
+                        "image": "/assets/images/adventure-activity-img1.jpg",
+                        "name": "Caño Cristales River Trip",
+                        "price": "$131.10",
+                        "oldPrice": "$138.00"
+                    },
+                    {
+                        "image": "/assets/images/adventure-activity-img2.jpg",
+                        "name": "Waterfalls, Geysers and Glacier",
+                        "price": "$234.00"
+                    },
+                    {
+                        "image": "/assets/images/adventure-activity-img3.jpg",
+                        "name": "Mount Kilimanjaro, Machame",
+                        "price": "$560.00",
+                        "oldPrice": "$650.00"
+                    }
+                ]
+            },
+            {
+                "icon": "/assets/images/beach-tours-icon.svg",
+                "title": "Beach tours",
+                "subtitle": "4 Tours from $450.00",
+                "tours": [
+                    {
+                        "image": "/assets/images/adventure-activity-img4.jpg",
+                        "name": "Itali beach, and grace",
+                        "price": "$400.00",
+                        "oldPrice": "$500.00"
+                    },
+                    {
+                        "image": "/assets/images/adventure-activity-img5.jpg",
+                        "name": "Landmannalaugar Beach",
+                        "price": "$333.00",
+                        "oldPrice": "$444.00"
+                    },
+                    {
+                        "image": "/assets/images/adventure-activity-img6.jpg",
+                        "name": "Maladivs luxurries villas",
+                        "price": "$900.00",
+                        "oldPrice": "$1050.00"
+                    }
+                ]
+            },
+            {
+                "icon": "/assets/images/adventurer-icon.svg",
+                "title": "Adventure",
+                "subtitle": "6 Tours from $345.00",
+                "tours": [
+                    {
+                        "image": "/assets/images/adventure-activity-img7.jpg",
+                        "name": "Orca Camp Kayaking Trip",
+                        "price": "$445.00",
+                        "oldPrice": "$543.00"
+                    },
+                    {
+                        "image": "/assets/images/adventure-activity-img8.jpg",
+                        "name": "Adventure Colombia",
+                        "price": "$200.00",
+                        "oldPrice": "$300.00"
+                    },
+                    {
+                        "image": "/assets/images/adventure-activity-img9.jpg",
+                        "name": "Experience Greece",
+                        "price": "$550.00",
+                        "oldPrice": "$650.00"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,250 @@
+[
+    {
+        "title": "Africa – Amazing African Safari",
+        "icon": "fa-solid fa-location-dot",
+        "icon_label": "Soldue, Andorra",
+        "image": "/assets/images/tour-product-detail-img.jpg",
+        "alt": "tour-product-detail-img",
+        "detail": [
+            {
+                "title": "Africa – Amazing African Safari",
+                "rating": 4,
+                "review": 1,
+                "service": [
+                    {
+                        "image": "/assets/images/clock-icon.svg",
+                        "alt": "clock-icon",
+                        "width": 20,
+                        "title": "Duration:",
+                        "label": "11h"
+                    },
+                    {
+                        "image": "/assets/images/group-user-icon.svg",
+                        "alt": "group-user-icon",
+                        "width": 22,
+                        "title": "Group size:",
+                        "label": "52"
+                    },
+                    {
+                        "image": "/assets/images/train-icon.svg",
+                        "alt": "train-icon",
+                        "width": 24,
+                        "title": "Near public transportation",
+                        "label": ""
+                    },
+                    {
+                        "image": "/assets/images/cross_duotone-icon.svg",
+                        "alt": "cross_duotone-icon",
+                        "width": 24,
+                        "title": "Free cancellation",
+                        "label": ""
+                    }
+                ],
+                "overview": [
+                    {
+                        "title": "Overview",
+                        "labels": [
+                            {
+                                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis. Odio tempor orci dapibus ultrices. Magna fringilla urna porttitor rhoncus dolor purus non. Ac ut consequat semper viverra nam libero justo laoreet. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. Libero id faucibus nisl tincidunt eget nullam non nisi. Tellus molestie nunc non blandit massa. Quam quisque id diam vel quam. Ac tortor vitae purus faucibus. Ultrices tincidunt arcu non sodales. Amet nisl purus in mollis. Volutpat est velit egestas dui id ornare arcu odio ut. Enim facilisis gravida neque convallis."
+                            },
+                            {
+                                "label": "Sit amet nisl suscipit adipiscing bibendum. Tortor pretium viverra suspendisse potenti. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Quam adipiscing vitae proin sagittis nisl. Duis at tellus at urna condimentum mattis pellentesque id nibh. Et leo duis ut diam quam nulla. Nascetur ridiculus mus mauris vitae ultricies leo. Morbi tristique senectus et netus et malesuada. Egestas pretium aenean pharetra magna ac placerat vestibulum. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Velit scelerisque in dictum non consectetur."
+                            }
+                        ]
+                    }
+                ],
+                "included": [
+                    {
+                        "title": "What's Included",
+                        "details": [
+                            {
+                                "label": "Entry ticket to Harry Potter Warner Bros Studio Tour London"
+                            },
+                            {
+                                "label": "Return transfers in air-conditioned coach"
+                            },
+                            {
+                                "label": "Food and drinks"
+                            },
+                            {
+                                "label": "Digital guide available in 10 different languages at additional cost"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "photo": [
+            {
+                "title": "Photos",
+                "images": [
+                    {
+                        "image": "/assets/images/photo-1.jpg",
+                        "alt": "tour-product-detail-img"
+                    },
+                    {
+                        "image": "/assets/images/tour-product-detail-img.jpg",
+                        "alt": "tour-product-detail-img"
+                    },
+                    {
+                        "image": "/assets/images/photo-1.jpg",
+                        "alt": "tour-product-detail-img"
+                    },
+                    {
+                        "image": "/assets/images/tour-product-detail-img.jpg",
+                        "alt": "tour-product-detail-img"
+                    }
+                ]
+            }
+        ],
+        "itinerary": [
+            {
+                "title": "Itinerary",
+                "details": [
+                    {
+                        "day": 1,
+                        "title": "Barcelona – Zaragoza – Madrid",
+                        "content": "Sit amet nisl suscipit adipiscing bibendum. Tortor pretium viverra suspendisse potenti. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Quam adipiscing vitae proin sagittis nisl. Duis at tellus at urna condimentum mattis pellentesque id nibh. Et leo duis ut diam quam nulla."
+                    },
+                    {
+                        "day": 2,
+                        "title": "Zürich–Biel/Bienne–Neuchâtel–Geneva",
+                        "content": "Sit amet nisl suscipit adipiscing bibendum. Tortor pretium viverra suspendisse potenti. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Quam adipiscing vitae proin sagittis nisl. Duis at tellus at urna condimentum mattis pellentesque id nibh. Et leo duis ut diam quam nulla."
+                    },
+                    {
+                        "day": 3,
+                        "title": "Enchanting Engelberg",
+                        "content": "Sit amet nisl suscipit adipiscing bibendum. Tortor pretium viverra suspendisse potenti. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Quam adipiscing vitae proin sagittis nisl. Duis at tellus at urna condimentum mattis pellentesque id nibh. Et leo duis ut diam quam nulla."
+                    }
+                ]
+            }
+        ],
+        "map": [
+            {
+                "title": "Map",
+                "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15281460.907549841!2d72.108907873321!3d20.757869068510853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1693676006953!5m2!1sen!2sin"
+            }
+        ],
+        "faq": [
+            {
+                "title": "FAQ",
+                "question": [
+                    {
+                        "question": "I'm a solo traveller, is there a single supplement?",
+                        "answer": "Sit amet nisl suscipit adipiscing bibendum. Tortor pretium viverra suspendisse potenti. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Quam adipiscing vitae proin sagittis nisl. Duis at tellus at urna condimentum mattis pellentesque id nibh. Et leo duis ut diam quam nulla."
+                    },
+                    {
+                        "question": "Which currency is most widely accepted on this tour?",
+                        "answer": "Sit amet nisl suscipit adipiscing bibendum. Tortor pretium viverra suspendisse potenti. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Quam adipiscing vitae proin sagittis nisl. Duis at tellus at urna condimentum mattis pellentesque id nibh. Et leo duis ut diam quam nulla."
+                    },
+                    {
+                        "question": "Should I book pre/post tour accommodation?",
+                        "answer": "Sit amet nisl suscipit adipiscing bibendum. Tortor pretium viverra suspendisse potenti. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Quam adipiscing vitae proin sagittis nisl. Duis at tellus at urna condimentum mattis pellentesque id nibh. Et leo duis ut diam quam nulla."
+                    }
+                ]
+            }
+        ],
+        "side_bar": [
+            {
+                "title": "Book This Tour",
+                "from_title": "From",
+                "time_title": "Time",
+                "time1": "10:00",
+                "time2": "02:00",
+                "ticket_title": "Tickets",
+                "ticket1": "Adult (18+ years)",
+                "ticket1_price": 122.0,
+                "ticket2": "Children (0-18 years)",
+                "ticket2_price": 0.0,
+                "total_title": "Total",
+                "product": [
+                    {
+                        "slug": "tour-detail-2",
+                        "title": "Costa rita self drive",
+                        "price": 399,
+                        "image": "/assets/images/blog-img1.jpg",
+                        "alt": "img",
+                        "btn_label": "Read more"
+                    },
+                    {
+                        "slug": "tour-detail-2",
+                        "title": "Luxury Greece villa",
+                        "price": 1499,
+                        "image": "/assets/images/blog-img1.jpg",
+                        "alt": "img",
+                        "btn_label": "Read more"
+                    }
+                ]
+            }
+        ],
+        "reviews": [
+            {
+                "title": "Guest reviews",
+                "review": [
+                    {
+                        "user_name": "Tonko Mory",
+                        "image": "/assets/images/testimonial-img2.png",
+                        "alt": "testimonial-img2",
+                        "label": "Nice two level apartment in great London location. Located in quiet small street, but just 50 meters from main street and bus stop. Tube station is short walk, just like two grocery stores.",
+                        "rating": 3,
+                        "review": "5.2",
+                        "date": "March 2022"
+                    },
+                    {
+                        "user_name": "Tyler Bailey",
+                        "image": "/assets/images/team-pearson-img3.jpg",
+                        "alt": "team-pearson-img3",
+                        "label": "Nice two level apartment in great London location. Located in quiet small street, but just 50 meters from main street and bus stop. Tube station is short walk, just like two grocery stores.",
+                        "rating": 4,
+                        "review": "4.8",
+                        "date": "March 2022"
+                    }
+                ],
+                "exceptional": [
+                    {
+                        "review": "5.0",
+                        "title": "Exceptional",
+                        "total_review": "3,014",
+                        "details": [
+                            {
+                                "title": "Location",
+                                "value": 4.6,
+                                "rating": {
+                                    "width": "90%"
+                                }
+                            },
+                            {
+                                "title": "Staff",
+                                "value": 4.2,
+                                "rating": {
+                                    "width": "80%"
+                                }
+                            },
+                            {
+                                "title": "Cleanliness",
+                                "value": 4.2,
+                                "rating": {
+                                    "width": "90%"
+                                }
+                            },
+                            {
+                                "title": "Value for money",
+                                "value": "5.0",
+                                "rating": {
+                                    "width": "85%"
+                                }
+                            },
+                            {
+                                "title": "Comfort",
+                                "value": 4.8,
+                                "rating": {
+                                    "width": "87%"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

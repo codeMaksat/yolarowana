@@ -1,0 +1,20 @@
+[
+    {
+        "image": "/assets/images/guarantee-icon.svg",
+        "alt": "guarantee-icon",
+        "title": "Best Price Guarantee",
+        "label": "Ut morbi tincidunt augue interdum velit euismod in pellentesque"
+    },
+    {
+        "image": "/assets/images/appointment-icon.svg",
+        "alt": "guarantee-icon",
+        "title": "Easy & Quick Booking",
+        "label": "Ut morbi tincidunt augue interdum velit euismod in pellentesque"
+    },
+    {
+        "image": "/assets/images/headset-icon.svg",
+        "alt": "guarantee-icon",
+        "title": "Customer Care 24/7",
+        "label": "Ut morbi tincidunt augue interdum velit euismod in pellentesque"
+    }
+]
