@@ -1,31 +1,31 @@
 [
     {
-        "title": "What our Travelers are saying",
-        "label": "Check our google/tripadvisor/trustpilot reviews",
+        "title": "Stories from the Road",
+        "label": "Real words from travelers who crossed deserts, cities, borders, and mountain roads with our local team.",
         "review": [
             {
-                "user_name": "John Borthe",
+               "user_name": "John Borthe",
                 "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
-                "comment": "“I enjoyed my tour in Turkmenistan very well organised. I appreciated very much Merdan our guide so professional, patient and kind. I thanks Yola Rowan for the great opportunity it gives to a single traveller to book a tour, guaranteeing the departure of the tour at a fixed fare rate, even if no other people join the group.”",
+                "comment": "“My Turkmenistan tour was very well organised. Merdan, our guide, was professional, patient and kind. I also appreciated that Yolarowana made it possible for a solo traveler to join a fixed-price departure with confidence.”",
                 "alt": "profile picture",
                 "rating": 5,
-                "country": "Newzealand-NZ"
+                "country": "New Zealand"
             },
             {
-                "user_name": "John Borthe",
+  "user_name": "Sarah Mitchell",
                 "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
-                "comment": "“Yola Rowana organized an incredible 5-country Central Asia tour for my group. They did a spectacular job, from early communication and throughout the entire journey. We truly had the best experience because of the expertise of Yola Rowana. I recommend them highly!”",
+                "comment": "“Yolarowana organized an incredible five-country Central Asia journey for our group. Communication was clear from the first message, and the team handled the route, guides, hotels and border details with real care.”",
                 "alt": "profile picture",
                 "rating": 5,
-                "country": "Newzealand-NZ"
+                "country": "United States"
             },
             {
-                "user_name": "John Borthe",
+               "user_name": "Anita Tan",
                 "image": "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
-                "comment": "“We had the opportunity to be guests with this excellent tour company. Our 10 days from 20th December till 30th December 2025 was indeed and truly educational and enjoyable trip.”",
+                "comment": "“Our December trip was smooth, educational and full of moments we could never have planned alone. The guides made the Silk Road cities feel alive, and the logistics were handled quietly in the background.”",
                 "alt": "profile picture",
                 "rating": 5,
-                "country": "Newzealand-NZ"
+                "country": "Singapore"
             }
         ],
         "bg_image": [

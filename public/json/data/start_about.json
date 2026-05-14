@@ -1,7 +1,7 @@
 [
     {
-        "title": "Why Central Asia?",
-        "label": "Discover a world where ancient trade routes meet untouched natural wonders and timeless hospitality.",
+        "title": "Why travel Central Asia with us?",
+        "label": "Central Asia is beautiful, but it is not always simple to plan alone. Routes are long, borders matter, permits can be confusing, and the best experiences often depend on the right local people. We help you travel the region with trusted guides, smooth logistics, and real on-the-ground support.",
         "first_image": "/assets/images/about-img1.jpg",
         "first_alt": "about img 1",
         "second_image": "/assets/images/about-img2.jpg",
@@ -10,19 +10,19 @@
         "third_alt": "about img 3",
         "points": [
             {
-                "label": "Ancient Silk Road cities rich in history and architecture"
+                "label": "Local guides who know the roads, borders, and culture"
             },
             {
-                "label": "Diverse landscapes — deserts, mountains, and vast steppes"
+                "label": "Private and small group tours across the Five Stans"
             },
             {
-                "label": "Connect with local people and genuine hospitality"
+                "label": "Help with routes, timing, permits, and border crossings"
             },
             {
-                "label": "Authentic culture and traditions still alive today"
+                "label": "Carefully planned itineraries with room for real local moments"
             },
             {
-                "label": "Less crowded destinations for a more unique experience"
+                "label": "Support before, during, and after your Central Asia journey"
             }
         ],
         "contect": [
@@ -32,9 +32,9 @@
                 "label": "+993 61691909"
             },
             {
-                "slug": "mailto:journeya@gmail.com",
-                "icon": "fa-solid fa-phone",
-                "label": "journeya@gmail.com"
+                "slug": "mailto:info@yolarowana.com",
+                "icon": "fa-solid fa-envelope",
+                "label": "info@yolarowana.com"
             }
         ]
     }

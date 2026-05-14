@@ -16,7 +16,7 @@
                         "alt": "logo-dark"
                     }
                 ],
-                "details": "We create unforgettable journeys across Central Asia, offering authentic experiences, expert planning, and trusted local support.",
+                "details": "Yolarowana creates private and small group journeys across Central Asia — from Silk Road cities and desert routes to mountain roads, nomad culture, and local experiences.",
                 "icons": [
                     {
                         "slug": "https://www.facebook.com/",
@@ -44,23 +44,23 @@
                     "menu": [
                         {
                             "slug": "/about",
-                            "label": "About Us"
+                            "label": "About Yolarowana"
                         },
                         {
                             "slug": "/tour",
-                            "label": "Tour"
+                            "label": "Central Asia Tours"
                         },
                         {
-                            "slug": "/destinations",
+                            "slug": "/destination",
                             "label": "Destinations"
                         },
                         {
                             "slug": "/blog",
-                            "label": "Blog"
+                            "label": "Travel Guide"
                         },
                         {
                             "slug": "/contact",
-                            "label": "Contact Us"
+                            "label": "Plan a Custom Trip"
                         }
                     ]
                 }
@@ -72,19 +72,19 @@
                         {
                             "img": "/assets/images/pin.svg",
                             "alt": "call-sharp",
-                            "label": "57 Gurtly, Ashgabat, Turkmenistan"
+                            "label": "Ashgabat, Turkmenistan"
                         },
                         {
                             "img": "/assets/images/call-sharp.svg",
                             "alt": "call-sharp",
-                            "slug": "tel:+993 61691909",
+                            "slug": "tel:+99361691909",
                             "label": "+993 61691909"
                         },
                         {
                             "img": "/assets/images/mail-unread.svg",
                             "alt": "mail-sharp",
-                            "slug": "mailto:journeya@gmail.com",
-                            "label": "journeya@gmail.com"
+                            "slug": "mailto:info@yolarowana.com",
+                            "label": "info@yolarowana.com"
                         }
                     ]
                 }
@@ -140,7 +140,7 @@
         "last_data": [
             {
                 "label": "Copyright 2026",
-                "label1": "Yola Rowan",
+                "label1": "Yolarowana",
                 "label2": ". All Rights Reserved."
             }
         ],

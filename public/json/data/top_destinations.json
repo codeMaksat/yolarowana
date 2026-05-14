@@ -1,7 +1,7 @@
 [
     {
-        "title": "Top Destinations",
-        "label": "Explore the most iconic places across Central Asia — from ancient Silk Road cities to breathtaking natural landscapes",
+        "title": "Top Central Asia Destinations",
+        "label": "From blue-tiled Silk Road cities to burning deserts, mountain lakes, canyons, and nomad camps — choose the country that fits your journey.",
         "product": [
             {
                 "id": 1,
@@ -9,7 +9,7 @@
                 "image": "/assets/images/categories-img-1.jpg",
                 "alt": "turkmenistan img 1",
                 "title": "Turkmenistan",
-                "count": 3
+                "count": 6
             },
             {
                 "id": 2,
@@ -17,7 +17,7 @@
                 "image": "/assets/images/categories-img-2.jpg",
                 "alt": "uzbekistan img 2",
                 "title": "Uzbekistan",
-                "count": 5
+                "count": 8
             },
             {
                 "id": 3,
@@ -25,7 +25,7 @@
                 "image": "/assets/images/categories-img-3.jpg",
                 "alt": "Tajikistan img 3",
                 "title": "Tajikistan",
-                "count": 2
+                "count": 4
             },
             {
                 "id": 4,
@@ -47,8 +47,8 @@
                 "id": 6,
                 "slug": "/destination",
                 "image": "/assets/images/categories-img-6.jpg",
-                "alt": "Azerbaijan img 6",
-                "title": "Azerbaijan",
+                "alt": "central asia multi country tour img",
+                "title": "Multi-Country Tours",
                 "count": 6
             }
         ]

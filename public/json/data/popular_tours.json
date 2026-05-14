@@ -1,67 +1,72 @@
 [
     {
-        "title": "Popular Tours",
-        "label": "Discover our most booked and highly recommended journeys across Central Asia. Each tour is carefully designed to combine culture, history, and unforgettable landscapes.",
+        "title": "Popular Central Asia Tours",
+        "label": "Our most requested routes combine the places travelers dream about with the practical details that matter here — timing, borders, guides, roads, and the right pace.",
         "product": [
             {
                 "id": 7,
                 "slug": "/tour",
                 "image": "/assets/images/popular-tours-img1.jpg",
                 "alt": "popular-tours img 1",
-                "title": "Austrlia - 6 days in Vienna, Hallstatt",
-                "rating": 3,
-                "old_price": "2100.00",
-                "price": "1200.00",
-                "night": 5,
-                "day": 6
+                "title": "Turkmenistan Highlights Tour",
+                "rating": 5,
+                "old_price": "1450.00",
+                "price": "1180.00",
+                "night": 6,
+                "day": 7,
+                "label": "Ashgabat, Darvaza Gas Crater, Ancient Merv and Yangykala Canyon in one rare desert journey."
             },
             {
                 "id": 8,
                 "slug": "/tour",
                 "image": "/assets/images/popular-tours-img2.jpg",
                 "alt": "popular-tours img 2",
-                "title": "Asia",
-                "rating": 4,
-                "old_price": "2100.00",
-                "price": "1200.00",
-                "night": 5,
-                "day": 5
+                "title": "Uzbekistan Silk Road Classic",
+                "rating": 5,
+                "old_price": "1690.00",
+                "price": "1390.00",
+                "night": 7,
+                "day": 8,
+                "label": "Tashkent, Samarkand, Bukhara and Khiva — the classic route for first-time Silk Road travelers."
             },
             {
                 "id": 9,
                 "slug": "/tour",
                 "image": "/assets/images/popular-tours-img3.jpg",
                 "alt": "popular-tours img 3",
-                "title": "Italy",
+                "title": "Five Stans Central Asia Tour",
                 "rating": 5,
-                "old_price": "2100.00",
-                "price": "1200.00",
-                "night": 2,
-                "day": 2
+                "old_price": "3950.00",
+                "price": "3490.00",
+                "night": 14,
+                "day": 15,
+                "label": "A complete cross-border journey through Turkmenistan, Uzbekistan, Tajikistan, Kyrgyzstan and Kazakhstan."
             },
             {
                 "id": 10,
                 "slug": "/tour",
                 "image": "/assets/images/popular-tours-img4.jpg",
                 "alt": "popular-tours img 4",
-                "title": "Thailand",
+                "title": "Kyrgyzstan Nomad & Mountain Tour",
                 "rating": 4,
-                "old_price": "2100.00",
-                "price": "1200.00",
-                "night": 8,
-                "day": 8
+                "old_price": "1590.00",
+                "price": "1280.00",
+                "night": 7,
+                "day": 8,
+                "label": "Yurt camps, mountain lakes, eagle culture, wide valleys and life on the road with local guides."
             },
             {
                 "id": 11,
                 "slug": "/tour",
                 "image": "/assets/images/popular-tours-img5.jpg",
                 "alt": "popular-tours img 5",
-                "title": "Egypt",
-                "rating": 3,
-                "old_price": "2100.00",
-                "price": "1200.00",
-                "night": 3,
-                "day": 3
+                "title": "Uzbekistan & Turkmenistan Silk Road",
+                "rating": 5,
+                "old_price": "2490.00",
+                "price": "2190.00",
+                "night": 10,
+                "day": 11,
+                "label": "Blue domes, desert roads, Ancient Merv, Darvaza and two of Central Asia’s most fascinating countries."
             }
         ]
     }

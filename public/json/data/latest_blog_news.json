@@ -1,39 +1,39 @@
 [
     {
-        "title": "CA Expert Advice & Latest Updates",
-        "label": "Travel tips, destination guides, and the latest updates from Central Asia",
+        "title": "Central Asia Travel Guides & Local Advice",
+        "label": "Practical route ideas, destination notes, border tips, and honest planning advice for traveling across the Five Stans.",
         "product": [
             {
                 "slug": "blog-detail-1",
                 "image": "/assets/images/blog-img1.jpg",
                 "alt": "blog-img1",
-                "date": "Jan 10, 2023",
-                "title": "Change your place and get the fresh air",
-                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt..."
+                "date": "May 12, 2026",
+                "title": "How to Plan Your First Central Asia Trip",
+                "label": "A simple guide to choosing countries, timing your route, and deciding between private, group, and tailor-made tours."
             },
             {
                 "slug": "blog-detail-2",
                 "image": "/assets/images/blog-img2.jpg",
                 "alt": "blog-img2",
-                "date": "Feb 3, 2023",
-                "title": "How to travel with paper map",
-                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt..."
+                "date": "May 8, 2026",
+                "title": "Best Time to Visit Central Asia",
+                "label": "What each season feels like across deserts, Silk Road cities, mountain lakes, and high-altitude roads."
             },
             {
-                "slug": "blog-detail-1",
+                "slug": "blog-detail-3",
                 "image": "/assets/images/blog-img3.jpg",
                 "alt": "blog-img3",
-                "date": "Dec 12, 2022",
-                "title": "How to get cheaper and better flight",
-                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt..."
+                "date": "Apr 29, 2026",
+                "title": "Uzbekistan & Turkmenistan: A Silk Road Route That Works",
+                "label": "How to combine Samarkand, Bukhara, Khiva, Ancient Merv, Ashgabat and Darvaza without rushing the journey."
             },
             {
-                "slug": "blog-detail-1",
+                "slug": "blog-detail-4",
                 "image": "/assets/images/blog-img4.jpg",
                 "alt": "blog-img4",
-                "date": "Nov 25, 2022",
-                "title": "Passport and documents requirments for travel",
-                "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elitsed do eiusmod tempor incididunt..."
+                "date": "Apr 18, 2026",
+                "title": "Central Asia Visa, Permit & Border Tips",
+                "label": "Practical notes on documents, timing, border crossings, and why local planning makes the trip easier."
             }
         ]
     }

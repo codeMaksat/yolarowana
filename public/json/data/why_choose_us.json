@@ -2,62 +2,62 @@
     {
         "bg_image": "/assets/images/why-choose-us-bg.svg",
         "bg_alt": "why-choose-us-bg",
-        "title": "Why choose us?",
-        "label": "We are a local travel company with deep experience across Central Asia. Our tours are designed to give you real cultural experiences, smooth logistics, and complete peace of mind from start to finish.",
+        "title": "Why travel with Yolarowana?",
+        "label": "We are a local travel company with deep experience across Central Asia. Our tours are designed to give you real cultural experiences, smooth logistics, and complete peace of mind from start to finish. Central Asia is beautiful, but it is also a region where routes, seasons, borders, permits, transport, and guide quality make a real difference. We plan trips with local knowledge, honest advice, and support from the first message to the last day of your journey.",
         "service": [
             {
-                "title": "Local Experts",
-                "label": "Local experts with on-the-ground knowledge",
+                "title": "Local Road Knowledge",
+                "label": "Routes planned by people who understand Central Asia on the ground — not from a generic map.",
                 "image": "/assets/images/world-tour-icon.svg",
                 "alt": "world-tour-icon"
             },
             {
-                "title": "Smart Planning",
-                "label": "Carefully planned itineraries, no stress for you",
+                "title": "Silk Road Planning",
+                "label": "Smart itineraries through ancient cities, deserts, canyons, mountains, and nomad regions.",
                 "image": "/assets/images/travelling-icon.svg",
                 "alt": "travelling-icon"
             },
             {
-                "title": "Best Guide",
-                "label": "Trusted guides and reliable partners",
+                "title": "Trusted Guides",
+                "label": "Reliable local guides, drivers, and partners who make the history and culture feel alive.",
                 "image": "/assets/images/best-guide-icon.svg",
                 "alt": "best-guide-icon"
             },
             {
-                "title": "Support 24/7",
-                "label": "We’re here for you anytime during your trip",
+                "title": "Trip Support",
+                "label": "Clear communication before and during the trip, including practical help when plans change.",
                 "image": "/assets/images/support-icon.svg",
                 "alt": "support-icon"
             },
             {
-                "title": "Quality Service",
-                "label": "High service standards",
+                "title": "Border & Visa Guidance",
+                "label": "Advice for permits, visa timing, border crossings, and realistic multi-country routes.",
                 "image": "/assets/images/luxary-hotel-icon.svg",
                 "alt": "luxary-hotel-icon"
             },
             {
-                "title": "Flexible Tours",
-                "label": "Flexible tours based on your interests",
+                "title": "Flexible Private Tours",
+                "label": "Private, small group, and tailor-made trips shaped around your dates, pace, and interests.",
                 "image": "/assets/images/easy-booking-icon.svg",
                 "alt": "easy-booking-icon"
             }
         ],
         "offers": [
             {
-                "slug": "/tour-detail-2",
-                "title": "Group tours",
-                "label": "Upto 15% off",
+                 "slug": "/tour",
+                "title": "Small Group Tours",
+                "label": "Fixed departures on trusted Central Asia routes",
                 "image": "/assets/images/weekly-flash-deels-img.jpg",
-                "alt": "weekly-flash-deels-img",
-                "btn_label": "View deals"
+                "alt": "small group central asia tour",
+                "btn_label": "View tours"
             },
             {
-                "slug": "/tour-detail-2",
-                "title": "Tailor made tour",
-                "label": "Plan your next trip with us.",
+                "slug": "/contact",
+                "title": "Tailor-Made Trip",
+                "label": "Tell us your dates, countries, and travel style",
                 "image": "/assets/images/summer-escaps-img.png",
-                "alt": "summer-escaps-img",
-                "btn_label": "View deals"
+                "alt": "tailor made central asia tour",
+                "btn_label": "Plan my trip"
             }
         ]
     }

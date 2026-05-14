@@ -2,8 +2,8 @@
     {
         "left_contain": [
             {
-                "title": "Best-Selling Tour",
-                "label": "Explore our most popular journeys across Central Asia — carefully designed and trusted by travelers from around the world",
+                "title": "Best-Selling Journey",
+                "label": "A traveler-favorite route through Central Asia, built for people who want more than a checklist — real guides, strong logistics, and time to feel the road.",
                 "customer_img": [
                     {
                         "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
@@ -43,20 +43,20 @@
                     }
                 ],
                 "count": 500,
-                "count_label": "Happy Customer"
+                "count_label": "Travelers Guided"
             }
         ],
         "mid_contain": [
             {
                 "image": "/assets/images/stephan-valentin-img.jpg",
-                "alt": "stephan-valentin-img",
-                "round_label": "* Explore the world * Journea - Tours"
+                "alt": "Central Asia traveler",
+                "round_label": "* Silk Road Routes * Yolarowana Tours"
             }
         ],
         "right_contain": [
             {
                 "title": "Central Asia Highlights Tour",
-                "label": "Discover our best-selling tours across Central Asia",
+                "label": "From ancient cities and desert camps to mountain roads and local markets — this route brings together the best of the Five Stans.",
                 "review": [
                     {
                         "label": "Days",
@@ -67,13 +67,13 @@
                         "value": 5
                     },
                     {
-                        "label": "Tour Type",
-                        "value": "Guided"
+                        "label": "Guided",
+                        "value": "Yes"
                     }
                 ],
-                "btn_slug":"/about",
-                "btn_label":"Check the tour",
-                "btn_icon":"fa-regular fa-arrow-right"
+                "btn_slug": "/tour",
+                "btn_label": "Check the tour",
+                "btn_icon": "fa-regular fa-arrow-right"
             }
         ]
     }
