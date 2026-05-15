@@ -26,6 +26,11 @@ const Hero = ({ initialValues }) => {
               <p className="mb-6 md:mb-9 text-white text-md md:text-2xl md:leading-2xl">
                 {data.label}
               </p>
+              {data.trust_label && (
+                <div className="mt-5 inline-flex rounded-full bg-white/20 px-5 py-2 text-sm font-medium text-white backdrop-blur-sm">
+                  {data.trust_label}
+                </div>
+              )}
             </div>
           </div>
         </section>

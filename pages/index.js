@@ -54,8 +54,8 @@ export default function Index() {
       <Hero initialValues={hero_data} />
       <Top_Destinations initialValues={top_destinations_data} />
       <Start_About initialValues={start_about_data} />
-      <Perfect_Travel_Planner initialValues={perfect_travel_planner_data} />
       <Popular_Tours initialValues={popular_tours_data} />
+      <Perfect_Travel_Planner initialValues={perfect_travel_planner_data} />
       <Full_Video initialValues={full_video_data} />
       {/* <Why_Choose_Us initialValues={why_choose_us_data} /> */}
       <Start_Testimonial initialValues={start_testimonial_data} />
