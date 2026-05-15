@@ -28,8 +28,8 @@
             {
                 "logo": [
                     {
-                        "img": "/assets/images/logo-dark.svg",
-                        "img_dark": "/assets/images/logo-white.svg",
+                        "img": "/assets/images/logo-dark.png",
+                        "img_dark": "/assets/images/logo-white.png",
                         "slug": "/",
                         "alt": "main-logo"
                     }

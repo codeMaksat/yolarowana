@@ -37,34 +37,37 @@ module.exports = {
         transparent: "transparent",
 
         primary: {
-          100: "#ddede8",
-          200: "#abd1c6",
-          300: "#F8F1F9",
-          400: "#F3EEFD",
-          700: "#F9F6FF",
-          800: "#EAE4F6",
-          900: "#645CBB",
+          100: "#E6F1F4", // soft blue tint
+          200: "#BFDDE5", // light Silk Road blue
+          300: "#FAF7F2", // warm ivory
+          400: "#F7F1E8", // warm sand
+          700: "#FFF8ED", // very soft sand
+          800: "#E8D8C3", // sand border tone
+          900: "#1E5F74", // main Silk Road blue
         },
+
         gray: {
           100: "#F5F5F5",
-          200: "#FAF8FF",
+          200: "#FAF7F2",
           300: "#D9D9D9",
-          400: "#F9F5FF",
+          400: "#F7F1E8",
         },
+
         yellow: {
-          500: "#FEF2D3",
-          600: "#EFB41E",
-          900: "#FFB038",
+          500: "#FFF3D4",
+          600: "#D9A441",
+          900: "#C8912E",
         },
+
         red: {
-          500: "#F6E4E8",
-          600: "#E87676",
+          500: "#F4E2DA",
+          600: "#C46A3A",
         },
 
         dark: {
-          700: "#2C2929",
-          800: "#626262",
-          900: "#190D1F",
+          700: "#1F2933",
+          800: "#6B7280",
+          900: "#16242A",
         },
       },
 

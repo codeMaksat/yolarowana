@@ -742,7 +742,7 @@ section {
 }
 
 .about-section {
-    background: linear-gradient(254.3deg, #faf2f9 3.21%, #f3eefd 60.97%)
+    background: linear-gradient(254.3deg, #FAF7F2 3.21%, #F7F1E8 60.97%);
 }
 
 .list li,
@@ -823,7 +823,7 @@ section {
 }
 
 .testimonial-section {
-    background: linear-gradient(180deg, #f3eefd, #f8f1f9)
+     background: linear-gradient(180deg, #FAF7F2, #F7F1E8);
 }
 
 .slider-arrow {
