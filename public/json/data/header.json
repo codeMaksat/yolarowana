@@ -17,11 +17,11 @@
                         "slug": "#"
                     }
                 ],
-                "call_slug": "tel:+993 61691909",
+                "call_slug": "tel:+99361691909",
                 "call_icon": "fa-solid fa-phone",
-                "call_label": "+993 61691909",
-                "logout_slug": "/login",
-                "logout_label": "LOGOUT"
+                "call_label": "+993 61 691909",
+                "logout_slug": "/contact",
+                "logout_label": "PLAN A TRIP"
             }
         ],
         "mid_bar": [
@@ -42,36 +42,36 @@
                 "label": "Home"
             },
             {
-                "slug": "/about",
-                "label": "About"
-            },
-            {
                 "slug": "/destination",
-                "label": "Destination",
+                "label": "Destinations",
                 "menu": [
                     {
-                        "title": "Turkmenistan",
+                        "title": "Central Asia Countries",
                         "sub_menu": [
                             {
-                                "slug": "/destination/ashgabat",
-                                "label": "Ashgabat"
+                                "slug": "/destination/turkmenistan",
+                                "label": "Turkmenistan"
                             },
                             {
-                                "slug": "/destination/darvaza",
-                                "label": "Darvaza"
+                                "slug": "/destination/uzbekistan",
+                                "label": "Uzbekistan"
                             },
                             {
-                                "slug": "/destination/merv",
-                                "label": "Merv"
+                                "slug": "/destination/kazakhstan",
+                                "label": "Kazakhstan"
                             },
                             {
-                                "slug": "/destination/yangikala",
-                                "label": "Yangikala"
+                                "slug": "/destination/kyrgyzstan",
+                                "label": "Kyrgyzstan"
+                            },
+                            {
+                                "slug": "/destination/tajikistan",
+                                "label": "Tajikistan"
                             }
                         ]
                     },
                     {
-                        "title": "Uzbekistan",
+                        "title": "Popular Places",
                         "sub_menu": [
                             {
                                 "slug": "/destination/samarkand",
@@ -84,53 +84,31 @@
                             {
                                 "slug": "/destination/khiva",
                                 "label": "Khiva"
+                            },
+                            {
+                                "slug": "/destination/darvaza",
+                                "label": "Darvaza Gas Crater"
+                            },
+                            {
+                                "slug": "/destination/merv",
+                                "label": "Ancient Merv"
                             }
                         ]
                     },
                     {
-                        "title": "Tajikistan",
+                        "title": "Multi-Country Routes",
                         "sub_menu": [
                             {
-                                "slug": "/destination/dushanbe",
-                                "label": "Dushanbe"
+                                "slug": "/tour/five-stans",
+                                "label": "Five Stans Tours"
                             },
                             {
-                                "slug": "/destination/khujand",
-                                "label": "Khujand"
+                                "slug": "/tour/uzbekistan-turkmenistan",
+                                "label": "Uzbekistan & Turkmenistan"
                             },
                             {
-                                "slug": "/destination/seven-lakes",
-                                "label": "Seven Lakes"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Kyrgyzstan",
-                        "sub_menu": [
-                            {
-                                "slug": "/destination/bishkek",
-                                "label": "Bishkek"
-                            },
-                            {
-                                "slug": "/destination/issyk-kul",
-                                "label": "Issyk-kul"
-                            },
-                            {
-                                "slug": "/destination/karakol",
-                                "label": "Karakol"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Kazakhstan",
-                        "sub_menu": [
-                            {
-                                "slug": "/destination/almaty",
-                                "label": "Almaty"
-                            },
-                            {
-                                "slug": "/destination/astana",
-                                "label": "Astana"
+                                "slug": "/tour/silk-road",
+                                "label": "Silk Road Tours"
                             }
                         ]
                     }
@@ -138,100 +116,29 @@
                 "promo": {
                     "image": "/assets/images/summer-escaps-img.png",
                     "title": "Central Asia Tours",
-                    "text": "Find your perfect journey.",
+                    "text": "Private and small group journeys across the Silk Road.",
                     "link": "/tour"
                 }
             },
             {
                 "slug": "/tour",
-                "label": "Tour"
+                "label": "Tours"
+            },
+            {
+                "slug": "/tour/group-tours",
+                "label": "Group Tours"
+            },
+            {
+                "slug": "/tailor-made",
+                "label": "Tailor-Made"
             },
             {
                 "slug": "/blog",
-                "label": "Blog"
+                "label": "Travel Guide"
             },
             {
-                "slug": "/hotels",
-                "label": "Hotels"
-            },
-            {
-                "slug": "/page",
-                "label": "Pages",
-                "menu": [
-                    {
-                        "title": "Home page",
-                        "sub_menu": [
-                            {
-                                "slug": "/",
-                                "label": "Home v1"
-                            },
-                            {
-                                "slug": "/home-2",
-                                "label": "Home v2"
-                            },
-                            {
-                                "slug": "/home-3",
-                                "label": "Home v3"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Booking pages",
-                        "sub_menu": [
-                            {
-                                "slug": "/hotels",
-                                "label": "Hotels"
-                            },
-                            {
-                                "slug": "/portfolio",
-                                "label": "Portfolio"
-                            },
-                            {
-                                "slug": "/tour",
-                                "label": "Tours"
-                            },
-                            {
-                                "slug": "/gallery",
-                                "label": "Gallery"
-                            },
-                            {
-                                "slug": "/testimonial",
-                                "label": "Testimonial"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Other pages",
-                        "sub_menu": [
-                            {
-                                "slug": "/login",
-                                "label": "Login"
-                            },
-                            {
-                                "slug": "/sign-in",
-                                "label": "Sign in"
-                            },
-                            {
-                                "slug": "/404",
-                                "label": "404 Error"
-                            },
-                            {
-                                "slug": "/faq",
-                                "label": "Faqs"
-                            },
-                            {
-                                "slug": "/sitemap",
-                                "label": "Sitemap"
-                            }
-                        ]
-                    }
-                ],
-                "promo": {
-                    "image": "/assets/images/summer-escaps-img.png",
-                    "title": "Best Tours",
-                    "text": "Find your perfect journey.",
-                    "link": "/tour"
-                }
+                "slug": "/about",
+                "label": "About"
             },
             {
                 "slug": "/contact",
