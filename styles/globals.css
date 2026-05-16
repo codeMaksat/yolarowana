@@ -175,7 +175,7 @@
     }
 
     .tours-btn {
-        @apply py-0 px-2 md:px-5 font-extrabold tracking-[0.08em] uppercase py-[1px] mx-auto bg-primary-900 inline-block max-w-fit text-[10px] sm:text-[12px] rounded-full md:rounded-md
+        @apply py-1 px-5 md:px-6 font-extrabold tracking-[0.08em] uppercase mx-auto bg-primary-900 inline-block max-w-fit text-[11px] sm:text-[13px] rounded-full md:rounded-md
     }
 
     .top-destinations-section-three .categories-detail a {
@@ -623,14 +623,17 @@
     .testimonial-full-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
         @apply bg-primary-900
     }
-    .MuiSlider-colorPrimary.MuiSlider-sizeMedium.css-187mznn-MuiSlider-root{
+
+    .MuiSlider-colorPrimary.MuiSlider-sizeMedium.css-187mznn-MuiSlider-root {
         @apply text-primary-900
     }
+
     .trending-attractions-slider .swiper-pagination {
-      @apply bg-primary-800 
+        @apply bg-primary-800
     }
+
     .trending-attractions-slider .swiper-pagination .swiper-pagination-progressbar-fill {
-    @apply bg-primary-900
+        @apply bg-primary-900
     }
 
     .header-style3.sticky-header {

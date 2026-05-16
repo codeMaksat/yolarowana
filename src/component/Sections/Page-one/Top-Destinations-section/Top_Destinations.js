@@ -19,25 +19,25 @@ const Top_Destinations = ({ initialValues }) => {
                   data.product.map((product_data, index) => {
                     return (
                       <div
-                        className="category-box overflow-hidden group rounded-1xl relative"
-                        key={index}
-                      >
-                        <Image
-                          src={product_data.image}
-                          alt={product_data.alt}
-                          width={361}
-                          height={252}
-                          className="transition-all group-hover:scale-105"
-                        />
-                        <div className="categories-detail">
-                          <Link href={product_data.slug}>
-                            <h4>{product_data.title}</h4>
-                            <div className="tours-btn">
-                              {product_data.count} Tours
-                            </div>
-                          </Link>
-                        </div>
-                      </div>
+  className="category-box overflow-hidden group rounded-1xl relative"
+  key={index}
+>
+  <Image
+    src={product_data.image}
+    alt={product_data.alt}
+    width={361}
+    height={252}
+    className="transition-all group-hover:scale-105"
+  />
+
+  <div className="categories-detail" style={{ zIndex: 2 }}>
+    <Link href={product_data.slug}>
+      <div className="tours-btn">
+        {product_data.title}
+      </div>
+    </Link>
+  </div>
+</div>
                     );
                   })}
               </div>
