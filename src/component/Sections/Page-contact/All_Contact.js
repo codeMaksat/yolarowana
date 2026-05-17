@@ -5,6 +5,7 @@ import { supabase } from "@/utils/supabaseClient";
 const All_Contact = ({ initialValues }) => {
   const [address_save_errors, setaddress_save_errors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const whatsappNumber = "99361691909";
   const emailAddress = "info@yolarowana.com";
@@ -104,10 +105,12 @@ ${inquiry.messages}
 
     if (Object.keys(error).length > 0) {
       setaddress_save_errors(error);
+      setSuccessMessage("");
       return;
     }
 
     setaddress_save_errors({});
+    setSuccessMessage("");
     setIsSubmitting(true);
 
     const supabaseError = await saveInquiryToSupabase(inquiry);
@@ -119,6 +122,16 @@ ${inquiry.messages}
       return;
     }
 
+    setSuccessMessage(
+      "Thank you! Your inquiry has been sent. Our consultant will contact you soon."
+    );
+
+    const formElement = document.querySelector("#account_details_form");
+    if (formElement) {
+      formElement.reset();
+    }
+
+
     const inquiryMessage = createMessage(inquiry);
 
     if (method === "whatsapp") {
@@ -126,17 +139,10 @@ ${inquiry.messages}
         inquiryMessage
       )}`;
 
-      window.location.href = whatsappUrl;
-      return;
-    }
+      setTimeout(() => {
+        window.location.href = whatsappUrl;
+      }, 800);
 
-    if (method === "email") {
-      const subject = `Central Asia Trip Inquiry - ${inquiry.name}`;
-      const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(inquiryMessage)}`;
-
-      window.location.href = mailtoUrl;
       return;
     }
 
@@ -232,7 +238,7 @@ ${inquiry.messages}
                 <form
                   className="form"
                   id="account_details_form"
-                  onSubmit={event => handleInquiry(event, "whatsapp")}
+                  onSubmit={event => handleInquiry(event, "consultant")}
                 >
                   <div className="flex flex-wrap md:-mx-2">
                     <div className="md:px-2 w-full md:w-1/2 mb-3 md:mb-5">
@@ -341,8 +347,9 @@ ${inquiry.messages}
                       <div className="flex flex-col sm:flex-row justify-center gap-3">
                         <button
                           className="btn btn-primary rounded-full px-8"
-                          type="submit"
+                          type="button"
                           disabled={isSubmitting}
+                          onClick={event => handleInquiry(event, "whatsapp")}
                         >
                           {isSubmitting ? "Sending..." : "Send via WhatsApp"}
                           <i className="fa-brands fa-whatsapp ml-2"></i>
@@ -350,14 +357,21 @@ ${inquiry.messages}
 
                         <button
                           className="btn btn-light rounded-full px-8 border border-primary-900"
-                          type="button"
+                          type="submit"
                           disabled={isSubmitting}
-                          onClick={event => handleInquiry(event, "email")}
                         >
-                          {isSubmitting ? "Saving..." : "Send by Email"}
-                          <i className="fa-regular fa-envelope ml-2"></i>
+                          {isSubmitting ? "Sending..." : "Send to Consultant"}
+                          <i className="fa-regular fa-paper-plane ml-2"></i>
                         </button>
                       </div>
+
+                      {successMessage && (
+                        <div className="mt-5 bg-white border border-[#E2CFAF] rounded-2xl px-5 py-4 text-center">
+                          <p className="text-primary-900 font-semibold mb-0">
+                            {successMessage}
+                          </p>
+                        </div>
+                      )}
 
                       <p className="text-center text-sm text-dark-800 mt-4 mb-0">
                         Prefer direct email? Write to{" "}
