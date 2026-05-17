@@ -4,7 +4,6 @@ import { Comman_Hero } from "@/component/Sections/Page-commen";
 import { All_Blog_Detail } from "@/component/Sections/Page-blog-detail";
 import { Head_Meta, useFetchData } from "@/component/comman";
 import React from "react";
-import Related_Products from "@/component/comman/related_products";
 
 export default function Destination() {
   const { data: hero_hotels_detail_data } = useFetchData(
@@ -16,10 +15,6 @@ export default function Destination() {
   );
 
   const { data: side_bar_data } = useFetchData("json/data/side_bar.json");
-  const { data: reviews_data } = useFetchData("json/data/reviews.json");
-  const { data: related_product_data } = useFetchData(
-    "json/data/related_product.json"
-  );
 
   // Fetch Seo data
   const { data: seo_data } = useFetchData("/json/data/site_meta_link.json"); // Fetch Seo data using the custom hook
@@ -33,10 +28,6 @@ export default function Destination() {
         initialValues={hotels_detail_product_data}
         side_bar_data={side_bar_data}
         order={1}
-      />
-      <Related_Products
-        reviews_data={reviews_data}
-        products={related_product_data}
       />
     </>
   );

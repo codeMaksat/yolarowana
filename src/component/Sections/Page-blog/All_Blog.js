@@ -26,7 +26,6 @@ const All_Blog = ({ initialValues, side_bar_data }) => {
               </div>
 
               <div className="lg:flex lg:-mx-5">
-                <Blog_Side_Bar Data={side_bar_data} />
                 <div className="w-full lg:px-5">
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     {data.product &&
@@ -37,14 +36,17 @@ const All_Blog = ({ initialValues, side_bar_data }) => {
                             <div className="relative group" key={index}>
                               <Link
                                 href={product_data.slug}
-                                className="absolute top-0 right-0 w-full h-full z-2"></Link>
+                                className="absolute top-0 right-0 w-full h-full z-2"
+                              ></Link>
+
                               <div className="absolute top-4 right-4 bg-primary-900 w-11 h-11 flex items-center justify-center z-1 rounded-full">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="23"
                                   height="23"
                                   viewBox="0 0 23 23"
-                                  fill="none">
+                                  fill="none"
+                                >
                                   <path
                                     fillRule="evenodd"
                                     clipRule="evenodd"
@@ -54,6 +56,7 @@ const All_Blog = ({ initialValues, side_bar_data }) => {
                                   />
                                 </svg>
                               </div>
+
                               <div className="relative overflow-hidden h-full before:top-[110%] before:block after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-dark-900/30">
                                 <Image
                                   src={product_data.image}
@@ -63,14 +66,17 @@ const All_Blog = ({ initialValues, side_bar_data }) => {
                                   className="transition-all group-hover:scale-105 w-full h-full object-cover duration-300"
                                 />
                               </div>
+
                               <div className="absolute bottom-0 left-0 w-full p-5 text-white">
                                 <div className="max-w-[380px]">
                                   <span className="bg-white/80 rounded-md px-2 text-12 text-dark-900 mb-3 block max-w-fit">
                                     {product_data.date}
                                   </span>
+
                                   <h3 className="text-xl xl:text-[25px] xl:leading-normal text-white mb-2">
                                     {product_data.title}
                                   </h3>
+
                                   <p className="text-md leading-normal mb-0">
                                     {product_data.short_des.length
                                       ? `${product_data.short_des.substring(
@@ -85,27 +91,29 @@ const All_Blog = ({ initialValues, side_bar_data }) => {
                           );
                         })}
                   </div>
-                </div>
-              </div>
 
-              <div className="mt-8">
-                <nav aria-label="Pagination">
-                  <ReactPaginate
-                    breakLabel="..."
-                    nextLabel=">"
-                    pageLinkClassName="w-10 h-10 border border-primary-900 rounded-full flex items-center justify-center text-dark-900 hover:bg-primary-900 hover:text-white"
-                    activeLinkClassName="w-10 h-10 border border-primary-900 rounded-full flex items-center justify-center bg-primary-900 text-white hover:bg-primary-900 hover:text-white"
-                    containerClassName="isolate flex justify-end gap-2 text-md font-bold"
-                    previousLinkClassName="w-10 h-10 border border-primary-900 rounded-full flex items-center justify-center text-dark-900 hover:bg-primary-900 hover:text-white"
-                    nextLinkClassName="w-10 h-10 border border-primary-900 rounded-full flex items-center justify-center text-dark-900 hover:bg-primary-900 hover:text-white"
-                    onPageChange={handlePageClick}
-                    pageRangeDisplayed={5}
-                    pageCount={Math.ceil(data.product.length / itemsPerPage)}
-                    previousClassName=""
-                    previousLabel="<"
-                    renderOnZeroPageCount={null}
-                  />
-                </nav>
+                  <div className="mt-8">
+                    <nav aria-label="Pagination">
+                      <ReactPaginate
+                        breakLabel="..."
+                        nextLabel=">"
+                        pageLinkClassName="w-10 h-10 border border-primary-900 rounded-full flex items-center justify-center text-dark-900 hover:bg-primary-900 hover:text-white"
+                        activeLinkClassName="w-10 h-10 border border-primary-900 rounded-full flex items-center justify-center bg-primary-900 text-white hover:bg-primary-900 hover:text-white"
+                        containerClassName="isolate flex justify-center gap-2 text-md font-bold"
+                        previousLinkClassName="w-10 h-10 border border-primary-900 rounded-full flex items-center justify-center text-dark-900 hover:bg-primary-900 hover:text-white"
+                        nextLinkClassName="w-10 h-10 border border-primary-900 rounded-full flex items-center justify-center text-dark-900 hover:bg-primary-900 hover:text-white"
+                        onPageChange={handlePageClick}
+                        pageRangeDisplayed={5}
+                        pageCount={Math.ceil(data.product.length / itemsPerPage)}
+                        previousClassName=""
+                        previousLabel="<"
+                        renderOnZeroPageCount={null}
+                      />
+                    </nav>
+                  </div>
+                </div>
+
+                <Blog_Side_Bar Data={side_bar_data} />
               </div>
             </div>
           );

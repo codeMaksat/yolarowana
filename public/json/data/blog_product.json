@@ -1,151 +1,79 @@
 [
-    {
-        "title": "Latest Blog grid",
-        "product": [
-            {
-                "id": 1,
-                "slug": "/blog-detail-1",
-                "title": "How to travel with paper map",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/blog-img2.jpg",
-                "alt": "blog-img2",
-                "date": "Feb 3, 2023"
-            },
-            {
-                "id": 2,
-                "slug": "/blog-detail-1",
-                "title": "Use Your Social Network to Travel",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/blog-img3.jpg",
-                "alt": "blog-img3",
-                "date": "Feb 3, 2023"
-            },
-            {
-                "id": 3,
-                "slug": "/blog-detail-1",
-                "title": "Cruise traveling tours",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-8.jpg",
-                "alt": "top-destinations-img-8",
-                "date": "Mar 5, 2023"
-            },
-            {
-                "id": 4,
-                "slug": "/blog-detail-1",
-                "title": "Thing to know before solo traveling",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-3.jpg",
-                "alt": "top-destinations-img-3",
-                "date": "Apr 12, 2023"
-            },
-            {
-                "id": 5,
-                "slug": "/blog-detail-1",
-                "title": "Passport required countries for travel",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/popular-tours-img13.jpg",
-                "alt": "popular-tours-img13",
-                "date": "Apr 5, 2023"
-            },
-            {
-                "id": 6,
-                "slug": "/blog-detail-1",
-                "title": "A man surfing on high waves",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/popular-tours-img12.jpg",
-                "alt": "popular-tours-img12",
-                "date": "Jun 12, 2023"
-            },
-            {
-                "id": 7,
-                "slug": "/blog-detail-1",
-                "title": "Cities which devlop on islands",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/categories-img-3.jpg",
-                "alt": "categories-img-3",
-                "date": "Aug 3, 2023"
-            },
-            {
-                "id": 8,
-                "slug": "/blog-detail-1",
-                "title": "How to travel with paper map",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/blog-img2.jpg",
-                "alt": "blog-img2",
-                "date": "Feb 3, 2023"
-            },
-            {
-                "id": 9,
-                "slug": "/blog-detail-1",
-                "title": "Cities which devlop on islands",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/categories-img-3.jpg",
-                "alt": "categories-img-3",
-                "date": "Aug 3, 2023"
-            },
-            {
-                "id": 10,
-                "slug": "/blog-detail-1",
-                "title": "A man surfing on high waves",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/popular-tours-img12.jpg",
-                "alt": "popular-tours-img12",
-                "date": "Jun 12, 2023"
-            },
-            {
-                "id": 11,
-                "slug": "/blog-detail-1",
-                "title": "Passport required countries for travel",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/popular-tours-img13.jpg",
-                "alt": "popular-tours-img13",
-                "date": "Apr 5, 2023"
-            },
-            {
-                "id": 12,
-                "slug": "/blog-detail-1",
-                "title": "Cruise traveling tours",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-8.jpg",
-                "alt": "top-destinations-img-8",
-                "date": "Mar 5, 2023"
-            },
-            {
-                "id": 13,
-                "slug": "/blog-detail-1",
-                "title": "Thing to know before solo traveling",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-3.jpg",
-                "alt": "top-destinations-img-3",
-                "date": "Apr 12, 2023"
-            },
-            {
-                "id": 14,
-                "slug": "/blog-detail-1",
-                "title": "Passport required countries for travel",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/popular-tours-img13.jpg",
-                "alt": "popular-tours-img13",
-                "date": "Apr 5, 2023"
-            },
-            {
-                "id": 15,
-                "slug": "/blog-detail-1",
-                "title": "A man surfing on high waves",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/popular-tours-img12.jpg",
-                "alt": "popular-tours-img12",
-                "date": "Jun 12, 2023"
-            },
-            {
-                "id": 16,
-                "slug": "/blog-detail-1",
-                "title": "Cities which devlop on islands",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/categories-img-3.jpg",
-                "alt": "categories-img-3",
-                "date": "Aug 3, 2023"
-            }
-        ]
-    }
+  {
+    "title": "Central Asia Travel Guide",
+    "product": [
+      {
+        "id": 1,
+        "slug": "/blog-detail-1",
+        "title": "How to Plan a Central Asia Trip",
+        "short_des": "A practical guide to choosing countries, routes, timing and travel style for your first journey across Central Asia.",
+        "image": "/assets/images/blog-img2.jpg",
+        "alt": "How to plan a Central Asia trip",
+        "date": "Travel Planning"
+      },
+      {
+        "id": 2,
+        "slug": "/blog-detail-1",
+        "title": "Best Time to Visit Central Asia",
+        "short_des": "Understand the best seasons for Silk Road cities, desert routes, mountain roads and multi-country journeys.",
+        "image": "/assets/images/blog-img3.jpg",
+        "alt": "Best time to visit Central Asia",
+        "date": "Travel Tips"
+      },
+      {
+        "id": 3,
+        "slug": "/blog-detail-1",
+        "title": "Turkmenistan Travel Guide",
+        "short_des": "What to know before visiting Ashgabat, Darvaza Gas Crater, Ancient Merv, Yangykala Canyon and desert routes.",
+        "image": "/assets/images/top-destinations-img-8.jpg",
+        "alt": "Turkmenistan travel guide",
+        "date": "Destination Guide"
+      },
+      {
+        "id": 4,
+        "slug": "/blog-detail-1",
+        "title": "Uzbekistan & Turkmenistan Itinerary",
+        "short_des": "A strong Silk Road route combining Samarkand, Bukhara, Khiva, Ashgabat, Merv and Darvaza.",
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Uzbekistan and Turkmenistan itinerary",
+        "date": "Itinerary"
+      },
+      {
+        "id": 5,
+        "slug": "/blog-detail-1",
+        "title": "Is Central Asia Safe for Travelers?",
+        "short_des": "A calm overview of safety, local customs, transport, guides, borders and practical travel expectations.",
+        "image": "/assets/images/popular-tours-img13.jpg",
+        "alt": "Central Asia travel safety",
+        "date": "Travel Advice"
+      },
+      {
+        "id": 6,
+        "slug": "/blog-detail-1",
+        "title": "Central Asia Visa & Border Tips",
+        "short_des": "Helpful notes on visas, border crossings, route planning and why preparation matters in this region.",
+        "image": "/assets/images/popular-tours-img12.jpg",
+        "alt": "Central Asia visa and border tips",
+        "date": "Planning Guide"
+      },
+      {
+        "id": 7,
+        "slug": "/blog-detail-1",
+        "title": "What to Know Before Visiting Darvaza",
+        "short_des": "When to go, what to expect, how the desert overnight works, and how to include Darvaza in your route.",
+        "image": "/assets/images/categories-img-3.jpg",
+        "alt": "Darvaza Gas Crater travel guide",
+        "date": "Turkmenistan"
+      },
+      {
+        "id": 8,
+        "slug": "/blog-detail-1",
+        "title": "How Many Days Do You Need for Central Asia?",
+        "short_des": "Compare 7-day, 10-day, 14-day and Five Stans routes to choose a realistic journey length.",
+        "image": "/assets/images/blog-img2.jpg",
+        "alt": "Central Asia itinerary length guide",
+        "date": "Itinerary Guide"
+      }
+    ]
+  }
 ]

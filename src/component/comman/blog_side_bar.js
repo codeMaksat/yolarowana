@@ -1,244 +1,154 @@
-import { useState, useEffect } from "react";
-import Slider from "@mui/material/Slider";
-import Image from "next/image";
+import Link from "next/link";
 
-// Define a reusable function for fetching data
 const Blog_Side_Bar = ({ Data, orders }) => {
-  const [No_of_Persons, setNo_of_Persons] = useState("");
-  const [range, setRange] = useState([0, 900]); //[minPrice, maxPrice]
-  const [minPrice, setminPrice] = useState("0");
-  const [maxPrice, setmaxPrice] = useState("900");
-  const [Date_from, setDate_from] = useState("");
-  const [location, setLocation] = useState("Location?");
-  const [booking, setBooking] = useState("Booking types");
-
-  const option = [
-    { value: "Location?" },
-    { value: "Location 1" },
-    { value: "Location 2" },
+  const popularGuides = [
+    {
+      title: "How to Plan a Central Asia Trip",
+      slug: "/blog-detail-1",
+      label: "Route planning",
+    },
+    {
+      title: "Best Time to Visit Central Asia",
+      slug: "/blog-detail-1",
+      label: "Travel seasons",
+    },
+    {
+      title: "Turkmenistan Travel Guide",
+      slug: "/blog-detail-1",
+      label: "Destination guide",
+    },
+    {
+      title: "Central Asia Visa & Border Tips",
+      slug: "/blog-detail-1",
+      label: "Practical advice",
+    },
   ];
-  const option2 = [
-    { value: "Booking types" },
-    { value: "1 day" },
-    { value: "1 day" },
+
+  const destinations = [
+    {
+      title: "Turkmenistan",
+      slug: "/destination-detail",
+    },
+    {
+      title: "Uzbekistan",
+      slug: "/destination-detail",
+    },
+    {
+      title: "Kazakhstan",
+      slug: "/destination-detail",
+    },
+    {
+      title: "Kyrgyzstan",
+      slug: "/destination-detail",
+    },
+    {
+      title: "Tajikistan",
+      slug: "/destination-detail",
+    },
   ];
 
-  function handleChanges(event, newValue) {
-    setRange(newValue);
-  }
+  const topics = [
+    "Itinerary Planning",
+    "Visa & Border Tips",
+    "Best Time to Travel",
+    "Silk Road Cities",
+    "Desert Routes",
+    "Mountain Journeys",
+  ];
 
   return (
-    Data &&
-    Data.map((data, index) => {
-      return (
-        <div
-          className="w-full lg:max-w-[340px] shrink-0 lg:px-5"
-          key={index}
-          style={{ order: orders }}>
-          {data.search &&
-            data.search.map((search_data, index) => {
-              return (
-                <div
-                  className="search-location bg-gray-200 border border-primary-800 rounded-1xl py-3.5 px-5 mb-9"
-                  key={index}>
-                  <h2 className="text-lg font-bold mb-4">
-                    {search_data.title}
-                  </h2>
-                  <form>
-                    <div className="mb-3 relative">
-                      <span className="absolute top-4 left-3">
-                        <Image
-                          src="/assets/images/location.svg"
-                          alt="location"
-                          width={18}
-                          height={18}
-                        />
-                      </span>
-                      <select
-                        className="form-control"
-                        value={location}
-                        onChange={e => setLocation(e.target.value)}
-                        option={option.value}>
-                        {option.map((opt, index) => (
-                          <option key={index} value={opt.value}>
-                            {opt.value}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="mb-3 relative">
-                      <span className="absolute top-4 left-3">
-                        <Image
-                          src="/assets/images/ticket.svg"
-                          alt="location"
-                          width={16}
-                          height={16}
-                        />
-                      </span>
-                      <select
-                        className="form-control"
-                        value={booking}
-                        onChange={e => setBooking(e.target.value)}>
-                        {option2.map((opt, index) => (
-                          <option key={index} value={opt.value}>
-                            {opt.value}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-                    <div className="mb-3 relative">
-                      <span className="absolute top-4 left-3">
-                        <Image
-                          src="/assets/images/calendar-icon2.svg"
-                          alt="calendar"
-                          width={13}
-                          height={13}
-                        />
-                      </span>
-                      <input
-                        type="text"
-                        placeholder="Date from"
-                        name=""
-                        className="form-control"
-                        value={Date_from}
-                        onChange={e => setDate_from(e.target.value)}
-                      />
-                    </div>
-                    <div className="mb-3 relative">
-                      <span className="absolute top-4 left-3">
-                        <Image
-                          src="/assets/images/person-circle-outline.svg"
-                          alt="location"
-                          width={17}
-                          height={17}
-                        />
-                      </span>
-                      <input
-                        type="text"
-                        placeholder="No of Persons"
-                        name=""
-                        className="form-control"
-                        value={No_of_Persons}
-                        onChange={e => setNo_of_Persons(e.target.value)}
-                      />
-                    </div>
-                    <div>
-                      <button
-                        type="button"
-                        className="btn btn-primary max-w-full w-full text-sm font-semibold">
-                        {search_data.btn_label}
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              );
-            })}
-          {data.category &&
-            data.category.map((category_data, index) => {
-              return (
-                <div className="mb-9" key={index}>
-                  <h2 className="text-lg font-bold mb-6">
-                    {category_data.title}
-                  </h2>
-                  <ul className="space-y-2 category-checkbox">
-                    {category_data.sub_category &&
-                      category_data.sub_category.map(
-                        (sub_category_data, index) => {
-                          return (
-                            <li key={index}>
-                              <div className="flex items-center justify-between text-dark-800 text-md">
-                                <label className="checkcontainer leading-normal">
-                                  {sub_category_data.label}
-                                  <input type="checkbox" />
-                                  <span className="checkmark"></span>
-                                </label>
-                                <span>{sub_category_data.value}</span>
-                              </div>
-                            </li>
-                          );
-                        }
-                      )}
-                  </ul>
-                </div>
-              );
-            })}
-          {data.other &&
-            data.other.map((other_data, index) => {
-              return (
-                <div className="mb-9" key={index}>
-                  <h2 className="text-lg font-bold mb-6">{other_data.title}</h2>
-                  <ul className="space-y-2 category-checkbox">
-                    {other_data.sub_other &&
-                      other_data.sub_other.map((sub_other_data, index) => {
-                        return (
-                          <li key={index}>
-                            <div className="flex items-center justify-between text-dark-800 text-md">
-                              <label className="checkcontainer leading-normal">
-                                {sub_other_data.label}
-                                <input type="checkbox" />
-                                <span className="checkmark"></span>
-                              </label>
-                              <span>{sub_other_data.value}</span>
-                            </div>
-                          </li>
-                        );
-                      })}
-                  </ul>
-                </div>
-              );
-            })}
-          {data.duration &&
-            data.duration.map((duration_data, index) => {
-              return (
-                <div className="mb-9" key={index}>
-                  <h2 className="text-lg font-bold mb-6">
-                    {duration_data.title}
-                  </h2>
-                  <ul className="space-y-2 category-checkbox">
-                    {duration_data.sub_duration &&
-                      duration_data.sub_duration.map(
-                        (sub_duration_data, index) => {
-                          return (
-                            <li key={index}>
-                              <div className="flex items-center justify-between text-dark-800 text-md">
-                                <label className="checkcontainer leading-normal">
-                                  {sub_duration_data.label}
-                                  <input type="checkbox" />
-                                  <span className="checkmark"></span>
-                                </label>
-                                <span>{sub_duration_data.value}</span>
-                              </div>
-                            </li>
-                          );
-                        }
-                      )}
-                  </ul>
-                </div>
-              );
-            })}
-          {data.price &&
-            data.price.map((price_data, index) => {
-              let price = [];
-              if (price_data.minPrice && price_data.maxPrice) {
-                price.push(price_data.minPrice);
-                price.push(price_data.maxPrice);
-                setRange(price);
-              }
-              return (
-                <div className="mb-9" key={index}>
-                  <h2 className="text-lg font-bold mb-6">{price_data.title}</h2>
-                  <p className="text-md mb-3">{`$${price_data.minPrice} - $${price_data.maxPrice}`}</p>
-                  <div className="flex items-center justify-center">
-                    <div className="py-1 relative min-w-full ">
-                      <Slider value={range} onChange={handleChanges} className="!text-primary-900 color_value" />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
+    <div
+      className="w-full lg:max-w-[340px] shrink-0 lg:px-5"
+      style={{ order: orders }}
+    >
+      {/* CTA Box */}
+      <div className="bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl p-5 mb-8 shadow-sm">
+        <span className="text-primary-900 text-sm font-bold uppercase tracking-[0.08em] block mb-2">
+          Need help planning?
+        </span>
+
+        <h2 className="text-xl font-bold mb-3">
+          Build your Central Asia route with us
+        </h2>
+
+        <p className="text-dark-800 text-md leading-normal mb-5">
+          Tell us your dates, countries, travel style and group size. We will
+          help you shape a practical Silk Road journey.
+        </p>
+
+        <Link
+          href="/contact"
+          className="btn btn-primary max-w-full w-full text-sm font-semibold rounded-full"
+        >
+          Plan My Trip
+          <i className="fa-regular fa-arrow-right ml-2"></i>
+        </Link>
+      </div>
+
+      {/* Popular Guides */}
+      <div className="bg-white border border-[#E2CFAF] rounded-2xl p-5 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold mb-5">Popular Guides</h2>
+
+        <div className="space-y-4">
+          {popularGuides.map((guide, index) => {
+            return (
+              <Link
+                href={guide.slug}
+                className="block group border-b border-[#E2CFAF] last:border-b-0 pb-4 last:pb-0"
+                key={index}
+              >
+                <span className="text-primary-900 text-xs font-semibold uppercase tracking-[0.08em] block mb-1">
+                  {guide.label}
+                </span>
+
+                <h3 className="text-md font-bold mb-0 leading-normal group-hover:text-primary-900 transition-all">
+                  {guide.title}
+                </h3>
+              </Link>
+            );
+          })}
         </div>
-      );
-    })
+      </div>
+
+      {/* Destinations */}
+      <div className="bg-white border border-[#E2CFAF] rounded-2xl p-5 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold mb-5">Destinations</h2>
+
+        <ul className="space-y-3">
+          {destinations.map((destination, index) => {
+            return (
+              <li key={index}>
+                <Link
+                  href={destination.slug}
+                  className="flex items-center justify-between text-dark-800 hover:text-primary-900 transition-all"
+                >
+                  <span>{destination.title}</span>
+                  <i className="fa-regular fa-arrow-right text-sm"></i>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      {/* Travel Topics */}
+      <div className="bg-white border border-[#E2CFAF] rounded-2xl p-5 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold mb-5">Travel Topics</h2>
+
+        <div className="flex flex-wrap gap-2">
+          {topics.map((topic, index) => {
+            return (
+              <span
+                key={index}
+                className="bg-[#FAF7F2] border border-[#E2CFAF] rounded-full px-3 py-1.5 text-sm text-dark-800"
+              >
+                {topic}
+              </span>
+            );
+          })}
+        </div>
+      </div>
+    </div>
   );
 };
 
