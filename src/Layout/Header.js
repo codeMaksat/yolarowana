@@ -166,14 +166,15 @@ export default function Header({ initialValues }) {
                             <div className="logo" key={index}>
                               <Link
                                 href={mid_bar_logo_data.slug}
-                                className={`${isScrolled
-                                    ? "max-w-[135px] lg:max-w-[110px]"
-                                    : "max-w-[150px] lg:max-w-[135px]"
-                                  } block transition-all`}
+                                className="block transition-all"
                               >
                                 <img
                                   src={mid_bar_logo_data.img}
                                   alt={mid_bar_logo_data.alt}
+                                  className={`transition-all ${isScrolled
+                                      ? "w-[170px] lg:w-[115px]"
+                                      : "w-[190px] lg:w-[140px]"
+                                    }`}
                                 />
                               </Link>
                             </div>
