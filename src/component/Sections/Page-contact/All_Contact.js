@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { useState } from "react";
+import { supabase } from "@/utils/supabaseClient";
 
 const All_Contact = ({ initialValues }) => {
   const [address_save_errors, setaddress_save_errors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const whatsappNumber = "99361691909";
+  const emailAddress = "info@yolarowana.com";
 
   const inputClass =
     "w-full rounded-full bg-white border border-[#E2CFAF] px-5 py-3 text-[15px] text-dark-900 placeholder:text-dark-800/60 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all";
@@ -15,40 +18,89 @@ const All_Contact = ({ initialValues }) => {
   const textareaClass =
     "w-full rounded-2xl bg-white border border-[#E2CFAF] px-5 py-4 text-[15px] text-dark-900 placeholder:text-dark-800/60 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all min-h-[130px] resize-none";
 
-  const save_account_details = event => {
-    event.preventDefault();
-
+  const getInquiryData = () => {
     const formElement = document.querySelector("#account_details_form");
     const formData = new FormData(formElement);
 
-    let name = formData.get("Fullname");
-    let email = formData.get("email");
-    let phone = formData.get("phone");
-    let travelDates = formData.get("travel_dates");
-    let countries = formData.get("countries");
-    let travelStyle = formData.get("travel_style");
-    let travelers = formData.get("travelers");
-    let messages = formData.get("messages");
+    return {
+      name: formData.get("Fullname"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      travelDates: formData.get("travel_dates"),
+      countries: formData.get("countries"),
+      travelStyle: formData.get("travel_style"),
+      travelers: formData.get("travelers"),
+      messages: formData.get("messages"),
+    };
+  };
 
+  const validateInquiry = inquiry => {
     const error = {};
 
-    if (!name || name.trim() === "") {
+    if (!inquiry.name || inquiry.name.trim() === "") {
       error.name = "Name is required*";
     }
 
-    if (!email || email.trim() === "") {
+    if (!inquiry.email || inquiry.email.trim() === "") {
       error.email = "Email is required*";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(inquiry.email)
+    ) {
       error.email = "Invalid email address";
     }
 
-    if (!countries || countries.trim() === "") {
+    if (!inquiry.countries || inquiry.countries.trim() === "") {
       error.countries = "Please tell us which countries you are interested in*";
     }
 
-    if (!messages || messages.trim() === "") {
+    if (!inquiry.messages || inquiry.messages.trim() === "") {
       error.messages = "Message is required*";
     }
+
+    return error;
+  };
+
+  const createMessage = inquiry => {
+    return `
+Hello Yola Rowana, I would like to plan a Central Asia trip.
+
+Name: ${inquiry.name}
+Email: ${inquiry.email}
+WhatsApp / Phone: ${inquiry.phone || "Not provided"}
+Preferred travel dates: ${inquiry.travelDates || "Not provided"}
+Countries interested in: ${inquiry.countries}
+Travel style: ${inquiry.travelStyle || "Not selected"}
+Number of travelers: ${inquiry.travelers || "Not selected"}
+
+Message:
+${inquiry.messages}
+    `.trim();
+  };
+
+  const saveInquiryToSupabase = async inquiry => {
+    const { error } = await supabase.from("inquiries").insert([
+      {
+        name: inquiry.name,
+        email: inquiry.email,
+        phone: inquiry.phone || null,
+        travel_dates: inquiry.travelDates || null,
+        countries: inquiry.countries,
+        travel_style: inquiry.travelStyle || null,
+        travelers: inquiry.travelers || null,
+        message: inquiry.messages,
+        source: "contact_page",
+        status: "new",
+      },
+    ]);
+
+    return error;
+  };
+
+  const handleInquiry = async (event, method) => {
+    event.preventDefault();
+
+    const inquiry = getInquiryData();
+    const error = validateInquiry(inquiry);
 
     if (Object.keys(error).length > 0) {
       setaddress_save_errors(error);
@@ -56,27 +108,39 @@ const All_Contact = ({ initialValues }) => {
     }
 
     setaddress_save_errors({});
+    setIsSubmitting(true);
 
-    const whatsappMessage = `
-Hello Yola Rowana, I would like to plan a Central Asia trip.
+    const supabaseError = await saveInquiryToSupabase(inquiry);
 
-Name: ${name}
-Email: ${email}
-WhatsApp / Phone: ${phone || "Not provided"}
-Preferred travel dates: ${travelDates || "Not provided"}
-Countries interested in: ${countries}
-Travel style: ${travelStyle || "Not selected"}
-Number of travelers: ${travelers || "Not selected"}
+    if (supabaseError) {
+      console.error("Supabase insert error:", supabaseError);
+      alert("Something went wrong while saving your inquiry. Please try again.");
+      setIsSubmitting(false);
+      return;
+    }
 
-Message:
-${messages}
-    `.trim();
+    const inquiryMessage = createMessage(inquiry);
 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+    if (method === "whatsapp") {
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        inquiryMessage
+      )}`;
 
-    window.open(whatsappUrl, "_blank");
+      window.location.href = whatsappUrl;
+      return;
+    }
+
+    if (method === "email") {
+      const subject = `Central Asia Trip Inquiry - ${inquiry.name}`;
+      const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(inquiryMessage)}`;
+
+      window.location.href = mailtoUrl;
+      return;
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -168,7 +232,7 @@ ${messages}
                 <form
                   className="form"
                   id="account_details_form"
-                  onSubmit={save_account_details}
+                  onSubmit={event => handleInquiry(event, "whatsapp")}
                 >
                   <div className="flex flex-wrap md:-mx-2">
                     <div className="md:px-2 w-full md:w-1/2 mb-3 md:mb-5">
@@ -274,12 +338,36 @@ ${messages}
                     </div>
 
                     <div className="md:px-2 w-full">
-                      <button
-                        className="btn btn-primary mx-auto rounded-full px-8"
-                        type="submit"
-                      >
-                        {data.submit_btn_label}
-                      </button>
+                      <div className="flex flex-col sm:flex-row justify-center gap-3">
+                        <button
+                          className="btn btn-primary rounded-full px-8"
+                          type="submit"
+                          disabled={isSubmitting}
+                        >
+                          {isSubmitting ? "Sending..." : "Send via WhatsApp"}
+                          <i className="fa-brands fa-whatsapp ml-2"></i>
+                        </button>
+
+                        <button
+                          className="btn btn-light rounded-full px-8 border border-primary-900"
+                          type="button"
+                          disabled={isSubmitting}
+                          onClick={event => handleInquiry(event, "email")}
+                        >
+                          {isSubmitting ? "Saving..." : "Send by Email"}
+                          <i className="fa-regular fa-envelope ml-2"></i>
+                        </button>
+                      </div>
+
+                      <p className="text-center text-sm text-dark-800 mt-4 mb-0">
+                        Prefer direct email? Write to{" "}
+                        <Link
+                          href={`mailto:${emailAddress}`}
+                          className="text-primary-900 font-semibold"
+                        >
+                          {emailAddress}
+                        </Link>
+                      </p>
                     </div>
                   </div>
                 </form>
