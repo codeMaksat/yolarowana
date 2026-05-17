@@ -39,7 +39,7 @@ export default function Index() {
       <Icon_Grid initialValues={icon_grid_about_data} />
       <Get_About_Us initialValues={get_about_us_about_data} />
       <Most_Liked_Tours initialValues={most_liked_tours_about_data} />
-      <Our_Team initialValues={our_team_about_data} />
+      {/* <Our_Team initialValues={our_team_about_data} /> */}
     </>
   );
 }

@@ -1,44 +1,44 @@
 [
-    {
-        "title": "Most Liked Tours",
-        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-        "product": [
-            {
-                "id": 12,
-                "slug": "/destination",
-                "image": "/assets/images/popular-tours-img1.jpg",
-                "alt": "popular-tours img 1",
-                "title": "Austrlia - 6 days in Vienna, Hallstatt",
-                "rating": 3,
-                "old_price": "2100.00",
-                "price": "1200.00",
-                "night": 5,
-                "day": 6
-            },
-            {
-                "id": 13,
-                "slug": "/destination",
-                "image": "/assets/images/popular-tours-img2.jpg",
-                "alt": "popular-tours img 2",
-                "title": "Cusco & Sallkantay beach",
-                "rating": 4,
-                "old_price": "2100.00",
-                "price": "1200.00",
-                "night": 8,
-                "day": 7
-            },
-            {
-                "id": 14,
-                "slug": "/destination",
-                "image": "/assets/images/popular-tours-img3.jpg",
-                "alt": "popular-tours img 3",
-                "title": "Thailand - Bali tour",
-                "rating": 5,
-                "old_price": "1200.00",
-                "price": "300.00",
-                "night": 3,
-                "day": 4
-            }
-        ]
-    }
+  {
+    "title": "Signature Central Asia Routes",
+    "label": "A few journeys that represent what Yola Rowana knows best — Silk Road cities, desert roads, mountain landscapes, and multi-country Central Asia routes.",
+    "product": [
+      {
+        "id": 12,
+        "slug": "/tour-detail",
+        "image": "/assets/images/popular-tours-img1.jpg",
+        "alt": "Turkmenistan Highlights Tour",
+        "title": "Turkmenistan Highlights Tour",
+        "rating": 5,
+        "old_price": "0",
+        "price": "850",
+        "night": 6,
+        "day": 7
+      },
+      {
+        "id": 13,
+        "slug": "/tour-detail",
+        "image": "/assets/images/popular-tours-img2.jpg",
+        "alt": "Uzbekistan Silk Road Classic",
+        "title": "Uzbekistan Silk Road Classic",
+        "rating": 5,
+        "old_price": "0",
+        "price": "980",
+        "night": 7,
+        "day": 8
+      },
+      {
+        "id": 14,
+        "slug": "/tour-detail",
+        "image": "/assets/images/popular-tours-img3.jpg",
+        "alt": "Five Stans Central Asia Tour",
+        "title": "Five Stans Central Asia Tour",
+        "rating": 5,
+        "old_price": "0",
+        "price": "2950",
+        "night": 14,
+        "day": 15
+      }
+    ]
+  }
 ]

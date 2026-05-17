@@ -31,7 +31,7 @@ const All_Tour_Detail = ({ initialValues }) => {
 
                 <div className="lg:flex">
                   <div className="w-full lg:w-[calc(100%-300px)] lg:pr-12">
-                    <ul className="flex overflow-x-auto md:space-x-5 mb-8 pb-3 md:pb-1 scroll-menu sticky top-[62px] md:top-[82px] lg:top-[82px] z-10 py-2 bg-white">
+                    <ul className="flex overflow-x-auto md:space-x-5 mb-8 pb-3 md:pb-1 scroll-menu sticky top-[62px] md:top-[82px] lg:top-[82px] z-2 py-2 bg-white">
                       <li>
                         <Link
                           href="#detail"

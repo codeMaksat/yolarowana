@@ -1,21 +1,21 @@
 [
-    {
-        "image": "/assets/images/get-about-us-img.svg",
-        "alt": "get-about-us-img",
-        "top_title": "Get About Us",
-        "main_label": "We create the trips you love",
-        "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed viverra tellus in hac. Ut faucibus pulvinar elementum integer.",
-        "review": [
-            {
-                "title": "24 Years Experience",
-                "label": "Feugiat scelerisque varius morbi enim nunc faucibus a."
-            },
-            {
-                "title": "Best Travel Agents",
-                "label": "Feugiat scelerisque varius morbi enim nunc faucibus a."
-            }
-        ],
-        "btn_slug":"/destination",
-        "btn_label":"Know more"
-    }
+  {
+    "image": "/assets/images/get-about-us-img.svg",
+    "alt": "Yola Rowana Central Asia travel planning",
+    "top_title": "About Yola Rowana",
+    "main_label": "We know the road across Central Asia",
+    "short_des": "Yola Rowana creates private and small group journeys across Central Asia — connecting Silk Road cities, desert routes, mountain landscapes, nomad culture, and local experiences with practical route planning and reliable support.",
+    "review": [
+      {
+        "title": "Local route knowledge",
+        "label": "From Ashgabat and Darvaza to Samarkand, Bukhara, the Pamirs and mountain roads, we plan journeys around real distances, borders, timing and traveler comfort."
+      },
+      {
+        "title": "Private and small group journeys",
+        "label": "We design flexible routes for travelers who want culture, landscapes, history and local connection — not rushed, copy-paste itineraries."
+      }
+    ],
+    "btn_slug": "/tour",
+    "btn_label": "Explore our tours"
+  }
 ]

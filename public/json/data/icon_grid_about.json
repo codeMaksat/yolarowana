@@ -1,40 +1,40 @@
 [
-    {
-        "title": "We Are Travel Point",
-        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-        "product": [
-            {
-                "value": 678,
-                "label": "Destinations Place",
-                "image": "/assets/images/destinations-icon1.svg",
-                "alt": "destinations-icon1",
-                "width": 82,
-                "height": 81
-            },
-            {
-                "value": 2547,
-                "label": "Amazing Tours",
-                "image": "/assets/images/destinations-icon2.svg",
-                "alt": "destinations-icon2",
-                "width": 82,
-                "height": 85
-            },
-            {
-                "value": 98,
-                "label": "Tour Types",
-                "image": "/assets/images/destinations-icon3.svg",
-                "alt": "destinations-icon3",
-                "width": 82,
-                "height": 80
-            },
-            {
-                "value": "12,567",
-                "label": "Happy Customer",
-                "image": "/assets/images/destinations-icon4.svg",
-                "alt": "destinations-icon4",
-                "width": 82,
-                "height": 86
-            }
-        ]
-    }
+  {
+    "title": "Built for Central Asia Travel",
+    "label": "We focus on private and small group journeys across the Silk Road, with local route knowledge, practical planning, and reliable support.",
+    "product": [
+      {
+        "value": "5",
+        "label": "Central Asia Countries",
+        "image": "/assets/images/destinations-icon1.svg",
+        "alt": "Central Asia countries icon",
+        "width": 82,
+        "height": 81
+      },
+      {
+        "value": "30+",
+        "label": "Silk Road Routes",
+        "image": "/assets/images/destinations-icon2.svg",
+        "alt": "Silk Road routes icon",
+        "width": 82,
+        "height": 85
+      },
+      {
+        "value": "Local",
+        "label": "Guides & Road Support",
+        "image": "/assets/images/destinations-icon3.svg",
+        "alt": "Local guides icon",
+        "width": 82,
+        "height": 80
+      },
+      {
+        "value": "24/7",
+        "label": "Trip Assistance",
+        "image": "/assets/images/destinations-icon4.svg",
+        "alt": "Trip assistance icon",
+        "width": 82,
+        "height": 86
+      }
+    ]
+  }
 ]
