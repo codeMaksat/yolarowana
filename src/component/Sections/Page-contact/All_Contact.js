@@ -4,6 +4,8 @@ import { useState } from "react";
 const All_Contact = ({ initialValues }) => {
   const [address_save_errors, setaddress_save_errors] = useState({});
 
+  const whatsappNumber = "99361691909";
+
   const inputClass =
     "w-full rounded-full bg-white border border-[#E2CFAF] px-5 py-3 text-[15px] text-dark-900 placeholder:text-dark-800/60 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all";
 
@@ -21,7 +23,11 @@ const All_Contact = ({ initialValues }) => {
 
     let name = formData.get("Fullname");
     let email = formData.get("email");
+    let phone = formData.get("phone");
+    let travelDates = formData.get("travel_dates");
     let countries = formData.get("countries");
+    let travelStyle = formData.get("travel_style");
+    let travelers = formData.get("travelers");
     let messages = formData.get("messages");
 
     const error = {};
@@ -46,18 +52,31 @@ const All_Contact = ({ initialValues }) => {
 
     if (Object.keys(error).length > 0) {
       setaddress_save_errors(error);
-    } else {
-      setaddress_save_errors({});
-
-      let data = {
-        name: name,
-        email: email,
-        countries: countries,
-        messages: messages,
-      };
-
-      console.log(data);
+      return;
     }
+
+    setaddress_save_errors({});
+
+    const whatsappMessage = `
+Hello Yola Rowana, I would like to plan a Central Asia trip.
+
+Name: ${name}
+Email: ${email}
+WhatsApp / Phone: ${phone || "Not provided"}
+Preferred travel dates: ${travelDates || "Not provided"}
+Countries interested in: ${countries}
+Travel style: ${travelStyle || "Not selected"}
+Number of travelers: ${travelers || "Not selected"}
+
+Message:
+${messages}
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
