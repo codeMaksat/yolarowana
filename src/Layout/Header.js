@@ -149,7 +149,10 @@ export default function Header({ initialValues }) {
                 );
               })}
 
-            <div className={`main-navigation ${isScrolled ? "py-1" : "py-2"}`}>
+            <div
+              className={`main-navigation ${isScrolled ? "py-3 lg:py-1" : "py-3 lg:py-2"
+                }`}
+            >
               {data.mid_bar &&
                 data.mid_bar.map((mid_bar_data, index) => {
                   return (
@@ -163,7 +166,10 @@ export default function Header({ initialValues }) {
                             <div className="logo" key={index}>
                               <Link
                                 href={mid_bar_logo_data.slug}
-                                className={`${isScrolled ? "max-w-[120px]" : "max-w-[150px]"} sm:max-w-auto block transition-all`}
+                                className={`${isScrolled
+                                    ? "max-w-[135px] lg:max-w-[110px]"
+                                    : "max-w-[150px] lg:max-w-[135px]"
+                                  } block transition-all`}
                               >
                                 <img
                                   src={mid_bar_logo_data.img}
