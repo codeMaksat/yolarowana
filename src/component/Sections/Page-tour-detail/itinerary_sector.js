@@ -9,7 +9,7 @@ const Itinerary_Sector = ({ itinerary_data }) => {
     itinerary_data &&
     itinerary_data.map((data, index) => {
       return (
-        <div id="itinerary" className="mb-10" key={index}>
+        <div id="itinerary" className="mb-10 scroll-mt-[150px]" key={index}>
           <h4 className="text-xl md:text-2xl">{data.title}</h4>
           <div className="accordion">
             {data.details &&

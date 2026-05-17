@@ -18,7 +18,7 @@ const Detail_Sector = ({ detail_data }) => {
         <React.Fragment key={index}>
           <div
             id="detail"
-            className="flex flex-wrap items-center justify-between mb-8"
+            className="flex flex-wrap items-center justify-between mb-8 scroll-mt-[150px]"
             key={index}
           >
             <h3 className="text-1xl lg:text-25 mb-0 leading-normal">

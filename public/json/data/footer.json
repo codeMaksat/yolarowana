@@ -13,10 +13,10 @@
                     {
                         "slug": "/",
                         "img": "/assets/images/logo-dark.png",
-                        "alt": "logo-dark"
+                        "alt": "Yola Rowana logo"
                     }
                 ],
-                "details": "Yolarowana creates private and small group journeys across Central Asia — from Silk Road cities and desert routes to mountain roads, nomad culture, and local experiences.",
+                "details": "Yola Rowana creates private and small group journeys across Central Asia — from Silk Road cities and desert routes to mountain roads, nomad culture, and local experiences.",
                 "icons": [
                     {
                         "slug": "https://www.facebook.com/",
@@ -44,15 +44,19 @@
                     "menu": [
                         {
                             "slug": "/about",
-                            "label": "About Yolarowana"
+                            "label": "About Yola Rowana"
                         },
                         {
                             "slug": "/tour",
                             "label": "Central Asia Tours"
                         },
                         {
-                            "slug": "/destination",
-                            "label": "Destinations"
+                            "slug": "/tour/group-tours",
+                            "label": "Group Tours"
+                        },
+                        {
+                            "slug": "/tailor-made",
+                            "label": "Tailor-Made Trips"
                         },
                         {
                             "slug": "/blog",
@@ -91,7 +95,7 @@
             ],
             "gallery": [
                 {
-                    "title": "Gallery",
+                    "title": "Central Asia Gallery",
                     "menu": [
                         {
                             "slug": "/gallery",
@@ -140,7 +144,7 @@
         "last_data": [
             {
                 "label": "Copyright 2026",
-                "label1": "Yolarowana",
+                "label1": "Yola Rowana",
                 "label2": ". All Rights Reserved."
             }
         ],

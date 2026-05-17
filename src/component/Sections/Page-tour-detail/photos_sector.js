@@ -18,7 +18,7 @@ const Photos_Sector = ({ photo_data }) => {
     photo_data &&
     photo_data.map((data, index) => {
       return (
-        <div id="photos" className="mb-10 w-full" key={index}>
+        <div id="photos" className="mb-10 w-full scroll-mt-[150px]" key={index}>
           <h4 className=" text-xl md:text-25">{data.title}</h4>
           <div className="photos-gallery-slider">
             <Swiper

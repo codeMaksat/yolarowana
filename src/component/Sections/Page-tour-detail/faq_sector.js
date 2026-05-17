@@ -9,7 +9,7 @@ const Faq_Sector = ({ faq_data }) => {
     faq_data &&
     faq_data.map((data, index) => {
       return (
-        <div id="faq" className="mb-10" key={index}>
+        <div id="faq" className="mb-10 scroll-mt-[150px]" key={index}>
           <h4 className="text-xl md:text-2xl">{data.title}</h4>
           <div className="accordion faqs-list">
             {data.question &&

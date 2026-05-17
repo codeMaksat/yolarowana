@@ -58,8 +58,14 @@ const Start_Testimonial = ({ initialValues }) => {
                 </div>
                 <Swiper
                   className="mySwiper !py-5 !px-3"
-                  slidesPerView={2}
-                  spaceBetween={30}
+                  slidesPerView={1}
+                  spaceBetween={20}
+                  breakpoints={{
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 30,
+                    },
+                  }}
                   navigation={{
                     nextEl: ".slider-arrow .swiper-button-next",
                     prevEl: ".slider-arrow .swiper-button-prev",
@@ -112,9 +118,8 @@ const Start_Testimonial = ({ initialValues }) => {
             data.bg_image.map((bg_image_data, index) => {
               return (
                 <div
-                  className={`absolute bottom-0 ${
-                    index === 0 ? "left" : "right"
-                  }-0`}
+                  className={`absolute bottom-0 ${index === 0 ? "left" : "right"
+                    }-0`}
                   key={index}>
                   <Image src={bg_image_data.image} alt={bg_image_data.alt} width={551} height={388} />
                 </div>

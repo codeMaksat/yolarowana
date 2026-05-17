@@ -7,7 +7,7 @@ const Map_Sector = ({ map_data }) => {
     map_data &&
     map_data.map((data, index) => {
       return (
-        <div id="map" className="mb-10" key={index}>
+        <div id="map" className="mb-10 scroll-mt-[150px]" key={index}>
           <h4 className=" text-xl md:text-25">{data.title}</h4>
           <div className="google-map rounded-2xl overflow-hidden">
             <iframe
