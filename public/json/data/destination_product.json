@@ -1,128 +1,68 @@
 [
-    {
-        "product": [
-            {
-                "id": 1,
-                "slug": "/destination-detail",
-                "title": "Europe",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-1.jpg",
-                "alt": "blog-img1",
-                "count": 3,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 2,
-                "slug": "/destination-detail",
-                "title": "Polar",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-2.jpg",
-                "alt": "blog-img2",
-                "count": 3,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 3,
-                "slug": "/destination-detail",
-                "title": "Africa",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-3.jpg",
-                "alt": "blog-img-3",
-                "count": 4,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 4,
-                "slug": "/destination-detail",
-                "title": "Middle asia",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-4.jpg",
-                "alt": "blog-img-4",
-                "count": 4,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 5,
-                "slug": "/destination-detail",
-                "title": "Scandinavia",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-7.jpg",
-                "alt": "blog-img-7",
-                "count": 4,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 6,
-                "slug": "/destination-detail",
-                "title": "Dream cruise",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-8.jpg",
-                "alt": "blog-img-8",
-                "count": 4,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 7,
-                "slug": "/destination-detail",
-                "title": "London",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-9.jpg",
-                "alt": "blog-img-9",
-                "count": 4,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 8,
-                "slug": "/destination-detail",
-                "title": "Turkey",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-10.jpg",
-                "alt": "blog-img-10",
-                "count": 4,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 9,
-                "slug": "/destination-detail",
-                "title": "Western Europe",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-11.jpg",
-                "alt": "blog-img-11",
-                "count": 5,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 10,
-                "slug": "/destination-detail",
-                "title": "Thailand",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-12.jpg",
-                "alt": "blog-img-12",
-                "count": 3,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 11,
-                "slug": "/destination-detail",
-                "title": "India",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-13.jpg",
-                "alt": "blog-img-13",
-                "count": 2,
-                "btn_label": "Read more"
-            },
-            {
-                "id": 12,
-                "slug": "/destination-detail",
-                "title": "Northan lights",
-                "short_des": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                "image": "/assets/images/top-destinations-img-14.jpg",
-                "alt": "blog-img-14",
-                "count": 4,
-                "btn_label": "Read more"
-            }
-        ],
-        "btn_label": "Load more",
-        "btn_slug": "/destination-two"
-    }
+  {
+    "product": [
+      {
+        "id": 1,
+        "slug": "/destination-detail",
+        "title": "Turkmenistan",
+        "short_des": "Desert routes, Ashgabat’s marble cityscape, the Darvaza Gas Crater, Ancient Merv, Yangykala Canyon and Silk Road history.",
+        "image": "/assets/images/top-destinations-img-1.jpg",
+        "alt": "Turkmenistan travel destination",
+        "count": 6,
+        "btn_label": "Explore"
+      },
+      {
+        "id": 2,
+        "slug": "/destination-detail",
+        "title": "Uzbekistan",
+        "short_des": "The heart of the Silk Road, with Samarkand, Bukhara, Khiva, Tashkent, blue-tiled madrasahs, old bazaars and rich cultural routes.",
+        "image": "/assets/images/top-destinations-img-2.jpg",
+        "alt": "Uzbekistan travel destination",
+        "count": 8,
+        "btn_label": "Explore"
+      },
+      {
+        "id": 3,
+        "slug": "/destination-detail",
+        "title": "Kazakhstan",
+        "short_des": "Wide steppe landscapes, Almaty, Charyn Canyon, mountain lakes, modern cities and routes connecting nature with Central Asian culture.",
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Kazakhstan travel destination",
+        "count": 5,
+        "btn_label": "Explore"
+      },
+      {
+        "id": 4,
+        "slug": "/destination-detail",
+        "title": "Kyrgyzstan",
+        "short_des": "Mountain roads, yurt camps, Issyk-Kul Lake, alpine valleys, horse culture and nomad experiences for travelers who love nature.",
+        "image": "/assets/images/top-destinations-img-4.jpg",
+        "alt": "Kyrgyzstan travel destination",
+        "count": 7,
+        "btn_label": "Explore"
+      },
+      {
+        "id": 5,
+        "slug": "/destination-detail",
+        "title": "Tajikistan",
+        "short_des": "The Pamir Highway, high mountain passes, remote valleys, lakes, villages and some of the most dramatic road journeys in Central Asia.",
+        "image": "/assets/images/top-destinations-img-7.jpg",
+        "alt": "Tajikistan travel destination",
+        "count": 4,
+        "btn_label": "Explore"
+      },
+      {
+        "id": 6,
+        "slug": "/tour",
+        "title": "Multi-Country Tours",
+        "short_des": "Silk Road journeys across several Central Asian countries, designed for travelers who want one connected route through the region.",
+        "image": "/assets/images/top-destinations-img-8.jpg",
+        "alt": "Multi-country Central Asia tours",
+        "count": 6,
+        "btn_label": "View Tours"
+      }
+    ],
+    "btn_label": "View all tours",
+    "btn_slug": "/tour"
+  }
 ]
