@@ -109,14 +109,34 @@ export default function Dashboard() {
     return "bg-[#FEF2D3] text-[#B98500]";
   };
 
+  const getRowClass = status => {
+    if (status === "new") {
+      return "bg-[#FFF9E8]";
+    }
+
+    if (status === "contacted") {
+      return "bg-[#F0F7FF]";
+    }
+
+    if (status === "confirmed") {
+      return "bg-[#F1FBF4]";
+    }
+
+    if (status === "closed") {
+      return "bg-[#F5F5F5] text-dark-800/70";
+    }
+
+    return "bg-white";
+  };
+
   return (
     <>
       <Head_Meta meta_data={seo_data.contact_meta} comman_meta={seo_data} />
 
       <div className="bg-gray-200 mb-10 md:mb-14 py-10 md:py-0">
-        <div className="container">
+        <div className="max-w-[1600px] mx-auto px-4 md:px-6">
           <div className="md:flex">
-            <div className="md:max-w-[258px] w-full shrink-0 py-6 md:py-10 px-4 md:px-5 bg-white">
+            <div className="md:max-w-[220px] w-full shrink-0 py-6 md:py-10 px-4 md:px-5 bg-white">
               <ul className="dashboard-list">
                 <li className="active">
                   <Link href="/booking-dashboard">
@@ -147,7 +167,7 @@ export default function Dashboard() {
               </ul>
             </div>
 
-            <div className="pt-8 mb-0 md:py-8 md:pb-14 md:px-5 xl:px-8 w-full md:w-[calc(100%-258px)]">
+            <div className="pt-8 mb-0 md:py-8 md:pb-14 md:px-5 xl:px-8 w-full md:w-[calc(100%-220px)]">
               <div className="mb-7 flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <h2 className="text-xl md:text-25 mb-2">
@@ -243,7 +263,7 @@ export default function Dashboard() {
                 </div>
 
                 <div className="w-full overflow-x-auto">
-                  <table className="table-list table-auto whitespace-nowrap">
+                  <table className="table-list table-auto whitespace-nowrap min-w-[1500px]">
                     <thead>
                       <tr>
                         <th>Date</th>
@@ -270,7 +290,12 @@ export default function Dashboard() {
 
                       {inquiries.map(inquiry => {
                         return (
-                          <tr key={inquiry.id}>
+                          <tr
+                            key={inquiry.id}
+                            className={`${getRowClass(
+                              inquiry.status || "new"
+                            )} transition-all`}
+                          >
                             <td>{formatDate(inquiry.created_at)}</td>
 
                             <td>{inquiry.name || "-"}</td>
@@ -311,23 +336,23 @@ export default function Dashboard() {
                               </span>
                             </td>
 
-<td>
-  <select
-    value={inquiry.status || "new"}
-    disabled={updatingId === inquiry.id}
-    onChange={event =>
-      updateInquiryStatus(inquiry.id, event.target.value)
-    }
-    className="min-w-[140px] rounded-full border border-[#E2CFAF] bg-white px-4 py-2 text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 capitalize"
-  >
-    <option value="new">New</option>
-    <option value="contacted">Contacted</option>
-    <option value="confirmed">Confirmed</option>
-    <option value="closed">Closed</option>
-  </select>
-</td>
+                            <td>
+                              <select
+                                value={inquiry.status || "new"}
+                                disabled={updatingId === inquiry.id}
+                                onChange={event =>
+                                  updateInquiryStatus(inquiry.id, event.target.value)
+                                }
+                                className="min-w-[140px] rounded-full border border-[#E2CFAF] bg-white px-4 py-2 text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 capitalize"
+                              >
+                                <option value="new">New</option>
+                                <option value="contacted">Contacted</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="closed">Closed</option>
+                              </select>
+                            </td>
 
-                            <td className="max-w-[360px] whitespace-normal">
+                            <td className="max-w-[420px] whitespace-normal leading-normal">
                               {inquiry.message || "-"}
                             </td>
                           </tr>
