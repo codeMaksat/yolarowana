@@ -1,6 +1,7 @@
 import { Head_Meta, useFetchData } from "@/component/comman";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { supabase } from "@/utils/supabaseClient";
 
 export default function Dashboard() {
@@ -9,8 +10,32 @@ export default function Dashboard() {
   const [inquiries, setInquiries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [updatingId, setUpdatingId] = useState(null);
+  const router = useRouter();
+  const [checkingAuth, setCheckingAuth] = useState(true);
 
   const statusOptions = ["new", "contacted", "confirmed", "closed"];
+
+  useEffect(() => {
+    const checkUser = async () => {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
+      if (!user) {
+        router.push("/yola-admin");
+        return;
+      }
+
+      setCheckingAuth(false);
+    };
+
+    checkUser();
+  }, [router]);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    router.push("/yola-admin");
+  };
 
   const fetchInquiries = async () => {
     setLoading(true);
@@ -31,8 +56,10 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
-    fetchInquiries();
-  }, []);
+    if (!checkingAuth) {
+      fetchInquiries();
+    }
+  }, [checkingAuth]);
 
   const updateInquiryStatus = async (id, newStatus) => {
     setUpdatingId(id);
@@ -129,6 +156,14 @@ export default function Dashboard() {
     return "bg-white";
   };
 
+  if (checkingAuth) {
+    return (
+      <div className="py-20 text-center">
+        <p>Checking access...</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <Head_Meta meta_data={seo_data.contact_meta} comman_meta={seo_data} />
@@ -163,6 +198,18 @@ export default function Dashboard() {
                     </span>
                     Back to website
                   </Link>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={handleLogout}
+                    className="w-full text-left flex items-center gap-3"
+                  >
+                    <span>
+                      <img src="/assets/images/logout.svg" alt="logout" />
+                    </span>
+                    Logout
+                  </button>
                 </li>
               </ul>
             </div>

@@ -1,23 +1,37 @@
 import { Head_Meta, useFetchData } from "@/component/comman";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { supabase } from "@/utils/supabaseClient";
 
-export default function ForgotPassword() {
-  const [email, setEmail] = useState("");
+export default function ResetPassword() {
+  const router = useRouter();
+
   const [address_save_errors, setaddress_save_errors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleResetPassword = async event => {
+  const handleUpdatePassword = async event => {
     event.preventDefault();
+
+    const formElement = document.querySelector("#reset_password_form");
+    const formData = new FormData(formElement);
+
+    const password = formData.get("password");
+    const passwordConfirm = formData.get("password_confirm");
 
     const error = {};
 
-    if (!email || email.trim() === "") {
-      error.email = "Email is required*";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
-      error.email = "Invalid email address";
+    if (!password || password.trim() === "") {
+      error.password = "Password is required*";
+    } else if (password.length < 8) {
+      error.password = "Password must be at least 8 characters long";
+    }
+
+    if (!passwordConfirm || passwordConfirm.trim() === "") {
+      error.password_confirm = "Confirm password is required*";
+    } else if (password !== passwordConfirm) {
+      error.password_confirm = "Passwords do not match*";
     }
 
     if (Object.keys(error).length > 0) {
@@ -30,25 +44,26 @@ export default function ForgotPassword() {
     setSuccessMessage("");
     setIsSubmitting(true);
 
-    const { error: resetError } = await supabase.auth.resetPasswordForEmail(
-      email,
-      {
-        redirectTo: `${window.location.origin}/reset-password`,
-      }
-    );
+    const { error: updateError } = await supabase.auth.updateUser({
+      password,
+    });
 
-    if (resetError) {
+    if (updateError) {
       setaddress_save_errors({
-        general: "Could not send reset email. Please try again.",
+        general:
+          "Could not update password. Please open the reset link from your email again.",
       });
       setIsSubmitting(false);
       return;
     }
 
-    setSuccessMessage(
-      "Password reset link sent. Please check your email inbox."
-    );
-    setEmail("");
+    setSuccessMessage("Your password has been updated successfully.");
+    formElement.reset();
+
+    setTimeout(() => {
+      router.push("/yola-admin");
+    }, 1200);
+
     setIsSubmitting(false);
   };
 
@@ -65,11 +80,10 @@ export default function ForgotPassword() {
         <div className="container">
           <div className="max-w-[590px] mx-auto px-3 sm:px-6 md:px-8 pb-7 md:pb-9 bg-primary-400 rounded-4xl">
             <div className="shadow-form-box px-4 sm:px-6 md:px-8 py-7 md:py-9 bg-white rounded-4xl -mt-7 md:-mt-9 inline-block w-full">
-              <h1 className="text-xl mb-2">Forgot password</h1>
+              <h1 className="text-xl mb-2">Create new password</h1>
 
               <p className="text-dark-800 md:mb-6">
-                Enter your admin email address. We will send you a link to
-                create a new password.
+                Enter a new password for your Yola Rowana admin account.
               </p>
 
               {address_save_errors.general && (
@@ -88,20 +102,35 @@ export default function ForgotPassword() {
                 </div>
               )}
 
-              <form className="form" onSubmit={handleResetPassword}>
+              <form
+                className="form"
+                id="reset_password_form"
+                onSubmit={handleUpdatePassword}
+              >
                 <div className="mb-3 sm:mb-5">
                   <input
-                    type="email"
-                    placeholder="Email address"
+                    type="password"
+                    placeholder="New password"
                     className="form-control"
-                    name="email"
-                    value={email}
-                    onChange={event => setEmail(event.target.value)}
+                    name="password"
                   />
-
-                  {address_save_errors.email && (
+                  {address_save_errors.password && (
                     <span className="error text-red-800">
-                      {address_save_errors.email}
+                      {address_save_errors.password}
+                    </span>
+                  )}
+                </div>
+
+                <div className="mb-3 sm:mb-5">
+                  <input
+                    type="password"
+                    placeholder="Confirm new password"
+                    className="form-control"
+                    name="password_confirm"
+                  />
+                  {address_save_errors.password_confirm && (
+                    <span className="error text-red-800">
+                      {address_save_errors.password_confirm}
                     </span>
                   )}
                 </div>
@@ -112,7 +141,7 @@ export default function ForgotPassword() {
                     className="btn btn-primary"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Send reset link"}
+                    {isSubmitting ? "Updating..." : "Update password"}
                   </button>
 
                   <p className="text-dark-800 m-0">
