@@ -3,7 +3,7 @@
     "product": [
       {
         "id": 1,
-        "slug": "/destination-detail",
+        "slug": "/destination-turkmenistan",
         "title": "Turkmenistan",
         "short_des": "Desert routes, Ashgabat’s marble cityscape, the Darvaza Gas Crater, Ancient Merv, Yangykala Canyon and Silk Road history.",
         "image": "/assets/images/top-destinations-img-1.jpg",
@@ -13,7 +13,7 @@
       },
       {
         "id": 2,
-        "slug": "/destination-detail",
+        "slug": "/destination-uzbekistan",
         "title": "Uzbekistan",
         "short_des": "The heart of the Silk Road, with Samarkand, Bukhara, Khiva, Tashkent, blue-tiled madrasahs, old bazaars and rich cultural routes.",
         "image": "/assets/images/top-destinations-img-2.jpg",
@@ -23,7 +23,7 @@
       },
       {
         "id": 3,
-        "slug": "/destination-detail",
+        "slug": "/destination-kazakhstan",
         "title": "Kazakhstan",
         "short_des": "Wide steppe landscapes, Almaty, Charyn Canyon, mountain lakes, modern cities and routes connecting nature with Central Asian culture.",
         "image": "/assets/images/top-destinations-img-3.jpg",
@@ -33,7 +33,7 @@
       },
       {
         "id": 4,
-        "slug": "/destination-detail",
+        "slug": "/destination-kyrgyzstan",
         "title": "Kyrgyzstan",
         "short_des": "Mountain roads, yurt camps, Issyk-Kul Lake, alpine valleys, horse culture and nomad experiences for travelers who love nature.",
         "image": "/assets/images/top-destinations-img-4.jpg",
@@ -43,7 +43,7 @@
       },
       {
         "id": 5,
-        "slug": "/destination-detail",
+        "slug": "/destination-tajikistan",
         "title": "Tajikistan",
         "short_des": "The Pamir Highway, high mountain passes, remote valleys, lakes, villages and some of the most dramatic road journeys in Central Asia.",
         "image": "/assets/images/top-destinations-img-7.jpg",

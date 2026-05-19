@@ -1,0 +1,166 @@
+[
+  {
+    "title": "Central Asia Multi-Country Tours",
+    "icon": "fa-solid fa-location-dot",
+    "description": "Central Asia is best experienced as a connected journey — a region where Silk Road cities, desert routes, mountain roads, nomadic culture and modern capitals come together across several countries. Multi-country tours are ideal for travelers who want to understand the region beyond one destination.",
+    "description1": "A Central Asia route can combine Uzbekistan’s historic cities, Turkmenistan’s desert landscapes, Kazakhstan’s wide scenery, Kyrgyzstan’s mountains and Tajikistan’s Pamir routes. The key is choosing the right countries, border connections, timing and travel pace.",
+    "title1": "Why Choose a Multi-Country Central Asia Tour",
+    "description2": "Multi-country tours allow travelers to see the contrast between the region’s main travel identities: Uzbekistan for Silk Road architecture, Turkmenistan for desert routes and Ancient Merv, Kazakhstan for open landscapes and modern cities, Kyrgyzstan for lakes and nomadic culture, and Tajikistan for high mountain roads.",
+    "description3": "These routes require careful planning because distances, visas, borders, road conditions and seasonal timing can vary between countries. A good itinerary should not simply include more places; it should connect them in a practical and comfortable order.",
+    "description4": "Yola Rowana helps travelers design realistic Central Asia routes based on available time, travel style, comfort level and interests. Whether you want a two-country Silk Road route or a complete Five Stans journey, the trip should feel connected, not rushed.",
+    "description5": "Popular combinations include Uzbekistan + Turkmenistan, Kazakhstan + Kyrgyzstan, Uzbekistan + Kazakhstan + Kyrgyzstan, and full Five Stans tours across the region.",
+    "activitie": [
+      {
+        "title": "Top Multi-Country Route Ideas",
+        "description": "Central Asia’s strongest route combinations include Uzbekistan and Turkmenistan for classic Silk Road and desert landscapes, Kazakhstan and Kyrgyzstan for mountains and lakes, and full Five Stans routes for travelers who want the complete regional experience.",
+        "short_des": "For first-time travelers, the best multi-country routes are usually Uzbekistan + Turkmenistan, Kazakhstan + Kyrgyzstan, or a 14–18 day Five Stans itinerary."
+      }
+    ],
+    "top_places": [
+      {
+        "title": "Uzbekistan + Turkmenistan",
+        "label": "A powerful Silk Road route combining Samarkand, Bukhara and Khiva with Ashgabat, Darvaza and Ancient Merv.",
+        "image": "/assets/images/top-place-uzbekistan-turkmenistan.jpg",
+        "alt": "Uzbekistan and Turkmenistan tour"
+      },
+      {
+        "title": "Kazakhstan + Kyrgyzstan",
+        "label": "A scenic route focused on mountains, lakes, canyons, yurt culture and road journeys across two nature-rich countries.",
+        "image": "/assets/images/top-place-kazakhstan-kyrgyzstan.jpg",
+        "alt": "Kazakhstan and Kyrgyzstan tour"
+      },
+      {
+        "title": "Uzbekistan + Kazakhstan",
+        "label": "A balanced route combining Uzbekistan’s Silk Road cities with Kazakhstan’s modern cities and nature highlights.",
+        "image": "/assets/images/top-place-uzbekistan-kazakhstan.jpg",
+        "alt": "Uzbekistan and Kazakhstan tour"
+      },
+      {
+        "title": "Kyrgyzstan + Tajikistan",
+        "label": "A mountain-focused route for adventurous travelers, connecting alpine lakes, yurt culture and Pamir road journeys.",
+        "image": "/assets/images/top-place-kyrgyzstan-tajikistan.jpg",
+        "alt": "Kyrgyzstan and Tajikistan tour"
+      },
+      {
+        "title": "Three-Country Silk Road",
+        "label": "A practical regional route often combining Uzbekistan, Turkmenistan and Kazakhstan or Kyrgyzstan depending on interests.",
+        "image": "/assets/images/top-place-three-country-silk-road.jpg",
+        "alt": "Three country Silk Road route"
+      },
+      {
+        "title": "Five Stans Journey",
+        "label": "The complete Central Asia experience across Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan.",
+        "image": "/assets/images/top-place-five-stans.jpg",
+        "alt": "Five Stans Central Asia tour"
+      }
+    ],
+    "flights": [
+      {
+        "details": [
+          {
+            "title": "Best For",
+            "label": "Silk Road cities, deserts, mountains, nomadic culture"
+          },
+          {
+            "title": "Best Time",
+            "label": "April–May and September–October for most routes"
+          },
+          {
+            "title": "Common Route",
+            "label": "Uzbekistan – Turkmenistan – Kazakhstan – Kyrgyzstan"
+          },
+          {
+            "title": "Travel Style",
+            "label": "Private tours, small group trips and tailor-made routes"
+          },
+          {
+            "title": "Good To Know",
+            "label": "Border timing, visas and route order should be planned carefully"
+          }
+        ]
+      }
+    ],
+    "routes_title": "Recommended Central Asia Routes",
+    "routes_description": "Choose a route based on your available days, preferred travel pace and whether you want more culture, nature or a complete regional journey.",
+    "routes": [
+      {
+        "title": "Two-Country Silk Road",
+        "label": "Uzbekistan + Turkmenistan",
+        "duration": "10–12 Days",
+        "description": "Best for travelers who want iconic Silk Road cities, desert landscapes, Darvaza and Ancient Merv in one strong route."
+      },
+      {
+        "title": "Nature & Nomad Route",
+        "label": "Kazakhstan + Kyrgyzstan",
+        "duration": "9–12 Days",
+        "description": "A scenic route focused on mountains, lakes, canyons, yurt stays and nomadic culture."
+      },
+      {
+        "title": "Three-Country Route",
+        "label": "Uzbekistan – Kazakhstan – Kyrgyzstan",
+        "duration": "12–15 Days",
+        "description": "A balanced journey combining Silk Road culture, modern cities, mountain scenery and lake landscapes."
+      },
+      {
+        "title": "Complete Five Stans",
+        "label": "Kazakhstan – Kyrgyzstan – Tajikistan – Uzbekistan – Turkmenistan",
+        "duration": "15–18 Days",
+        "description": "The most complete Central Asia route for travelers who want to experience all five countries in one connected journey."
+      }
+    ],
+    "recommended_tours_title": "Recommended Central Asia Tours",
+    "recommended_tours_description": "Start with one of these regional routes, or ask us to customize a multi-country journey around your dates, visas and border connections.",
+    "tour": [
+      {
+        "product": [
+          {
+            "id": 1,
+            "slug": "/tour-detail",
+            "title": "Five Stans Central Asia Tour",
+            "short_des": "A complete journey across Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan.",
+            "description": "",
+            "image": "/assets/images/special-offers-img1.jpg",
+            "alt": "Five Stans Central Asia Tour",
+            "date": "Group",
+            "day": 15,
+            "rating": "4.9",
+            "price": 2950,
+            "old_price": 0
+          },
+          {
+            "id": 2,
+            "slug": "/tour-detail",
+            "title": "Uzbekistan & Turkmenistan Tour",
+            "short_des": "A cross-border Silk Road route combining historic cities, Darvaza and Ancient Merv.",
+            "description": "",
+            "image": "/assets/images/special-offers-img2.jpg",
+            "alt": "Uzbekistan and Turkmenistan Tour",
+            "date": "Private",
+            "day": 12,
+            "rating": "4.9",
+            "price": 1680,
+            "old_price": 0
+          },
+          {
+            "id": 3,
+            "slug": "/tour-detail",
+            "title": "Kazakhstan & Kyrgyzstan Tour",
+            "short_des": "A scenic mountain, canyon and lake journey across two Central Asian countries.",
+            "description": "",
+            "image": "/assets/images/special-offers-img3.jpg",
+            "alt": "Kazakhstan and Kyrgyzstan Tour",
+            "date": "Private",
+            "day": 10,
+            "rating": "4.8",
+            "price": 1580,
+            "old_price": 0
+          }
+        ]
+      }
+    ],
+    "cta_title": "Not sure how to plan Central Asia?",
+    "cta_description": "Tell us your dates, travel style and the countries you are interested in. We will help you build a realistic multi-country route with the right pace, border order and local support.",
+    "cta_button_label": "Plan My Trip",
+    "cta_button_slug": "/contact"
+  }
+]

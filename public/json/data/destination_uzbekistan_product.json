@@ -1,0 +1,208 @@
+[
+    {
+        "title": "Uzbekistan",
+        "icon": "fa-solid fa-location-dot",
+        "description": "Uzbekistan is the heart of the Silk Road in Central Asia — a country of blue-tiled madrasahs, ancient caravan cities, old bazaars, desert fortresses, warm hospitality, and deep cultural heritage. For many first-time travelers to the region, Uzbekistan is the best place to begin.",
+        "description1": "A journey through Uzbekistan often connects Tashkent, Samarkand, Bukhara, Khiva, and the Kyzylkum Desert. The routes are rich in history but also practical to travel, making Uzbekistan ideal for culture-focused travelers, photographers, families, and anyone who wants a strong introduction to Central Asia.",
+        "title1": "Why Visit Uzbekistan",
+        "description2": "Uzbekistan is best known for its Silk Road cities. Samarkand impresses with monumental architecture and the famous Registan Square. Bukhara offers a more intimate old-city atmosphere with mosques, madrasahs, caravanserais and local craft traditions. Khiva feels like an open-air museum, with its preserved walled old town and desert setting.",
+        "description3": "The country is easier to combine into a well-paced itinerary compared with some other Central Asian routes. It works beautifully as a single-country journey, but also pairs very well with Turkmenistan for travelers who want to connect classic Silk Road cities with desert routes, Darvaza and Ancient Merv.",
+        "description4": "Yola Rowana helps travelers design Uzbekistan routes that match their time, comfort level and interests — whether you want a short cultural journey, a deeper Silk Road route, or a cross-border itinerary with Turkmenistan and wider Central Asia.",
+        "description5": "Popular combinations include Uzbekistan Classic, Uzbekistan and Turkmenistan, or a wider Five Stans journey that uses Uzbekistan as the cultural heart of the route.",
+        "activitie": [
+            {
+                "title": "Top Places to Visit",
+                "description": "Uzbekistan’s strongest travel highlights include Tashkent, Samarkand, Bukhara, Khiva, Shakhrisabz, the Kyzylkum Desert, and the Fergana Valley. Each place offers a different layer of the country — from grand Silk Road monuments to local crafts, desert landscapes, markets, food and living traditions.",
+                "short_des": "For first-time visitors, the classic route is Tashkent – Samarkand – Bukhara – Khiva, with possible extensions to Shakhrisabz, Fergana Valley, Turkmenistan or a wider Central Asia journey."
+            }
+        ],
+        "top_places": [
+            {
+                "title": "Tashkent",
+                "label": "Uzbekistan’s capital, mixing Soviet-era avenues, modern city life, museums, metro stations and local markets.",
+                "image": "/assets/images/top-place-tashkent.jpg",
+                "alt": "Tashkent Uzbekistan"
+            },
+            {
+                "title": "Samarkand",
+                "label": "One of the great Silk Road cities, known for Registan Square, blue-tiled architecture and monumental Islamic heritage.",
+                "image": "/assets/images/top-place-samarkand.jpg",
+                "alt": "Samarkand Uzbekistan"
+            },
+            {
+                "title": "Bukhara",
+                "label": "A historic old city with mosques, madrasahs, caravanserais, craft traditions and a strong Silk Road atmosphere.",
+                "image": "/assets/images/top-place-bukhara.jpg",
+                "alt": "Bukhara Uzbekistan"
+            },
+            {
+                "title": "Khiva",
+                "label": "A preserved walled city in the desert, famous for Itchan Kala, minarets, old palaces and open-air museum feeling.",
+                "image": "/assets/images/top-place-khiva.jpg",
+                "alt": "Khiva Uzbekistan"
+            },
+            {
+                "title": "Shakhrisabz",
+                "label": "The birthplace of Amir Timur, with historic monuments and an easy extension from Samarkand.",
+                "image": "/assets/images/top-place-shakhrisabz.jpg",
+                "alt": "Shakhrisabz Uzbekistan"
+            },
+            {
+                "title": "Fergana Valley",
+                "label": "A rich cultural region known for crafts, ceramics, silk, local markets and traditional Uzbek life.",
+                "image": "/assets/images/top-place-fergana.jpg",
+                "alt": "Fergana Valley Uzbekistan"
+            }
+        ],
+        "routes_title": "Recommended Uzbekistan Routes",
+        "routes_description": "Choose a route based on your time, travel style and whether you want to combine Uzbekistan with Turkmenistan or wider Central Asia.",
+        "routes": [
+            {
+                "title": "Short Route",
+                "label": "Tashkent – Samarkand",
+                "duration": "3–4 Days",
+                "description": "Best for travelers with limited time who want a quick introduction to Uzbekistan’s Silk Road culture."
+            },
+            {
+                "title": "Classic Route",
+                "label": "Tashkent – Samarkand – Bukhara",
+                "duration": "6–7 Days",
+                "description": "A strong first-time route combining the capital, grand monuments and Bukhara’s old-city atmosphere."
+            },
+            {
+                "title": "Complete Route",
+                "label": "Tashkent – Samarkand – Bukhara – Khiva",
+                "duration": "8–10 Days",
+                "description": "The most complete classic Uzbekistan route, ending with the preserved walled city of Khiva."
+            },
+            {
+                "title": "Cross-Border Route",
+                "label": "Uzbekistan + Turkmenistan",
+                "duration": "10–12 Days",
+                "description": "A powerful Silk Road combination connecting Uzbekistan’s historic cities with Turkmenistan’s desert routes, Darvaza and Ancient Merv."
+            }
+        ],
+        "recommended_tours_title": "Recommended Uzbekistan Tours",
+        "recommended_tours_description": "Start with one of these routes, or ask us to customize your Uzbekistan journey around your dates and border connections.",
+        "cta_title": "Not sure how to plan Uzbekistan?",
+        "cta_description": "Tell us your dates, travel style and whether you want to combine Uzbekistan with Turkmenistan or a wider Central Asia route. We will help you build a practical itinerary.",
+        "cta_button_label": "Plan My Trip",
+        "cta_button_slug": "/contact",
+        "flights": [
+            {
+                "details": [
+                    {
+                        "title": "Best For",
+                        "label": "Silk Road cities, culture, architecture, bazaars"
+                    },
+                    {
+                        "title": "Best Time",
+                        "label": "April–May and September–October"
+                    },
+                    {
+                        "title": "Common Route",
+                        "label": "Tashkent – Samarkand – Bukhara – Khiva"
+                    },
+                    {
+                        "title": "Travel Style",
+                        "label": "Private tours, cultural journeys and small group routes"
+                    },
+                    {
+                        "title": "Good To Know",
+                        "label": "Pairs very well with Turkmenistan and Five Stans tours"
+                    }
+                ]
+            }
+        ],
+        "hotel": [
+            {
+                "product": [
+                    {
+                        "id": 1,
+                        "slug": "/contact",
+                        "title": "Spring: April to May",
+                        "short_des": "One of the best seasons for Uzbekistan. The weather is comfortable for walking tours in Samarkand, Bukhara and Khiva, and the light is beautiful for photography.",
+                        "image": "/assets/images/hotel-img1.jpg",
+                        "alt": "Spring travel in Uzbekistan",
+                        "rating": 5,
+                        "review": 0,
+                        "day": 0,
+                        "price": 0
+                    },
+                    {
+                        "id": 2,
+                        "slug": "/contact",
+                        "title": "Autumn: September to October",
+                        "short_des": "Another excellent time to visit. Temperatures are pleasant, the cities feel lively, and it works well for longer Silk Road and cross-border routes.",
+                        "image": "/assets/images/hotel-img2.jpg",
+                        "alt": "Autumn travel in Uzbekistan",
+                        "rating": 5,
+                        "review": 0,
+                        "day": 0,
+                        "price": 0
+                    },
+                    {
+                        "id": 3,
+                        "slug": "/contact",
+                        "title": "Summer & Winter Notes",
+                        "short_des": "Summer can be very hot, especially in desert areas and old cities. Winter is possible and quieter, but some travelers may prefer spring or autumn for comfort.",
+                        "image": "/assets/images/hotel-img3.jpg",
+                        "alt": "Uzbekistan seasonal travel notes",
+                        "rating": 5,
+                        "review": 0,
+                        "day": 0,
+                        "price": 0
+                    }
+                ]
+            }
+        ],
+        "tour": [
+            {
+                "product": [
+                    {
+                        "id": 1,
+                        "slug": "/tour-detail",
+                        "title": "Uzbekistan Silk Road Classic",
+                        "short_des": "Tashkent, Samarkand, Bukhara and Khiva in one classic cultural route.",
+                        "description": "",
+                        "image": "/assets/images/special-offers-img1.jpg",
+                        "alt": "Uzbekistan Silk Road Classic Tour",
+                        "date": "Private",
+                        "day": 8,
+                        "rating": "4.9",
+                        "price": 980,
+                        "old_price": 0
+                    },
+                    {
+                        "id": 2,
+                        "slug": "/tour-detail",
+                        "title": "Uzbekistan & Turkmenistan Tour",
+                        "short_des": "A cross-border Silk Road journey combining historic cities and desert routes.",
+                        "description": "",
+                        "image": "/assets/images/special-offers-img2.jpg",
+                        "alt": "Uzbekistan and Turkmenistan Tour",
+                        "date": "Private",
+                        "day": 12,
+                        "rating": "4.9",
+                        "price": 1680,
+                        "old_price": 0
+                    },
+                    {
+                        "id": 3,
+                        "slug": "/tour-detail",
+                        "title": "Five Stans Central Asia Tour",
+                        "short_des": "A wider regional journey through the cultural and natural highlights of Central Asia.",
+                        "description": "",
+                        "image": "/assets/images/special-offers-img3.jpg",
+                        "alt": "Five Stans Central Asia Tour",
+                        "date": "Group",
+                        "day": 15,
+                        "rating": "4.8",
+                        "price": 2950,
+                        "old_price": 0
+                    }
+                ]
+            }
+        ]
+    }
+]

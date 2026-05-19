@@ -1,0 +1,166 @@
+[
+  {
+    "title": "Kazakhstan",
+    "icon": "fa-solid fa-location-dot",
+    "description": "Kazakhstan is Central Asia’s largest country — a land of wide steppe horizons, mountain landscapes, canyon roads, modern cities, lakes, nomadic heritage and long-distance travel routes. It is ideal for travelers who want both nature and city comfort in one journey.",
+    "description1": "A Kazakhstan trip often begins in Almaty, with access to Charyn Canyon, mountain lakes, national parks and scenic day trips. Astana adds a modern architectural contrast, while wider routes can connect Kazakhstan with Kyrgyzstan, Uzbekistan or a full Five Stans journey.",
+    "title1": "Why Visit Kazakhstan",
+    "description2": "Kazakhstan is best for travelers who enjoy big landscapes, road trips, mountain scenery and modern city experiences. Almaty is one of the most comfortable entry points in Central Asia, offering cafés, mountain views, parks, museums and easy access to nature.",
+    "description3": "Beyond the cities, Kazakhstan gives travelers a sense of scale. Charyn Canyon, Kolsai Lakes, Kaindy Lake, Altyn-Emel National Park and the open steppe offer a different side of Central Asia compared with the Silk Road cities of Uzbekistan or the desert routes of Turkmenistan.",
+    "description4": "Yola Rowana helps travelers plan Kazakhstan routes that balance city stays, nature excursions and regional connections. Kazakhstan can work as a focused short trip, a nature extension, or part of a wider Central Asia itinerary.",
+    "description5": "Popular combinations include Kazakhstan with Kyrgyzstan for mountains and lakes, Kazakhstan with Uzbekistan for city and culture balance, or Kazakhstan as part of a Five Stans journey.",
+    "activitie": [
+      {
+        "title": "Top Places to Visit",
+        "description": "Kazakhstan’s strongest highlights include Almaty, Astana, Charyn Canyon, Kolsai Lakes, Kaindy Lake, Altyn-Emel National Park, Big Almaty Lake and the vast steppe landscapes. Each place shows a different side of the country — modern cities, mountain scenery, canyon views, lakes and open-road travel.",
+        "short_des": "For first-time visitors, the most popular route is Almaty – Charyn Canyon – Kolsai Lakes – Kaindy Lake, with possible extensions to Astana, Kyrgyzstan or a wider Central Asia route."
+      }
+    ],
+    "top_places": [
+      {
+        "title": "Almaty",
+        "label": "Kazakhstan’s most visitor-friendly city, known for mountain views, parks, cafés, museums and access to nearby nature.",
+        "image": "/assets/images/top-place-almaty.jpg",
+        "alt": "Almaty Kazakhstan"
+      },
+      {
+        "title": "Astana",
+        "label": "The modern capital, known for futuristic architecture, wide boulevards and a strong contrast with historic Silk Road cities.",
+        "image": "/assets/images/top-place-astana.jpg",
+        "alt": "Astana Kazakhstan"
+      },
+      {
+        "title": "Charyn Canyon",
+        "label": "One of Kazakhstan’s most dramatic landscapes, often called a must-see nature stop near Almaty.",
+        "image": "/assets/images/top-place-charyn.jpg",
+        "alt": "Charyn Canyon Kazakhstan"
+      },
+      {
+        "title": "Kolsai Lakes",
+        "label": "A beautiful mountain lake region with forested slopes, fresh air and scenic walking routes.",
+        "image": "/assets/images/top-place-kolsai.jpg",
+        "alt": "Kolsai Lakes Kazakhstan"
+      },
+      {
+        "title": "Kaindy Lake",
+        "label": "A striking alpine lake famous for its submerged spruce trees and unusual natural scenery.",
+        "image": "/assets/images/top-place-kaindy.jpg",
+        "alt": "Kaindy Lake Kazakhstan"
+      },
+      {
+        "title": "Altyn-Emel National Park",
+        "label": "A wide protected landscape known for desert scenery, colorful hills, dunes and remote nature routes.",
+        "image": "/assets/images/top-place-altyn-emel.jpg",
+        "alt": "Altyn Emel National Park Kazakhstan"
+      }
+    ],
+    "flights": [
+      {
+        "details": [
+          {
+            "title": "Best For",
+            "label": "Mountain scenery, canyon routes, modern cities, nature trips"
+          },
+          {
+            "title": "Best Time",
+            "label": "May–June and September–October"
+          },
+          {
+            "title": "Common Route",
+            "label": "Almaty – Charyn Canyon – Kolsai Lakes – Kaindy Lake"
+          },
+          {
+            "title": "Travel Style",
+            "label": "Private tours, nature routes and regional combinations"
+          },
+          {
+            "title": "Good To Know",
+            "label": "Pairs well with Kyrgyzstan, Uzbekistan and Five Stans tours"
+          }
+        ]
+      }
+    ],
+    "routes_title": "Recommended Kazakhstan Routes",
+    "routes_description": "Choose a route based on your interest in cities, mountains, lakes and whether you want to combine Kazakhstan with nearby countries.",
+    "routes": [
+      {
+        "title": "Short Route",
+        "label": "Almaty + Charyn Canyon",
+        "duration": "3–4 Days",
+        "description": "Best for travelers who want a quick Kazakhstan introduction with a comfortable city base and one major nature highlight."
+      },
+      {
+        "title": "Nature Route",
+        "label": "Almaty – Charyn – Kolsai – Kaindy",
+        "duration": "5–6 Days",
+        "description": "A strong nature-focused route combining mountain landscapes, canyon views and lake scenery near Almaty."
+      },
+      {
+        "title": "City & Nature Route",
+        "label": "Almaty – Astana – Charyn Canyon",
+        "duration": "6–8 Days",
+        "description": "A balanced route connecting Kazakhstan’s modern urban side with its most accessible natural landscapes."
+      },
+      {
+        "title": "Regional Route",
+        "label": "Kazakhstan + Kyrgyzstan",
+        "duration": "9–12 Days",
+        "description": "A beautiful mountain and lake combination across two countries, ideal for travelers who want nature and nomadic culture."
+      }
+    ],
+    "recommended_tours_title": "Recommended Kazakhstan Tours",
+    "recommended_tours_description": "Start with one of these routes, or ask us to customize Kazakhstan as part of a wider Central Asia journey.",
+    "tour": [
+      {
+        "product": [
+          {
+            "id": 1,
+            "slug": "/tour-detail",
+            "title": "Kazakhstan Nature Highlights",
+            "short_des": "Almaty, Charyn Canyon, Kolsai Lakes and Kaindy Lake.",
+            "description": "",
+            "image": "/assets/images/special-offers-img1.jpg",
+            "alt": "Kazakhstan Nature Highlights Tour",
+            "date": "Private",
+            "day": 6,
+            "rating": "4.8",
+            "price": 890,
+            "old_price": 0
+          },
+          {
+            "id": 2,
+            "slug": "/tour-detail",
+            "title": "Kazakhstan & Kyrgyzstan Tour",
+            "short_des": "A mountain and lake journey across two of Central Asia’s most scenic countries.",
+            "description": "",
+            "image": "/assets/images/special-offers-img2.jpg",
+            "alt": "Kazakhstan and Kyrgyzstan Tour",
+            "date": "Private",
+            "day": 10,
+            "rating": "4.9",
+            "price": 1580,
+            "old_price": 0
+          },
+          {
+            "id": 3,
+            "slug": "/tour-detail",
+            "title": "Five Stans Central Asia Tour",
+            "short_des": "A wider regional journey through the cultural and natural highlights of Central Asia.",
+            "description": "",
+            "image": "/assets/images/special-offers-img3.jpg",
+            "alt": "Five Stans Central Asia Tour",
+            "date": "Group",
+            "day": 15,
+            "rating": "4.8",
+            "price": 2950,
+            "old_price": 0
+          }
+        ]
+      }
+    ],
+    "cta_title": "Not sure how to plan Kazakhstan?",
+    "cta_description": "Tell us your dates, travel style and whether you want to combine Kazakhstan with Kyrgyzstan, Uzbekistan or a wider Central Asia route. We will help you build a practical itinerary.",
+    "cta_button_label": "Plan My Trip",
+    "cta_button_slug": "/contact"
+  }
+]

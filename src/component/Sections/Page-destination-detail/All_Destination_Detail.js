@@ -2,81 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const All_Destination_Detail = ({ initialValues }) => {
-  const routeIdeas = [
-    {
-      title: "Short Route",
-      label: "Ashgabat + Darvaza",
-      duration: "2–3 Days",
-      description:
-        "Best for travelers who want a quick introduction to Turkmenistan with the capital city and the famous Darvaza Gas Crater.",
-    },
-    {
-      title: "Classic Route",
-      label: "Ashgabat – Darvaza – Ancient Merv",
-      duration: "5 Days",
-      description:
-        "A balanced route combining modern Ashgabat, desert landscapes, and one of the most important Silk Road sites in Central Asia.",
-    },
-    {
-      title: "Complete Route",
-      label: "Ashgabat – Darvaza – Merv – Yangykala",
-      duration: "7 Days",
-      description:
-        "A deeper journey through Turkmenistan, adding dramatic canyon landscapes and a stronger sense of the country’s natural beauty.",
-    },
-    {
-      title: "Cross-Border Route",
-      label: "Turkmenistan + Uzbekistan",
-      duration: "10–12 Days",
-      description:
-        "A strong Silk Road combination connecting Turkmenistan’s desert routes with Uzbekistan’s historic cities.",
-    },
-  ];
 
-  const topPlaceCards = [
-    {
-      title: "Ashgabat",
-      label:
-        "Turkmenistan’s capital, known for marble architecture, monuments, museums and wide modern avenues.",
-      image: "/assets/images/top-destinations-img-1.jpg",
-      alt: "Ashgabat Turkmenistan",
-    },
-    {
-      title: "Darvaza Gas Crater",
-      label:
-        "The famous desert fire crater, best experienced at sunset and after dark under the open sky.",
-      image: "/assets/images/top-destinations-img-1.jpg",
-      alt: "Darvaza Gas Crater Turkmenistan",
-    },
-    {
-      title: "Ancient Merv",
-      label:
-        "A UNESCO-listed Silk Road site with ancient city walls, mausoleums and deep historical layers.",
-      image: "/assets/images/top-destinations-img-1.jpg",
-      alt: "Ancient Merv Turkmenistan",
-    },
-    {
-      title: "Yangykala Canyon",
-      label:
-        "A dramatic canyon landscape with colorful cliffs, remote viewpoints and strong photography appeal.",
-      image: "/assets/images/top-destinations-img-1.jpg",
-      alt: "Yangykala Canyon Turkmenistan",
-    },
-    {
-      title: "Nisa",
-      label:
-        "An ancient Parthian site near Ashgabat, ideal for travelers interested in archaeology and early empires.",
-      image: "/assets/images/top-destinations-img-1.jpg",
-      alt: "Nisa Turkmenistan",
-    },
-    {
-      title: "Karakum Desert",
-      label:
-        "The vast desert heart of Turkmenistan, connecting road journeys, villages and remote landscapes.",
-      image: "/assets/images/top-destinations-img-1.jpg",
-      alt: "Karakum Desert Turkmenistan",
-    },
-  ];
+
 
   return (
     <section className="destination-detail py-14 md:mb-10">
@@ -84,6 +11,8 @@ const All_Destination_Detail = ({ initialValues }) => {
         initialValues.map((data, index) => {
           const travelInfo = data.flights?.[0]?.details || [];
           const topPlaces = data.activitie?.[0];
+          const topPlaceCards = data.top_places || [];
+          const routes = data.routes || [];
           const tours = data.tour?.[0]?.product || [];
 
           return (
@@ -229,16 +158,15 @@ const All_Destination_Detail = ({ initialValues }) => {
               <div className="mb-12 md:mb-16">
                 <div className="text-center mb-7 md:mb-10">
                   <h3 className="text-2xl md:text-3xl mb-3">
-                    Recommended Routes
+                    {data.routes_title || "Recommended Routes"}
                   </h3>
                   <p className="max-w-[760px] mx-auto text-dark-800">
-                    Choose a route based on your time, travel style, and whether
-                    you want to continue into Uzbekistan or wider Central Asia.
+                    {data.routes_description}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  {routeIdeas.map((route, routeIndex) => {
+                  {routes.map((route, routeIndex) => {
                     return (
                       <div
                         className="bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl p-5 md:p-6 shadow-sm"
@@ -271,11 +199,10 @@ const All_Destination_Detail = ({ initialValues }) => {
               <div className="mb-12 md:mb-16">
                 <div className="text-center mb-7 md:mb-10">
                   <h3 className="text-2xl md:text-3xl mb-3">
-                    Recommended Turkmenistan Tours
+                    {data.recommended_tours_title || "Recommended Tours"}
                   </h3>
                   <p className="max-w-[760px] mx-auto text-dark-800">
-                    Start with one of these routes, or ask us to customize the
-                    trip around your dates and border connections.
+                    {data.recommended_tours_description}
                   </p>
                 </div>
 
@@ -385,17 +312,18 @@ const All_Destination_Detail = ({ initialValues }) => {
               {/* CTA */}
               <div className="bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl p-6 md:p-10 text-center">
                 <h3 className="text-2xl md:text-3xl mb-3">
-                  Not sure how to plan Turkmenistan?
+                  {data.cta_title || "Not sure how to plan your trip?"}
                 </h3>
 
                 <p className="max-w-[760px] mx-auto text-dark-800 mb-6">
-                  Tell us your dates, travel style, and whether you want to
-                  combine Turkmenistan with Uzbekistan or a wider Central Asia
-                  route. We will help you build a practical itinerary.
+                  {data.cta_description}
                 </p>
 
-                <Link href="/contact" className="btn btn-primary mx-auto">
-                  Plan My Trip
+                <Link
+                  href={data.cta_button_slug || "/contact"}
+                  className="btn btn-primary mx-auto"
+                >
+                  {data.cta_button_label || "Plan My Trip"}
                   <i className="fa-regular fa-arrow-right ml-2"></i>
                 </Link>
               </div>
