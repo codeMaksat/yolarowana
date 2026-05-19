@@ -5,42 +5,42 @@
         "product": [
             {
                 "id": 1,
-                "slug": "/destination",
+                "slug": "/destination-turkmenistan",
                 "image": "/assets/images/categories-img-1.jpg",
                 "alt": "turkmenistan img 1",
                 "title": "Turkmenistan"
             },
             {
                 "id": 2,
-                "slug": "/destination",
+                "slug": "/destination-uzbekistan",
                 "image": "/assets/images/categories-img-2.jpg",
                 "alt": "uzbekistan img 2",
                 "title": "Uzbekistan"
             },
             {
                 "id": 3,
-                "slug": "/destination",
+                "slug": "/destination-tajikistan",
                 "image": "/assets/images/categories-img-3.jpg",
                 "alt": "Tajikistan img 3",
                 "title": "Tajikistan"
             },
             {
                 "id": 4,
-                "slug": "/destination",
+                "slug": "/destination-kyrgyzstan",
                 "image": "/assets/images/categories-img-4.jpg",
                 "alt": "Kyrgyzstan img 4",
                 "title": "Kyrgyzstan"
             },
             {
                 "id": 5,
-                "slug": "/destination",
+                "slug": "/destination-kazakhstan",
                 "image": "/assets/images/categories-img-5.jpg",
                 "alt": "Kazakhstan img 5",
                 "title": "Kazakhstan"
             },
             {
                 "id": 6,
-                "slug": "/destination",
+                "slug": "/destination-central-asia",
                 "image": "/assets/images/categories-img-6.jpg",
                 "alt": "central asia multi country tour img",
                 "title": "Multi-Country Tours"
