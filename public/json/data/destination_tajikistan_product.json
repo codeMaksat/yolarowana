@@ -115,7 +115,7 @@
         "product": [
           {
             "id": 1,
-            "slug": "/tour-detail",
+            "slug": "/tour-tajikistan-mountain-highlights",
             "title": "Tajikistan Mountain Highlights",
             "short_des": "Dushanbe, Iskanderkul Lake, Fann Mountains and scenic valleys.",
             "description": "",
@@ -129,7 +129,7 @@
           },
           {
             "id": 2,
-            "slug": "/tour-detail",
+            "slug": "/tour-pamir-highway",
             "title": "Pamir Highway Adventure",
             "short_des": "A remote road journey through Khorog, Wakhan Valley, Murghab and high mountain passes.",
             "description": "",
@@ -143,7 +143,7 @@
           },
           {
             "id": 3,
-            "slug": "/tour-detail",
+            "slug": "/tour-five-stans",
             "title": "Five Stans Central Asia Tour",
             "short_des": "A wider regional journey through Central Asia’s cities, mountains, deserts and cultural routes.",
             "description": "",

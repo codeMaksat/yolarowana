@@ -1,0 +1,275 @@
+[
+  {
+    "title": "Kazakhstan Nature Highlights",
+    "icon": "fa-solid fa-location-dot",
+    "icon_label": "Almaty, Charyn Canyon, Kolsai Lakes, Kaindy Lake",
+    "image": "/assets/images/tour-product-detail-img.jpg",
+    "alt": "Kazakhstan Nature Highlights Tour",
+    "detail": [
+      {
+        "title": "Kazakhstan Nature Highlights",
+        "rating": 5,
+        "review": 17,
+        "service": [
+          {
+            "image": "/assets/images/clock-icon.svg",
+            "alt": "clock-icon",
+            "width": 20,
+            "title": "Duration:",
+            "label": "6 Days"
+          },
+          {
+            "image": "/assets/images/group-user-icon.svg",
+            "alt": "group-user-icon",
+            "width": 22,
+            "title": "Travel style:",
+            "label": "Private / Small group"
+          },
+          {
+            "image": "/assets/images/train-icon.svg",
+            "alt": "train-icon",
+            "width": 24,
+            "title": "Route:",
+            "label": "Almaty – Charyn – Kolsai – Kaindy"
+          },
+          {
+            "image": "/assets/images/cross_duotone-icon.svg",
+            "alt": "cross-duotone-icon",
+            "width": 24,
+            "title": "Support:",
+            "label": "Route planning & local guidance"
+          }
+        ],
+        "overview": [
+          {
+            "title": "Overview",
+            "labels": [
+              {
+                "label": "This Kazakhstan Nature Highlights tour is designed for travelers who want a short but powerful introduction to Kazakhstan’s landscapes. The route begins in Almaty, then continues to Charyn Canyon, Kolsai Lakes and Kaindy Lake."
+              },
+              {
+                "label": "It is ideal for travelers who enjoy mountain scenery, canyon views, alpine lakes, photography and scenic road travel. The journey works well as a focused Kazakhstan trip or as a nature extension before continuing to Kyrgyzstan or wider Central Asia."
+              }
+            ]
+          }
+        ],
+        "included": [
+          {
+            "title": "What's Included",
+            "details": [
+              {
+                "label": "Private transport during the tour"
+              },
+              {
+                "label": "Local English-speaking guide or driver-guide according to the itinerary"
+              },
+              {
+                "label": "Accommodation in selected hotels and guesthouses where applicable"
+              },
+              {
+                "label": "Airport transfers in Almaty"
+              },
+              {
+                "label": "Entrance tickets for listed sightseeing places"
+              },
+              {
+                "label": "Route planning and local travel coordination support"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "photo": [
+      {
+        "title": "Photos",
+        "images": [
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Kazakhstan nature tour photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Charyn Canyon Kazakhstan travel photo"
+          },
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Kolsai Lakes Kazakhstan travel photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Kaindy Lake Kazakhstan travel photo"
+          }
+        ]
+      }
+    ],
+    "itinerary": [
+      {
+        "title": "Itinerary",
+        "details": [
+          {
+            "day": 1,
+            "title": "Arrival in Almaty",
+            "content": "Arrive in Almaty and meet your local guide. Begin with a relaxed introduction to Kazakhstan’s most visitor-friendly city, known for mountain views, parks, cafés and cultural landmarks."
+          },
+          {
+            "day": 2,
+            "title": "Almaty City & Mountain Viewpoints",
+            "content": "Explore Almaty’s main highlights and nearby mountain viewpoints. Depending on weather and timing, the day can include city landmarks, local markets and scenic areas close to the city."
+          },
+          {
+            "day": 3,
+            "title": "Almaty – Charyn Canyon",
+            "content": "Travel to Charyn Canyon, one of Kazakhstan’s most dramatic natural landscapes. Walk through the canyon area, enjoy viewpoints and continue through open steppe and mountain scenery."
+          },
+          {
+            "day": 4,
+            "title": "Kolsai Lakes",
+            "content": "Visit the Kolsai Lakes region, known for alpine lake scenery, forested slopes and peaceful mountain atmosphere. This is one of the most beautiful nature areas near Almaty."
+          },
+          {
+            "day": 5,
+            "title": "Kaindy Lake – Return Toward Almaty",
+            "content": "Visit Kaindy Lake, famous for its submerged spruce trees and unusual alpine scenery. After sightseeing, return toward Almaty or stay overnight depending on the final route."
+          },
+          {
+            "day": 6,
+            "title": "Departure from Almaty",
+            "content": "Transfer to the airport for departure or extend your journey to Kyrgyzstan, Uzbekistan or a wider Central Asia route."
+          }
+        ]
+      }
+    ],
+    "map": [
+      {
+        "title": "Map",
+        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2548788.2543709846!2d72.04480799586505!3d43.30725633459886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836d6f5cf34f5b%3A0x3dd0f0901eebd1d6!2sAlmaty%2C%20Kazakhstan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+      }
+    ],
+    "faq": [
+      {
+        "title": "FAQ",
+        "question": [
+          {
+            "question": "Is this tour suitable for first-time Kazakhstan travelers?",
+            "answer": "Yes. This route is a strong first introduction to Kazakhstan because it combines Almaty with the country’s most accessible nature highlights."
+          },
+          {
+            "question": "When is the best time for this tour?",
+            "answer": "May to October is usually the best period. Late spring and autumn are comfortable, while summer is good for lake and mountain scenery."
+          },
+          {
+            "question": "Can this tour connect with Kyrgyzstan?",
+            "answer": "Yes. This route connects very well with Kyrgyzstan, especially for travelers who want a longer mountain and lake journey."
+          },
+          {
+            "question": "Can the itinerary be customized?",
+            "answer": "Yes. The route can be adjusted based on your travel dates, preferred pace, comfort level and whether you want to add more nature or city time."
+          }
+        ]
+      }
+    ],
+    "side_bar": [
+      {
+        "title": "Plan This Tour",
+        "from_title": "Travel Date",
+        "time_title": "Travel Style",
+        "time1": "Private",
+        "time2": "Small Group",
+        "ticket_title": "Travelers",
+        "ticket1": "Adult travelers",
+        "ticket1_price": 890.0,
+        "ticket2": "Children / family travelers",
+        "ticket2_price": 0.0,
+        "total_title": "Estimated From",
+        "product": [
+          {
+            "slug": "/tour-kazakhstan-kyrgyzstan",
+            "title": "Kazakhstan & Kyrgyzstan Tour",
+            "price": 1580,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Kazakhstan and Kyrgyzstan Tour",
+            "btn_label": "View Tour"
+          },
+          {
+            "slug": "/tour-five-stans",
+            "title": "Five Stans Central Asia Tour",
+            "price": 2950,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Five Stans Central Asia Tour",
+            "btn_label": "View Tour"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Traveler Reviews",
+        "review": [
+          {
+            "user_name": "Chris Morgan",
+            "image": "/assets/images/testimonial-img2.png",
+            "alt": "traveler review image",
+            "label": "This was a perfect short nature trip from Almaty. Charyn Canyon and Kaindy Lake were the highlights, and the route felt easy to follow.",
+            "rating": 5,
+            "review": "5.0",
+            "date": "June 2025"
+          },
+          {
+            "user_name": "Elena Foster",
+            "image": "/assets/images/team-pearson-img3.jpg",
+            "alt": "traveler review image",
+            "label": "We wanted landscapes without a very long itinerary. This Kazakhstan route gave us mountains, lakes and canyon scenery in a comfortable amount of time.",
+            "rating": 5,
+            "review": "4.9",
+            "date": "September 2025"
+          }
+        ],
+        "exceptional": [
+          {
+            "review": "5.0",
+            "title": "Excellent",
+            "total_review": "17",
+            "details": [
+              {
+                "title": "Nature experience",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              },
+              {
+                "title": "Route planning",
+                "value": 4.9,
+                "rating": {
+                  "width": "98%"
+                }
+              },
+              {
+                "title": "Transport",
+                "value": 4.8,
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Local guidance",
+                "value": "4.8",
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Experience",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

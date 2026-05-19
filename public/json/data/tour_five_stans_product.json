@@ -1,0 +1,320 @@
+[
+  {
+    "title": "Five Stans Central Asia Tour",
+    "icon": "fa-solid fa-location-dot",
+    "icon_label": "Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan, Turkmenistan",
+    "image": "/assets/images/tour-product-detail-img.jpg",
+    "alt": "Five Stans Central Asia Tour",
+    "detail": [
+      {
+        "title": "Five Stans Central Asia Tour",
+        "rating": 5,
+        "review": 24,
+        "service": [
+          {
+            "image": "/assets/images/clock-icon.svg",
+            "alt": "clock-icon",
+            "width": 20,
+            "title": "Duration:",
+            "label": "15 Days"
+          },
+          {
+            "image": "/assets/images/group-user-icon.svg",
+            "alt": "group-user-icon",
+            "width": 22,
+            "title": "Travel style:",
+            "label": "Small group / Private"
+          },
+          {
+            "image": "/assets/images/train-icon.svg",
+            "alt": "train-icon",
+            "width": 24,
+            "title": "Route:",
+            "label": "Kazakhstan – Kyrgyzstan – Tajikistan – Uzbekistan – Turkmenistan"
+          },
+          {
+            "image": "/assets/images/cross_duotone-icon.svg",
+            "alt": "cross-duotone-icon",
+            "width": 24,
+            "title": "Support:",
+            "label": "Visa, border & route planning"
+          }
+        ],
+        "overview": [
+          {
+            "title": "Overview",
+            "labels": [
+              {
+                "label": "This Five Stans Central Asia Tour is designed for travelers who want to experience the full diversity of the region in one connected journey. The route brings together Kazakhstan’s open landscapes, Kyrgyzstan’s mountain and nomadic culture, Tajikistan’s dramatic highland scenery, Uzbekistan’s Silk Road cities, and Turkmenistan’s desert routes and ancient history."
+              },
+              {
+                "label": "The journey is best for curious travelers who want more than a single-country trip. It combines major highlights with practical pacing, local support, border coordination, and a route structure that helps the five countries feel connected rather than rushed."
+              }
+            ]
+          }
+        ],
+        "included": [
+          {
+            "title": "What's Included",
+            "details": [
+              {
+                "label": "Private or group transport according to the itinerary"
+              },
+              {
+                "label": "Local English-speaking guides in each country where required"
+              },
+              {
+                "label": "Accommodation in selected hotels and local-style stays where applicable"
+              },
+              {
+                "label": "Airport transfers according to the final route"
+              },
+              {
+                "label": "Entrance tickets for listed sightseeing places"
+              },
+              {
+                "label": "Visa, border and route planning guidance"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "photo": [
+      {
+        "title": "Photos",
+        "images": [
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Five Stans Central Asia tour photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Central Asia Silk Road travel photo"
+          },
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Central Asia mountain and desert travel photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Five Stans travel route photo"
+          }
+        ]
+      }
+    ],
+    "itinerary": [
+      {
+        "title": "Itinerary",
+        "details": [
+          {
+            "day": 1,
+            "title": "Arrival in Almaty, Kazakhstan",
+            "content": "Arrive in Almaty and meet your local team. Begin with a gentle introduction to Kazakhstan’s most visitor-friendly city, surrounded by mountain scenery, parks, cafés and cultural landmarks."
+          },
+          {
+            "day": 2,
+            "title": "Almaty – Charyn Canyon – Kolsai Area",
+            "content": "Travel out of the city toward Charyn Canyon, one of Kazakhstan’s most impressive natural landscapes. Continue toward the lake and mountain region, depending on the final route and season."
+          },
+          {
+            "day": 3,
+            "title": "Kazakhstan – Kyrgyzstan Border – Bishkek",
+            "content": "Cross into Kyrgyzstan and continue to Bishkek. After arrival, explore the capital’s main squares, local markets and Soviet-era city character before preparing for the mountain and lake routes ahead."
+          },
+          {
+            "day": 4,
+            "title": "Bishkek – Issyk-Kul Lake",
+            "content": "Drive toward Issyk-Kul Lake, one of Central Asia’s most famous alpine lakes. Visit cultural and scenic stops along the way, with time to enjoy mountain views and local life near the lake."
+          },
+          {
+            "day": 5,
+            "title": "Issyk-Kul – Karakol – Jeti-Oguz",
+            "content": "Continue around the lake toward Karakol and the red rock landscapes of Jeti-Oguz. This day highlights Kyrgyzstan’s natural beauty, mountain culture and scenic road travel."
+          },
+          {
+            "day": 6,
+            "title": "Kyrgyzstan – Tajikistan Connection",
+            "content": "Travel toward the Tajikistan route according to the final border and flight/road plan. This section is adjusted based on season, road conditions and border arrangements."
+          },
+          {
+            "day": 7,
+            "title": "Dushanbe, Tajikistan",
+            "content": "Arrive in Dushanbe and explore Tajikistan’s capital. Visit key city highlights, parks and cultural sites while preparing for the mountain-focused part of the journey."
+          },
+          {
+            "day": 8,
+            "title": "Fann Mountains or Pamir Route Introduction",
+            "content": "Depending on the selected route, travel toward the Fann Mountains, Iskanderkul Lake or the first stage of a Pamir-style road journey. The day focuses on Tajikistan’s mountain scenery and remote atmosphere."
+          },
+          {
+            "day": 9,
+            "title": "Tajikistan – Uzbekistan Border – Samarkand",
+            "content": "Cross into Uzbekistan and continue to Samarkand, one of the great cities of the Silk Road. Begin exploring the city’s monumental architecture and historic atmosphere."
+          },
+          {
+            "day": 10,
+            "title": "Samarkand Sightseeing",
+            "content": "Visit Samarkand’s main highlights, including Registan Square, mausoleums, mosques, bazaars and Silk Road landmarks. This is one of the cultural peaks of the journey."
+          },
+          {
+            "day": 11,
+            "title": "Samarkand – Bukhara",
+            "content": "Travel to Bukhara, a historic city known for its old town, caravanserais, madrasahs and craft traditions. The evening can include a relaxed walk through the old city area."
+          },
+          {
+            "day": 12,
+            "title": "Bukhara – Khiva",
+            "content": "Continue toward Khiva, passing through desert landscapes and Silk Road routes. Arrive at the preserved walled city, one of the most atmospheric places in Uzbekistan."
+          },
+          {
+            "day": 13,
+            "title": "Khiva – Turkmenistan Border – Darvaza",
+            "content": "Cross into Turkmenistan and continue toward the Karakum Desert. Travel to Darvaza Gas Crater and experience the famous burning crater after sunset."
+          },
+          {
+            "day": 14,
+            "title": "Darvaza – Ashgabat",
+            "content": "Return from the desert to Ashgabat. Explore Turkmenistan’s capital, known for marble architecture, monuments, wide avenues and a distinctive modern identity."
+          },
+          {
+            "day": 15,
+            "title": "Ashgabat Departure",
+            "content": "Transfer to the airport for departure or extend your journey with extra time in Turkmenistan, Uzbekistan or another Central Asia destination."
+          }
+        ]
+      }
+    ],
+    "map": [
+      {
+        "title": "Map",
+        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8578675.755613146!2d54.39813121536887!3d42.15023407349052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ac000000000000%3A0x0!2sCentral%20Asia!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+      }
+    ],
+    "faq": [
+      {
+        "title": "FAQ",
+        "question": [
+          {
+            "question": "Can the Five Stans route be customized?",
+            "answer": "Yes. The route can be adjusted based on your travel dates, comfort level, preferred countries, flight schedule and border conditions."
+          },
+          {
+            "question": "How many days do I need for all five countries?",
+            "answer": "A complete Five Stans journey is usually best with 15 to 18 days. Shorter routes are possible, but they may feel rushed depending on border timing and transport connections."
+          },
+          {
+            "question": "Do I need visas for this tour?",
+            "answer": "Visa requirements depend on your nationality and the final route. Some countries may be visa-free for certain travelers, while others may require visa or invitation support. We can guide you through the planning process."
+          },
+          {
+            "question": "Is this tour suitable for first-time Central Asia travelers?",
+            "answer": "Yes. This route is a strong introduction to the whole region, but it is best for travelers comfortable with multi-country travel, changing landscapes and some long travel days."
+          }
+        ]
+      }
+    ],
+    "side_bar": [
+      {
+        "title": "Plan This Tour",
+        "from_title": "Travel Date",
+        "time_title": "Travel Style",
+        "time1": "Small Group",
+        "time2": "Private",
+        "ticket_title": "Travelers",
+        "ticket1": "Adult travelers",
+        "ticket1_price": 2950.0,
+        "ticket2": "Children / family travelers",
+        "ticket2_price": 0.0,
+        "total_title": "Estimated From",
+        "product": [
+          {
+            "slug": "/tour-turkmenistan-highlights",
+            "title": "Turkmenistan Highlights Tour",
+            "price": 850,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Turkmenistan Highlights Tour",
+            "btn_label": "View Tour"
+          },
+          {
+            "slug": "/tour-uzbekistan-turkmenistan",
+            "title": "Uzbekistan & Turkmenistan Tour",
+            "price": 1680,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Uzbekistan and Turkmenistan Tour",
+            "btn_label": "View Tour"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Traveler Reviews",
+        "review": [
+          {
+            "user_name": "Michael Brown",
+            "image": "/assets/images/testimonial-img2.png",
+            "alt": "traveler review image",
+            "label": "This was a huge trip, but the route felt organized and realistic. Each country had a different character, and the border planning made the journey much easier.",
+            "rating": 5,
+            "review": "5.0",
+            "date": "May 2025"
+          },
+          {
+            "user_name": "Sophie Lee",
+            "image": "/assets/images/team-pearson-img3.jpg",
+            "alt": "traveler review image",
+            "label": "The mix of Silk Road cities, mountains, deserts and local culture was exactly what we wanted from Central Asia. It felt like a complete regional experience.",
+            "rating": 5,
+            "review": "4.9",
+            "date": "September 2025"
+          }
+        ],
+        "exceptional": [
+          {
+            "review": "5.0",
+            "title": "Excellent",
+            "total_review": "24",
+            "details": [
+              {
+                "title": "Route planning",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              },
+              {
+                "title": "Local guidance",
+                "value": 4.9,
+                "rating": {
+                  "width": "98%"
+                }
+              },
+              {
+                "title": "Border support",
+                "value": 4.8,
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Transport",
+                "value": "4.8",
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Experience",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

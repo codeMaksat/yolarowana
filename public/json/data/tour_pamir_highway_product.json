@@ -1,0 +1,295 @@
+[
+  {
+    "title": "Pamir Highway Adventure",
+    "icon": "fa-solid fa-location-dot",
+    "icon_label": "Dushanbe, Khorog, Wakhan Valley, Murghab, Osh",
+    "image": "/assets/images/tour-product-detail-img.jpg",
+    "alt": "Pamir Highway Adventure Tour",
+    "detail": [
+      {
+        "title": "Pamir Highway Adventure",
+        "rating": 5,
+        "review": 16,
+        "service": [
+          {
+            "image": "/assets/images/clock-icon.svg",
+            "alt": "clock-icon",
+            "width": 20,
+            "title": "Duration:",
+            "label": "10 Days"
+          },
+          {
+            "image": "/assets/images/group-user-icon.svg",
+            "alt": "group-user-icon",
+            "width": 22,
+            "title": "Travel style:",
+            "label": "Private adventure route"
+          },
+          {
+            "image": "/assets/images/train-icon.svg",
+            "alt": "train-icon",
+            "width": 24,
+            "title": "Route:",
+            "label": "Tajikistan – Kyrgyzstan"
+          },
+          {
+            "image": "/assets/images/cross_duotone-icon.svg",
+            "alt": "cross-duotone-icon",
+            "width": 24,
+            "title": "Support:",
+            "label": "Border, altitude & route planning"
+          }
+        ],
+        "overview": [
+          {
+            "title": "Overview",
+            "labels": [
+              {
+                "label": "The Pamir Highway Adventure is one of Central Asia’s most dramatic road journeys, designed for travelers who want remote mountain landscapes, high passes, frontier valleys and a deeper sense of expedition travel."
+              },
+              {
+                "label": "The route usually connects Dushanbe, Khorog, Wakhan Valley, Murghab and Osh, with adjustments based on border conditions, season and road access. It is best for adventurous travelers comfortable with long driving days, basic remote-area comfort and high-altitude landscapes."
+              }
+            ]
+          }
+        ],
+        "included": [
+          {
+            "title": "What's Included",
+            "details": [
+              {
+                "label": "Private transport suitable for mountain road conditions"
+              },
+              {
+                "label": "Local English-speaking guide or driver-guide according to the itinerary"
+              },
+              {
+                "label": "Accommodation in selected hotels, guesthouses and local-style stays"
+              },
+              {
+                "label": "Airport and border transfers according to the final route"
+              },
+              {
+                "label": "Entrance tickets and local visits listed in the itinerary"
+              },
+              {
+                "label": "Route planning, altitude notes and border coordination guidance"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "photo": [
+      {
+        "title": "Photos",
+        "images": [
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Pamir Highway travel photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Tajikistan mountain road photo"
+          },
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Wakhan Valley Tajikistan photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Pamir mountain landscape photo"
+          }
+        ]
+      }
+    ],
+    "itinerary": [
+      {
+        "title": "Itinerary",
+        "details": [
+          {
+            "day": 1,
+            "title": "Arrival in Dushanbe, Tajikistan",
+            "content": "Arrive in Dushanbe and meet your local team. Begin with a relaxed introduction to Tajikistan’s capital, including parks, museums, monuments and city landmarks depending on arrival time."
+          },
+          {
+            "day": 2,
+            "title": "Dushanbe – Kalai-Khumb",
+            "content": "Start the road journey toward the Pamir region. Drive through mountain valleys and river landscapes, with stops along the way. Overnight in Kalai-Khumb or a similar route town."
+          },
+          {
+            "day": 3,
+            "title": "Kalai-Khumb – Khorog",
+            "content": "Continue along remote mountain roads toward Khorog, the main town of the Pamir region. The route follows dramatic river valleys and gives the first strong sense of Pamir travel."
+          },
+          {
+            "day": 4,
+            "title": "Khorog and Surroundings",
+            "content": "Explore Khorog and nearby cultural or natural sites depending on timing. This day also gives time to prepare for the higher and more remote sections of the Pamir Highway."
+          },
+          {
+            "day": 5,
+            "title": "Khorog – Wakhan Valley",
+            "content": "Travel into the Wakhan Valley, one of the most atmospheric parts of the route. Visit villages, viewpoints and historic stops while following a corridor shaped by mountains, rivers and old Silk Road connections."
+          },
+          {
+            "day": 6,
+            "title": "Wakhan Valley Exploration",
+            "content": "Continue through the valley with stops at local villages, fortresses, hot springs or viewpoints depending on conditions. This is one of the most culturally and visually powerful days of the journey."
+          },
+          {
+            "day": 7,
+            "title": "Wakhan Valley – Murghab",
+            "content": "Drive toward Murghab through high-altitude landscapes and remote plateaus. The scenery changes dramatically as the route moves deeper into the Pamir highlands."
+          },
+          {
+            "day": 8,
+            "title": "Murghab – High Passes – Kyrgyzstan Border",
+            "content": "Continue across open mountain terrain and high passes toward the Kyrgyz border. The route is adjusted depending on road and border conditions."
+          },
+          {
+            "day": 9,
+            "title": "Kyrgyzstan Border – Osh",
+            "content": "Cross into Kyrgyzstan and continue to Osh, one of the region’s historic cities. Rest after the Pamir road journey and explore the city depending on arrival time."
+          },
+          {
+            "day": 10,
+            "title": "Departure from Osh",
+            "content": "Transfer to the airport for departure or continue your journey into Kyrgyzstan, Uzbekistan or a wider Five Stans Central Asia route."
+          }
+        ]
+      }
+    ],
+    "map": [
+      {
+        "title": "Map",
+        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2467972.382832684!2d68.49683339065721!3d38.54785750652906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b5d3d765778e7f%3A0x9d3e3fdf6b812b72!2sDushanbe%2C%20Tajikistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+      }
+    ],
+    "faq": [
+      {
+        "title": "FAQ",
+        "question": [
+          {
+            "question": "Is the Pamir Highway suitable for everyone?",
+            "answer": "This route is best for adventurous travelers who are comfortable with long road days, remote areas, simple accommodation in some places and high-altitude landscapes."
+          },
+          {
+            "question": "When is the best time to travel the Pamir Highway?",
+            "answer": "The best period is usually June to September, when high mountain routes are more accessible and weather conditions are more suitable."
+          },
+          {
+            "question": "Can the route end in Tajikistan instead of Kyrgyzstan?",
+            "answer": "Yes. The route can be adjusted to return to Dushanbe or connect onward depending on border conditions, flights and your travel plan."
+          },
+          {
+            "question": "Can this tour be part of a Five Stans journey?",
+            "answer": "Yes. The Pamir Highway can be included as the Tajikistan and Kyrgyzstan section of a wider Five Stans Central Asia itinerary."
+          }
+        ]
+      }
+    ],
+    "side_bar": [
+      {
+        "title": "Plan This Tour",
+        "from_title": "Travel Date",
+        "time_title": "Travel Style",
+        "time1": "Private",
+        "time2": "Adventure Route",
+        "ticket_title": "Travelers",
+        "ticket1": "Adult travelers",
+        "ticket1_price": 1850.0,
+        "ticket2": "Children / family travelers",
+        "ticket2_price": 0.0,
+        "total_title": "Estimated From",
+        "product": [
+          {
+            "slug": "/tour-five-stans",
+            "title": "Five Stans Central Asia Tour",
+            "price": 2950,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Five Stans Central Asia Tour",
+            "btn_label": "View Tour"
+          },
+          {
+            "slug": "/tour-kazakhstan-kyrgyzstan",
+            "title": "Kazakhstan & Kyrgyzstan Tour",
+            "price": 1580,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Kazakhstan and Kyrgyzstan Tour",
+            "btn_label": "View Tour"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Traveler Reviews",
+        "review": [
+          {
+            "user_name": "Oliver Grant",
+            "image": "/assets/images/testimonial-img2.png",
+            "alt": "traveler review image",
+            "label": "The Pamir route felt like a true adventure. The roads were long, but the landscapes and villages made it one of the most memorable trips we have taken.",
+            "rating": 5,
+            "review": "5.0",
+            "date": "July 2025"
+          },
+          {
+            "user_name": "Mina Roberts",
+            "image": "/assets/images/team-pearson-img3.jpg",
+            "alt": "traveler review image",
+            "label": "We appreciated the honest planning advice before the trip. The route was remote, but we felt prepared and supported throughout the journey.",
+            "rating": 5,
+            "review": "4.9",
+            "date": "August 2025"
+          }
+        ],
+        "exceptional": [
+          {
+            "review": "5.0",
+            "title": "Excellent",
+            "total_review": "16",
+            "details": [
+              {
+                "title": "Adventure experience",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              },
+              {
+                "title": "Route planning",
+                "value": 4.9,
+                "rating": {
+                  "width": "98%"
+                }
+              },
+              {
+                "title": "Local support",
+                "value": 4.8,
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Transport",
+                "value": "4.8",
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Experience",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -161,7 +161,7 @@
                 "product": [
                     {
                         "id": 1,
-                        "slug": "/tour-detail",
+                        "slug": "/tour-uzbekistan-silk-road",
                         "title": "Uzbekistan Silk Road Classic",
                         "short_des": "Tashkent, Samarkand, Bukhara and Khiva in one classic cultural route.",
                         "description": "",
@@ -175,7 +175,7 @@
                     },
                     {
                         "id": 2,
-                        "slug": "/tour-detail",
+                        "slug": "/tour-uzbekistan-turkmenistan",
                         "title": "Uzbekistan & Turkmenistan Tour",
                         "short_des": "A cross-border Silk Road journey combining historic cities and desert routes.",
                         "description": "",
@@ -189,7 +189,7 @@
                     },
                     {
                         "id": 3,
-                        "slug": "/tour-detail",
+                        "slug": "/tour-five-stans",
                         "title": "Five Stans Central Asia Tour",
                         "short_des": "A wider regional journey through the cultural and natural highlights of Central Asia.",
                         "description": "",

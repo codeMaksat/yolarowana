@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Destination() {
   const { data: hero_destination_detail_data } = useFetchData(
-    "json/data/hero_destination_detail.json"
+    "json/data/hero_destination_uzbekistan.json"
   );
 
   const { data: destination_detail_product_data } = useFetchData(

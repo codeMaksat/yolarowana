@@ -1,0 +1,295 @@
+[
+  {
+    "title": "Kazakhstan & Kyrgyzstan Tour",
+    "icon": "fa-solid fa-location-dot",
+    "icon_label": "Almaty, Charyn Canyon, Kolsai Lakes, Bishkek, Issyk-Kul, Karakol",
+    "image": "/assets/images/tour-product-detail-img.jpg",
+    "alt": "Kazakhstan and Kyrgyzstan Tour",
+    "detail": [
+      {
+        "title": "Kazakhstan & Kyrgyzstan Tour",
+        "rating": 5,
+        "review": 19,
+        "service": [
+          {
+            "image": "/assets/images/clock-icon.svg",
+            "alt": "clock-icon",
+            "width": 20,
+            "title": "Duration:",
+            "label": "10 Days"
+          },
+          {
+            "image": "/assets/images/group-user-icon.svg",
+            "alt": "group-user-icon",
+            "width": 22,
+            "title": "Travel style:",
+            "label": "Private / Small group"
+          },
+          {
+            "image": "/assets/images/train-icon.svg",
+            "alt": "train-icon",
+            "width": 24,
+            "title": "Route:",
+            "label": "Kazakhstan – Kyrgyzstan"
+          },
+          {
+            "image": "/assets/images/cross_duotone-icon.svg",
+            "alt": "cross-duotone-icon",
+            "width": 24,
+            "title": "Support:",
+            "label": "Border & route planning"
+          }
+        ],
+        "overview": [
+          {
+            "title": "Overview",
+            "labels": [
+              {
+                "label": "This Kazakhstan and Kyrgyzstan tour is designed for travelers who want Central Asia’s most accessible mountain, lake and canyon landscapes in one journey. The route begins in Almaty, continues through Kazakhstan’s nature highlights, then crosses into Kyrgyzstan for alpine lakes, nomadic culture and mountain valleys."
+              },
+              {
+                "label": "It is ideal for travelers who prefer nature, scenery, road trips and local culture over city-heavy itineraries. Kazakhstan brings wide landscapes and modern city comfort, while Kyrgyzstan adds yurt culture, highland lakes and a stronger nomadic atmosphere."
+              }
+            ]
+          }
+        ],
+        "included": [
+          {
+            "title": "What's Included",
+            "details": [
+              {
+                "label": "Private transport during the tour"
+              },
+              {
+                "label": "Local English-speaking guides according to the itinerary"
+              },
+              {
+                "label": "Accommodation in selected hotels and local-style stays where applicable"
+              },
+              {
+                "label": "Airport and border transfers according to the final route"
+              },
+              {
+                "label": "Entrance tickets for listed sightseeing places"
+              },
+              {
+                "label": "Route planning and border coordination support"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "photo": [
+      {
+        "title": "Photos",
+        "images": [
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Kazakhstan and Kyrgyzstan tour photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Kazakhstan canyon travel photo"
+          },
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Kyrgyzstan mountain lake travel photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Central Asia nature tour photo"
+          }
+        ]
+      }
+    ],
+    "itinerary": [
+      {
+        "title": "Itinerary",
+        "details": [
+          {
+            "day": 1,
+            "title": "Arrival in Almaty, Kazakhstan",
+            "content": "Arrive in Almaty and meet your local guide. Begin with a relaxed introduction to Kazakhstan’s most visitor-friendly city, with mountain views, parks, cafés and cultural landmarks."
+          },
+          {
+            "day": 2,
+            "title": "Almaty City & Mountain Surroundings",
+            "content": "Explore Almaty’s main highlights and nearby mountain viewpoints. Depending on timing and weather, the day can include city landmarks, local markets and scenic areas close to the city."
+          },
+          {
+            "day": 3,
+            "title": "Almaty – Charyn Canyon",
+            "content": "Travel to Charyn Canyon, one of Kazakhstan’s most dramatic landscapes. Walk through the canyon area, enjoy viewpoints and continue through open steppe and mountain scenery."
+          },
+          {
+            "day": 4,
+            "title": "Kolsai Lakes & Kaindy Lake",
+            "content": "Visit the Kolsai Lakes region and Kaindy Lake, known for alpine scenery and submerged spruce trees. This is one of the most photogenic nature days of the tour."
+          },
+          {
+            "day": 5,
+            "title": "Kazakhstan – Kyrgyzstan Border – Bishkek",
+            "content": "Travel toward the border and cross into Kyrgyzstan. Continue to Bishkek, the capital, with time for a short city introduction depending on arrival time."
+          },
+          {
+            "day": 6,
+            "title": "Bishkek – Ala Archa – Issyk-Kul",
+            "content": "Visit Ala Archa National Park for a first taste of Kyrgyz alpine scenery, then continue toward Issyk-Kul Lake, one of Central Asia’s most famous highland lakes."
+          },
+          {
+            "day": 7,
+            "title": "Issyk-Kul Lake – Karakol",
+            "content": "Travel along Issyk-Kul Lake with cultural and scenic stops. Continue to Karakol, a mountain town often used as a base for valleys, hikes and local experiences."
+          },
+          {
+            "day": 8,
+            "title": "Karakol – Jeti-Oguz – Issyk-Kul",
+            "content": "Visit the red rock landscapes of Jeti-Oguz and explore the surrounding valley areas. Continue enjoying lake and mountain scenery around Issyk-Kul."
+          },
+          {
+            "day": 9,
+            "title": "Issyk-Kul – Bishkek",
+            "content": "Return to Bishkek with stops along the way, such as Burana Tower or local village/craft experiences depending on the final route and season."
+          },
+          {
+            "day": 10,
+            "title": "Departure from Bishkek",
+            "content": "Transfer to the airport for departure or extend your journey to Uzbekistan, Tajikistan or a wider Five Stans Central Asia route."
+          }
+        ]
+      }
+    ],
+    "map": [
+      {
+        "title": "Map",
+        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2548788.2543709846!2d72.04480799586505!3d43.30725633459886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836d6f5cf34f5b%3A0x3dd0f0901eebd1d6!2sAlmaty%2C%20Kazakhstan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+      }
+    ],
+    "faq": [
+      {
+        "title": "FAQ",
+        "question": [
+          {
+            "question": "Is this tour more nature-focused or culture-focused?",
+            "answer": "This route is mainly nature-focused, with mountains, lakes, canyons and scenic road journeys. It also includes cultural stops, city introductions and local experiences."
+          },
+          {
+            "question": "Can this tour be customized?",
+            "answer": "Yes. The route can be adjusted based on your travel dates, preferred pace, hotel level and whether you want more hiking, lake time or cultural stops."
+          },
+          {
+            "question": "What is the best time for this route?",
+            "answer": "Late spring, summer and early autumn are best. May to September works well for most Kazakhstan and Kyrgyzstan nature routes, with summer being better for higher mountain areas."
+          },
+          {
+            "question": "Can this connect with Uzbekistan or Five Stans?",
+            "answer": "Yes. This route can be extended into Uzbekistan or included as part of a wider Five Stans Central Asia journey."
+          }
+        ]
+      }
+    ],
+    "side_bar": [
+      {
+        "title": "Plan This Tour",
+        "from_title": "Travel Date",
+        "time_title": "Travel Style",
+        "time1": "Private",
+        "time2": "Small Group",
+        "ticket_title": "Travelers",
+        "ticket1": "Adult travelers",
+        "ticket1_price": 1580.0,
+        "ticket2": "Children / family travelers",
+        "ticket2_price": 0.0,
+        "total_title": "Estimated From",
+        "product": [
+          {
+            "slug": "/tour-five-stans",
+            "title": "Five Stans Central Asia Tour",
+            "price": 2950,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Five Stans Central Asia Tour",
+            "btn_label": "View Tour"
+          },
+          {
+            "slug": "/tour-uzbekistan-silk-road",
+            "title": "Uzbekistan Silk Road Classic",
+            "price": 980,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Uzbekistan Silk Road Classic",
+            "btn_label": "View Tour"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Traveler Reviews",
+        "review": [
+          {
+            "user_name": "Mark Jensen",
+            "image": "/assets/images/testimonial-img2.png",
+            "alt": "traveler review image",
+            "label": "The Kazakhstan and Kyrgyzstan route was exactly what we wanted — mountains, lakes, canyons and enough city comfort at the beginning and end.",
+            "rating": 5,
+            "review": "5.0",
+            "date": "June 2025"
+          },
+          {
+            "user_name": "Natalie Wong",
+            "image": "/assets/images/team-pearson-img3.jpg",
+            "alt": "traveler review image",
+            "label": "The scenery was incredible and the route felt very well paced. Crossing from Kazakhstan into Kyrgyzstan was smooth and the local support made a big difference.",
+            "rating": 5,
+            "review": "4.9",
+            "date": "August 2025"
+          }
+        ],
+        "exceptional": [
+          {
+            "review": "5.0",
+            "title": "Excellent",
+            "total_review": "19",
+            "details": [
+              {
+                "title": "Nature experience",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              },
+              {
+                "title": "Route planning",
+                "value": 4.9,
+                "rating": {
+                  "width": "98%"
+                }
+              },
+              {
+                "title": "Transport",
+                "value": 4.8,
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Local guidance",
+                "value": "4.8",
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Experience",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

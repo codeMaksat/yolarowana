@@ -1,0 +1,280 @@
+[
+  {
+    "title": "Turkmenistan Highlights Tour",
+    "icon": "fa-solid fa-location-dot",
+    "icon_label": "Ashgabat, Darvaza, Ancient Merv, Yangykala Canyon",
+    "image": "/assets/images/tour-product-detail-img.jpg",
+    "alt": "Turkmenistan Highlights Tour",
+    "detail": [
+      {
+        "title": "Turkmenistan Highlights Tour",
+        "rating": 5,
+        "review": 18,
+        "service": [
+          {
+            "image": "/assets/images/clock-icon.svg",
+            "alt": "clock-icon",
+            "width": 20,
+            "title": "Duration:",
+            "label": "7 Days"
+          },
+          {
+            "image": "/assets/images/group-user-icon.svg",
+            "alt": "group-user-icon",
+            "width": 22,
+            "title": "Travel style:",
+            "label": "Private / Small group"
+          },
+          {
+            "image": "/assets/images/train-icon.svg",
+            "alt": "train-icon",
+            "width": 24,
+            "title": "Route:",
+            "label": "Ashgabat – Darvaza – Merv – Yangykala"
+          },
+          {
+            "image": "/assets/images/cross_duotone-icon.svg",
+            "alt": "cross-duotone-icon",
+            "width": 24,
+            "title": "Support:",
+            "label": "Visa & border guidance"
+          }
+        ],
+        "overview": [
+          {
+            "title": "Overview",
+            "labels": [
+              {
+                "label": "This 7-day Turkmenistan journey is designed for travelers who want to experience the country beyond the surface — from the white marble avenues of Ashgabat to the fire-lit desert night at Darvaza, the ancient Silk Road ruins of Merv, and the dramatic colors of Yangykala Canyon."
+              },
+              {
+                "label": "The route combines culture, history, desert landscapes, local stories, and carefully planned logistics. It is suitable for private travelers, couples, small groups, and guests who want a guided Central Asia experience with local knowledge and practical support along the way."
+              }
+            ]
+          }
+        ],
+        "included": [
+          {
+            "title": "What's Included",
+            "details": [
+              {
+                "label": "Private transport during the tour"
+              },
+              {
+                "label": "Local English-speaking guide according to the itinerary"
+              },
+              {
+                "label": "Accommodation in selected hotels and desert camp/yurt-style stay where applicable"
+              },
+              {
+                "label": "Airport transfers in Ashgabat"
+              },
+              {
+                "label": "Entrance tickets for listed sightseeing places"
+              },
+              {
+                "label": "Visa invitation support and travel planning guidance"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "photo": [
+      {
+        "title": "Photos",
+        "images": [
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Turkmenistan tour photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Turkmenistan tour landscape"
+          },
+          {
+            "image": "/assets/images/photo-1.jpg",
+            "alt": "Central Asia travel photo"
+          },
+          {
+            "image": "/assets/images/tour-product-detail-img.jpg",
+            "alt": "Silk Road travel photo"
+          }
+        ]
+      }
+    ],
+    "itinerary": [
+      {
+        "title": "Itinerary",
+        "details": [
+          {
+            "day": 1,
+            "title": "Arrival in Ashgabat",
+            "content": "Arrive in Ashgabat and meet your local guide. Transfer to the hotel and begin with a gentle introduction to Turkmenistan’s capital, known for its white marble architecture, wide avenues, monuments, and distinctive city atmosphere."
+          },
+          {
+            "day": 2,
+            "title": "Ashgabat City Tour",
+            "content": "Explore the main highlights of Ashgabat, including key monuments, local markets, the National Museum, and architectural landmarks. This day gives context to Turkmenistan’s history, culture, and modern identity."
+          },
+          {
+            "day": 3,
+            "title": "Ashgabat – Darvaza Gas Crater",
+            "content": "Drive north through the Karakum Desert toward Darvaza Gas Crater. Arrive before sunset and enjoy the changing desert light. In the evening, experience the famous burning crater under the night sky."
+          },
+          {
+            "day": 4,
+            "title": "Darvaza – Ashgabat",
+            "content": "After breakfast in the desert, return to Ashgabat with stops along the way depending on timing and road conditions. The afternoon can include additional sightseeing or time to rest."
+          },
+          {
+            "day": 5,
+            "title": "Ashgabat – Ancient Merv – Mary",
+            "content": "Travel to the historic region of Mary and visit Ancient Merv, one of the great cities of the Silk Road and a UNESCO World Heritage site. Explore the remains of fortresses, mausoleums, and old city walls that tell the story of centuries of trade and culture."
+          },
+          {
+            "day": 6,
+            "title": "Mary – Yangykala Canyon",
+            "content": "Continue toward the striking landscapes of Yangykala Canyon, known for its layered cliffs and dramatic colors. This is one of Turkmenistan’s most photogenic natural sites and a highlight for landscape lovers."
+          },
+          {
+            "day": 7,
+            "title": "Return to Ashgabat / Departure",
+            "content": "Return to Ashgabat for your onward flight or extension. Depending on your schedule, the route can be adjusted with additional stops, extra nights, or connections to Uzbekistan and wider Central Asia."
+          }
+        ]
+      }
+    ],
+    "map": [
+      {
+        "title": "Map",
+        "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4950410.22452773!2d51.42389821549355!3d39.07463379114525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6ffe35a8435ec5%3A0xc22468e70d0c80c1!2sTurkmenistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+      }
+    ],
+    "faq": [
+      {
+        "title": "FAQ",
+        "question": [
+          {
+            "question": "Can this tour be customized?",
+            "answer": "Yes. The route can be adjusted based on your travel dates, flight schedule, preferred comfort level, and whether you want to continue to Uzbekistan or another Central Asia destination."
+          },
+          {
+            "question": "Do I need visa support for Turkmenistan?",
+            "answer": "Most travelers need visa or invitation support for Turkmenistan. We can guide you through the required documents and help coordinate the travel invitation process where applicable."
+          },
+          {
+            "question": "Is Darvaza Gas Crater included?",
+            "answer": "Yes. The itinerary includes an overnight or evening visit to Darvaza Gas Crater, depending on the final route, season, and road conditions."
+          },
+          {
+            "question": "Is this tour suitable for first-time visitors?",
+            "answer": "Yes. This route is designed as a strong first introduction to Turkmenistan, combining city culture, Silk Road history, desert scenery, and natural landscapes."
+          }
+        ]
+      }
+    ],
+    "side_bar": [
+      {
+        "title": "Plan This Tour",
+        "from_title": "Travel Date",
+        "time_title": "Travel Style",
+        "time1": "Private",
+        "time2": "Small Group",
+        "ticket_title": "Travelers",
+        "ticket1": "Adult travelers",
+        "ticket1_price": 850.0,
+        "ticket2": "Children / family travelers",
+        "ticket2_price": 0.0,
+        "total_title": "Estimated From",
+        "product": [
+          {
+            "slug": "/tour-detail",
+            "title": "Uzbekistan Silk Road Classic",
+            "price": 980,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Uzbekistan Silk Road Classic",
+            "btn_label": "View Tour"
+          },
+          {
+            "slug": "/tour-detail",
+            "title": "Five Stans Central Asia Tour",
+            "price": 2950,
+            "image": "/assets/images/blog-img1.jpg",
+            "alt": "Five Stans Central Asia Tour",
+            "btn_label": "View Tour"
+          }
+        ]
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Traveler Reviews",
+        "review": [
+          {
+            "user_name": "Anna Miller",
+            "image": "/assets/images/testimonial-img2.png",
+            "alt": "traveler review image",
+            "label": "The route was well planned and the local guide made Turkmenistan much easier to understand. Darvaza at night was unforgettable, and the logistics felt smooth from arrival to departure.",
+            "rating": 5,
+            "review": "5.0",
+            "date": "May 2025"
+          },
+          {
+            "user_name": "David Chen",
+            "image": "/assets/images/team-pearson-img3.jpg",
+            "alt": "traveler review image",
+            "label": "We wanted a Central Asia trip that felt local, not rushed. The balance of Ashgabat, Merv, desert routes, and canyon landscapes was exactly what we hoped for.",
+            "rating": 5,
+            "review": "4.9",
+            "date": "September 2025"
+          }
+        ],
+        "exceptional": [
+          {
+            "review": "5.0",
+            "title": "Excellent",
+            "total_review": "18",
+            "details": [
+              {
+                "title": "Local guidance",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              },
+              {
+                "title": "Route planning",
+                "value": 4.9,
+                "rating": {
+                  "width": "98%"
+                }
+              },
+              {
+                "title": "Transport",
+                "value": 4.8,
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Value for money",
+                "value": "4.8",
+                "rating": {
+                  "width": "96%"
+                }
+              },
+              {
+                "title": "Experience",
+                "value": 5.0,
+                "rating": {
+                  "width": "100%"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
