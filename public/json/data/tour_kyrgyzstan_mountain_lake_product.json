@@ -1,7 +1,6 @@
 [
   {
     "title": "Kyrgyzstan Mountain & Lake Tour",
-    "tour_name": "Kyrgyzstan Mountain & Lake Tour",
     "icon": "fa-solid fa-location-dot",
     "icon_label": "Bishkek, Ala Archa, Issyk-Kul, Karakol, Jeti-Oguz, Song-Kul",
     "image": "/assets/images/tour-product-detail-img.jpg",
@@ -183,6 +182,7 @@
     "side_bar": [
       {
         "title": "Plan This Tour",
+        "tour_name": "Kyrgyzstan Mountain & Lake Tour",
         "from_title": "Travel Date",
         "time_title": "Travel Style",
         "time1": "Private",

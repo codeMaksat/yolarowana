@@ -1,7 +1,6 @@
 [
   {
     "title": "Turkmenistan Highlights Tour",
-    "tour_name": "Turkmenistan Highlights Tour",
     "icon": "fa-solid fa-location-dot",
     "icon_label": "Ashgabat, Darvaza, Ancient Merv, Yangykala Canyon",
     "image": "/assets/images/tour-product-detail-img.jpg",
@@ -178,6 +177,7 @@
     "side_bar": [
       {
         "title": "Plan This Tour",
+        "tour_name": "Turkmenistan Highlights Tour",
         "from_title": "Travel Date",
         "time_title": "Travel Style",
         "time1": "Private",

@@ -1,7 +1,6 @@
 [
   {
     "title": "Uzbekistan Silk Road Classic",
-    "tour_name": "Uzbekistan Silk Road Classic",
     "icon": "fa-solid fa-location-dot",
     "icon_label": "Tashkent, Samarkand, Bukhara, Khiva",
     "image": "/assets/images/tour-product-detail-img.jpg",
@@ -183,6 +182,7 @@
     "side_bar": [
       {
         "title": "Plan This Tour",
+        "tour_name": "Uzbekistan Silk Road Classic",
         "from_title": "Travel Date",
         "time_title": "Travel Style",
         "time1": "Private",

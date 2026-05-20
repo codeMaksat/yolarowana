@@ -1,7 +1,6 @@
 [
   {
     "title": "Uzbekistan & Turkmenistan Tour",
-    "tour_name": "Uzbekistan & Turkmenistan Tour",
     "icon": "fa-solid fa-location-dot",
     "icon_label": "Tashkent, Samarkand, Bukhara, Khiva, Darvaza, Ashgabat, Ancient Merv",
     "image": "/assets/images/tour-product-detail-img.jpg",
@@ -203,6 +202,7 @@
     "side_bar": [
       {
         "title": "Plan This Tour",
+        "tour_name": "Uzbekistan & Turkmenistan Tour",
         "from_title": "Travel Date",
         "time_title": "Travel Style",
         "time1": "Private",

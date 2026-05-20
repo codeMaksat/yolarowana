@@ -1,7 +1,6 @@
 [
   {
     "title": "Kazakhstan & Kyrgyzstan Tour",
-    "tour_name": "Kazakhstan & Kyrgyzstan Tour",
     "icon": "fa-solid fa-location-dot",
     "icon_label": "Almaty, Charyn Canyon, Kolsai Lakes, Bishkek, Issyk-Kul, Karakol",
     "image": "/assets/images/tour-product-detail-img.jpg",
@@ -193,6 +192,7 @@
     "side_bar": [
       {
         "title": "Plan This Tour",
+        "tour_name": "Kazakhstan & Kyrgyzstan Tour",
         "from_title": "Travel Date",
         "time_title": "Travel Style",
         "time1": "Private",
