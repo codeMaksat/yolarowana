@@ -189,7 +189,7 @@
         "total_title": "Estimated From",
         "product": [
           {
-            "slug": "/tour-detail",
+            "slug": "/tour-uzbekistan-silk-road",
             "title": "Uzbekistan Silk Road Classic",
             "price": 980,
             "image": "/assets/images/blog-img1.jpg",
@@ -197,7 +197,7 @@
             "btn_label": "View Tour"
           },
           {
-            "slug": "/tour-detail",
+            "slug": "/tour-five-stans",
             "title": "Five Stans Central Asia Tour",
             "price": 2950,
             "image": "/assets/images/blog-img1.jpg",

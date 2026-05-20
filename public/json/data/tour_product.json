@@ -3,7 +3,7 @@
     "product": [
       {
         "id": 1,
-        "slug": "/tour-detail",
+        "slug": "/tour-turkmenistan-highlights",
         "title": "Turkmenistan Highlights Tour",
         "short_des": "Ashgabat, Darvaza Gas Crater, Ancient Merv and desert landscapes.",
         "description": "",
@@ -17,7 +17,7 @@
       },
       {
         "id": 2,
-        "slug": "/tour-detail",
+        "slug": "/tour-uzbekistan-silk-road",
         "title": "Uzbekistan Silk Road Classic",
         "short_des": "Samarkand, Bukhara, Khiva and Tashkent in one classic cultural route.",
         "description": "",
@@ -31,7 +31,7 @@
       },
       {
         "id": 3,
-        "slug": "/tour-detail",
+        "slug": "/tour-five-stans",
         "title": "Five Stans Central Asia Tour",
         "short_des": "A complete journey across Turkmenistan, Uzbekistan, Tajikistan, Kyrgyzstan and Kazakhstan.",
         "description": "",
@@ -45,7 +45,7 @@
       },
       {
         "id": 4,
-        "slug": "/tour-detail",
+        "slug": "/tour-uzbekistan-turkmenistan",
         "title": "Uzbekistan & Turkmenistan Tour",
         "short_des": "Silk Road cities, desert routes, Ashgabat, Ancient Merv and Darvaza.",
         "description": "",
@@ -59,7 +59,7 @@
       },
       {
         "id": 5,
-        "slug": "/tour-detail",
+        "slug": "/tour-kyrgyzstan-mountain-lake",
         "title": "Kyrgyzstan Nomad Adventure",
         "short_des": "Yurt camps, mountain lakes, open roads and nomad culture.",
         "description": "",
@@ -73,7 +73,7 @@
       },
       {
         "id": 6,
-        "slug": "/tour-detail",
+        "slug": "/tour-kazakhstan-kyrgyzstan",
         "title": "Kazakhstan & Kyrgyzstan Tour",
         "short_des": "Almaty, Charyn Canyon, Issyk-Kul, Karakol and alpine valleys.",
         "description": "",
@@ -87,7 +87,7 @@
       },
       {
         "id": 7,
-        "slug": "/tour-detail",
+        "slug": "/tour-pamir-highway",
         "title": "Tajikistan Pamir Highway Tour",
         "short_des": "A high mountain journey through the Pamirs, valleys and remote villages.",
         "description": "",

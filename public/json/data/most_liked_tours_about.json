@@ -5,7 +5,7 @@
     "product": [
       {
         "id": 12,
-        "slug": "/tour-detail",
+        "slug": "/tour-turkmenistan-highlights",
         "image": "/assets/images/popular-tours-img1.jpg",
         "alt": "Turkmenistan Highlights Tour",
         "title": "Turkmenistan Highlights Tour",
@@ -17,7 +17,7 @@
       },
       {
         "id": 13,
-        "slug": "/tour-detail",
+        "slug": "/tour-uzbekistan-silk-road",
         "image": "/assets/images/popular-tours-img2.jpg",
         "alt": "Uzbekistan Silk Road Classic",
         "title": "Uzbekistan Silk Road Classic",
@@ -29,7 +29,7 @@
       },
       {
         "id": 14,
-        "slug": "/tour-detail",
+        "slug": "/tour-five-stans",
         "image": "/assets/images/popular-tours-img3.jpg",
         "alt": "Five Stans Central Asia Tour",
         "title": "Five Stans Central Asia Tour",
