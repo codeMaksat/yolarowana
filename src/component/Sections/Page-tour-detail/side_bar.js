@@ -38,11 +38,14 @@ const Side_Bar = ({ sideBar_data }) => {
     return error;
   };
 
-  const handleSubmit = async (event, formTitle) => {
+  const handleSubmit = async (event, formTitle, tourName) => {
     event.preventDefault();
 
     const formElement = event.currentTarget;
     const formData = new FormData(formElement);
+
+    const finalTourName =
+      tourName && tourName.trim() !== "" ? tourName : formTitle || "Tour Detail Inquiry";
 
     const inquiry = {
       name: formData.get("name"),
@@ -52,7 +55,7 @@ const Side_Bar = ({ sideBar_data }) => {
       travelers: formData.get("travelers"),
       travelStyle: formData.get("travel_style"),
       message: formData.get("message"),
-      tourName: formTitle || "Tour Detail Inquiry",
+      tourName: finalTourName,
     };
 
     const validationErrors = validateInquiry(inquiry);
@@ -118,7 +121,9 @@ const Side_Bar = ({ sideBar_data }) => {
 
             <form
               className="space-y-3"
-              onSubmit={event => handleSubmit(event, form_data.title)}
+              onSubmit={event =>
+                handleSubmit(event, form_data.title, form_data.tour_name)
+              }
             >
               <div>
                 <input

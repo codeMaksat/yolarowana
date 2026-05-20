@@ -1,73 +1,73 @@
 [
-    {
-        "title": "Popular Central Asia Tours",
-        "label": "Our most requested routes combine the places travelers dream about with the practical details that matter here — timing, borders, guides, roads, and the right pace.",
-        "product": [
-            {
-                "id": 7,
-                "slug": "/tour",
-                "image": "/assets/images/popular-tours-img1.jpg",
-                "alt": "popular-tours img 1",
-                "title": "Turkmenistan Highlights Tour",
-                "rating": 5,
-                "old_price": "1450.00",
-                "price": "1180.00",
-                "night": 6,
-                "day": 7,
-                "label": "Ashgabat, Darvaza Gas Crater, Ancient Merv and Yangykala Canyon in one rare desert journey."
-            },
-            {
-                "id": 8,
-                "slug": "/tour",
-                "image": "/assets/images/popular-tours-img2.jpg",
-                "alt": "popular-tours img 2",
-                "title": "Uzbekistan Silk Road Classic",
-                "rating": 5,
-                "old_price": "1690.00",
-                "price": "1390.00",
-                "night": 7,
-                "day": 8,
-                "label": "Tashkent, Samarkand, Bukhara and Khiva — the classic route for first-time Silk Road travelers."
-            },
-            {
-                "id": 9,
-                "slug": "/tour",
-                "image": "/assets/images/popular-tours-img3.jpg",
-                "alt": "popular-tours img 3",
-                "title": "Five Stans Central Asia Tour",
-                "rating": 5,
-                "old_price": "3950.00",
-                "price": "3490.00",
-                "night": 14,
-                "day": 15,
-                "label": "A complete cross-border journey through Turkmenistan, Uzbekistan, Tajikistan, Kyrgyzstan and Kazakhstan."
-            },
-            {
-                "id": 10,
-                "slug": "/tour",
-                "image": "/assets/images/popular-tours-img4.jpg",
-                "alt": "popular-tours img 4",
-                "title": "Kyrgyzstan Nomad & Mountain Tour",
-                "rating": 4,
-                "old_price": "1590.00",
-                "price": "1280.00",
-                "night": 7,
-                "day": 8,
-                "label": "Yurt camps, mountain lakes, eagle culture, wide valleys and life on the road with local guides."
-            },
-            {
-                "id": 11,
-                "slug": "/tour",
-                "image": "/assets/images/popular-tours-img5.jpg",
-                "alt": "popular-tours img 5",
-                "title": "Uzbekistan & Turkmenistan Silk Road",
-                "rating": 5,
-                "old_price": "2490.00",
-                "price": "2190.00",
-                "night": 10,
-                "day": 11,
-                "label": "Blue domes, desert roads, Ancient Merv, Darvaza and two of Central Asia’s most fascinating countries."
-            }
-        ]
-    }
+  {
+    "title": "Popular Central Asia Tours",
+    "label": "Our most requested routes combine the places travelers dream about with the practical details that matter here — timing, borders, guides, roads, and the right pace.",
+    "product": [
+      {
+        "id": 1,
+        "slug": "/tour-five-stans",
+        "image": "/assets/images/popular-tours-img3.jpg",
+        "alt": "Five Stans Central Asia Tour",
+        "title": "Five Stans Central Asia Tour",
+        "rating": 5,
+        "old_price": "0.00",
+        "price": "2950.00",
+        "night": 14,
+        "day": 15,
+        "label": "A complete cross-border journey through Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan."
+      },
+      {
+        "id": 2,
+        "slug": "/tour-turkmenistan-highlights",
+        "image": "/assets/images/popular-tours-img1.jpg",
+        "alt": "Turkmenistan Highlights Tour",
+        "title": "Turkmenistan Highlights Tour",
+        "rating": 5,
+        "old_price": "0.00",
+        "price": "850.00",
+        "night": 6,
+        "day": 7,
+        "label": "Ashgabat, Darvaza Gas Crater, Ancient Merv and Yangykala Canyon in one rare desert journey."
+      },
+      {
+        "id": 3,
+        "slug": "/tour-uzbekistan-turkmenistan",
+        "image": "/assets/images/popular-tours-img5.jpg",
+        "alt": "Uzbekistan and Turkmenistan Tour",
+        "title": "Uzbekistan & Turkmenistan Tour",
+        "rating": 5,
+        "old_price": "0.00",
+        "price": "1680.00",
+        "night": 11,
+        "day": 12,
+        "label": "Blue domes, desert roads, Ancient Merv, Darvaza and two of Central Asia’s most fascinating countries."
+      },
+      {
+        "id": 4,
+        "slug": "/tour-uzbekistan-silk-road",
+        "image": "/assets/images/popular-tours-img2.jpg",
+        "alt": "Uzbekistan Silk Road Classic",
+        "title": "Uzbekistan Silk Road Classic",
+        "rating": 5,
+        "old_price": "0.00",
+        "price": "980.00",
+        "night": 7,
+        "day": 8,
+        "label": "Tashkent, Samarkand, Bukhara and Khiva — the classic route for first-time Silk Road travelers."
+      },
+      {
+        "id": 5,
+        "slug": "/tour-kazakhstan-kyrgyzstan",
+        "image": "/assets/images/popular-tours-img4.jpg",
+        "alt": "Kazakhstan and Kyrgyzstan Tour",
+        "title": "Kazakhstan & Kyrgyzstan Tour",
+        "rating": 5,
+        "old_price": "0.00",
+        "price": "1580.00",
+        "night": 9,
+        "day": 10,
+        "label": "Almaty, Charyn Canyon, Issyk-Kul, Karakol and alpine valleys in one scenic mountain-and-lake route."
+      }
+    ]
+  }
 ]
