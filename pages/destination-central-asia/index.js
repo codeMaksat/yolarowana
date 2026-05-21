@@ -20,7 +20,10 @@ export default function Destination() {
   return (
     <>
       {/* Render the Seo component with SeoData */}
-      <Head_Meta meta_data={seo_data.destination_meta} comman_meta={seo_data} />
+      <Head_Meta
+        meta_data={seo_data.destination_central_asia_meta}
+        comman_meta={seo_data}
+      />
       <Comman_Hero initialValues={hero_destination_detail_data} />
       <All_Destination_Detail initialValues={destination_detail_product_data} />
     </>

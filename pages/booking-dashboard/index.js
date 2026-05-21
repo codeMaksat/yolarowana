@@ -13,8 +13,6 @@ export default function Dashboard() {
   const router = useRouter();
   const [checkingAuth, setCheckingAuth] = useState(true);
 
-  const statusOptions = ["new", "contacted", "confirmed", "closed"];
-
   useEffect(() => {
     const checkUser = async () => {
       const {
@@ -156,6 +154,46 @@ export default function Dashboard() {
     return "bg-white";
   };
 
+  const getSourceLabel = source => {
+    if (source === "contact_page") {
+      return "Contact Page";
+    }
+
+    if (source === "tour_detail") {
+      return "Tour Page";
+    }
+
+    return source || "-";
+  };
+
+  const getInquiryTitle = inquiry => {
+    if (!inquiry.message) {
+      return inquiry.source === "contact_page"
+        ? "Contact Page Inquiry"
+        : "Tour Inquiry";
+    }
+
+    if (inquiry.message.startsWith("Tour inquiry:")) {
+      const firstLine = inquiry.message.split("\n")[0];
+      return firstLine.replace("Tour inquiry:", "").trim();
+    }
+
+    return inquiry.source === "contact_page"
+      ? "Contact Page Inquiry"
+      : "General Inquiry";
+  };
+
+  const getCleanMessage = message => {
+    if (!message) return "-";
+
+    if (message.startsWith("Tour inquiry:")) {
+      const lines = message.split("\n");
+      return lines.slice(2).join("\n").trim() || "-";
+    }
+
+    return message;
+  };
+
   if (checkingAuth) {
     return (
       <div className="py-20 text-center">
@@ -199,6 +237,7 @@ export default function Dashboard() {
                     Back to website
                   </Link>
                 </li>
+
                 <li>
                   <button
                     type="button"
@@ -292,7 +331,7 @@ export default function Dashboard() {
 
                 <div className="shadow-box-3 rounded-xl py-5 px-5 bg-white">
                   <span className="text-dark-900 text-sm block mb-1 font-medium">
-                    Tour detail inquiries
+                    Tour page inquiries
                   </span>
                   <h3 className="text-xl md:text-25 mb-1 font-bold">
                     {tourDetailInquiries}
@@ -310,13 +349,14 @@ export default function Dashboard() {
                 </div>
 
                 <div className="w-full overflow-x-auto">
-                  <table className="table-list table-auto whitespace-nowrap min-w-[1500px]">
+                  <table className="table-list table-auto whitespace-nowrap min-w-[1650px]">
                     <thead>
                       <tr>
                         <th>Date</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Phone</th>
+                        <th>Inquiry / Tour</th>
                         <th>Countries</th>
                         <th>Travel dates</th>
                         <th>Travel style</th>
@@ -331,7 +371,7 @@ export default function Dashboard() {
                     <tbody>
                       {!loading && inquiries.length === 0 && (
                         <tr>
-                          <td colSpan="12">No inquiries yet.</td>
+                          <td colSpan="13">No inquiries yet.</td>
                         </tr>
                       )}
 
@@ -367,11 +407,15 @@ export default function Dashboard() {
                               )}
                             </td>
 
+                            <td className="max-w-[260px] whitespace-normal font-semibold text-dark-900">
+                              {getInquiryTitle(inquiry)}
+                            </td>
+
                             <td>{inquiry.countries || "-"}</td>
                             <td>{inquiry.travel_dates || "-"}</td>
                             <td>{inquiry.travel_style || "-"}</td>
                             <td>{inquiry.travelers || "-"}</td>
-                            <td>{inquiry.source || "-"}</td>
+                            <td>{getSourceLabel(inquiry.source)}</td>
 
                             <td>
                               <span
@@ -388,7 +432,10 @@ export default function Dashboard() {
                                 value={inquiry.status || "new"}
                                 disabled={updatingId === inquiry.id}
                                 onChange={event =>
-                                  updateInquiryStatus(inquiry.id, event.target.value)
+                                  updateInquiryStatus(
+                                    inquiry.id,
+                                    event.target.value
+                                  )
                                 }
                                 className="min-w-[140px] rounded-full border border-[#E2CFAF] bg-white px-4 py-2 text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 capitalize"
                               >
@@ -400,7 +447,7 @@ export default function Dashboard() {
                             </td>
 
                             <td className="max-w-[420px] whitespace-normal leading-normal">
-                              {inquiry.message || "-"}
+                              {getCleanMessage(inquiry.message)}
                             </td>
                           </tr>
                         );
@@ -412,9 +459,8 @@ export default function Dashboard() {
 
               <div className="mt-6 bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl px-5 py-4">
                 <p className="mb-0 text-sm text-dark-800">
-                  Note: this dashboard is currently public if the page is live.
-                  Before launch, protect it with login or remove the link from
-                  the website.
+                  Dashboard is protected by Supabase Auth. Keep admin links out
+                  of public navigation.
                 </p>
               </div>
             </div>

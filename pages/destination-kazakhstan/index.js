@@ -1,5 +1,3 @@
-import Footer from "@/Layout/Footer";
-import Header from "@/Layout/Header";
 import { Comman_Hero } from "@/component/Sections/Page-commen";
 import { All_Destination_Detail } from "@/component/Sections/Page-destination-detail";
 import { Head_Meta, useFetchData } from "@/component/comman";
@@ -20,7 +18,10 @@ export default function Destination() {
   return (
     <>
       {/* Render the Seo component with SeoData */}
-      <Head_Meta meta_data={seo_data.destination_meta} comman_meta={seo_data} />
+      <Head_Meta
+        meta_data={seo_data.destination_kazakhstan_meta}
+        comman_meta={seo_data}
+      />
       <Comman_Hero initialValues={hero_destination_detail_data} />
       <All_Destination_Detail initialValues={destination_detail_product_data} />
     </>
