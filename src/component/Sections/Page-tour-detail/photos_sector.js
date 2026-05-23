@@ -1,25 +1,17 @@
-import React, { useState } from "react";
-import Link from "next/link";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
-// import "./styles.css";
-
-// import required modules
 import { Navigation } from "swiper/modules";
 
-// Define the Photos_Sector component
 const Photos_Sector = ({ photo_data }) => {
   return (
     photo_data &&
     photo_data.map((data, index) => {
       return (
-        <div id="photos" className="mb-10 w-full scroll-mt-[150px]" key={index}>
-          <h4 className=" text-xl md:text-25">{data.title}</h4>
+        <div id="photos" className="mb-0 w-full scroll-mt-[150px]" key={index}>
           <div className="photos-gallery-slider">
             <Swiper
               slidesPerView={1}
@@ -30,13 +22,13 @@ const Photos_Sector = ({ photo_data }) => {
                 prevEl: ".swiper-button-prev",
               }}
               modules={[Navigation]}
-              className="mySwiper w-full rounded-1xl !overflow-hidden"
+              className="mySwiper w-full rounded-2xl !overflow-hidden"
             >
               {data.images &&
                 data.images.map((images_data, index) => {
                   return (
                     <SwiperSlide key={index}>
-                      <div className="rounded-1xl overflow-hidden relative before:pt-[70%] md:before:pt-[45%] before:block">
+                      <div className="rounded-2xl overflow-hidden relative h-[220px] sm:h-[260px] md:h-[340px] lg:h-[420px]">
                         <img
                           src={images_data.image}
                           alt={images_data.alt}
@@ -46,6 +38,7 @@ const Photos_Sector = ({ photo_data }) => {
                     </SwiperSlide>
                   );
                 })}
+
               <div className="slider-all">
                 <div className="swiper-button-prev arrow"></div>
                 <div className="swiper-button-next arrow"></div>

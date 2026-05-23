@@ -6,93 +6,138 @@ import Photos_Sector from "./photos_sector";
 import Side_Bar from "./side_bar";
 import Detail_Sector from "./detail_sector";
 
+const Included_Excluded_Sector = ({ detail_data }) => {
+  return (
+    detail_data &&
+    detail_data.map((data, index) => {
+      return (
+        <div id="included" className="mb-10 scroll-mt-[160px]" key={index}>
+          <div className="grid md:grid-cols-2 gap-6">
+            {data.included &&
+              data.included.map((included_data, index) => {
+                return (
+                  <div
+                    className="border border-primary-800 rounded-2xl p-5 bg-white"
+                    key={index}
+                  >
+                    <h4 className="text-xl mb-4">{included_data.title}</h4>
+
+                    <ul className="leading-[32px] list">
+                      {included_data.details &&
+                        included_data.details.map((details_data, index) => {
+                          return <li key={index}>{details_data.label}</li>;
+                        })}
+                    </ul>
+                  </div>
+                );
+              })}
+
+            {data.not_included &&
+              data.not_included.map((not_included_data, index) => {
+                return (
+                  <div
+                    className="border border-primary-800 rounded-2xl p-5 bg-white"
+                    key={index}
+                  >
+                    <h4 className="text-xl mb-4">{not_included_data.title}</h4>
+
+                    <ul className="leading-[32px] list">
+                      {not_included_data.details &&
+                        not_included_data.details.map((details_data, index) => {
+                          return <li key={index}>{details_data.label}</li>;
+                        })}
+                    </ul>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
+      );
+    })
+  );
+};
+
 const All_Tour_Detail = ({ initialValues }) => {
   return (
-    <section className="">
+    <section className="py-8 md:py-12 lg:py-14">
       {initialValues &&
         initialValues.map((data, index) => {
           return (
             <div className="container" key={index}>
-              <div>
-                <h2 className="mb-5">{data.title}</h2>
+              <h2 className="mb-3 md:mb-4">{data.title}</h2>
 
-                <div className="text-md md:text-lg leading-normal mb-6 flex items-center gap-2">
-                  <i className={`${data.icon} text-primary-900`}></i>
-                  {data.icon_label}
-                </div>
+              <div className="text-md md:text-lg leading-normal mb-5 flex items-center gap-2">
+                <i className={`${data.icon} text-primary-900`}></i>
+                {data.icon_label}
+              </div>
 
-                <div className="mb-8 overflow-hidden rounded-2xl">
-                  <img
-                    src={data.image}
-                    alt={data.alt}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
+              <div id="photos" className="mb-6 md:mb-7 overflow-hidden rounded-2xl">
+                <Photos_Sector photo_data={data.photo} />
+              </div>
 
-                <div className="lg:flex">
-                  <div className="w-full lg:w-[calc(100%-300px)] lg:pr-12">
-                    <ul className="flex overflow-x-auto md:space-x-5 mb-8 pb-3 md:pb-1 scroll-menu sticky top-[62px] md:top-[82px] lg:top-[82px] z-2 py-2 bg-white">
-                      <li>
-                        <Link
-                          href="#detail"
-                          className="px-7 py-2 text-md leading-normal md:text-lg rounded-full font-semibold block bg-primary-900 text-white"
-                        >
-                          Detail
-                        </Link>
-                      </li>
+              <div className="lg:flex">
+                <div className="w-full lg:w-[calc(100%-300px)] lg:pr-12">
+                  <ul className="flex overflow-x-auto gap-2 md:gap-4 mb-6 pb-3 md:pb-1 scroll-menu sticky top-[60px] lg:top-[83px] z-2 py-1.5 bg-white">
+                    <li>
+                      <Link
+                        href="#detail"
+                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full font-semibold block bg-primary-900 text-white"
+                      >
+                        Overview
+                      </Link>
+                    </li>
 
-                      <li>
-                        <Link
-                          href="#photos"
-                          className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
-                        >
-                          Photos
-                        </Link>
-                      </li>
+                    <li>
+                      <Link
+                        href="#itinerary"
+                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
+                      >
+                        Itinerary
+                      </Link>
+                    </li>
 
-                      <li>
-                        <Link
-                          href="#itinerary"
-                          className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
-                        >
-                          Itinerary
-                        </Link>
-                      </li>
+                    <li>
+                      <Link
+                        href="#included"
+                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
+                      >
+                        Included
+                      </Link>
+                    </li>
 
-                      <li>
-                        <Link
-                          href="#map"
-                          className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
-                        >
-                          Map
-                        </Link>
-                      </li>
+                    <li>
+                      <Link
+                        href="#map"
+                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
+                      >
+                        Map
+                      </Link>
+                    </li>
 
-                      <li>
-                        <Link
-                          href="#faq"
-                          className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
-                        >
-                          FAQ
-                        </Link>
-                      </li>
-                    </ul>
+                    <li>
+                      <Link
+                        href="#faq"
+                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
+                      >
+                        FAQ
+                      </Link>
+                    </li>
+                  </ul>
 
-                    <div className="tabs-content">
-                      <Detail_Sector detail_data={data.detail} />
+                  <div className="tabs-content">
+                    <Detail_Sector detail_data={data.detail} />
 
-                      <Photos_Sector photo_data={data.photo} />
+                    <Itinerary_Sector itinerary_data={data.itinerary} />
 
-                      <Itinerary_Sector itinerary_data={data.itinerary} />
+                    <Included_Excluded_Sector detail_data={data.detail} />
 
-                      <Map_Sector map_data={data.map} />
+                    <Map_Sector map_data={data.map} />
 
-                      <Faq_Sector faq_data={data.faq} />
-                    </div>
+                    <Faq_Sector faq_data={data.faq} />
                   </div>
-
-                  <Side_Bar sideBar_data={data.side_bar} />
                 </div>
+
+                <Side_Bar sideBar_data={data.side_bar} />
               </div>
             </div>
           );

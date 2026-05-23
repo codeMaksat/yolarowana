@@ -77,6 +77,31 @@
               }
             ]
           }
+        ],
+        "not_included": [
+          {
+            "title": "What's Not Included",
+            "details": [
+              {
+                "label": "International flights"
+              },
+              {
+                "label": "Visa fees and border fees where applicable"
+              },
+              {
+                "label": "Personal expenses"
+              },
+              {
+                "label": "Meals not mentioned in the itinerary"
+              },
+              {
+                "label": "Travel insurance"
+              },
+              {
+                "label": "Tips for guides and drivers"
+              }
+            ]
+          }
         ]
       }
     ],
@@ -110,7 +135,9 @@
           {
             "day": 1,
             "title": "Arrival in Tashkent",
-            "content": "Arrive in Tashkent and meet your local guide. Begin with an introduction to Uzbekistan’s capital, including modern avenues, old city areas, local markets and cultural landmarks."
+            "content": "Arrive in Tashkent and meet your local guide. Begin with an introduction to Uzbekistan’s capital, including modern avenues, old city areas, local markets and cultural landmarks.",
+            "image": "/assets/images/itinerary-tashkent.jpg",
+            "alt": "Arrival in Tashkent"
           },
           {
             "day": 2,

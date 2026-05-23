@@ -17,9 +17,9 @@
             "slug": "#"
           }
         ],
-        "call_slug": "tel:+99361691909",
+        "call_slug": "tel:+99361419041",
         "call_icon": "fa-solid fa-phone",
-        "call_label": "+993 61 691909",
+        "call_label": "+993 61 419041",
         "logout_slug": "/contact",
         "logout_label": "PLAN A TRIP"
       }
