@@ -7,72 +7,54 @@ export default function Header({ initialValues }) {
 
   const [OpenMenu, setOpenMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
 
-  const acitive_class_slug = slug => {
-    if (router.asPath === slug) {
-      return router.asPath === slug ? "active" : "";
-    } else if (
-      router.asPath === "/faq" ||
-      router.asPath === "/gallery" ||
-      router.asPath === "/gallery-masonry" ||
-      router.asPath === "/forgot-password" ||
-      router.asPath === "/portfolio" ||
-      router.asPath === "/testimonial" ||
-      router.asPath === "/sitemap" ||
-      router.asPath === "/team" ||
-      router.asPath === "/team-detail" ||
-      router.asPath === "/login" ||
-      router.asPath === "/sign-in" ||
-      router.asPath === "/404"
-    ) {
-      return slug === "/page" ? "active" : "";
-    } else if (
-      router.asPath === "/destination-two" ||
-      router.asPath === "/destination-detail"
-    ) {
-      return slug === "/destination" ? "active" : "";
-    } else if (router.asPath === "/home-2" || router.asPath === "/home-3") {
-      return slug === "/" ? "active" : "";
-    } else if (router.asPath === "/hotels-detail") {
-      return slug === "/hotels" ? "active" : "";
-    } else if (
-      router.asPath === "/tour-detail" ||
-      router.asPath === "/tour-detail-2" ||
-      router.asPath === "/tour-detail-3" ||
-      router.asPath === "/tour-list" ||
-      router.asPath === "/tour-detail#detail" ||
-      router.asPath === "/tour-detail#photos" ||
-      router.asPath === "/tour-detail#itinerary" ||
-      router.asPath === "/tour-detail#map" ||
-      router.asPath === "/tour-detail#faq" ||
-      router.asPath === "/tour-grid"
-    ) {
-      return slug === "/tour" ? "active" : "";
-    } else if (
-      router.asPath === "/blog-detail-1" ||
-      router.asPath === "/blog-detail-2" ||
-      router.asPath === "/blog-detail-3" ||
-      router.asPath === "/standard-blog"
-    ) {
-      return slug === "/blog" ? "active" : "";
+  const active_class_slug = slug => {
+    const path = router.asPath.split("#")[0];
+
+    if (path === slug) {
+      return "active";
     }
+
+    if (path.startsWith("/destination-") && slug === "/destination") {
+      return "active";
+    }
+
+    if (path.startsWith("/tour-") && slug === "/tour") {
+      return "active";
+    }
+
+    if (
+      (path.startsWith("/blog-detail") || path === "/standard-blog") &&
+      slug === "/blog"
+    ) {
+      return "active";
+    }
+
+    return "";
   };
 
-  const handelOpenMenu = e => {
+  const handleOpenMenu = e => {
     e.preventDefault();
     setOpenMenu(prevClass => !prevClass);
   };
 
+  const closeMobileMenu = () => {
+    setOpenMenu(false);
+    setOpenMobileDropdown(null);
+  };
+
+  const toggleMobileDropdown = index => {
+    setOpenMobileDropdown(prevIndex => (prevIndex === index ? null : index));
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -87,17 +69,25 @@ export default function Header({ initialValues }) {
       return (
         <React.Fragment key={index}>
           <header
-            className={`header relative z-20 ${headerClasses}${OpenMenu ? " header-open" : ""
-              }`}
+            className={`header relative z-20 ${headerClasses}${
+              OpenMenu ? " header-open" : ""
+            }`}
           >
-            <div className="overlay lg:hidden" aria-expanded="false"></div>
+            <div
+              className="overlay lg:hidden"
+              aria-expanded={OpenMenu ? "true" : "false"}
+              onClick={closeMobileMenu}
+            ></div>
 
             {data.top_bar &&
               data.top_bar.map((top_bar_data, index) => {
                 return (
                   <div
-                    className={`bg-primary-800 text-dark-900 text-sm font-medium overflow-hidden transition-all duration-300 ${isScrolled ? "max-h-0 py-0 opacity-0" : "max-h-[40px] py-2 opacity-100"
-                      }`}
+                    className={`bg-primary-800 text-dark-900 text-sm font-medium overflow-hidden transition-all duration-300 ${
+                      isScrolled
+                        ? "max-h-0 py-0 opacity-0"
+                        : "max-h-[40px] py-2 opacity-100"
+                    }`}
                     key={index}
                   >
                     <div className="container flex justify-between items-center">
@@ -118,9 +108,7 @@ export default function Header({ initialValues }) {
                                         className="hover:text-primary-900"
                                       >
                                         <i
-                                          className={
-                                            top_bar_media_data.icon
-                                          }
+                                          className={top_bar_media_data.icon}
                                         ></i>
                                       </Link>
                                     </li>
@@ -135,7 +123,7 @@ export default function Header({ initialValues }) {
                             href={top_bar_data.call_slug}
                             className="flex items-center gap-4 hover:text-primary-900"
                           >
-                            <i className={top_bar_data.call_icon}></i>{" "}
+                            <i className={top_bar_data.call_icon}></i>
                             <span className="hidden md:block">
                               {top_bar_data.call_label}
                             </span>
@@ -150,8 +138,9 @@ export default function Header({ initialValues }) {
               })}
 
             <div
-              className={`main-navigation ${isScrolled ? "py-3 lg:py-1" : "py-3 lg:py-2"
-                }`}
+              className={`main-navigation ${
+                isScrolled ? "py-3 lg:py-1" : "py-3 lg:py-2"
+              }`}
             >
               {data.mid_bar &&
                 data.mid_bar.map((mid_bar_data, index) => {
@@ -167,14 +156,16 @@ export default function Header({ initialValues }) {
                               <Link
                                 href={mid_bar_logo_data.slug}
                                 className="block transition-all"
+                                onClick={closeMobileMenu}
                               >
                                 <img
                                   src={mid_bar_logo_data.img}
                                   alt={mid_bar_logo_data.alt}
-                                  className={`transition-all ${isScrolled
+                                  className={`transition-all ${
+                                    isScrolled
                                       ? "w-[170px] lg:w-[115px]"
                                       : "w-[190px] lg:w-[140px]"
-                                    }`}
+                                  }`}
                                 />
                               </Link>
                             </div>
@@ -186,9 +177,7 @@ export default function Header({ initialValues }) {
                           <button
                             type="button"
                             className="absolute top-0 right-0 lg:hidden p-1"
-                            onClick={e => {
-                              handelOpenMenu(e);
-                            }}
+                            onClick={handleOpenMenu}
                             aria-expanded={OpenMenu ? "true" : "false"}
                           >
                             <img
@@ -197,49 +186,74 @@ export default function Header({ initialValues }) {
                             />
                           </button>
 
-                          <ul className="lg:flex items-center lg:gap-1 text-sm lg:text-md text-dark-900 font-semibold">
+                          <ul className="lg:flex items-center lg:gap-2 xl:gap-4 text-sm lg:text-md text-dark-900 font-semibold">
                             {data.mega_menu &&
                               data.mega_menu.map((mega_menu_data, index) => {
                                 const promo = mega_menu_data.promo;
+                                const hasMegaMenu = !!mega_menu_data.menu;
+                                const hasSubMenu = !!mega_menu_data.sub_menu;
+                                const hasChildren = hasMegaMenu || hasSubMenu;
+                                const isMobileDropdownOpen =
+                                  openMobileDropdown === index;
 
-                                let html_code = (
-                                  <li
-                                    key={index}
-                                    className={acitive_class_slug(
-                                      mega_menu_data.slug
-                                    )}
-                                  >
-                                    <Link
-                                      href={mega_menu_data.slug}
-                                      className="hover:text-primary-900"
-                                    >
-                                      {mega_menu_data.label}
-                                    </Link>
-                                  </li>
-                                );
-
-                                if (mega_menu_data.menu) {
-                                  html_code = (
+                                if (!hasChildren) {
+                                  return (
                                     <li
-                                      className={`menu-item-has-children ${acitive_class_slug(
+                                      key={index}
+                                      className={active_class_slug(
+                                        mega_menu_data.slug
+                                      )}
+                                    >
+                                      <Link
+                                        href={mega_menu_data.slug}
+                                        className="block py-3 lg:py-2 lg:px-2 xl:px-3 hover:text-primary-900"
+                                        onClick={closeMobileMenu}
+                                      >
+                                        {mega_menu_data.label}
+                                      </Link>
+                                    </li>
+                                  );
+                                }
+
+                                if (hasMegaMenu) {
+                                  return (
+                                    <li
+                                      className={`menu-item-has-children group ${active_class_slug(
                                         mega_menu_data.slug
                                       )}`}
                                       key={index}
                                     >
-                                      <Link
-                                        href="#"
-                                        className="hover:text-primary-900"
-                                      >
-                                        {mega_menu_data.label}
-                                      </Link>
+                                      <div className="flex items-center justify-between gap-3">
+                                        <Link
+                                          href={mega_menu_data.slug}
+                                          className="flex items-center gap-1.5 py-3 lg:py-2 lg:px-2 xl:px-3 hover:text-primary-900 w-full lg:w-auto"
+                                          onClick={e => {
+                                            if (window.innerWidth < 1024) {
+                                              e.preventDefault();
+                                              toggleMobileDropdown(index);
+                                            }
+                                          }}
+                                        >
+                                          {mega_menu_data.label}
+                                          <i className="fa-regular fa-chevron-down text-xs hidden lg:inline-block"></i>
+                                        </Link>
+
+                                      </div>
 
                                       <div
-                                        className={`mega-menu hidden lg:absolute lg:left-0 bg-white w-full pt-3 ${isScrolled ? "lg:top-[65px]" : "lg:top-[106px]"
-                                          }`}
+                                        className={`mega-menu bg-white w-full pt-3 ${
+                                          isMobileDropdownOpen
+                                            ? "block"
+                                            : "hidden"
+                                        } lg:hidden lg:group-hover:block lg:absolute lg:left-0 ${
+                                          isScrolled
+                                            ? "lg:top-[65px]"
+                                            : "lg:top-[106px]"
+                                        }`}
                                       >
-                                        <div className="container">
-                                          <div className="lg:flex lg:border-t lg:border-primary-800 lg:py-8">
-                                            <div className="w-full grid lg:grid-cols-[repeat(auto-fit,minmax(120px,1fr))]">
+                                        <div className="container lg:px-4 px-0">
+                                          <div className="lg:flex lg:border-t lg:border-primary-800 lg:py-8 py-3">
+                                            <div className="w-full grid lg:grid-cols-[repeat(auto-fit,minmax(120px,1fr))] gap-5">
                                               {mega_menu_data.menu &&
                                                 mega_menu_data.menu.map(
                                                   (menu_data, index) => {
@@ -249,7 +263,7 @@ export default function Header({ initialValues }) {
                                                           {menu_data.title}
                                                         </h4>
 
-                                                        <ul className="text-lg text-dark-800">
+                                                        <ul className="text-lg text-dark-800 space-y-3">
                                                           {menu_data.sub_menu &&
                                                             menu_data.sub_menu.map(
                                                               (
@@ -259,10 +273,16 @@ export default function Header({ initialValues }) {
                                                                 return (
                                                                   <li
                                                                     key={index}
+                                                                    className={active_class_slug(
+                                                                      sub_menu_data.slug
+                                                                    )}
                                                                   >
                                                                     <Link
                                                                       href={
                                                                         sub_menu_data.slug
+                                                                      }
+                                                                      onClick={
+                                                                        closeMobileMenu
                                                                       }
                                                                     >
                                                                       {
@@ -303,6 +323,7 @@ export default function Header({ initialValues }) {
                                                     <Link
                                                       href={promo.link}
                                                       className="btn btn-light btn-md shadow-btn mx-0"
+                                                      onClick={closeMobileMenu}
                                                     >
                                                       View tours
                                                       <i className="fa-regular fa-arrow-right ml-3"></i>
@@ -316,34 +337,53 @@ export default function Header({ initialValues }) {
                                       </div>
                                     </li>
                                   );
-                                } else if (mega_menu_data.sub_menu) {
-                                  html_code = (
+                                }
+
+                                if (hasSubMenu) {
+                                  return (
                                     <li
-                                      className={`menu-item-has-children relative group ${acitive_class_slug(
+                                      className={`menu-item-has-children relative group ${active_class_slug(
                                         mega_menu_data.slug
                                       )}`}
                                       key={index}
                                     >
-                                      <Link
-                                        href={mega_menu_data.slug}
-                                        className="hover:text-primary-900"
-                                      >
-                                        {mega_menu_data.label}
-                                      </Link>
+                                      <div className="flex items-center justify-between gap-3">
+                                        <Link
+                                          href={mega_menu_data.slug}
+                                          className="flex items-center gap-1.5 py-3 lg:py-2 lg:px-2 xl:px-3 hover:text-primary-900 w-full lg:w-auto"
+                                          onClick={e => {
+                                            if (window.innerWidth < 1024) {
+                                              e.preventDefault();
+                                              toggleMobileDropdown(index);
+                                            }
+                                          }}
+                                        >
+                                          {mega_menu_data.label}
+                                          <i className="fa-regular fa-chevron-down text-xs hidden lg:inline-block"></i>
+                                        </Link>
 
-                                      <ul className="sub-menu-list hidden lg:block text-lg text-dark-800 lg:absolute lg:top-[calc(100%+7px)] lg:left-0 lg:border lg:border-gray-100 lg:w-[200px] lg:bg-white lg:p-5 lg:rounded-xl lg:shadow-box lg:transition-all lg:translate-y-4 lg:invisible lg:opacity-0 lg:group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                                      </div>
+
+                                      <ul
+                                        className={`sub-menu-list text-lg text-dark-800 lg:absolute lg:top-[calc(100%+7px)] lg:left-0 lg:border lg:border-gray-100 lg:w-[240px] lg:bg-white lg:p-5 lg:rounded-xl lg:shadow-box lg:transition-all lg:translate-y-4 lg:invisible lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100 lg:group-hover:translate-y-0 ${
+                                          isMobileDropdownOpen
+                                            ? "block mt-2 pl-4 pb-3 space-y-3"
+                                            : "hidden lg:block"
+                                        }`}
+                                      >
                                         {mega_menu_data.sub_menu &&
                                           mega_menu_data.sub_menu.map(
                                             (sub_menu_data, index) => {
                                               return (
                                                 <li
                                                   key={index}
-                                                  className={acitive_class_slug(
+                                                  className={active_class_slug(
                                                     sub_menu_data.slug
                                                   )}
                                                 >
                                                   <Link
                                                     href={sub_menu_data.slug}
+                                                    onClick={closeMobileMenu}
                                                   >
                                                     {sub_menu_data.label}
                                                   </Link>
@@ -356,7 +396,7 @@ export default function Header({ initialValues }) {
                                   );
                                 }
 
-                                return html_code;
+                                return null;
                               })}
                           </ul>
                         </div>
@@ -365,9 +405,7 @@ export default function Header({ initialValues }) {
                           <div className="block lg:hidden">
                             <button
                               type="button"
-                              onClick={e => {
-                                handelOpenMenu(e);
-                              }}
+                              onClick={handleOpenMenu}
                               aria-expanded={OpenMenu ? "true" : "false"}
                             >
                               <img
