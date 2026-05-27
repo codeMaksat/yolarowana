@@ -4,75 +4,39 @@
     "product": [
       {
         "id": 1,
-        "slug": "/blog-detail-1",
-        "title": "How to Plan a Central Asia Trip",
-        "short_des": "A practical guide to choosing countries, routes, timing and travel style for your first journey across Central Asia.",
-        "image": "/assets/images/blog-img2.jpg",
-        "alt": "How to plan a Central Asia trip",
-        "date": "Travel Planning"
+        "slug": "/turkmenistan-itinerary",
+        "title": "Turkmenistan Itinerary Guide",
+        "short_des": "Compare 3-day, 5-day, 7-day and 10-day Turkmenistan routes with Ashgabat, Darvaza, Ancient Merv and desert landscapes.",
+        "image": "/assets/images/top-destinations-img-8.jpg",
+        "alt": "Turkmenistan itinerary guide",
+        "date": "Itinerary Guide"
       },
       {
         "id": 2,
-        "slug": "/blog-detail-1",
-        "title": "Best Time to Visit Central Asia",
-        "short_des": "Understand the best seasons for Silk Road cities, desert routes, mountain roads and multi-country journeys.",
-        "image": "/assets/images/blog-img3.jpg",
-        "alt": "Best time to visit Central Asia",
-        "date": "Travel Tips"
-      },
-      {
-        "id": 3,
-        "slug": "/blog-detail-1",
-        "title": "Turkmenistan Travel Guide",
-        "short_des": "What to know before visiting Ashgabat, Darvaza Gas Crater, Ancient Merv, Yangykala Canyon and desert routes.",
-        "image": "/assets/images/top-destinations-img-8.jpg",
-        "alt": "Turkmenistan travel guide",
-        "date": "Destination Guide"
-      },
-      {
-        "id": 4,
-        "slug": "/blog-detail-1",
-        "title": "Uzbekistan & Turkmenistan Itinerary",
-        "short_des": "A strong Silk Road route combining Samarkand, Bukhara, Khiva, Ashgabat, Merv and Darvaza.",
-        "image": "/assets/images/top-destinations-img-3.jpg",
-        "alt": "Uzbekistan and Turkmenistan itinerary",
-        "date": "Itinerary"
-      },
-      {
-        "id": 5,
-        "slug": "/blog-detail-1",
-        "title": "Is Central Asia Safe for Travelers?",
-        "short_des": "A calm overview of safety, local customs, transport, guides, borders and practical travel expectations.",
-        "image": "/assets/images/popular-tours-img13.jpg",
-        "alt": "Central Asia travel safety",
-        "date": "Travel Advice"
-      },
-      {
-        "id": 6,
-        "slug": "/blog-detail-1",
-        "title": "Central Asia Visa & Border Tips",
-        "short_des": "Helpful notes on visas, border crossings, route planning and why preparation matters in this region.",
-        "image": "/assets/images/popular-tours-img12.jpg",
-        "alt": "Central Asia visa and border tips",
-        "date": "Planning Guide"
-      },
-      {
-        "id": 7,
-        "slug": "/blog-detail-1",
-        "title": "What to Know Before Visiting Darvaza",
-        "short_des": "When to go, what to expect, how the desert overnight works, and how to include Darvaza in your route.",
+        "slug": "/darvaza-gas-crater-guide",
+        "title": "Darvaza Gas Crater Guide",
+        "short_des": "Learn how to visit Darvaza Gas Crater, when to go, whether to stay overnight and how to include it in your Turkmenistan route.",
         "image": "/assets/images/categories-img-3.jpg",
         "alt": "Darvaza Gas Crater travel guide",
         "date": "Turkmenistan"
       },
       {
-        "id": 8,
-        "slug": "/blog-detail-1",
-        "title": "How Many Days Do You Need for Central Asia?",
-        "short_des": "Compare 7-day, 10-day, 14-day and Five Stans routes to choose a realistic journey length.",
-        "image": "/assets/images/blog-img2.jpg",
-        "alt": "Central Asia itinerary length guide",
-        "date": "Itinerary Guide"
+        "id": 3,
+        "slug": "/best-time-to-visit-central-asia",
+        "title": "Best Time to Visit Central Asia",
+        "short_des": "Choose the best season for Silk Road cities, desert routes, mountain landscapes, Pamir Highway and multi-country Central Asia tours.",
+        "image": "/assets/images/blog-img3.jpg",
+        "alt": "Best time to visit Central Asia",
+        "date": "Travel Tips"
+      },
+      {
+        "id": 4,
+        "slug": "/uzbekistan-silk-road-guide",
+        "title": "Uzbekistan Silk Road Guide",
+        "short_des": "Plan a classic Uzbekistan route through Tashkent, Samarkand, Bukhara and Khiva with practical timing and travel tips.",
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Uzbekistan Silk Road travel guide",
+        "date": "Destination Guide"
       }
     ]
   }

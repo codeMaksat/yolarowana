@@ -1,0 +1,208 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Uzbekistan Silk Road Guide",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Uzbekistan Silk Road Guide"
+      }
+    ],
+    "title": "Uzbekistan Silk Road Travel Guide: Samarkand, Bukhara, Khiva & Tashkent",
+    "intro": "A practical guide to planning an Uzbekistan Silk Road journey, including the best cities to visit, how many days you need, suggested route order, travel tips and recommended tours.",
+    "main_image": "/assets/images/popular-tours-img2.jpg",
+    "main_image_alt": "Uzbekistan Silk Road architecture",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best time: April–May & September–October"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended: 7–9 days"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Tashkent, Samarkand, Bukhara, Khiva"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#why-visit",
+        "label": "Why visit Uzbekistan?"
+      },
+      {
+        "slug": "#route-comparison",
+        "label": "Route comparison"
+      },
+      {
+        "slug": "#tashkent",
+        "label": "Tashkent"
+      },
+      {
+        "slug": "#samarkand",
+        "label": "Samarkand"
+      },
+      {
+        "slug": "#bukhara",
+        "label": "Bukhara"
+      },
+      {
+        "slug": "#khiva",
+        "label": "Khiva"
+      },
+      {
+        "slug": "#tips",
+        "label": "Travel tips"
+      }
+    ],
+    "overview": {
+      "id": "why-visit",
+      "title": "Why Visit Uzbekistan on a Silk Road Journey?",
+      "paragraphs": [
+        "Uzbekistan is one of the strongest destinations for a first Central Asia trip. It combines famous Silk Road cities, Islamic architecture, blue-tiled madrasahs, old bazaars, caravan history and warm local culture in a route that is practical and rewarding.",
+        "The classic route usually includes Tashkent, Samarkand, Bukhara and Khiva. These cities give travelers a clear introduction to Uzbekistan’s history, architecture and atmosphere while keeping transport planning manageable."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Samarkand Registan Uzbekistan"
+      },
+      {
+        "image": "/assets/images/top-destinations-img-4.jpg",
+        "alt": "Bukhara old city Uzbekistan"
+      }
+    ],
+    "quote": "For most first-time visitors, the classic Uzbekistan Silk Road route is Tashkent, Samarkand, Bukhara and Khiva. It offers the strongest balance of history, architecture, atmosphere and practical travel flow.",
+    "comparison": {
+      "id": "route-comparison",
+      "title": "Uzbekistan Silk Road Route Comparison",
+      "items": [
+        {
+          "days": "5 Days",
+          "title": "Short Uzbekistan Highlights",
+          "route": "Tashkent → Samarkand → Bukhara",
+          "best_for": "Travelers with limited time",
+          "highlight": "Fast introduction to the strongest cultural cities"
+        },
+        {
+          "days": "7–8 Days",
+          "title": "Classic Silk Road Route",
+          "route": "Tashkent → Samarkand → Bukhara → Khiva",
+          "best_for": "First-time visitors",
+          "highlight": "Best balance of cities, history and atmosphere"
+        },
+        {
+          "days": "10 Days",
+          "title": "Uzbekistan Deeper Journey",
+          "route": "Tashkent → Samarkand → Bukhara → Khiva + extensions",
+          "best_for": "Slow travel and culture lovers",
+          "highlight": "More time for crafts, bazaars, side trips and local life"
+        },
+        {
+          "days": "12+ Days",
+          "title": "Uzbekistan & Turkmenistan",
+          "route": "Uzbekistan Silk Road cities → Turkmenistan",
+          "best_for": "Cross-border Central Asia travelers",
+          "highlight": "Combine Khiva with Darvaza, Ashgabat and Ancient Merv"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "tashkent",
+        "title": "Tashkent: The Starting Point of the Journey",
+        "image": "/assets/images/popular-tours-img2.jpg",
+        "alt": "Tashkent Uzbekistan travel",
+        "paragraphs": [
+          "Tashkent is the capital of Uzbekistan and the usual starting point for international arrivals. It combines Soviet-era urban planning, modern streets, museums, metro stations, old city areas and local markets.",
+          "Although many travelers use Tashkent mainly as an arrival city, it is worth spending at least one day here. It gives useful context before continuing to the older Silk Road cities."
+        ]
+      },
+      {
+        "id": "samarkand",
+        "title": "Samarkand: The Icon of the Silk Road",
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Samarkand Silk Road Uzbekistan",
+        "paragraphs": [
+          "Samarkand is one of the most famous cities on the Silk Road. Registan Square, mausoleums, mosques and blue-tiled architecture make it one of the visual highlights of Uzbekistan.",
+          "For most travelers, Samarkand is the city that best represents the grandeur of Silk Road history. Plan at least one full sightseeing day, and ideally two nights if your schedule allows."
+        ]
+      },
+      {
+        "id": "bukhara",
+        "title": "Bukhara: Old City Atmosphere and Caravan History",
+        "image": "/assets/images/top-destinations-img-4.jpg",
+        "alt": "Bukhara old city Uzbekistan",
+        "paragraphs": [
+          "Bukhara feels more compact and atmospheric than many other cities. Its old streets, trading domes, madrasahs, mosques and caravanserais create a strong sense of historical continuity.",
+          "This is a good city for slower walking, local crafts, tea houses and evening atmosphere. Many travelers find Bukhara one of the most memorable stops in Uzbekistan."
+        ]
+      },
+      {
+        "id": "khiva",
+        "title": "Khiva: The Walled Desert City",
+        "image": "/assets/images/top-destinations-img-5.jpg",
+        "alt": "Khiva walled city Uzbekistan",
+        "paragraphs": [
+          "Khiva is famous for Itchan Kala, the historic walled inner city. Its narrow streets, minarets, palaces and city walls make it feel different from Samarkand and Bukhara.",
+          "Khiva is often placed at the end of the Uzbekistan route. It also works well as a connection point for travelers who want to continue into Turkmenistan."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Uzbekistan Silk Road Travel Tips",
+      "items": [
+        {
+          "title": "Best Time to Visit",
+          "text": "April, May, September and October are usually the most comfortable months for Uzbekistan’s Silk Road cities."
+        },
+        {
+          "title": "Recommended Duration",
+          "text": "Plan 7 to 8 days for the classic route including Tashkent, Samarkand, Bukhara and Khiva."
+        },
+        {
+          "title": "Route Direction",
+          "text": "Many travelers start in Tashkent and move west through Samarkand, Bukhara and Khiva."
+        },
+        {
+          "title": "Combine with Turkmenistan",
+          "text": "Khiva can connect well with Turkmenistan routes including Darvaza, Ashgabat and Ancient Merv."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan Your Uzbekistan Route",
+      "help_text": "Tell us your travel dates, group size and preferred pace. We will help you choose the best Uzbekistan Silk Road route.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Uzbekistan Silk Road Classic",
+          "label": "8 days from $980",
+          "slug": "/tour-uzbekistan-silk-road"
+        },
+        {
+          "title": "Uzbekistan & Turkmenistan Tour",
+          "label": "12 days from $1680",
+          "slug": "/tour-uzbekistan-turkmenistan"
+        },
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to Plan Your Uzbekistan Silk Road Trip?",
+      "text": "Share your travel dates, group size and preferred route. We will help you build the right Uzbekistan journey or connect it with wider Central Asia.",
+      "button": "Plan My Uzbekistan Trip",
+      "slug": "/contact"
+    }
+  }
+]

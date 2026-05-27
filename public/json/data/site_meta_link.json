@@ -466,5 +466,61 @@
     "twitter_description": "A remote Pamir Highway journey through Tajikistan and Kyrgyzstan.",
     "twitter_site": "@YolaRowana",
     "twitter_creator": "@YolaRowana"
-  }
+  },
+  "blog_turkmenistan_itinerary_meta": {
+  "title": "Turkmenistan Itinerary Guide | 3, 5, 7 & 10 Day Routes",
+  "og_title": "Turkmenistan Itinerary Guide | Yola Rowana",
+  "description": "Plan your Turkmenistan itinerary with 3, 5, 7 and 10 day route ideas including Ashgabat, Darvaza Gas Crater, Ancient Merv and desert landscapes.",
+  "locale": "en_US",
+  "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+  "image_alt": "Turkmenistan itinerary guide",
+  "twitter_card": "summary_large_image",
+  "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+  "twitter_title": "Turkmenistan Itinerary Guide | Yola Rowana",
+  "twitter_description": "Compare 3, 5, 7 and 10 day Turkmenistan routes with Ashgabat, Darvaza and Ancient Merv.",
+  "twitter_site": "@YolaRowana",
+  "twitter_creator": "@YolaRowana"
+},
+"blog_darvaza_gas_crater_guide_meta": {
+  "title": "Darvaza Gas Crater Guide | How to Visit the Door to Hell",
+  "og_title": "Darvaza Gas Crater Guide | Yola Rowana",
+  "description": "Plan your visit to Darvaza Gas Crater in Turkmenistan, including how to get there, overnight options, best time to visit and practical travel tips.",
+  "locale": "en_US",
+  "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+  "image_alt": "Darvaza Gas Crater guide",
+  "twitter_card": "summary_large_image",
+  "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+  "twitter_title": "Darvaza Gas Crater Guide | Yola Rowana",
+  "twitter_description": "A practical guide to visiting Darvaza Gas Crater, the Door to Hell in Turkmenistan.",
+  "twitter_site": "@YolaRowana",
+  "twitter_creator": "@YolaRowana"
+},
+"blog_best_time_central_asia_meta": {
+  "title": "Best Time to Visit Central Asia | Month-by-Month Guide",
+  "og_title": "Best Time to Visit Central Asia | Yola Rowana",
+  "description": "Find the best time to visit Central Asia by season, including Uzbekistan, Turkmenistan, Kazakhstan, Kyrgyzstan, Tajikistan, Silk Road cities and mountain routes.",
+  "locale": "en_US",
+  "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+  "image_alt": "Best time to visit Central Asia",
+  "twitter_card": "summary_large_image",
+  "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+  "twitter_title": "Best Time to Visit Central Asia | Yola Rowana",
+  "twitter_description": "Compare spring, summer, autumn and winter travel across Central Asia.",
+  "twitter_site": "@YolaRowana",
+  "twitter_creator": "@YolaRowana"
+},
+"blog_uzbekistan_silk_road_guide_meta": {
+  "title": "Uzbekistan Silk Road Guide | Samarkand, Bukhara & Khiva",
+  "og_title": "Uzbekistan Silk Road Guide | Yola Rowana",
+  "description": "Plan an Uzbekistan Silk Road journey with Tashkent, Samarkand, Bukhara and Khiva, including route ideas, best time to visit and travel tips.",
+  "locale": "en_US",
+  "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+  "image_alt": "Uzbekistan Silk Road guide",
+  "twitter_card": "summary_large_image",
+  "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+  "twitter_title": "Uzbekistan Silk Road Guide | Yola Rowana",
+  "twitter_description": "A practical guide to Uzbekistan’s classic Silk Road route through Tashkent, Samarkand, Bukhara and Khiva.",
+  "twitter_site": "@YolaRowana",
+  "twitter_creator": "@YolaRowana"
+}
 }

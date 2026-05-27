@@ -1,40 +1,40 @@
 [
-    {
-        "title": "Central Asia Travel Guides & Local Advice",
-        "label": "Practical route ideas, destination notes, border tips, and honest planning advice for traveling across the Five Stans.",
-        "product": [
-            {
-                "slug": "blog-detail-1",
-                "image": "/assets/images/blog-img1.jpg",
-                "alt": "blog-img1",
-                "date": "May 12, 2026",
-                "title": "How to Plan Your First Central Asia Trip",
-                "label": "A simple guide to choosing countries, timing your route, and deciding between private, group, and tailor-made tours."
-            },
-            {
-                "slug": "blog-detail-2",
-                "image": "/assets/images/blog-img2.jpg",
-                "alt": "blog-img2",
-                "date": "May 8, 2026",
-                "title": "Best Time to Visit Central Asia",
-                "label": "What each season feels like across deserts, Silk Road cities, mountain lakes, and high-altitude roads."
-            },
-            {
-                "slug": "blog-detail-3",
-                "image": "/assets/images/blog-img3.jpg",
-                "alt": "blog-img3",
-                "date": "Apr 29, 2026",
-                "title": "Uzbekistan & Turkmenistan: A Silk Road Route That Works",
-                "label": "How to combine Samarkand, Bukhara, Khiva, Ancient Merv, Ashgabat and Darvaza without rushing the journey."
-            },
-            {
-                "slug": "blog-detail-4",
-                "image": "/assets/images/blog-img4.jpg",
-                "alt": "blog-img4",
-                "date": "Apr 18, 2026",
-                "title": "Central Asia Visa, Permit & Border Tips",
-                "label": "Practical notes on documents, timing, border crossings, and why local planning makes the trip easier."
-            }
-        ]
-    }
+  {
+    "title": "Central Asia Travel Guides & Local Advice",
+    "label": "Practical route ideas, destination notes, seasonal advice and honest planning tips for traveling across the Five Stans.",
+    "product": [
+      {
+        "slug": "/turkmenistan-itinerary",
+        "image": "/assets/images/blog-img1.jpg",
+        "alt": "Turkmenistan itinerary guide",
+        "date": "Itinerary Guide",
+        "title": "Turkmenistan Itinerary Guide",
+        "label": "Compare 3-day, 5-day, 7-day and 10-day Turkmenistan routes with Ashgabat, Darvaza, Ancient Merv and desert landscapes."
+      },
+      {
+        "slug": "/darvaza-gas-crater-guide",
+        "image": "/assets/images/blog-img2.jpg",
+        "alt": "Darvaza Gas Crater travel guide",
+        "date": "Turkmenistan",
+        "title": "Darvaza Gas Crater Guide",
+        "label": "Learn how to visit Darvaza Gas Crater, when to go, whether to stay overnight and how to include it in your Turkmenistan route."
+      },
+      {
+        "slug": "/best-time-to-visit-central-asia",
+        "image": "/assets/images/blog-img3.jpg",
+        "alt": "Best time to visit Central Asia",
+        "date": "Travel Tips",
+        "title": "Best Time to Visit Central Asia",
+        "label": "Choose the best season for Silk Road cities, desert routes, mountain landscapes, Pamir Highway and multi-country Central Asia tours."
+      },
+      {
+        "slug": "/uzbekistan-silk-road-guide",
+        "image": "/assets/images/blog-img4.jpg",
+        "alt": "Uzbekistan Silk Road travel guide",
+        "date": "Destination Guide",
+        "title": "Uzbekistan Silk Road Guide",
+        "label": "Plan a classic Uzbekistan route through Tashkent, Samarkand, Bukhara and Khiva with practical timing and travel tips."
+      }
+    ]
+  }
 ]

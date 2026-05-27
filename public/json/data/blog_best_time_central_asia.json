@@ -1,0 +1,208 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Best Time to Visit Central Asia",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Best Time to Visit Central Asia"
+      }
+    ],
+    "title": "Best Time to Visit Central Asia: Month-by-Month Travel Guide",
+    "intro": "A practical guide to choosing the best season for Central Asia travel, including Silk Road cities, mountain routes, desert landscapes, Pamir Highway, Darvaza Gas Crater and multi-country tours.",
+    "main_image": "/assets/images/top-destinations-img-2.jpg",
+    "main_image_alt": "Central Asia mountain and Silk Road travel",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best overall: April–June & September–October"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended trip length: 10–18 days"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan, Turkmenistan"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#best-overall",
+        "label": "Best overall time to visit"
+      },
+      {
+        "slug": "#season-comparison",
+        "label": "Season comparison"
+      },
+      {
+        "slug": "#spring",
+        "label": "Spring in Central Asia"
+      },
+      {
+        "slug": "#summer",
+        "label": "Summer in Central Asia"
+      },
+      {
+        "slug": "#autumn",
+        "label": "Autumn in Central Asia"
+      },
+      {
+        "slug": "#winter",
+        "label": "Winter travel"
+      },
+      {
+        "slug": "#tips",
+        "label": "Planning tips"
+      }
+    ],
+    "overview": {
+      "id": "best-overall",
+      "title": "When is the Best Time to Visit Central Asia?",
+      "paragraphs": [
+        "The best overall time to visit Central Asia is usually spring and autumn, especially April to June and September to October. These months are comfortable for Silk Road cities, desert routes, border crossings and cultural sightseeing.",
+        "Summer is excellent for mountain routes in Kyrgyzstan, Kazakhstan and Tajikistan, especially if you want alpine lakes, yurt stays, hiking, Pamir Highway or highland scenery. Winter can also be interesting, but it is better for city trips, ski extensions or travelers who prefer fewer crowds."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Silk Road city in Uzbekistan"
+      },
+      {
+        "image": "/assets/images/top-destinations-img-4.jpg",
+        "alt": "Mountain landscape in Central Asia"
+      }
+    ],
+    "quote": "For most travelers, the best Central Asia route depends less on one perfect month and more on matching the season with the right countries, altitude and travel style.",
+    "comparison": {
+      "id": "season-comparison",
+      "title": "Central Asia Season Comparison",
+      "items": [
+        {
+          "days": "Spring",
+          "title": "April – June",
+          "route": "Uzbekistan, Turkmenistan, Kazakhstan, city routes",
+          "best_for": "Culture, Silk Road cities, desert routes",
+          "highlight": "Comfortable weather and strong sightseeing season"
+        },
+        {
+          "days": "Summer",
+          "title": "July – August",
+          "route": "Kyrgyzstan, Tajikistan, Kazakhstan mountains",
+          "best_for": "Mountains, lakes, yurt stays, Pamir Highway",
+          "highlight": "Best season for highland landscapes and alpine routes"
+        },
+        {
+          "days": "Autumn",
+          "title": "September – October",
+          "route": "All Central Asia countries",
+          "best_for": "Multi-country tours and photography",
+          "highlight": "One of the best seasons for Five Stans routes"
+        },
+        {
+          "days": "Winter",
+          "title": "November – March",
+          "route": "Cities, ski areas, shorter cultural trips",
+          "best_for": "Lower crowds, city breaks, winter scenery",
+          "highlight": "Good for flexible travelers, less ideal for remote mountain roads"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "spring",
+        "title": "Spring in Central Asia: April to June",
+        "image": "/assets/images/top-destinations-img-1.jpg",
+        "alt": "Spring travel in Central Asia",
+        "paragraphs": [
+          "Spring is one of the best times to visit Central Asia. The weather is usually comfortable for walking tours, city sightseeing, desert travel and cultural routes. Uzbekistan’s Silk Road cities, Turkmenistan’s desert landscapes and Kazakhstan’s city-and-nature combinations are especially attractive in this period.",
+          "April and May are excellent for Samarkand, Bukhara, Khiva, Ashgabat, Darvaza and Ancient Merv. June can still be good, but lower-altitude desert and city areas may become warmer, so route pacing should be planned carefully."
+        ]
+      },
+      {
+        "id": "summer",
+        "title": "Summer in Central Asia: July to August",
+        "image": "/assets/images/top-destinations-img-2.jpg",
+        "alt": "Summer mountains in Central Asia",
+        "paragraphs": [
+          "Summer is the best season for mountain-focused routes. Kyrgyzstan, Tajikistan and parts of Kazakhstan are ideal for travelers who want lakes, valleys, yurt camps, hiking, high mountain roads and cooler alpine scenery.",
+          "This is also one of the strongest periods for the Pamir Highway and high-altitude routes. However, cities and desert areas can be hot, so a summer itinerary should focus more on mountains and less on long lowland sightseeing days."
+        ]
+      },
+      {
+        "id": "autumn",
+        "title": "Autumn in Central Asia: September to October",
+        "image": "/assets/images/popular-tours-img3.jpg",
+        "alt": "Autumn Central Asia tour",
+        "paragraphs": [
+          "Autumn is one of the best seasons for multi-country Central Asia tours. The weather becomes more comfortable again after summer, and many routes across Uzbekistan, Turkmenistan, Kazakhstan, Kyrgyzstan and Tajikistan work well.",
+          "September is especially strong for Five Stans routes because mountain areas are still accessible while Silk Road cities become more pleasant. October is excellent for culture, photography and desert routes, though high mountain conditions should be checked depending on the route."
+        ]
+      },
+      {
+        "id": "winter",
+        "title": "Winter in Central Asia: November to March",
+        "image": "/assets/images/top-destinations-img-5.jpg",
+        "alt": "Winter travel in Central Asia",
+        "paragraphs": [
+          "Winter is not the main season for classic Central Asia tours, but it can still work for specific travel styles. City routes in Uzbekistan, short cultural trips, winter photography and ski extensions in Kazakhstan or Kyrgyzstan can be interesting.",
+          "Remote mountain roads, high passes and some desert camping experiences may be less comfortable in winter. If traveling during this season, keep the route flexible and focus on realistic transport timing."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Central Asia Travel Planning Tips by Season",
+      "items": [
+        {
+          "title": "For Silk Road Cities",
+          "text": "Choose spring or autumn for Samarkand, Bukhara, Khiva, Tashkent and other cultural city routes."
+        },
+        {
+          "title": "For Mountains",
+          "text": "Choose summer for Kyrgyzstan, Tajikistan, alpine lakes, yurt stays and highland routes."
+        },
+        {
+          "title": "For Darvaza",
+          "text": "Spring and autumn are usually the most comfortable seasons for Darvaza Gas Crater and desert travel."
+        },
+        {
+          "title": "For Five Stans Tours",
+          "text": "September is one of the strongest months because it works well for both mountain and Silk Road sections."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan by Season",
+      "help_text": "Tell us your travel month, preferred countries and travel style. We will help you choose the best Central Asia route for that season.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        },
+        {
+          "title": "Uzbekistan & Turkmenistan Tour",
+          "label": "12 days from $1680",
+          "slug": "/tour-uzbekistan-turkmenistan"
+        },
+        {
+          "title": "Kazakhstan & Kyrgyzstan Tour",
+          "label": "10 days from $1580",
+          "slug": "/tour-kazakhstan-kyrgyzstan"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Not Sure When to Travel?",
+      "text": "Share your preferred month, trip length and countries you want to visit. We will help you choose the most suitable Central Asia route.",
+      "button": "Plan My Trip",
+      "slug": "/contact"
+    }
+  }
+]

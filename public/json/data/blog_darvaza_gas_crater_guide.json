@@ -1,0 +1,171 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Darvaza Gas Crater Guide",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Darvaza Gas Crater Guide"
+      }
+    ],
+    "title": "Darvaza Gas Crater Travel Guide: How to Visit the Door to Hell",
+    "intro": "A practical guide to visiting Darvaza Gas Crater in Turkmenistan, including where it is, how to get there, when to visit, what to expect at night and whether you should stay overnight.",
+    "main_image": "/assets/images/popular-tours-img8.jpg",
+    "main_image_alt": "Darvaza Gas Crater in Turkmenistan",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best time: Spring & Autumn"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended: Overnight"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Karakum Desert, Turkmenistan"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#what-is-darvaza",
+        "label": "What is Darvaza Gas Crater?"
+      },
+      {
+        "slug": "#where-is-darvaza",
+        "label": "Where is Darvaza located?"
+      },
+      {
+        "slug": "#how-to-get-there",
+        "label": "How to get there"
+      },
+      {
+        "slug": "#day-trip-or-overnight",
+        "label": "Day trip or overnight?"
+      },
+      {
+        "slug": "#best-time",
+        "label": "Best time to visit"
+      },
+      {
+        "slug": "#tips",
+        "label": "Travel tips"
+      }
+    ],
+    "overview": {
+      "id": "what-is-darvaza",
+      "title": "What is Darvaza Gas Crater?",
+      "paragraphs": [
+        "Darvaza Gas Crater, often called the Door to Hell, is one of Turkmenistan’s most famous travel highlights. Located in the Karakum Desert, the crater is known for its dramatic fire glow, especially after sunset.",
+        "For many travelers, Darvaza is the most memorable part of a Turkmenistan trip because it combines desert silence, night photography, camp atmosphere and one of Central Asia’s most unusual landscapes."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Karakum Desert route to Darvaza"
+      },
+      {
+        "image": "/assets/images/tour-product-detail-img.jpg",
+        "alt": "Turkmenistan desert travel"
+      }
+    ],
+    "quote": "Darvaza is best experienced after sunset. The crater is interesting during the day, but the real atmosphere begins when the desert becomes dark and the fire glow becomes visible.",
+    "guide_sections": [
+      {
+        "id": "where-is-darvaza",
+        "title": "Where is Darvaza Gas Crater Located?",
+        "image": "/assets/images/popular-tours-img8.jpg",
+        "alt": "Darvaza Gas Crater location in Karakum Desert",
+        "paragraphs": [
+          "Darvaza Gas Crater is located in the Karakum Desert, north of Ashgabat. Most travelers visit it as part of a road journey from Ashgabat, usually combined with a desert camp or onward travel toward Dashoguz, Kunya-Urgench or other northern routes.",
+          "Because the route crosses desert areas, it is best planned with local transport, an experienced driver and a clear travel schedule."
+        ]
+      },
+      {
+        "id": "how-to-get-there",
+        "title": "How to Get to Darvaza from Ashgabat",
+        "image": "/assets/images/tour-product-detail-img",
+        "alt": "Road journey from Ashgabat to Darvaza",
+        "paragraphs": [
+          "The most common way to reach Darvaza is by road from Ashgabat. The journey usually takes several hours depending on road conditions, stops and the final camp location.",
+          "Most visitors depart Ashgabat after lunch or in the afternoon, arrive before sunset, visit the crater in daylight and then return after dark to see the fire glow at its best.",
+          "For comfort and safety, Darvaza should be arranged with proper local transport, especially if your itinerary includes overnight camping or onward travel through the desert."
+        ]
+      },
+      {
+        "id": "day-trip-or-overnight",
+        "title": "Should You Visit Darvaza as a Day Trip or Overnight?",
+        "image": "/assets/images/special-offers-img3.jpg",
+        "alt": "Overnight stay near Darvaza Gas Crater",
+        "paragraphs": [
+          "A day trip to Darvaza is possible, but an overnight stay is usually the better experience. The main reason to visit Darvaza is the atmosphere at night, when the crater glows against the dark desert.",
+          "An overnight trip gives you more time for sunset, night photography, dinner in the desert and a slower experience. If your schedule is very limited, a same-day visit can work, but it may feel rushed."
+        ]
+      },
+      {
+        "id": "best-time",
+        "title": "Best Time to Visit Darvaza Gas Crater",
+        "image": "/assets/images/popular-tours-img5.jpg",
+        "alt": "Best time to visit Darvaza Gas Crater",
+        "paragraphs": [
+          "Spring and autumn are usually the most comfortable seasons for visiting Darvaza. The weather is generally better for desert travel, walking near the crater and spending time outdoors in the evening.",
+          "Summer can be very hot in the desert, while winter nights can be cold. If you travel outside the main seasons, your route should be planned with weather, clothing and camp comfort in mind."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Darvaza Gas Crater Travel Tips",
+      "items": [
+        {
+          "title": "Arrive Before Sunset",
+          "text": "Try to reach Darvaza before sunset so you can see the crater in daylight, during golden hour and again after dark."
+        },
+        {
+          "title": "Stay Overnight if Possible",
+          "text": "The overnight experience is much stronger than a quick stop because the crater is most impressive at night."
+        },
+        {
+          "title": "Bring Warm Layers",
+          "text": "Even when the day is warm, the desert can feel cooler at night. Bring layers, especially in spring, autumn and winter."
+        },
+        {
+          "title": "Plan with a Local Driver",
+          "text": "Darvaza is in a desert area, so transport, timing and camp arrangements should be organized carefully."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan Your Darvaza Trip",
+      "help_text": "Tell us your travel dates and route idea. We will help you decide whether Darvaza works best as an overnight trip or part of a longer Turkmenistan itinerary.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Turkmenistan Highlights Tour",
+          "label": "7 days from $850",
+          "slug": "/tour-turkmenistan-highlights"
+        },
+        {
+          "title": "Uzbekistan & Turkmenistan Tour",
+          "label": "12 days from $1680",
+          "slug": "/tour-uzbekistan-turkmenistan"
+        },
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to Visit Darvaza Gas Crater?",
+      "text": "Share your travel dates, group size and preferred route. We will help you plan the best way to include Darvaza in your Turkmenistan journey.",
+      "button": "Plan My Darvaza Trip",
+      "slug": "/contact"
+    }
+  }
+]

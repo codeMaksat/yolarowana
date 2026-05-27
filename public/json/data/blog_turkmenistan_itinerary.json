@@ -1,0 +1,263 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Turkmenistan Itinerary Guide",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Turkmenistan Itinerary Guide"
+      }
+    ],
+    "title": "Turkmenistan Itinerary: 3, 5, 7 & 10 Day Route Ideas",
+    "intro": "A practical guide to choosing the right Turkmenistan travel route based on your available time, interests and travel pace.",
+    "main_image": "/assets/images/popular-tours-img8.jpg",
+    "main_image_alt": "Darvaza Gas Crater Turkmenistan",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best time: Spring & Autumn"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended: 5–7 days"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Ashgabat, Darvaza, Merv"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#how-many-days",
+        "label": "How many days do you need?"
+      },
+      {
+        "slug": "#comparison",
+        "label": "Itinerary comparison"
+      },
+      {
+        "slug": "#three-days",
+        "label": "3 Days itinerary"
+      },
+      {
+        "slug": "#five-days",
+        "label": "5 Days itinerary"
+      },
+      {
+        "slug": "#seven-days",
+        "label": "7 Days itinerary"
+      },
+      {
+        "slug": "#tips",
+        "label": "Planning tips"
+      }
+    ],
+    "overview": {
+      "id": "how-many-days",
+      "title": "How Many Days Do You Need in Turkmenistan?",
+      "paragraphs": [
+        "For most travelers, the best Turkmenistan itinerary is between 5 and 7 days. A 3-day route is possible if you only want Ashgabat and Darvaza Gas Crater, while 7 days gives you enough time to include Ancient Merv and a more balanced Silk Road experience.",
+        "If you want a deeper journey with desert routes, northern highlights, Mary, Merv and western landscapes such as Yangykala Canyon, plan around 10 days."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/tour-product-detail-img.jpg",
+        "alt": "Ancient Merv Turkmenistan"
+      },
+      {
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Turkmenistan desert route"
+      }
+    ],
+    "quote": "The best Turkmenistan itinerary balances modern Ashgabat, the Karakum Desert, Darvaza Gas Crater and the Silk Road history of Ancient Merv.",
+    "comparison": {
+      "id": "comparison",
+      "title": "Turkmenistan Itinerary Comparison",
+      "items": [
+        {
+          "days": "3 Days",
+          "title": "Ashgabat & Darvaza Express",
+          "route": "Ashgabat → Darvaza → Ashgabat",
+          "best_for": "Short visit / transit travelers",
+          "highlight": "Modern Ashgabat and Darvaza Gas Crater"
+        },
+        {
+          "days": "5 Days",
+          "title": "Ashgabat, Darvaza & Ancient Merv",
+          "route": "Ashgabat → Darvaza → Mary → Merv",
+          "best_for": "First-time cultural travelers",
+          "highlight": "Capital city, desert night and Silk Road history"
+        },
+        {
+          "days": "7 Days",
+          "title": "Turkmenistan Highlights",
+          "route": "Ashgabat → Darvaza → Mary → Merv → Yangykala",
+          "best_for": "Best balanced route",
+          "highlight": "Desert, UNESCO history and canyon landscapes"
+        },
+        {
+          "days": "10 Days",
+          "title": "Complete Turkmenistan Journey",
+          "route": "Ashgabat → Darvaza → Dashoguz → Mary → Merv → Yangykala",
+          "best_for": "Slow travel / deeper exploration",
+          "highlight": "North, desert, ancient cities and western landscapes"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "three-days",
+        "title": "3 Days Turkmenistan Itinerary",
+        "image": "/assets/images/popular-tours-img8.jpg",
+        "alt": "Darvaza Gas Crater Turkmenistan",
+        "days": [
+          {
+            "day": "Day 1",
+            "title": "Arrival in Ashgabat",
+            "text": "Arrive in Ashgabat and begin with the capital’s most iconic monuments, marble architecture, local markets and evening city views."
+          },
+          {
+            "day": "Day 2",
+            "title": "Ashgabat – Darvaza Gas Crater",
+            "text": "Drive across the Karakum Desert to Darvaza. Arrive before sunset and experience the famous burning crater after dark."
+          },
+          {
+            "day": "Day 3",
+            "title": "Darvaza – Ashgabat Departure",
+            "text": "Return to Ashgabat for departure or continue with an extended Turkmenistan route."
+          }
+        ]
+      },
+      {
+        "id": "five-days",
+        "title": "5 Days Turkmenistan Itinerary",
+        "image": "/assets/images/tour-product-detail-img.jpg",
+        "alt": "Ancient Merv Turkmenistan",
+        "days": [
+          {
+            "day": "Day 1",
+            "title": "Arrival in Ashgabat",
+            "text": "Meet your guide and explore the capital’s monuments, viewpoints and cultural landmarks."
+          },
+          {
+            "day": "Day 2",
+            "title": "Ashgabat City Tour",
+            "text": "Visit museums, historical sites, local markets and modern architecture that define Ashgabat’s unique city identity."
+          },
+          {
+            "day": "Day 3",
+            "title": "Ashgabat – Darvaza",
+            "text": "Travel into the Karakum Desert and stay near Darvaza Gas Crater for the evening view."
+          },
+          {
+            "day": "Day 4",
+            "title": "Darvaza – Mary",
+            "text": "Continue toward Mary, passing desert routes and preparing for the ancient Silk Road section of the journey."
+          },
+          {
+            "day": "Day 5",
+            "title": "Ancient Merv – Departure",
+            "text": "Visit Ancient Merv, one of the great Silk Road cities, before returning or connecting onward."
+          }
+        ]
+      },
+      {
+        "id": "seven-days",
+        "title": "7 Days Turkmenistan Highlights Itinerary",
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Turkmenistan Highlights Tour",
+        "days": [
+          {
+            "day": "Day 1",
+            "title": "Arrival in Ashgabat",
+            "text": "Arrive in the capital and start with a light city introduction depending on your flight time."
+          },
+          {
+            "day": "Day 2",
+            "title": "Ashgabat Sightseeing",
+            "text": "Explore Ashgabat’s monuments, museums, Nisa or local markets based on the final route plan."
+          },
+          {
+            "day": "Day 3",
+            "title": "Ashgabat – Darvaza",
+            "text": "Drive to Darvaza Gas Crater and enjoy the desert atmosphere after sunset."
+          },
+          {
+            "day": "Day 4",
+            "title": "Darvaza – Mary",
+            "text": "Travel across desert landscapes toward Mary, with stops arranged according to road timing."
+          },
+          {
+            "day": "Day 5",
+            "title": "Ancient Merv",
+            "text": "Spend time exploring Ancient Merv, a UNESCO-listed Silk Road archaeological site."
+          },
+          {
+            "day": "Day 6",
+            "title": "Mary – Ashgabat",
+            "text": "Return to Ashgabat by flight or road depending on the final program and availability."
+          },
+          {
+            "day": "Day 7",
+            "title": "Departure",
+            "text": "Transfer to the airport or extend the trip to Yangykala Canyon or Uzbekistan."
+          }
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Turkmenistan Itinerary Planning Tips",
+      "items": [
+        {
+          "title": "Best Time to Visit",
+          "text": "Spring and autumn are usually the most comfortable seasons for city sightseeing, desert travel and archaeological sites."
+        },
+        {
+          "title": "Visa & Border Planning",
+          "text": "Turkmenistan often requires careful visa and invitation planning, so routes should be confirmed before travel dates are finalized."
+        },
+        {
+          "title": "Darvaza Timing",
+          "text": "Darvaza Gas Crater is best experienced after sunset, so the itinerary should be planned to arrive before dark."
+        },
+        {
+          "title": "Route Extensions",
+          "text": "Turkmenistan connects well with Uzbekistan, especially via Khiva, Bukhara and cross-border Silk Road routes."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Need Help Planning?",
+      "help_text": "Tell us your dates, travel style and group size. We will help you shape the best Turkmenistan route.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Turkmenistan Highlights Tour",
+          "label": "7 days from $850",
+          "slug": "/tour-turkmenistan-highlights"
+        },
+        {
+          "title": "Uzbekistan & Turkmenistan Tour",
+          "label": "12 days from $1680",
+          "slug": "/tour-uzbekistan-turkmenistan"
+        },
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want Us to Plan This Route for You?",
+      "text": "Tell us your travel dates, group size and preferred pace. We will help you choose the right Turkmenistan itinerary.",
+      "button": "Start Planning",
+      "slug": "/contact"
+    }
+  }
+]
