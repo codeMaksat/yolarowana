@@ -1,0 +1,208 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Silk Road Travel Guide",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Silk Road Travel Guide"
+      }
+    ],
+    "title": "Silk Road Travel Guide: Uzbekistan, Turkmenistan & Central Asia Route Ideas",
+    "intro": "A practical guide to planning a Silk Road journey across Central Asia, including Uzbekistan’s historic cities, Turkmenistan’s desert and ancient sites, multi-country route ideas and recommended tours.",
+    "main_image": "/assets/images/popular-tours-img2.jpg",
+    "main_image_alt": "Silk Road architecture in Central Asia",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best time: Spring & Autumn"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended: 8–15 days"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Samarkand, Bukhara, Khiva, Merv"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#why-travel",
+        "label": "Why travel the Silk Road?"
+      },
+      {
+        "slug": "#route-comparison",
+        "label": "Route comparison"
+      },
+      {
+        "slug": "#uzbekistan",
+        "label": "Uzbekistan"
+      },
+      {
+        "slug": "#turkmenistan",
+        "label": "Turkmenistan"
+      },
+      {
+        "slug": "#five-stans",
+        "label": "Five Stans route"
+      },
+      {
+        "slug": "#planning-style",
+        "label": "Travel style"
+      },
+      {
+        "slug": "#tips",
+        "label": "Planning tips"
+      }
+    ],
+    "overview": {
+      "id": "why-travel",
+      "title": "Why Travel the Silk Road in Central Asia?",
+      "paragraphs": [
+        "The Silk Road is one of the strongest travel themes in Central Asia. It connects historic cities, caravan routes, desert landscapes, ancient ruins, Islamic architecture, local bazaars and cultural crossroads between East and West.",
+        "For many travelers, the most practical Silk Road journey begins in Uzbekistan with Tashkent, Samarkand, Bukhara and Khiva. From there, the route can continue into Turkmenistan for Ancient Merv, Ashgabat and Darvaza, or expand into a wider Five Stans Central Asia journey."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Samarkand Silk Road Uzbekistan"
+      },
+      {
+        "image": "/assets/images/popular-tours-img8.jpg",
+        "alt": "Turkmenistan Silk Road and Darvaza route"
+      }
+    ],
+    "quote": "A Silk Road journey is not only about monuments. It is about routes, bazaars, desert roads, old caravan cities and the feeling of moving through centuries of exchange.",
+    "comparison": {
+      "id": "route-comparison",
+      "title": "Silk Road Travel Route Comparison",
+      "items": [
+        {
+          "days": "7–8 Days",
+          "title": "Uzbekistan Silk Road Classic",
+          "route": "Tashkent → Samarkand → Bukhara → Khiva",
+          "best_for": "First-time Silk Road travelers",
+          "highlight": "The strongest classic Silk Road city route"
+        },
+        {
+          "days": "10–12 Days",
+          "title": "Uzbekistan & Turkmenistan",
+          "route": "Tashkent → Samarkand → Bukhara → Khiva → Darvaza → Ashgabat → Merv",
+          "best_for": "Travelers who want history plus desert adventure",
+          "highlight": "Silk Road cities, Ancient Merv and Darvaza Gas Crater"
+        },
+        {
+          "days": "14–18 Days",
+          "title": "Five Stans Central Asia Tour",
+          "route": "Kazakhstan → Kyrgyzstan → Tajikistan → Uzbekistan → Turkmenistan",
+          "best_for": "Travelers who want the complete regional experience",
+          "highlight": "Mountains, cities, deserts, history and cross-border culture"
+        },
+        {
+          "days": "10+ Days",
+          "title": "Silk Road Plus Nature",
+          "route": "Uzbekistan cities + Kazakhstan or Kyrgyzstan nature extension",
+          "best_for": "Travelers who want architecture and landscapes",
+          "highlight": "Blue-tiled cities combined with mountains, lakes or canyons"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "uzbekistan",
+        "title": "Uzbekistan: The Classic Silk Road Core",
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Uzbekistan Silk Road cities",
+        "paragraphs": [
+          "Uzbekistan is the natural starting point for many Silk Road journeys. The classic route includes Tashkent, Samarkand, Bukhara and Khiva, each offering a different layer of history, architecture and atmosphere.",
+          "Samarkand is known for monumental architecture and the visual power of Registan Square. Bukhara gives travelers old city atmosphere, trading domes and caravan history. Khiva feels like a walled desert city and often works well as a gateway toward Turkmenistan."
+        ]
+      },
+      {
+        "id": "turkmenistan",
+        "title": "Turkmenistan: Ancient Merv, Desert Roads and Darvaza",
+        "image": "/assets/images/popular-tours-img8.jpg",
+        "alt": "Turkmenistan Silk Road route",
+        "paragraphs": [
+          "Turkmenistan adds a different feeling to a Silk Road route. It brings together Ashgabat’s unusual modern city identity, the desert atmosphere of Darvaza Gas Crater and the deep historical importance of Ancient Merv.",
+          "For travelers crossing from Uzbekistan, Turkmenistan can create a powerful extension after Khiva or Bukhara. It is especially good for those who want the Silk Road to feel more adventurous, remote and less predictable."
+        ]
+      },
+      {
+        "id": "five-stans",
+        "title": "The Five Stans: Complete Central Asia Journey",
+        "image": "/assets/images/popular-tours-img1.jpg",
+        "alt": "Five Stans Central Asia Silk Road route",
+        "paragraphs": [
+          "A Five Stans journey is the broadest way to experience Central Asia. It connects Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan in one regional route.",
+          "This type of trip is ideal for travelers who want more than historic cities. It combines Silk Road architecture with mountains, lakes, canyons, desert landscapes, remote roads and cultural contrasts across the region."
+        ]
+      },
+      {
+        "id": "planning-style",
+        "title": "Choosing the Right Silk Road Travel Style",
+        "image": "/assets/images/top-destinations-img-4.jpg",
+        "alt": "Silk Road travel planning in Central Asia",
+        "paragraphs": [
+          "The best Silk Road route depends on your travel style. If you want comfort and classic history, Uzbekistan is the best starting point. If you want something more adventurous, add Turkmenistan or a wider Central Asia route.",
+          "If you enjoy landscapes as much as history, consider adding Kazakhstan, Kyrgyzstan or Tajikistan. This creates a richer journey with mountains, lakes, canyons and highland roads in addition to Silk Road cities."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Silk Road Travel Planning Tips",
+      "items": [
+        {
+          "title": "Start with Uzbekistan",
+          "text": "For most first-time travelers, Uzbekistan offers the strongest and most practical introduction to Silk Road architecture, history and atmosphere."
+        },
+        {
+          "title": "Add Turkmenistan for Depth",
+          "text": "Turkmenistan adds Ancient Merv, Ashgabat, Darvaza Gas Crater and a more unusual desert route to the journey."
+        },
+        {
+          "title": "Plan Around Borders",
+          "text": "Multi-country Silk Road trips need careful planning around visas, border crossings, flight routes and driving distances."
+        },
+        {
+          "title": "Choose the Right Pace",
+          "text": "A Silk Road journey can be fast and city-focused or slower and more immersive. The best route depends on your available days and comfort level."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan Your Silk Road Route",
+      "help_text": "Tell us your travel dates, group size and preferred countries. We will help you shape the right Silk Road journey across Central Asia.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Uzbekistan Silk Road Classic",
+          "label": "8 days from $980",
+          "slug": "/tour-uzbekistan-silk-road"
+        },
+        {
+          "title": "Uzbekistan & Turkmenistan Tour",
+          "label": "12 days from $1680",
+          "slug": "/tour-uzbekistan-turkmenistan"
+        },
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to Plan Your Silk Road Journey?",
+      "text": "Share your travel dates, group size and preferred countries. We will help you build the right Silk Road route through Uzbekistan, Turkmenistan or wider Central Asia.",
+      "button": "Plan My Silk Road Trip",
+      "slug": "/contact"
+    }
+  }
+]

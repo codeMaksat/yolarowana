@@ -1,0 +1,215 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Central Asia Visa Guide",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Central Asia Visa Guide"
+      }
+    ],
+    "title": "Central Asia Visa Guide: Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan & Turkmenistan",
+    "intro": "A practical visa planning guide for Central Asia travelers, covering the main entry considerations for Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan.",
+    "main_image": "/assets/images/popular-tours-img1.jpg",
+    "main_image_alt": "Central Asia travel visa planning",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Check before booking"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Plan early for multi-country trips"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Five Stans visa planning"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#why-plan-visas",
+        "label": "Why visa planning matters"
+      },
+      {
+        "slug": "#visa-comparison",
+        "label": "Visa planning comparison"
+      },
+      {
+        "slug": "#kazakhstan",
+        "label": "Kazakhstan"
+      },
+      {
+        "slug": "#kyrgyzstan",
+        "label": "Kyrgyzstan"
+      },
+      {
+        "slug": "#tajikistan",
+        "label": "Tajikistan"
+      },
+      {
+        "slug": "#turkmenistan",
+        "label": "Turkmenistan"
+      },
+      {
+        "slug": "#tips",
+        "label": "Visa planning tips"
+      }
+    ],
+    "overview": {
+      "id": "why-plan-visas",
+      "title": "Why Visa Planning Matters in Central Asia",
+      "paragraphs": [
+        "Central Asia is a rewarding region for multi-country travel, but visa planning should be checked carefully before confirming flights and border routes. Rules can depend on nationality, passport type, length of stay, route direction and whether travelers enter by air or land border.",
+        "Kazakhstan, Kyrgyzstan, Uzbekistan and Tajikistan are often easier for many travelers to plan than Turkmenistan, but every passport is different. Turkmenistan usually requires more advance preparation because tourist travel commonly involves an invitation process and guided arrangements."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/top-destinations-img-1.jpg",
+        "alt": "Central Asia border and travel planning"
+      },
+      {
+        "image": "/assets/images/top-destinations-img-5.jpg",
+        "alt": "Silk Road visa and route planning"
+      }
+    ],
+    "quote": "For Central Asia, the best visa plan is not only about one country. It is about your full route, passport, border direction, travel dates and how the countries connect.",
+    "comparison": {
+      "id": "visa-comparison",
+      "title": "Central Asia Visa Planning Comparison",
+      "items": [
+        {
+          "days": "Kazakhstan",
+          "title": "Often straightforward for many travelers",
+          "route": "Check visa-free eligibility, e-visa options or embassy requirements based on passport",
+          "best_for": "Almaty, Astana, Kazakhstan nature routes",
+          "highlight": "Good starting point for Kazakhstan and Kyrgyzstan routes"
+        },
+        {
+          "days": "Kyrgyzstan",
+          "title": "Often simple for many nationalities",
+          "route": "Check visa-free stay rules or e-visa requirements before travel",
+          "best_for": "Mountain, lake and nomadic culture routes",
+          "highlight": "Useful for cross-border routes with Kazakhstan or Tajikistan"
+        },
+        {
+          "days": "Tajikistan",
+          "title": "E-visa or visa application may apply",
+          "route": "Check official Tajikistan visa portals and whether GBAO permit is needed",
+          "best_for": "Fann Mountains, Pamir Highway, Wakhan Valley",
+          "highlight": "Important for Pamir and GBAO route planning"
+        },
+        {
+          "days": "Uzbekistan",
+          "title": "Check visa-free or e-visa rules",
+          "route": "Confirm entry rules based on passport, stay length and route",
+          "best_for": "Tashkent, Samarkand, Bukhara, Khiva",
+          "highlight": "Often central to Silk Road and cross-border itineraries"
+        },
+        {
+          "days": "Turkmenistan",
+          "title": "Requires early planning",
+          "route": "Tourist travel usually needs an invitation process and confirmed arrangements",
+          "best_for": "Ashgabat, Darvaza, Ancient Merv, Uzbekistan connection",
+          "highlight": "Most important country to plan in advance"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "kazakhstan",
+        "title": "Kazakhstan Visa Planning",
+        "image": "/assets/images/popular-tours-img6.jpg",
+        "alt": "Kazakhstan visa and travel planning",
+        "paragraphs": [
+          "Kazakhstan is often used as a starting point for Central Asia travel, especially for routes beginning in Almaty. Many travelers check whether their passport qualifies for visa-free entry, e-visa options or embassy application requirements.",
+          "Because Kazakhstan is often combined with Kyrgyzstan, travelers should also check whether their full route uses air entry, land border crossing or a multi-country connection. This helps avoid problems when planning Almaty, Charyn Canyon, Kolsai Lakes and onward routes."
+        ]
+      },
+      {
+        "id": "kyrgyzstan",
+        "title": "Kyrgyzstan Visa Planning",
+        "image": "/assets/images/popular-tours-img7.jpg",
+        "alt": "Kyrgyzstan visa and travel planning",
+        "paragraphs": [
+          "Kyrgyzstan is popular for mountain and lake routes, including Bishkek, Issyk-Kul, Karakol and Song-Kul. Visa planning is usually connected to passport nationality and length of stay.",
+          "For cross-border trips, Kyrgyzstan is commonly combined with Kazakhstan or Tajikistan. Travelers should check both visa rules and border timing because route direction can affect the practical flow of the journey."
+        ]
+      },
+      {
+        "id": "tajikistan",
+        "title": "Tajikistan Visa and GBAO Planning",
+        "image": "/assets/images/popular-tours-img9.jpg",
+        "alt": "Tajikistan visa and Pamir Highway planning",
+        "paragraphs": [
+          "Tajikistan is important for travelers interested in the Fann Mountains, Pamir Highway and Wakhan Valley. Depending on nationality, travelers may need to use official visa or e-visa systems before arrival.",
+          "For Pamir Highway and eastern Tajikistan routes, travelers should also check whether a GBAO permit is required. This is especially important for Khorog, Murghab, Wakhan Valley and routes connecting toward Kyrgyzstan."
+        ]
+      },
+      {
+        "id": "turkmenistan",
+        "title": "Turkmenistan Visa and Letter of Invitation",
+        "image": "/assets/images/popular-tours-img8.jpg",
+        "alt": "Turkmenistan visa and invitation planning",
+        "paragraphs": [
+          "Turkmenistan usually requires the most careful visa planning in Central Asia. Tourist travel commonly involves a Letter of Invitation or approved invitation process, and arrangements should be started before the travel date.",
+          "Travelers planning Ashgabat, Darvaza Gas Crater, Ancient Merv or a connection with Uzbekistan should confirm the visa process early. The exact requirements depend on nationality, route, travel date and official approval."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Central Asia Visa Planning Tips",
+      "items": [
+        {
+          "title": "Check by Passport",
+          "text": "Visa rules depend on your nationality. Always check based on the passport you will use for travel."
+        },
+        {
+          "title": "Plan Turkmenistan Early",
+          "text": "Turkmenistan usually needs more preparation than other Central Asian countries, especially for tourist invitation and guided arrangements."
+        },
+        {
+          "title": "Check Land Borders",
+          "text": "Some travelers enter by air and exit by land, or travel between several countries. Always confirm border crossing rules before finalizing the itinerary."
+        },
+        {
+          "title": "Consider Permits",
+          "text": "Some routes may require extra permits, such as special regions in Tajikistan. Check this before confirming mountain or Pamir routes."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Need Visa Route Advice?",
+      "help_text": "Tell us your nationality, travel dates and countries you want to visit. We will help you understand the practical visa planning steps for your Central Asia route.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        },
+        {
+          "title": "Uzbekistan & Turkmenistan Tour",
+          "label": "12 days from $1680",
+          "slug": "/tour-uzbekistan-turkmenistan"
+        },
+        {
+          "title": "Kazakhstan & Kyrgyzstan Tour",
+          "label": "Ask for details",
+          "slug": "/tour-kazakhstan-kyrgyzstan"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Need Help Planning Central Asia Visas?",
+      "text": "Share your nationality, route idea, travel dates and countries you want to visit. We will help you plan the practical steps for your Central Asia journey.",
+      "button": "Ask About Visa Planning",
+      "slug": "/contact"
+    }
+  }
+]

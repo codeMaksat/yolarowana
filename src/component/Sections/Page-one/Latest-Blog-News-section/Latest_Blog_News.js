@@ -17,7 +17,7 @@ const Latest_Blog_News = ({ initialValues }) => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
             {data.product &&
               data.product.map((product_data, index) => {
                 return (

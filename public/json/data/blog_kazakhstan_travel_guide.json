@@ -1,0 +1,208 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Kazakhstan Travel Guide",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Kazakhstan Travel Guide"
+      }
+    ],
+    "title": "Kazakhstan Travel Guide: Almaty, Charyn Canyon, Kolsai Lakes & Astana",
+    "intro": "A practical guide to planning a Kazakhstan journey, including the best places to visit, suggested route ideas, travel timing, nature highlights and recommended tours.",
+    "main_image": "/assets/images/popular-tours-img6.jpg",
+    "main_image_alt": "Kazakhstan mountain and canyon landscape",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best time: Spring & Autumn"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended: 5–7 days"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Almaty, Charyn, Kolsai, Kaindy"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#why-visit",
+        "label": "Why visit Kazakhstan?"
+      },
+      {
+        "slug": "#route-comparison",
+        "label": "Route comparison"
+      },
+      {
+        "slug": "#almaty",
+        "label": "Almaty"
+      },
+      {
+        "slug": "#charyn",
+        "label": "Charyn Canyon"
+      },
+      {
+        "slug": "#kolsai-kaindy",
+        "label": "Kolsai & Kaindy Lakes"
+      },
+      {
+        "slug": "#astana",
+        "label": "Astana"
+      },
+      {
+        "slug": "#tips",
+        "label": "Travel tips"
+      }
+    ],
+    "overview": {
+      "id": "why-visit",
+      "title": "Why Visit Kazakhstan?",
+      "paragraphs": [
+        "Kazakhstan is one of the most diverse countries in Central Asia. It combines wide open steppe, mountain lakes, dramatic canyons, modern cities, nomadic heritage and Silk Road history in one destination.",
+        "For first-time travelers, the most practical route usually begins in Almaty. From there, it is possible to explore Charyn Canyon, Kolsai Lakes, Kaindy Lake and nearby mountain landscapes. Kazakhstan also combines very well with Kyrgyzstan or a wider Five Stans Central Asia journey."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/top-destinations-img-1.jpg",
+        "alt": "Almaty Kazakhstan travel"
+      },
+      {
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Kazakhstan nature route"
+      }
+    ],
+    "quote": "Kazakhstan is where Central Asia opens wide — modern cities, mountain lakes, desert canyons and endless steppe landscapes all in one journey.",
+    "comparison": {
+      "id": "route-comparison",
+      "title": "Kazakhstan Travel Route Comparison",
+      "items": [
+        {
+          "days": "3–4 Days",
+          "title": "Almaty & Charyn Canyon",
+          "route": "Almaty → Charyn Canyon → Almaty",
+          "best_for": "Short nature escape",
+          "highlight": "City atmosphere and canyon landscape"
+        },
+        {
+          "days": "5–6 Days",
+          "title": "Kazakhstan Nature Highlights",
+          "route": "Almaty → Charyn Canyon → Kolsai Lakes → Kaindy Lake",
+          "best_for": "First-time Kazakhstan travelers",
+          "highlight": "Best balance of mountains, lakes and canyon scenery"
+        },
+        {
+          "days": "7–8 Days",
+          "title": "Almaty, Nature & Astana",
+          "route": "Almaty → Charyn → Kolsai → Kaindy → Astana",
+          "best_for": "Travelers who want both nature and modern city contrast",
+          "highlight": "Southeast nature plus Kazakhstan’s modern capital"
+        },
+        {
+          "days": "8–12 Days",
+          "title": "Kazakhstan & Kyrgyzstan",
+          "route": "Almaty → Charyn → Kolsai → Bishkek → Issyk-Kul",
+          "best_for": "Mountain, lake and nomadic culture lovers",
+          "highlight": "Cross-border Central Asia nature route"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "almaty",
+        "title": "Almaty: The Best Starting Point",
+        "image": "/assets/images/popular-tours-img6.jpg",
+        "alt": "Almaty Kazakhstan travel",
+        "paragraphs": [
+          "Almaty is often the best starting point for a Kazakhstan trip. The city has mountain views, green parks, local markets, cafes, museums and easy access to nearby nature routes.",
+          "Travelers can visit Panfilov Park, Zenkov Cathedral, Green Bazaar, Kok Tobe and surrounding mountain areas. For many visitors, Almaty gives a soft and enjoyable introduction to Kazakhstan before continuing into wilder landscapes."
+        ]
+      },
+      {
+        "id": "charyn",
+        "title": "Charyn Canyon: Kazakhstan’s Dramatic Desert Landscape",
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Charyn Canyon Kazakhstan",
+        "paragraphs": [
+          "Charyn Canyon is one of Kazakhstan’s most famous natural attractions. Its red rock formations, deep valley views and unusual shapes make it one of the strongest day trips or overnight extensions from Almaty.",
+          "The Valley of Castles is the most famous section of the canyon. It is often included together with Kolsai Lakes and Kaindy Lake for travelers who want a compact but visually powerful Kazakhstan nature route."
+        ]
+      },
+      {
+        "id": "kolsai-kaindy",
+        "title": "Kolsai Lakes and Kaindy Lake",
+        "image": "/assets/images/top-destinations-img-1.jpg",
+        "alt": "Kolsai and Kaindy Lakes Kazakhstan",
+        "paragraphs": [
+          "Kolsai Lakes are among the most beautiful mountain lake areas in Kazakhstan. The landscape includes clear water, forested slopes, mountain views and peaceful village surroundings.",
+          "Kaindy Lake is especially known for its sunken forest, where tree trunks rise from the water and create a unique scene. Together, Kolsai and Kaindy are ideal for nature lovers, photographers and travelers who want a calm mountain atmosphere."
+        ]
+      },
+      {
+        "id": "astana",
+        "title": "Astana: Kazakhstan’s Modern Capital",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Astana Kazakhstan travel",
+        "paragraphs": [
+          "Astana shows a very different side of Kazakhstan. The capital is known for modern architecture, wide avenues, government buildings, museums and futuristic city design.",
+          "Adding Astana to a Kazakhstan itinerary gives travelers a broader understanding of the country. It creates a contrast between Almaty’s mountain atmosphere, southeast nature routes and Kazakhstan’s modern national capital."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Kazakhstan Travel Tips",
+      "items": [
+        {
+          "title": "Best Time to Visit",
+          "text": "Spring and autumn are usually the most comfortable seasons for Kazakhstan travel, especially for Almaty, Charyn Canyon and nature routes."
+        },
+        {
+          "title": "Recommended Duration",
+          "text": "Plan 5 to 6 days for a strong first Kazakhstan route including Almaty, Charyn Canyon, Kolsai Lakes and Kaindy Lake."
+        },
+        {
+          "title": "Route Planning",
+          "text": "Kazakhstan is a large country, so routes should be planned carefully. Driving times can be long, especially when visiting natural attractions outside the city."
+        },
+        {
+          "title": "Combine with Kyrgyzstan",
+          "text": "Kazakhstan combines very well with Kyrgyzstan for travelers interested in mountains, lakes, nomadic culture and cross-border Central Asia routes."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan Your Kazakhstan Route",
+      "help_text": "Tell us your travel dates, group size and preferred pace. We will help you choose the best Kazakhstan route or connect it with wider Central Asia.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Kazakhstan Nature Highlights",
+          "label": "Ask for details",
+          "slug": "/tour-kazakhstan-nature-highlights"
+        },
+        {
+          "title": "Kazakhstan & Kyrgyzstan Tour",
+          "label": "Ask for details",
+          "slug": "/tour-kazakhstan-kyrgyzstan"
+        },
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to Plan Your Kazakhstan Trip?",
+      "text": "Share your travel dates, group size and preferred route. We will help you build the right Kazakhstan journey or connect it with a wider Central Asia tour.",
+      "button": "Plan My Kazakhstan Trip",
+      "slug": "/contact"
+    }
+  }
+]

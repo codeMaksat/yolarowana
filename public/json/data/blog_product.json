@@ -37,6 +37,60 @@
         "image": "/assets/images/top-destinations-img-3.jpg",
         "alt": "Uzbekistan Silk Road travel guide",
         "date": "Destination Guide"
+      },
+      {
+        "id": 5,
+        "slug": "/kazakhstan-travel-guide",
+        "title": "Kazakhstan Travel Guide",
+        "short_des": "Explore Kazakhstan route ideas with Almaty, Charyn Canyon, Kolsai Lakes, Kaindy Lake, Astana and mountain landscapes.",
+        "image": "/assets/images/popular-tours-img6.jpg",
+        "alt": "Kazakhstan travel guide",
+        "date": "Destination Guide"
+      },
+      {
+        "id": 6,
+        "slug": "/kyrgyzstan-travel-guide",
+        "title": "Kyrgyzstan Travel Guide",
+        "short_des": "Plan a Kyrgyzstan journey through Bishkek, Issyk-Kul Lake, Karakol, Song-Kul Lake, yurt stays and nomadic mountain culture.",
+        "image": "/assets/images/popular-tours-img7.jpg",
+        "alt": "Kyrgyzstan travel guide",
+        "date": "Destination Guide"
+      },
+      {
+        "id": 7,
+        "slug": "/tajikistan-travel-guide",
+        "title": "Tajikistan Travel Guide",
+        "short_des": "Discover Tajikistan travel routes with Dushanbe, Iskanderkul, Fann Mountains, Pamir Highway, Wakhan Valley and mountain roads.",
+        "image": "/assets/images/popular-tours-img9.jpg",
+        "alt": "Tajikistan travel guide",
+        "date": "Destination Guide"
+      },
+      {
+        "id": 8,
+        "slug": "/central-asia-visa-guide",
+        "title": "Central Asia Visa Guide",
+        "short_des": "Understand practical visa planning for Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan multi-country routes.",
+        "image": "/assets/images/popular-tours-img1.jpg",
+        "alt": "Central Asia visa guide",
+        "date": "Visa Guide"
+      },
+      {
+        "id": 9,
+        "slug": "/silk-road-travel-guide",
+        "title": "Silk Road Travel Guide",
+        "short_des": "Plan a Silk Road journey through Uzbekistan, Turkmenistan and wider Central Asia with route ideas, timing and travel tips.",
+        "image": "/assets/images/popular-tours-img2.jpg",
+        "alt": "Silk Road travel guide",
+        "date": "Silk Road"
+      },
+      {
+        "id": 10,
+        "slug": "/turkmenistan-visa-guide",
+        "title": "Turkmenistan Visa Guide",
+        "short_des": "Learn how Turkmenistan visa planning works, including Letter of Invitation, tourist visa steps, border planning and route timing.",
+        "image": "/assets/images/popular-tours-img8.jpg",
+        "alt": "Turkmenistan visa guide",
+        "date": "Visa Guide"
       }
     ]
   }

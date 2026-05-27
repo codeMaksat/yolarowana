@@ -1,0 +1,208 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Kyrgyzstan Travel Guide",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Kyrgyzstan Travel Guide"
+      }
+    ],
+    "title": "Kyrgyzstan Travel Guide: Mountains, Lakes, Yurts & Nomadic Culture",
+    "intro": "A practical guide to planning a Kyrgyzstan journey, including the best places to visit, suggested routes, mountain lakes, yurt stays, travel timing and recommended tours.",
+    "main_image": "/assets/images/popular-tours-img7.jpg",
+    "main_image_alt": "Kyrgyzstan mountain and lake landscape",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best time: May–September"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended: 7–10 days"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Bishkek, Issyk-Kul, Karakol, Song-Kul"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#why-visit",
+        "label": "Why visit Kyrgyzstan?"
+      },
+      {
+        "slug": "#route-comparison",
+        "label": "Route comparison"
+      },
+      {
+        "slug": "#bishkek",
+        "label": "Bishkek"
+      },
+      {
+        "slug": "#issyk-kul",
+        "label": "Issyk-Kul Lake"
+      },
+      {
+        "slug": "#karakol",
+        "label": "Karakol"
+      },
+      {
+        "slug": "#song-kul",
+        "label": "Song-Kul Lake"
+      },
+      {
+        "slug": "#tips",
+        "label": "Travel tips"
+      }
+    ],
+    "overview": {
+      "id": "why-visit",
+      "title": "Why Visit Kyrgyzstan?",
+      "paragraphs": [
+        "Kyrgyzstan is one of the best destinations in Central Asia for mountain scenery, lake landscapes, nomadic culture and outdoor travel. It is known for high alpine views, yurt stays, horse culture, open valleys and peaceful road journeys.",
+        "For many travelers, Kyrgyzstan feels more nature-focused than city-focused. A good route usually combines Bishkek, Issyk-Kul Lake, Karakol, Jeti-Oguz, Song-Kul Lake and mountain valleys. It also connects very well with Kazakhstan for a wider Central Asia nature route."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/top-destinations-img-2.jpg",
+        "alt": "Kyrgyzstan mountain landscape"
+      },
+      {
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Kyrgyzstan yurt and lake route"
+      }
+    ],
+    "quote": "Kyrgyzstan is Central Asia’s mountain soul — alpine lakes, open valleys, yurt camps, horse culture and nomadic traditions in one unforgettable journey.",
+    "comparison": {
+      "id": "route-comparison",
+      "title": "Kyrgyzstan Travel Route Comparison",
+      "items": [
+        {
+          "days": "4–5 Days",
+          "title": "Bishkek & Issyk-Kul Short Trip",
+          "route": "Bishkek → Issyk-Kul Lake → Bishkek",
+          "best_for": "Short nature escape",
+          "highlight": "Capital city, lake scenery and easy road access"
+        },
+        {
+          "days": "7–8 Days",
+          "title": "Classic Kyrgyzstan Mountain & Lake Route",
+          "route": "Bishkek → Issyk-Kul → Karakol → Jeti-Oguz → Bishkek",
+          "best_for": "First-time Kyrgyzstan travelers",
+          "highlight": "Best balance of mountains, lake views and cultural stops"
+        },
+        {
+          "days": "9–10 Days",
+          "title": "Kyrgyzstan with Song-Kul Lake",
+          "route": "Bishkek → Issyk-Kul → Karakol → Song-Kul → Bishkek",
+          "best_for": "Travelers who want yurt stays and nomadic culture",
+          "highlight": "Highland lake experience and traditional yurt camp"
+        },
+        {
+          "days": "8–12 Days",
+          "title": "Kazakhstan & Kyrgyzstan",
+          "route": "Almaty → Charyn → Kolsai → Bishkek → Issyk-Kul",
+          "best_for": "Cross-border Central Asia nature route",
+          "highlight": "Canyons, lakes, mountains and nomadic landscapes"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "bishkek",
+        "title": "Bishkek: The Starting Point",
+        "image": "/assets/images/popular-tours-img7.jpg",
+        "alt": "Bishkek Kyrgyzstan travel",
+        "paragraphs": [
+          "Bishkek is the capital of Kyrgyzstan and the usual starting point for international arrivals. It is a relaxed city with parks, squares, museums, local markets and Soviet-era urban character.",
+          "Many travelers use Bishkek as a short introduction before continuing toward mountains and lakes. It is also useful for adjusting the travel pace, meeting the guide and preparing for road trips into the countryside."
+        ]
+      },
+      {
+        "id": "issyk-kul",
+        "title": "Issyk-Kul Lake: Kyrgyzstan’s Great Lake",
+        "image": "/assets/images/top-destinations-img-2.jpg",
+        "alt": "Issyk-Kul Lake Kyrgyzstan",
+        "paragraphs": [
+          "Issyk-Kul Lake is one of Kyrgyzstan’s most important travel highlights. Surrounded by mountain scenery, the lake is ideal for scenic drives, photography, cultural stops and relaxed overnight stays.",
+          "The northern and southern shores offer different experiences. Some routes focus on lake resorts and easy access, while others include quieter landscapes, villages and natural formations along the way."
+        ]
+      },
+      {
+        "id": "karakol",
+        "title": "Karakol: Gateway to Mountains and Valleys",
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Karakol Kyrgyzstan mountain route",
+        "paragraphs": [
+          "Karakol is one of the best bases for exploring eastern Kyrgyzstan. The town is connected to mountain valleys, trekking areas, cultural sites and scenic road routes.",
+          "Nearby highlights may include Jeti-Oguz, Altyn Arashan, wooden churches, local food experiences and mountain viewpoints depending on the season and travel style."
+        ]
+      },
+      {
+        "id": "song-kul",
+        "title": "Song-Kul Lake: Yurt Stays and Nomadic Atmosphere",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Song-Kul Lake Kyrgyzstan yurt stay",
+        "paragraphs": [
+          "Song-Kul Lake is one of Kyrgyzstan’s most memorable highland destinations. It is known for open pastures, yurt camps, horses, mountain air and a strong nomadic atmosphere.",
+          "Because Song-Kul is seasonal and located at high altitude, access depends on weather and road conditions. When included at the right time of year, it can become one of the strongest emotional highlights of a Kyrgyzstan journey."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Kyrgyzstan Travel Tips",
+      "items": [
+        {
+          "title": "Best Time to Visit",
+          "text": "Late spring to early autumn is usually best for mountain routes, lake scenery and yurt stays. Song-Kul is generally more suitable in the warmer travel season."
+        },
+        {
+          "title": "Recommended Duration",
+          "text": "Plan 7 to 10 days for a strong first Kyrgyzstan route including Bishkek, Issyk-Kul, Karakol and Song-Kul if the season allows."
+        },
+        {
+          "title": "Road Travel",
+          "text": "Kyrgyzstan is a road-trip destination. Distances can feel long, but the scenery is part of the travel experience."
+        },
+        {
+          "title": "Combine with Kazakhstan",
+          "text": "Kyrgyzstan combines very well with Kazakhstan, especially through Almaty, Charyn Canyon, Kolsai Lakes, Bishkek and Issyk-Kul."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan Your Kyrgyzstan Route",
+      "help_text": "Tell us your travel dates, group size and preferred pace. We will help you choose the best Kyrgyzstan route or connect it with wider Central Asia.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Kyrgyzstan Mountain & Lake Tour",
+          "label": "Ask for details",
+          "slug": "/tour-kyrgyzstan-mountain-lake"
+        },
+        {
+          "title": "Kazakhstan & Kyrgyzstan Tour",
+          "label": "Ask for details",
+          "slug": "/tour-kazakhstan-kyrgyzstan"
+        },
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to Plan Your Kyrgyzstan Trip?",
+      "text": "Share your travel dates, group size and preferred route. We will help you build the right Kyrgyzstan journey or connect it with Kazakhstan and wider Central Asia.",
+      "button": "Plan My Kyrgyzstan Trip",
+      "slug": "/contact"
+    }
+  }
+]

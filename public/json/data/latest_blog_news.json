@@ -34,6 +34,14 @@
         "date": "Destination Guide",
         "title": "Uzbekistan Silk Road Guide",
         "label": "Plan a classic Uzbekistan route through Tashkent, Samarkand, Bukhara and Khiva with practical timing and travel tips."
+      },
+      {
+        "slug": "/silk-road-travel-guide",
+        "image": "/assets/images/popular-tours-img2.jpg",
+        "alt": "Silk Road travel guide",
+        "date": "Silk Road",
+        "title": "Silk Road Travel Guide",
+        "label": "Explore Silk Road route ideas through Uzbekistan, Turkmenistan and wider Central Asia with practical planning advice."
       }
     ]
   }

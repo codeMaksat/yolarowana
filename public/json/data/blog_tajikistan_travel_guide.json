@@ -1,0 +1,208 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Tajikistan Travel Guide",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Tajikistan Travel Guide"
+      }
+    ],
+    "title": "Tajikistan Travel Guide: Pamir Highway, Fann Mountains, Lakes & Mountain Culture",
+    "intro": "A practical guide to planning a Tajikistan journey, including Dushanbe, Iskanderkul, the Fann Mountains, Pamir Highway, Wakhan Valley, route ideas, travel timing and recommended tours.",
+    "main_image": "/assets/images/popular-tours-img9.jpg",
+    "main_image_alt": "Tajikistan mountain landscape",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best time: May–October"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended: 6–10 days"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Dushanbe, Fann Mountains, Pamir Highway"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#why-visit",
+        "label": "Why visit Tajikistan?"
+      },
+      {
+        "slug": "#route-comparison",
+        "label": "Route comparison"
+      },
+      {
+        "slug": "#dushanbe",
+        "label": "Dushanbe"
+      },
+      {
+        "slug": "#fann-mountains",
+        "label": "Fann Mountains"
+      },
+      {
+        "slug": "#pamir-highway",
+        "label": "Pamir Highway"
+      },
+      {
+        "slug": "#wakhan-valley",
+        "label": "Wakhan Valley"
+      },
+      {
+        "slug": "#tips",
+        "label": "Travel tips"
+      }
+    ],
+    "overview": {
+      "id": "why-visit",
+      "title": "Why Visit Tajikistan?",
+      "paragraphs": [
+        "Tajikistan is one of the most dramatic mountain destinations in Central Asia. It is known for high passes, deep valleys, alpine lakes, remote villages, Persian-influenced culture and some of the most adventurous road journeys in the region.",
+        "For first-time travelers, Tajikistan can be planned in two main ways. A shorter route can focus on Dushanbe, Iskanderkul and the Fann Mountains, while a deeper adventure can follow the Pamir Highway toward Khorog, Murghab, the Wakhan Valley and onward to Kyrgyzstan."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/top-destinations-img-6.jpg",
+        "alt": "Tajikistan mountain route"
+      },
+      {
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Pamir Highway Tajikistan"
+      }
+    ],
+    "quote": "Tajikistan is the mountain heart of Central Asia — a place of high passes, blue lakes, remote valleys and unforgettable road journeys.",
+    "comparison": {
+      "id": "route-comparison",
+      "title": "Tajikistan Travel Route Comparison",
+      "items": [
+        {
+          "days": "4–5 Days",
+          "title": "Dushanbe & Iskanderkul Short Trip",
+          "route": "Dushanbe → Iskanderkul → Dushanbe",
+          "best_for": "Short mountain escape",
+          "highlight": "Capital city, lake scenery and easy mountain access"
+        },
+        {
+          "days": "6–7 Days",
+          "title": "Tajikistan Mountain Highlights",
+          "route": "Dushanbe → Iskanderkul → Fann Mountains → Dushanbe",
+          "best_for": "First-time Tajikistan travelers",
+          "highlight": "Best balance of city, lake and mountain scenery"
+        },
+        {
+          "days": "8–10 Days",
+          "title": "Pamir Highway Introduction",
+          "route": "Dushanbe → Khorog → Pamir Route → Dushanbe or Osh",
+          "best_for": "Adventure travelers",
+          "highlight": "Remote valleys, high roads and dramatic mountain landscapes"
+        },
+        {
+          "days": "10–14 Days",
+          "title": "Complete Pamir Highway Journey",
+          "route": "Dushanbe → Khorog → Wakhan Valley → Murghab → Osh",
+          "best_for": "Slow travel and overland adventure",
+          "highlight": "One of Central Asia’s strongest road journeys"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "dushanbe",
+        "title": "Dushanbe: The Starting Point",
+        "image": "/assets/images/popular-tours-img9.jpg",
+        "alt": "Dushanbe Tajikistan travel",
+        "paragraphs": [
+          "Dushanbe is the capital of Tajikistan and the usual starting point for most journeys. The city offers museums, parks, wide avenues, local markets and an introduction to Tajik culture before travelers continue into the mountains.",
+          "For many routes, Dushanbe is also the practical base for organizing transport, guides and road permits when needed. It works well as the beginning point for Fann Mountains trips or longer Pamir Highway journeys."
+        ]
+      },
+      {
+        "id": "fann-mountains",
+        "title": "Fann Mountains and Iskanderkul",
+        "image": "/assets/images/top-destinations-img-6.jpg",
+        "alt": "Fann Mountains Tajikistan",
+        "paragraphs": [
+          "The Fann Mountains are among the most beautiful and accessible mountain areas in Tajikistan. They are known for alpine scenery, lakes, valleys, village life and strong photography opportunities.",
+          "Iskanderkul Lake is one of the most popular highlights in this region. It can be included in a shorter Tajikistan route or used as part of a wider mountain itinerary for travelers who want nature without committing to a full Pamir Highway adventure."
+        ]
+      },
+      {
+        "id": "pamir-highway",
+        "title": "Pamir Highway: Tajikistan’s Great Road Journey",
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Pamir Highway Tajikistan",
+        "paragraphs": [
+          "The Pamir Highway is one of the most famous overland routes in Central Asia. It is known for high-altitude roads, remote villages, mountain passes, river valleys and changing landscapes across eastern Tajikistan.",
+          "This journey is best suited for travelers who enjoy road adventure, basic comfort in remote places and dramatic scenery. The route can connect Dushanbe with Khorog, Murghab and Osh in Kyrgyzstan, depending on the final travel plan."
+        ]
+      },
+      {
+        "id": "wakhan-valley",
+        "title": "Wakhan Valley: Remote Culture and Borderland Scenery",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Wakhan Valley Tajikistan",
+        "paragraphs": [
+          "The Wakhan Valley is one of the most atmospheric parts of a deeper Tajikistan journey. It combines remote settlements, river landscapes, mountain views, historical sites and a strong sense of borderland culture.",
+          "Including the Wakhan Valley usually requires more time and careful planning. For travelers who want one of Central Asia’s most memorable remote routes, it can become a defining part of the Pamir Highway experience."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Tajikistan Travel Tips",
+      "items": [
+        {
+          "title": "Best Time to Visit",
+          "text": "Late spring to autumn is usually the best period for Tajikistan mountain routes. Higher roads and remote areas depend strongly on weather and road conditions."
+        },
+        {
+          "title": "Recommended Duration",
+          "text": "Plan 6 to 7 days for a first Tajikistan mountain route, or 10 to 14 days for a deeper Pamir Highway journey."
+        },
+        {
+          "title": "Road Conditions",
+          "text": "Tajikistan travel often involves long drives, mountain roads and changing conditions. A realistic pace is important for comfort and safety."
+        },
+        {
+          "title": "Combine with Kyrgyzstan",
+          "text": "The Pamir Highway can connect Tajikistan with Kyrgyzstan, especially through the route toward Osh, making it a strong cross-border Central Asia journey."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan Your Tajikistan Route",
+      "help_text": "Tell us your travel dates, group size and preferred pace. We will help you choose the best Tajikistan route or connect it with the wider Central Asia journey.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Tajikistan Mountain Highlights",
+          "label": "Ask for details",
+          "slug": "/tour-tajikistan-mountain-highlights"
+        },
+        {
+          "title": "Pamir Highway Adventure",
+          "label": "Ask for details",
+          "slug": "/tour-pamir-highway"
+        },
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want to Plan Your Tajikistan Trip?",
+      "text": "Share your travel dates, group size and preferred route. We will help you build the right Tajikistan journey or connect it with the Pamir Highway and wider Central Asia.",
+      "button": "Plan My Tajikistan Trip",
+      "slug": "/contact"
+    }
+  }
+]
