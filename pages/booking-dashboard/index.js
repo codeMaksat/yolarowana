@@ -85,6 +85,34 @@ export default function Dashboard() {
     setUpdatingId(null);
   };
 
+  const deleteInquiry = async id => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this inquiry? This action cannot be undone."
+    );
+
+    if (!confirmDelete) return;
+
+    setUpdatingId(id);
+
+    const { error } = await supabase
+      .from("inquiries")
+      .delete()
+      .eq("id", id);
+
+    if (error) {
+      console.error("Error deleting inquiry:", error);
+      alert("Could not delete inquiry. Please try again.");
+      setUpdatingId(null);
+      return;
+    }
+
+    setInquiries(prevInquiries =>
+      prevInquiries.filter(inquiry => inquiry.id !== id)
+    );
+
+    setUpdatingId(null);
+  };
+
   const totalInquiries = inquiries.length;
   const newInquiries = inquiries.filter(item => item.status === "new").length;
   const contactedInquiries = inquiries.filter(
@@ -167,6 +195,10 @@ export default function Dashboard() {
   };
 
   const getInquiryTitle = inquiry => {
+    if (inquiry.tour_name) {
+      return inquiry.tour_name;
+    }
+
     if (!inquiry.message) {
       return inquiry.source === "contact_page"
         ? "Contact Page Inquiry"
@@ -349,7 +381,7 @@ export default function Dashboard() {
                 </div>
 
                 <div className="w-full overflow-x-auto">
-                  <table className="table-list table-auto whitespace-nowrap min-w-[1650px]">
+                  <table className="table-list table-auto whitespace-nowrap min-w-[1750px]">
                     <thead>
                       <tr>
                         <th>Date</th>
@@ -365,13 +397,14 @@ export default function Dashboard() {
                         <th>Status</th>
                         <th>Update status</th>
                         <th>Message</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
 
                     <tbody>
                       {!loading && inquiries.length === 0 && (
                         <tr>
-                          <td colSpan="13">No inquiries yet.</td>
+                          <td colSpan="14">No inquiries yet.</td>
                         </tr>
                       )}
 
@@ -448,6 +481,17 @@ export default function Dashboard() {
 
                             <td className="max-w-[420px] whitespace-normal leading-normal">
                               {getCleanMessage(inquiry.message)}
+                            </td>
+
+                            <td>
+                              <button
+                                type="button"
+                                disabled={updatingId === inquiry.id}
+                                onClick={() => deleteInquiry(inquiry.id)}
+                                className="rounded-full bg-red-100 px-4 py-2 text-sm font-medium text-red-700 hover:bg-red-200 disabled:opacity-50"
+                              >
+                                Delete
+                              </button>
                             </td>
                           </tr>
                         );
