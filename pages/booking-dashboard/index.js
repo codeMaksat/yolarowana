@@ -85,33 +85,41 @@ export default function Dashboard() {
     setUpdatingId(null);
   };
 
-  const deleteInquiry = async id => {
-    const confirmDelete = window.confirm(
-      "Are you sure you want to delete this inquiry? This action cannot be undone."
-    );
+const deleteInquiry = async id => {
+  const confirmDelete = window.confirm(
+    "Are you sure you want to delete this inquiry? This action cannot be undone."
+  );
 
-    if (!confirmDelete) return;
+  if (!confirmDelete) return;
 
-    setUpdatingId(id);
+  setUpdatingId(id);
 
-    const { error } = await supabase
-      .from("inquiries")
-      .delete()
-      .eq("id", id);
+  const { data, error } = await supabase
+    .from("inquiries")
+    .delete()
+    .eq("id", id)
+    .select();
 
-    if (error) {
-      console.error("Error deleting inquiry:", error);
-      alert("Could not delete inquiry. Please try again.");
-      setUpdatingId(null);
-      return;
-    }
-
-    setInquiries(prevInquiries =>
-      prevInquiries.filter(inquiry => inquiry.id !== id)
-    );
-
+  if (error) {
+    console.error("Error deleting inquiry:", error);
+    alert("Could not delete inquiry. Please check Supabase delete permission.");
     setUpdatingId(null);
-  };
+    return;
+  }
+
+  if (!data || data.length === 0) {
+    console.warn("No inquiry was deleted. Check RLS DELETE policy or ID.");
+    alert("No inquiry was deleted. Please check Supabase DELETE policy.");
+    setUpdatingId(null);
+    return;
+  }
+
+  setInquiries(prevInquiries =>
+    prevInquiries.filter(inquiry => inquiry.id !== id)
+  );
+
+  setUpdatingId(null);
+};
 
   const totalInquiries = inquiries.length;
   const newInquiries = inquiries.filter(item => item.status === "new").length;
