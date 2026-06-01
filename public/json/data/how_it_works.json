@@ -1,0 +1,38 @@
+[
+  {
+    "subtitle": "How It Works",
+    "title": "From First Inquiry to a Well-Planned Central Asia Journey",
+    "description": "Planning Central Asia can feel complicated, but the process does not have to be confusing. We help you move step by step from route idea to confirmed travel plan.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Send Your Travel Idea",
+        "description": "Tell us your travel dates, group size, preferred countries, budget range and the kind of experience you want."
+      },
+      {
+        "number": "02",
+        "title": "We Review the Route",
+        "description": "Our team checks your route, border flow, visa needs, travel season, driving times and practical connections between countries."
+      },
+      {
+        "number": "03",
+        "title": "Receive a Tailored Plan",
+        "description": "We prepare a realistic itinerary with route order, main highlights, travel pace, hotels, transport and guide arrangements."
+      },
+      {
+        "number": "04",
+        "title": "Confirm and Prepare",
+        "description": "After the program is confirmed, we help with the next steps such as visa support, invitation planning, final details and pre-trip guidance."
+      },
+      {
+        "number": "05",
+        "title": "Travel With Local Support",
+        "description": "During the journey, local guides, drivers and coordinators support the trip so you can focus on the experience."
+      }
+    ],
+    "button": {
+      "label": "Start Planning My Trip",
+      "slug": "/contact"
+    }
+  }
+]

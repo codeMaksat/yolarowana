@@ -8,3 +8,4 @@ export { default as Why_Choose_Us } from "./Why-Choose-Us-section/Why_Choose_Us"
 export { default as Start_Testimonial } from "./Start-Testimonial-section/Start_Testimonial";
 export { default as Latest_Blog_News } from "./Latest-Blog-News-section/Latest_Blog_News";
 export { default as Travel_Confidence } from "./Travel-confidence/Travel-confidence";
+export { default as How_It_Works } from "./How-it-works/How_it_works";
