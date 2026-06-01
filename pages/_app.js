@@ -5,6 +5,7 @@ import Footer3 from "@/Layout/Footer3";
 import Header from "@/Layout/Header";
 import Header2 from "@/Layout/Header2";
 import Header3 from "@/Layout/Header3";
+import StickyWhatsApp from "@/component/StickyWhatsApp";
 import { useFetchData } from "@/component/comman";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -161,6 +162,7 @@ export default function App({ Component, pageProps }) {
         </Head>
         <HeaderComponent initialValues={header_data} />
         <Component {...pageProps} />
+        <StickyWhatsApp />
         <FooterComponent initialValues={footer_data} />
       </CartProvider>
     </>
