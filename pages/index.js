@@ -9,6 +9,7 @@ import {
   Start_About,
   Start_Testimonial,
   Top_Destinations,
+  Travel_Confidence,
   Why_Choose_Us,
 } from "@/component/Sections/Page-one";
 import { Head_Meta, useFetchData } from "@/component/comman";
@@ -53,8 +54,9 @@ export default function Index() {
       <Head_Meta meta_data={seo_data.home_meta} comman_meta={seo_data} />
       <Hero initialValues={hero_data} />
       <Top_Destinations initialValues={top_destinations_data} />
-      <Start_About initialValues={start_about_data} />
+      <Travel_Confidence />
       <Popular_Tours initialValues={popular_tours_data} />
+      <Start_About initialValues={start_about_data} />
       <Perfect_Travel_Planner initialValues={perfect_travel_planner_data} />
       <Full_Video initialValues={full_video_data} />
       {/* <Why_Choose_Us initialValues={why_choose_us_data} /> */}

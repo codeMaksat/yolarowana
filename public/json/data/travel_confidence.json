@@ -1,0 +1,33 @@
+[
+  {
+    "subtitle": "Travel With Confidence",
+    "title": "Central Asia Travel Made Clear, Local and Well-Planned",
+    "description": "From visa support and border planning to guides, transport and realistic route timing, Yola Rowana helps travelers explore Central Asia with practical local knowledge.",
+    "cards": [
+      {
+        "icon": "fa-solid fa-map-location-dot",
+        "title": "Real Route Knowledge",
+        "description": "We help shape routes that make sense on the ground, with realistic driving times, border flow and country connections."
+      },
+      {
+        "icon": "fa-solid fa-passport",
+        "title": "Visa & Border Support",
+        "description": "Central Asia travel can involve visas, permits and border timing. We guide travelers through the practical planning steps."
+      },
+      {
+        "icon": "fa-solid fa-user-tie",
+        "title": "Local Guides & Coordination",
+        "description": "We work with local guides, drivers and partners to keep the journey smooth from arrival to departure."
+      },
+      {
+        "icon": "fa-solid fa-route",
+        "title": "Private & Small Group Tours",
+        "description": "Choose a private journey or small group route across Turkmenistan, Uzbekistan, Kazakhstan, Kyrgyzstan and Tajikistan."
+      }
+    ],
+    "button": {
+      "label": "Plan My Central Asia Trip",
+      "slug": "/contact"
+    }
+  }
+]

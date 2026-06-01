@@ -1,41 +1,41 @@
 [
-    {
-        "title": "Why travel Central Asia with us?",
-        "label": "Central Asia is beautiful, but it is not always simple to plan alone. Routes are long, borders matter, permits can be confusing, and the best experiences often depend on the right local people. We help you travel the region with trusted guides, smooth logistics, and real on-the-ground support.",
-        "first_image": "/assets/images/about-img1.jpg",
-        "first_alt": "about img 1",
-        "second_image": "/assets/images/about-img2.jpg",
-        "second_alt": "about img 2",
-        "third_image": "/assets/images/about-img3.jpg",
-        "third_alt": "about img 3",
-        "points": [
-            {
-                "label": "Local guides who know the roads, borders, and culture"
-            },
-            {
-                "label": "Private and small group tours across the Five Stans"
-            },
-            {
-                "label": "Help with routes, timing, permits, and border crossings"
-            },
-            {
-                "label": "Carefully planned itineraries with room for real local moments"
-            },
-            {
-                "label": "Support before, during, and after your Central Asia journey"
-            }
-        ],
-        "contect": [
-            {
-                "slug": "tel:+993 61419041",
-                "icon": "fa-solid fa-phone",
-                "label": "+993 61419041"
-            },
-            {
-                "slug": "mailto:info@yolarowana.com",
-                "icon": "fa-solid fa-envelope",
-                "label": "info@yolarowana.com"
-            }
-        ]
-    }
+  {
+    "title": "Why Travel Central Asia With Yola Rowana?",
+    "label": "Central Asia is not a simple copy-paste destination. Routes, borders, visas, seasons and travel timing all matter. Yola Rowana focuses on this region deeply, helping travelers build journeys that feel realistic, local and meaningful.",
+    "first_image": "/assets/images/about-img1.jpg",
+    "first_alt": "Central Asia local travel planning",
+    "second_image": "/assets/images/about-img2.jpg",
+    "second_alt": "Silk Road and Central Asia journey",
+    "third_image": "/assets/images/about-img3.jpg",
+    "third_alt": "Yola Rowana Central Asia travel support",
+    "points": [
+      {
+        "label": "Central Asia is our focus, not one destination among hundreds"
+      },
+      {
+        "label": "We understand how the Five Stans connect in real travel conditions"
+      },
+      {
+        "label": "Routes are shaped around pace, comfort, interests and season"
+      },
+      {
+        "label": "We design private, small group, Silk Road and multi-country journeys"
+      },
+      {
+        "label": "Our advice is practical, honest and based on how travel works on the ground"
+      }
+    ],
+    "contect": [
+      {
+        "slug": "tel:+993 61419041",
+        "icon": "fa-solid fa-phone",
+        "label": "+993 61419041"
+      },
+      {
+        "slug": "mailto:info@yolarowana.com",
+        "icon": "fa-solid fa-envelope",
+        "label": "info@yolarowana.com"
+      }
+    ]
+  }
 ]

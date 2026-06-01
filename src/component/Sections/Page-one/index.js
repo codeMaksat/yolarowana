@@ -7,3 +7,4 @@ export { default as Perfect_Travel_Planner } from "./Perfect-Travel-Planner-sect
 export { default as Why_Choose_Us } from "./Why-Choose-Us-section/Why_Choose_Us";
 export { default as Start_Testimonial } from "./Start-Testimonial-section/Start_Testimonial";
 export { default as Latest_Blog_News } from "./Latest-Blog-News-section/Latest_Blog_News";
+export { default as Travel_Confidence } from "./Travel-confidence/Travel-confidence";
