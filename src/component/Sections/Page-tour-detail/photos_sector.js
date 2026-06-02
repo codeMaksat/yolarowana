@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 const Photos_Sector = ({ photo_data }) => {
   return (
@@ -17,22 +17,27 @@ const Photos_Sector = ({ photo_data }) => {
               slidesPerView={1}
               spaceBetween={0}
               loop={true}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
               navigation={{
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
               }}
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
               className="mySwiper w-full rounded-2xl !overflow-hidden"
             >
               {data.images &&
                 data.images.map((images_data, index) => {
                   return (
                     <SwiperSlide key={index}>
-                      <div className="rounded-2xl overflow-hidden relative h-[220px] sm:h-[260px] md:h-[340px] lg:h-[420px]">
+                      <div className="rounded-2xl overflow-hidden relative h-[260px] sm:h-[320px] md:h-[430px] lg:h-[520px] xl:h-[560px]">
                         <img
                           src={images_data.image}
                           alt={images_data.alt}
-                          className="w-full h-full object-cover absolute top-0 left-0"
+                          className="w-full h-full object-cover object-center absolute top-0 left-0"
                         />
                       </div>
                     </SwiperSlide>
