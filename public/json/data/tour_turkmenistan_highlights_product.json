@@ -85,19 +85,19 @@
         "title": "Photos",
         "images": [
           {
-            "image": "/assets/images/photo-1.jpg",
+            "image": "/assets/images/turkmenistan-highlights-main.jpg",
             "alt": "Turkmenistan tour photo"
           },
           {
-            "image": "/assets/images/tour-product-detail-img.jpg",
+            "image": "/assets/images/turkmenistan-highlights-main-1.jpg",
             "alt": "Turkmenistan tour landscape"
           },
           {
-            "image": "/assets/images/photo-1.jpg",
+            "image": "/assets/images/turkmenistan-highlights-main-2.jpg",
             "alt": "Central Asia travel photo"
           },
           {
-            "image": "/assets/images/tour-product-detail-img.jpg",
+            "image": "/assets/images/turkmenistan-highlights-main-3.jpg",
             "alt": "Silk Road travel photo"
           }
         ]
