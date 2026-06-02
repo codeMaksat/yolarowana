@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Itinerary_Sector from "./itinerary_sector";
 import Faq_Sector from "./faq_sector";
@@ -60,6 +60,7 @@ const Included_Excluded_Sector = ({ detail_data }) => {
 
 const All_Tour_Detail = ({ initialValues }) => {
   const [activeSection, setActiveSection] = useState("detail");
+  const menuRef = useRef(null);
 
   const menuItems = [
     { id: "detail", label: "Overview" },
@@ -96,9 +97,25 @@ const All_Tour_Detail = ({ initialValues }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!menuRef.current) return;
+
+    const activeMenuItem = menuRef.current.querySelector(
+      `[data-menu-id="${activeSection}"]`
+    );
+
+    if (activeMenuItem) {
+      activeMenuItem.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  }, [activeSection]);
+
   const getMenuClass = (id) => {
     const baseClass =
-      "px-7 py-2 text-md leading-normal md:text-lg rounded-full font-semibold block transition-all duration-200";
+      "px-7 py-2 text-md leading-normal md:text-lg rounded-full font-semibold block transition-all duration-200 whitespace-nowrap";
 
     const activeClass = "bg-primary-900 text-white";
 
@@ -132,12 +149,16 @@ const All_Tour_Detail = ({ initialValues }) => {
 
               <div className="lg:flex">
                 <div className="w-full lg:w-[calc(100%-300px)] lg:pr-12">
-                  <ul className="flex overflow-x-auto gap-2 md:gap-4 mb-6 pb-3 md:pb-1 scroll-menu sticky top-[60px] lg:top-[83px] z-2 py-1.5 bg-white">
+                  <ul
+                    ref={menuRef}
+                    className="flex overflow-x-auto gap-2 md:gap-4 mb-6 pb-3 md:pb-1 scroll-menu sticky top-[60px] lg:top-[83px] z-2 py-1.5 bg-white"
+                  >
                     {menuItems.map((item) => {
                       return (
-                        <li key={item.id}>
+                        <li key={item.id} className="shrink-0">
                           <Link
                             href={`#${item.id}`}
+                            data-menu-id={item.id}
                             className={getMenuClass(item.id)}
                           >
                             {item.label}
