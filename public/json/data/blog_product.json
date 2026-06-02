@@ -100,6 +100,33 @@
         "image": "/assets/images/tour-product-detail-img.jpg",
         "alt": "How to plan a Five Stans tour",
         "date": "Planning Guide"
+      },
+      {
+        "id": 12,
+        "slug": "/is-central-asia-safe",
+        "title": "Is Central Asia Safe?",
+        "short_des": "A practical safety guide for first-time travelers covering cities, borders, mountain routes, desert travel and local planning tips.",
+        "image": "/assets/images/popular-tours-img1.jpg",
+        "alt": "Is Central Asia safe travel guide",
+        "date": "Safety Guide"
+      },
+      {
+        "id": 13,
+        "slug": "/uzbekistan-to-turkmenistan-border-guide",
+        "title": "Uzbekistan to Turkmenistan Border Guide",
+        "short_des": "Plan a cross-border Silk Road route from Uzbekistan to Turkmenistan, including Khiva, Bukhara, Darvaza, Ashgabat and visa tips.",
+        "image": "/assets/images/top-destinations-img-5.jpg",
+        "alt": "Uzbekistan to Turkmenistan border guide",
+        "date": "Border Guide"
+      },
+      {
+        "id": 14,
+        "slug": "/best-places-to-visit-turkmenistan",
+        "title": "Best Places to Visit in Turkmenistan",
+        "short_des": "Explore Turkmenistan’s top places, including Ashgabat, Darvaza Gas Crater, Ancient Merv, Yangykala Canyon and Silk Road routes.",
+        "image": "/assets/images/popular-tours-img8.jpg",
+        "alt": "Best places to visit in Turkmenistan",
+        "date": "Destination Guide"
       }
     ]
   }

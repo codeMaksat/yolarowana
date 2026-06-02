@@ -1,0 +1,212 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Uzbekistan to Turkmenistan Border Guide",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Uzbekistan to Turkmenistan Border Guide"
+      }
+    ],
+    "title": "Uzbekistan to Turkmenistan Border Guide: Khiva, Bukhara, Darvaza & Ashgabat Routes",
+    "intro": "A practical guide to planning a cross-border journey from Uzbekistan to Turkmenistan, including route ideas, visa planning, border timing, Darvaza connections and travel tips.",
+    "main_image": "/assets/images/top-destinations-img-5.jpg",
+    "main_image_alt": "Uzbekistan to Turkmenistan border travel guide",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Check border rules before travel"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Plan visa support early"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Khiva, Bukhara, Darvaza, Ashgabat, Merv"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#why-this-route",
+        "label": "Why this route works"
+      },
+      {
+        "slug": "#route-comparison",
+        "label": "Route options"
+      },
+      {
+        "slug": "#khiva-dashoguz",
+        "label": "Khiva to Dashoguz"
+      },
+      {
+        "slug": "#bukhara-farap",
+        "label": "Bukhara to Farap"
+      },
+      {
+        "slug": "#visa-planning",
+        "label": "Visa planning"
+      },
+      {
+        "slug": "#darvaza-connection",
+        "label": "Darvaza connection"
+      },
+      {
+        "slug": "#tips",
+        "label": "Border tips"
+      }
+    ],
+    "overview": {
+      "id": "why-this-route",
+      "title": "Why Combine Uzbekistan and Turkmenistan?",
+      "paragraphs": [
+        "Uzbekistan and Turkmenistan combine very well for travelers who want a deeper Silk Road journey. Uzbekistan offers classic historic cities such as Tashkent, Samarkand, Bukhara and Khiva, while Turkmenistan adds Ashgabat, Darvaza Gas Crater, Ancient Merv and desert landscapes.",
+        "The most common route logic is to finish the Uzbekistan section in Khiva or Bukhara, then continue into Turkmenistan with a planned border crossing, guide arrangement and visa support. Because Turkmenistan requires more preparation than many neighboring countries, this route should be planned before finalizing flights."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/top-destinations-img-5.jpg",
+        "alt": "Khiva Uzbekistan old city"
+      },
+      {
+        "image": "/assets/images/popular-tours-img8.jpg",
+        "alt": "Darvaza Gas Crater Turkmenistan route"
+      }
+    ],
+    "quote": "The Uzbekistan to Turkmenistan route is one of Central Asia’s strongest Silk Road combinations — but it works best when the border, visa and route timing are planned together.",
+    "comparison": {
+      "id": "route-comparison",
+      "title": "Uzbekistan to Turkmenistan Route Options",
+      "items": [
+        {
+          "days": "Option 1",
+          "title": "Khiva to Dashoguz and Darvaza",
+          "route": "Khiva → Border area → Dashoguz → Darvaza → Ashgabat",
+          "best_for": "Travelers ending Uzbekistan in Khiva",
+          "highlight": "Good connection for Darvaza Gas Crater and northern Turkmenistan"
+        },
+        {
+          "days": "Option 2",
+          "title": "Bukhara to Farap / Turkmenabat",
+          "route": "Bukhara → Border area → Turkmenabat → Mary → Ancient Merv",
+          "best_for": "Travelers focused on Ancient Merv and Silk Road history",
+          "highlight": "Useful for connecting Bukhara with Merv and Mary"
+        },
+        {
+          "days": "Option 3",
+          "title": "Uzbekistan & Turkmenistan Classic",
+          "route": "Tashkent → Samarkand → Bukhara → Khiva → Darvaza → Ashgabat → Merv",
+          "best_for": "First-time Silk Road travelers",
+          "highlight": "Best balance of Uzbekistan cities and Turkmenistan highlights"
+        },
+        {
+          "days": "Option 4",
+          "title": "Part of a Five Stans Route",
+          "route": "Kazakhstan / Kyrgyzstan / Tajikistan → Uzbekistan → Turkmenistan",
+          "best_for": "Travelers visiting all five Central Asian countries",
+          "highlight": "Works well as the final section of a wider Central Asia journey"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "khiva-dashoguz",
+        "title": "Khiva to Dashoguz: Good for Darvaza and Ashgabat",
+        "image": "/assets/images/top-destinations-img-5.jpg",
+        "alt": "Khiva to Dashoguz border route",
+        "paragraphs": [
+          "For many travelers, Khiva is the most natural final stop in Uzbekistan before entering Turkmenistan. From the Khiva area, travelers can continue toward the Dashoguz side of Turkmenistan and then plan a route to Darvaza Gas Crater or Ashgabat.",
+          "This route is especially useful if Darvaza is one of your main priorities. The final timing depends on border procedures, road conditions, guide arrangements and the confirmed Turkmenistan travel program."
+        ]
+      },
+      {
+        "id": "bukhara-farap",
+        "title": "Bukhara to Farap / Turkmenabat: Good for Ancient Merv",
+        "image": "/assets/images/top-destinations-img-4.jpg",
+        "alt": "Bukhara to Farap Turkmenabat route",
+        "paragraphs": [
+          "Another useful route is from Bukhara toward the Farap / Turkmenabat area. This can work well for travelers who want to connect Uzbekistan’s Silk Road cities with Mary and Ancient Merv in Turkmenistan.",
+          "This route is more history-focused than Darvaza-focused. It can be included in a carefully designed Uzbekistan and Turkmenistan itinerary, especially when Ancient Merv is a major part of the program."
+        ]
+      },
+      {
+        "id": "visa-planning",
+        "title": "Turkmenistan Visa and Letter of Invitation Planning",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Turkmenistan visa and LOI planning",
+        "paragraphs": [
+          "Turkmenistan usually requires advance visa planning. For tourist travel, the process commonly involves a Letter of Invitation connected to the confirmed route, dates and travel arrangements.",
+          "Travelers should not leave Turkmenistan visa planning until the last moment. The itinerary, entry point, exit point and travel dates should be clear before the visa support process begins. Requirements can depend on nationality and official approval."
+        ]
+      },
+      {
+        "id": "darvaza-connection",
+        "title": "Planning Darvaza After the Border",
+        "image": "/assets/images/popular-tours-img8.jpg",
+        "alt": "Darvaza Gas Crater after Uzbekistan border crossing",
+        "paragraphs": [
+          "Darvaza Gas Crater is one of the most popular reasons to continue from Uzbekistan into Turkmenistan. The experience is strongest around sunset and after dark, so the route should be planned to avoid arriving too late or rushing the desert section.",
+          "If crossing from the Khiva direction, Darvaza can often be planned as the next major highlight before continuing to Ashgabat. The final route should account for border time, road travel, overnight arrangements and season."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Uzbekistan to Turkmenistan Border Planning Tips",
+      "items": [
+        {
+          "title": "Plan the Turkmenistan Visa Early",
+          "text": "Turkmenistan tourist travel usually needs advance visa and invitation support, so start this process before confirming a tight route."
+        },
+        {
+          "title": "Choose the Right Border for Your Route",
+          "text": "Khiva-area crossings are useful for Darvaza and Ashgabat routes, while Bukhara-area crossings can work better for Merv and Mary-focused journeys."
+        },
+        {
+          "title": "Do Not Overload the Border Day",
+          "text": "Border formalities can take time. Avoid planning too many major sightseeing stops on the same day as a land crossing."
+        },
+        {
+          "title": "Carry Printed Documents",
+          "text": "Keep printed copies of passport details, visa documents, Letter of Invitation, tour confirmation and contact information."
+        },
+        {
+          "title": "Check Current Conditions",
+          "text": "Border procedures and opening conditions can change. Always confirm the latest route details before travel."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan Your Uzbekistan–Turkmenistan Route",
+      "help_text": "Tell us your nationality, dates, starting city and preferred route. We will help you plan the border, visa support and Turkmenistan connection.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Uzbekistan & Turkmenistan Tour",
+          "label": "12 days from $1680",
+          "slug": "/tour-uzbekistan-turkmenistan"
+        },
+        {
+          "title": "Turkmenistan Highlights Tour",
+          "label": "7 days from $850",
+          "slug": "/tour-turkmenistan-highlights"
+        },
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Need Help With the Uzbekistan to Turkmenistan Route?",
+      "text": "Share your dates, nationality, starting city and travel style. We will help you shape the right border plan, visa steps and Turkmenistan route.",
+      "button": "Plan My Border Route",
+      "slug": "/contact"
+    }
+  }
+]

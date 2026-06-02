@@ -620,5 +620,47 @@
     "twitter_description": "Practical guide to planning a Five Stans Central Asia tour with route order, timing, visas, borders and itinerary tips.",
     "twitter_site": "@YolaRowana",
     "twitter_creator": "@YolaRowana"
+  },
+  "blog_is_central_asia_safe_meta": {
+    "title": "Is Central Asia Safe? Practical Safety Guide for Travelers",
+    "og_title": "Is Central Asia Safe? | Yola Rowana",
+    "description": "Is Central Asia safe to visit? Read practical safety tips for Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan, including cities, borders, mountains, deserts and solo travel.",
+    "locale": "en_US",
+    "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "image_alt": "Is Central Asia safe travel guide",
+    "twitter_card": "summary_large_image",
+    "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "twitter_title": "Is Central Asia Safe? | Yola Rowana",
+    "twitter_description": "A balanced Central Asia travel safety guide covering cities, borders, mountain routes, desert travel, solo travel and practical planning tips.",
+    "twitter_site": "@YolaRowana",
+    "twitter_creator": "@YolaRowana"
+  },
+  "blog_uzbekistan_to_turkmenistan_border_guide_meta": {
+    "title": "Uzbekistan to Turkmenistan Border Guide | Route & Visa Tips",
+    "og_title": "Uzbekistan to Turkmenistan Border Guide | Yola Rowana",
+    "description": "Plan an Uzbekistan to Turkmenistan border route with Yola Rowana, including Khiva, Bukhara, Dashoguz, Farap, Darvaza, Ashgabat, visa planning and practical border tips.",
+    "locale": "en_US",
+    "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "image_alt": "Uzbekistan to Turkmenistan border guide",
+    "twitter_card": "summary_large_image",
+    "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "twitter_title": "Uzbekistan to Turkmenistan Border Guide | Yola Rowana",
+    "twitter_description": "Practical guide to planning Uzbekistan and Turkmenistan routes with border, visa, Darvaza and Silk Road travel tips.",
+    "twitter_site": "@YolaRowana",
+    "twitter_creator": "@YolaRowana"
+  },
+  "blog_best_places_to_visit_turkmenistan_meta": {
+    "title": "Best Places to Visit in Turkmenistan | Ashgabat, Darvaza & Merv",
+    "og_title": "Best Places to Visit in Turkmenistan | Yola Rowana",
+    "description": "Discover the best places to visit in Turkmenistan, including Ashgabat, Darvaza Gas Crater, Ancient Merv, Yangykala Canyon, Mary, Nisa and Silk Road routes.",
+    "locale": "en_US",
+    "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "image_alt": "Best places to visit in Turkmenistan",
+    "twitter_card": "summary_large_image",
+    "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "twitter_title": "Best Places to Visit in Turkmenistan | Yola Rowana",
+    "twitter_description": "Guide to Turkmenistan highlights including Ashgabat, Darvaza, Ancient Merv, Yangykala Canyon and practical route planning tips.",
+    "twitter_site": "@YolaRowana",
+    "twitter_creator": "@YolaRowana"
   }
 }

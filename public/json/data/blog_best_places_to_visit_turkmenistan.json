@@ -1,0 +1,212 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Best Places to Visit in Turkmenistan",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Best Places to Visit in Turkmenistan"
+      }
+    ],
+    "title": "Best Places to Visit in Turkmenistan: Ashgabat, Darvaza, Ancient Merv & Desert Landscapes",
+    "intro": "A practical guide to Turkmenistan’s most important places to visit, including Ashgabat, Darvaza Gas Crater, Ancient Merv, Yangykala Canyon, Nisa, Mary and Silk Road routes.",
+    "main_image": "/assets/images/popular-tours-img8.jpg",
+    "main_image_alt": "Best places to visit in Turkmenistan",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best time: Spring & Autumn"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended: 5–7 days"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Ashgabat, Darvaza, Merv, Yangykala"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#why-visit",
+        "label": "Why visit Turkmenistan?"
+      },
+      {
+        "slug": "#place-comparison",
+        "label": "Places comparison"
+      },
+      {
+        "slug": "#ashgabat",
+        "label": "Ashgabat"
+      },
+      {
+        "slug": "#darvaza",
+        "label": "Darvaza Gas Crater"
+      },
+      {
+        "slug": "#merv",
+        "label": "Ancient Merv"
+      },
+      {
+        "slug": "#yangykala",
+        "label": "Yangykala Canyon"
+      },
+      {
+        "slug": "#tips",
+        "label": "Travel tips"
+      }
+    ],
+    "overview": {
+      "id": "why-visit",
+      "title": "Why Visit Turkmenistan?",
+      "paragraphs": [
+        "Turkmenistan is one of the most unusual and memorable destinations in Central Asia. It combines marble city architecture, desert roads, ancient Silk Road history, archaeological sites, dramatic canyons and the famous Darvaza Gas Crater.",
+        "For many travelers, Turkmenistan is not a simple standalone trip. It is often included as part of a wider Central Asia journey, especially with Uzbekistan or a full Five Stans route. The best places to visit depend on your available days, visa planning, entry point and travel style."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/tour-product-detail-img.jpg",
+        "alt": "Ancient Merv Turkmenistan"
+      },
+      {
+        "image": "/assets/images/categories-img-3.jpg",
+        "alt": "Darvaza Gas Crater Turkmenistan"
+      }
+    ],
+    "quote": "Turkmenistan is where Central Asia feels different — white marble cities, ancient ruins, desert roads, burning craters and landscapes that stay in memory long after the trip.",
+    "comparison": {
+      "id": "place-comparison",
+      "title": "Best Places in Turkmenistan: Quick Comparison",
+      "items": [
+        {
+          "days": "Ashgabat",
+          "title": "Modern capital and cultural introduction",
+          "route": "City monuments, museums, markets, Nisa and viewpoints",
+          "best_for": "First-time visitors and arrival/departure base",
+          "highlight": "White marble architecture and unusual city identity"
+        },
+        {
+          "days": "Darvaza",
+          "title": "Famous desert crater experience",
+          "route": "Ashgabat → Karakum Desert → Darvaza",
+          "best_for": "Desert lovers and iconic Turkmenistan experience",
+          "highlight": "Best experienced around sunset and at night"
+        },
+        {
+          "days": "Ancient Merv",
+          "title": "Silk Road history and archaeology",
+          "route": "Ashgabat or Mary → Ancient Merv",
+          "best_for": "History lovers and Silk Road travelers",
+          "highlight": "One of the great historical sites of Central Asia"
+        },
+        {
+          "days": "Yangykala",
+          "title": "Canyon landscapes and remote scenery",
+          "route": "Western Turkmenistan route",
+          "best_for": "Landscape photography and longer trips",
+          "highlight": "Colorful cliffs, desert views and dramatic scenery"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "ashgabat",
+        "title": "Ashgabat: Turkmenistan’s Distinctive Capital",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Ashgabat Turkmenistan travel",
+        "paragraphs": [
+          "Ashgabat is usually the starting point for most Turkmenistan journeys. The city is known for wide avenues, white marble buildings, monuments, museums, parks and a very distinctive urban style.",
+          "A good Ashgabat visit can include city landmarks, local markets, the National Museum, viewpoints and the nearby ancient site of Nisa. The capital also works as the main base for airport arrival, departure and visa-related travel planning."
+        ]
+      },
+      {
+        "id": "darvaza",
+        "title": "Darvaza Gas Crater: The Desert Highlight",
+        "image": "/assets/images/categories-img-3.jpg",
+        "alt": "Darvaza Gas Crater Turkmenistan",
+        "paragraphs": [
+          "Darvaza Gas Crater is one of Turkmenistan’s most famous sights. Located in the Karakum Desert, it is best visited around sunset and after dark, when the crater becomes most dramatic.",
+          "Most travelers visit Darvaza as an overnight or evening desert experience from Ashgabat or as part of a route connecting northern Turkmenistan with the capital. Timing matters because the crater is most memorable at night."
+        ]
+      },
+      {
+        "id": "merv",
+        "title": "Ancient Merv: Silk Road History",
+        "image": "/assets/images/tour-product-detail-img.jpg",
+        "alt": "Ancient Merv Turkmenistan",
+        "paragraphs": [
+          "Ancient Merv is one of the most important historical places in Turkmenistan. It was once a major city on the Silk Road and remains a powerful archaeological landscape with old city walls, mausoleums, fortresses and ruins spread across a wide area.",
+          "Merv is usually visited from Mary and works very well for travelers combining Turkmenistan with Uzbekistan or a wider Silk Road journey. It gives historical depth to a route that may otherwise focus only on Ashgabat and Darvaza."
+        ]
+      },
+      {
+        "id": "yangykala",
+        "title": "Yangykala Canyon: Turkmenistan’s Colorful Landscape",
+        "image": "/assets/images/special-offers-img1.jpg",
+        "alt": "Yangykala Canyon Turkmenistan",
+        "paragraphs": [
+          "Yangykala Canyon is one of Turkmenistan’s most dramatic natural landscapes. The canyon is known for layered cliffs, desert colors and wide open views that are especially attractive for photography.",
+          "Because Yangykala is more remote than Ashgabat, Darvaza or Merv, it is best included in a longer and carefully planned route. It can be a major highlight for travelers who want to see a wilder side of Turkmenistan beyond the standard short itinerary."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Tips for Visiting Turkmenistan",
+      "items": [
+        {
+          "title": "Plan Visa Support Early",
+          "text": "Turkmenistan travel usually requires advance visa and invitation planning, so do not leave the process until the last moment."
+        },
+        {
+          "title": "Choose Places Based on Your Days",
+          "text": "For 3 days, focus on Ashgabat and Darvaza. For 5 to 7 days, add Ancient Merv. For longer trips, consider Yangykala Canyon."
+        },
+        {
+          "title": "Time Darvaza Correctly",
+          "text": "Darvaza Gas Crater is best experienced around sunset and after dark, so the itinerary should be planned around evening arrival."
+        },
+        {
+          "title": "Combine With Uzbekistan",
+          "text": "Turkmenistan connects well with Uzbekistan routes through Khiva or Bukhara, especially for Silk Road and desert journeys."
+        },
+        {
+          "title": "Use Local Route Planning",
+          "text": "Distances, permits, borders and road timing matter in Turkmenistan. A realistic route makes the trip smoother and more enjoyable."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan Your Turkmenistan Route",
+      "help_text": "Tell us your travel dates, nationality and places you want to visit. We will help you shape the right Turkmenistan route and visa planning steps.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Turkmenistan Highlights Tour",
+          "label": "7 days from $850",
+          "slug": "/tour-turkmenistan-highlights"
+        },
+        {
+          "title": "Uzbekistan & Turkmenistan Tour",
+          "label": "12 days from $1680",
+          "slug": "/tour-uzbekistan-turkmenistan"
+        },
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want Help Choosing Places in Turkmenistan?",
+      "text": "Share your dates, nationality, arrival point and preferred travel style. We will help you choose the best Turkmenistan places for your route.",
+      "button": "Plan My Turkmenistan Trip",
+      "slug": "/contact"
+    }
+  }
+]

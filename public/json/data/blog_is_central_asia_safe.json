@@ -1,0 +1,212 @@
+[
+  {
+    "hero": [
+      {
+        "title": "Is Central Asia Safe?",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Is Central Asia Safe?"
+      }
+    ],
+    "title": "Is Central Asia Safe to Visit? Practical Safety Tips for First-Time Travelers",
+    "intro": "A balanced guide to travel safety in Central Asia, including city safety, border areas, mountain routes, desert travel, solo travel, health preparation and practical planning tips.",
+    "main_image": "/assets/images/popular-tours-img1.jpg",
+    "main_image_alt": "Central Asia travel safety guide",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Updated travel planning guide"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Read before booking"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan, Turkmenistan"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#short-answer",
+        "label": "Short answer"
+      },
+      {
+        "slug": "#safety-comparison",
+        "label": "Safety overview"
+      },
+      {
+        "slug": "#city-safety",
+        "label": "City safety"
+      },
+      {
+        "slug": "#borders",
+        "label": "Borders & sensitive areas"
+      },
+      {
+        "slug": "#nature-routes",
+        "label": "Nature routes"
+      },
+      {
+        "slug": "#solo-travel",
+        "label": "Solo travel"
+      },
+      {
+        "slug": "#tips",
+        "label": "Safety tips"
+      }
+    ],
+    "overview": {
+      "id": "short-answer",
+      "title": "So, Is Central Asia Safe to Visit?",
+      "paragraphs": [
+        "For many travelers, Central Asia is a safe and rewarding region to visit when the trip is planned properly. Major travel routes through cities such as Almaty, Bishkek, Tashkent, Samarkand, Bukhara, Khiva, Dushanbe and Ashgabat are commonly visited by international travelers.",
+        "However, Central Asia is a large region with different road conditions, border zones, mountain areas, visa rules and local customs. Safety depends on your route, season, transport, guide support and the latest official travel advice for each country."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Safe travel in Silk Road cities"
+      },
+      {
+        "image": "/assets/images/popular-tours-img7.jpg",
+        "alt": "Mountain travel safety in Central Asia"
+      }
+    ],
+    "quote": "Central Asia is not unsafe by default. It is a region where good route planning, local knowledge and common-sense travel habits make a big difference.",
+    "comparison": {
+      "id": "safety-comparison",
+      "title": "Central Asia Safety Overview",
+      "items": [
+        {
+          "days": "Cities",
+          "title": "Generally manageable with normal precautions",
+          "route": "Almaty, Bishkek, Tashkent, Samarkand, Bukhara, Dushanbe, Ashgabat",
+          "best_for": "First-time travelers, cultural routes, guided trips",
+          "highlight": "Watch valuables, use reliable transport and avoid isolated areas late at night"
+        },
+        {
+          "days": "Borders",
+          "title": "Need extra route planning",
+          "route": "Land borders between Central Asian countries",
+          "best_for": "Multi-country tours and Five Stans routes",
+          "highlight": "Check current border rules, visa needs and sensitive border zones before travel"
+        },
+        {
+          "days": "Mountains",
+          "title": "Safe with proper preparation",
+          "route": "Kyrgyzstan, Tajikistan, Kazakhstan mountain routes",
+          "best_for": "Nature trips, Pamir Highway, lakes and valleys",
+          "highlight": "Weather, altitude, road quality and driver experience matter"
+        },
+        {
+          "days": "Deserts",
+          "title": "Plan logistics carefully",
+          "route": "Darvaza, Karakum Desert, long road routes",
+          "best_for": "Turkmenistan and desert extensions",
+          "highlight": "Travel with reliable transport, water, timing and local support"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "city-safety",
+        "title": "City Safety in Central Asia",
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Central Asia city safety",
+        "paragraphs": [
+          "Major Central Asian cities are usually comfortable for travelers who use normal city precautions. Keep valuables secure, avoid flashing expensive items, use trusted taxis or arranged transfers, and be careful in crowded markets, stations and nightlife areas.",
+          "Historic cities such as Samarkand, Bukhara and Khiva are popular tourist stops and generally easy to explore with a guide or good local planning. Still, travelers should respect local customs, dress appropriately at religious sites and keep identity documents accessible when required."
+        ]
+      },
+      {
+        "id": "borders",
+        "title": "Border Areas and Sensitive Regions",
+        "image": "/assets/images/top-destinations-img-5.jpg",
+        "alt": "Central Asia border safety",
+        "paragraphs": [
+          "Border planning is one of the most important safety topics in Central Asia. Some border areas can be sensitive, remote or affected by changing conditions. Travelers should not assume that every crossing is open or suitable for tourists at all times.",
+          "For multi-country routes, the safest approach is to confirm the route before booking flights, check official travel advice, verify visa rules and use local support for border timing and transport. This is especially important for routes involving Tajikistan, Kyrgyzstan, Uzbekistan or Turkmenistan."
+        ]
+      },
+      {
+        "id": "nature-routes",
+        "title": "Mountain, Desert and Road Safety",
+        "image": "/assets/images/popular-tours-img7.jpg",
+        "alt": "Central Asia mountain and desert safety",
+        "paragraphs": [
+          "Some of Central Asia’s best experiences are outside the cities: mountain lakes, canyons, high passes, desert routes and remote valleys. These places are rewarding, but they require realistic timing and proper transport.",
+          "In Kyrgyzstan, Tajikistan and Kazakhstan, weather and road conditions can affect mountain routes. In Turkmenistan, desert routes such as Darvaza need careful timing, water and reliable vehicles. For remote travel, local drivers and guides can make the journey safer and smoother."
+        ]
+      },
+      {
+        "id": "solo-travel",
+        "title": "Is Central Asia Safe for Solo Travelers?",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "Solo travel in Central Asia",
+        "paragraphs": [
+          "Many solo travelers visit Central Asia successfully, especially on well-known routes in Uzbekistan, Kazakhstan and Kyrgyzstan. Solo travel is easier in cities and popular tourist areas than in remote mountain or desert regions.",
+          "For solo travelers, especially first-time visitors, it is wise to use arranged transfers for late arrivals, avoid isolated areas at night, share route details with someone, keep copies of important documents and consider guided support for border crossings or remote nature routes."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Central Asia Safety Tips",
+      "items": [
+        {
+          "title": "Check Current Official Advice",
+          "text": "Before booking and before departure, check your government’s latest travel advice for each country on your route."
+        },
+        {
+          "title": "Use Reliable Transport",
+          "text": "For long drives, borders, mountains and deserts, reliable vehicles and experienced drivers are more important than saving a small amount of money."
+        },
+        {
+          "title": "Plan Borders Carefully",
+          "text": "Do not leave land border crossings to chance. Confirm opening status, visa rules, timing and local transport before you travel."
+        },
+        {
+          "title": "Respect Local Customs",
+          "text": "Central Asia is culturally diverse. Dress and behave respectfully, especially in religious sites, villages and conservative areas."
+        },
+        {
+          "title": "Keep Documents Safe",
+          "text": "Carry your passport or required ID according to local rules, and keep digital and printed copies of key documents."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Want a Safe Central Asia Route?",
+      "help_text": "Tell us your travel dates, countries, group size and comfort level. We will help you shape a route that is realistic and well-supported.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        },
+        {
+          "title": "Uzbekistan Silk Road Classic",
+          "label": "8 days from $980",
+          "slug": "/tour-uzbekistan-silk-road"
+        },
+        {
+          "title": "Turkmenistan Highlights Tour",
+          "label": "7 days from $850",
+          "slug": "/tour-turkmenistan-highlights"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Plan Central Asia With Local Support",
+      "text": "Share your route idea, dates and travel style. We will help you plan a Central Asia journey with realistic timing, local coordination and practical safety awareness.",
+      "button": "Plan My Safe Route",
+      "slug": "/contact"
+    }
+  }
+]
