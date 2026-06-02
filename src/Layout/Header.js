@@ -312,11 +312,11 @@ export default function Header({ initialValues }) {
                                                   </div>
 
                                                   <div className="relative max-w-[200px]">
-                                                    <h4 className="mb-3 text-2xl leading-[30px] lg:text-[28px]">
+                                                    <h4 className="mb-3 text-2xl leading-[30px] lg:text-[28px] text-white">
                                                       {promo.title}
                                                     </h4>
 
-                                                    <p className="text-dark-900 text-md mb-5">
+                                                    <p className="text-dark-900 text-md mb-5 text-white">
                                                       {promo.text}
                                                     </p>
 
