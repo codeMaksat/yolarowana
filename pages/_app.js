@@ -57,41 +57,89 @@ export default function App({ Component, pageProps }) {
   const isExcludedPage = excludeRoutes.includes(router.asPath);
 
   // Define a loading screen component
-  const LoadingScreen = () => {
-    return (
-      <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#0F2F2B]">
-        <div className="text-center px-6">
-          <div className="relative mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full border border-[#D8B46A]/40">
-            <div className="absolute inset-2 rounded-full border border-[#D8B46A]/20 animate-ping"></div>
+const LoadingScreen = () => {
+  return (
+    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#071B1A] overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(216,180,106,0.16),transparent_55%)]"></div>
 
-            <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-[#D8B46A] text-[#0F2F2B] shadow-lg">
-              <i className="fa-solid fa-route text-2xl"></i>
-            </div>
+      <div className="relative text-center px-6">
+        <div className="relative mx-auto mb-8 h-56 w-72">
+          <div className="absolute inset-0 rounded-[45%] border border-[#D8B46A]/20"></div>
+          <div className="absolute inset-6 rounded-[45%] border border-[#D8B46A]/10"></div>
+
+          <div className="absolute left-[32px] top-[70px]">
+            <span className="absolute h-5 w-5 rounded-full bg-[#D8B46A]/30 animate-ping"></span>
+            <span className="relative block h-5 w-5 rounded-full bg-[#D8B46A] shadow-[0_0_18px_rgba(216,180,106,0.9)]"></span>
           </div>
 
-          <h2 className="mb-2 text-2xl font-bold tracking-wide text-white">
-            Yola Rowana
-          </h2>
-
-          <p className="mb-5 text-sm uppercase tracking-[0.25em] text-[#D8B46A]">
-            Central Asia Travel
-          </p>
-
-          <div className="mx-auto flex w-40 items-center justify-between">
-            <span className="h-2 w-2 rounded-full bg-[#D8B46A] animate-pulse"></span>
-            <span className="h-[1px] flex-1 bg-[#D8B46A]/40 mx-2"></span>
-            <span className="h-2 w-2 rounded-full bg-[#D8B46A] animate-pulse"></span>
-            <span className="h-[1px] flex-1 bg-[#D8B46A]/40 mx-2"></span>
-            <span className="h-2 w-2 rounded-full bg-[#D8B46A] animate-pulse"></span>
+          <div className="absolute left-[92px] top-[118px]">
+            <span className="absolute h-5 w-5 rounded-full bg-[#D8B46A]/30 animate-ping [animation-delay:150ms]"></span>
+            <span className="relative block h-5 w-5 rounded-full bg-[#D8B46A] shadow-[0_0_18px_rgba(216,180,106,0.9)]"></span>
           </div>
 
-          <p className="mt-5 text-sm text-white/70">
-            Preparing your Silk Road journey...
-          </p>
+          <div className="absolute left-[148px] top-[92px]">
+            <span className="absolute h-5 w-5 rounded-full bg-[#D8B46A]/30 animate-ping [animation-delay:300ms]"></span>
+            <span className="relative block h-5 w-5 rounded-full bg-[#D8B46A] shadow-[0_0_18px_rgba(216,180,106,0.9)]"></span>
+          </div>
+
+          <div className="absolute left-[198px] top-[130px]">
+            <span className="absolute h-5 w-5 rounded-full bg-[#D8B46A]/30 animate-ping [animation-delay:450ms]"></span>
+            <span className="relative block h-5 w-5 rounded-full bg-[#D8B46A] shadow-[0_0_18px_rgba(216,180,106,0.9)]"></span>
+          </div>
+
+          <div className="absolute left-[225px] top-[70px]">
+            <span className="absolute h-5 w-5 rounded-full bg-[#D8B46A]/30 animate-ping [animation-delay:600ms]"></span>
+            <span className="relative block h-5 w-5 rounded-full bg-[#D8B46A] shadow-[0_0_18px_rgba(216,180,106,0.9)]"></span>
+          </div>
+
+          <svg
+            className="absolute left-[42px] top-[82px] h-24 w-52"
+            viewBox="0 0 220 100"
+            fill="none"
+          >
+            <path
+              d="M0 0 C45 60 75 70 115 20 C145 -15 165 88 210 8"
+              stroke="#D8B46A"
+              strokeWidth="2"
+              strokeDasharray="6 7"
+              opacity="0.55"
+            />
+          </svg>
         </div>
+
+        <h2 className="mb-2 text-2xl font-bold tracking-wide text-white">
+          Yola Rowana
+        </h2>
+
+        <p className="mb-5 text-sm uppercase tracking-[0.25em] text-[#D8B46A]">
+          Central Asia Tours
+        </p>
+
+        <div className="mx-auto mb-5 h-[2px] w-40 overflow-hidden rounded-full bg-white/10">
+          <div className="h-full w-1/2 animate-[loadingLine_1.4s_ease-in-out_infinite] rounded-full bg-[#D8B46A]"></div>
+        </div>
+
+        <p className="text-sm text-white/70">
+          Connecting the heart of Central Asia...
+        </p>
+
+        <style jsx>{`
+          @keyframes loadingLine {
+            0% {
+              transform: translateX(-100%);
+            }
+            50% {
+              transform: translateX(80%);
+            }
+            100% {
+              transform: translateX(220%);
+            }
+          }
+        `}</style>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
   // If the Component is not defined, redirect to the custom 404 page
   if (!Component) {
