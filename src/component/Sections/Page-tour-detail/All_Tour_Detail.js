@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Itinerary_Sector from "./itinerary_sector";
 import Faq_Sector from "./faq_sector";
@@ -58,6 +59,57 @@ const Included_Excluded_Sector = ({ detail_data }) => {
 };
 
 const All_Tour_Detail = ({ initialValues }) => {
+  const [activeSection, setActiveSection] = useState("detail");
+
+  const menuItems = [
+    { id: "detail", label: "Overview" },
+    { id: "itinerary", label: "Itinerary" },
+    { id: "included", label: "Included" },
+    { id: "map", label: "Map" },
+    { id: "faq", label: "FAQ" },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentSection = "detail";
+
+      menuItems.forEach((item) => {
+        const section = document.getElementById(item.id);
+
+        if (section) {
+          const sectionTop = section.offsetTop - 180;
+
+          if (window.scrollY >= sectionTop) {
+            currentSection = item.id;
+          }
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const getMenuClass = (id) => {
+    const baseClass =
+      "px-7 py-2 text-md leading-normal md:text-lg rounded-full font-semibold block transition-all duration-200";
+
+    const activeClass = "bg-primary-900 text-white";
+
+    const inactiveClass =
+      "text-dark-800 hover:bg-primary-900 hover:text-white";
+
+    return `${baseClass} ${
+      activeSection === id ? activeClass : inactiveClass
+    }`;
+  };
+
   return (
     <section className="py-8 md:py-12 lg:py-14">
       {initialValues &&
@@ -71,57 +123,28 @@ const All_Tour_Detail = ({ initialValues }) => {
                 {data.icon_label}
               </div>
 
-              <div id="photos" className="mb-6 md:mb-7 overflow-hidden rounded-2xl">
+              <div
+                id="photos"
+                className="mb-6 md:mb-7 overflow-hidden rounded-2xl"
+              >
                 <Photos_Sector photo_data={data.photo} />
               </div>
 
               <div className="lg:flex">
                 <div className="w-full lg:w-[calc(100%-300px)] lg:pr-12">
                   <ul className="flex overflow-x-auto gap-2 md:gap-4 mb-6 pb-3 md:pb-1 scroll-menu sticky top-[60px] lg:top-[83px] z-2 py-1.5 bg-white">
-                    <li>
-                      <Link
-                        href="#detail"
-                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full font-semibold block bg-primary-900 text-white"
-                      >
-                        Overview
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        href="#itinerary"
-                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
-                      >
-                        Itinerary
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        href="#included"
-                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
-                      >
-                        Included
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        href="#map"
-                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
-                      >
-                        Map
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        href="#faq"
-                        className="px-7 py-2 text-md leading-normal md:text-lg rounded-full text-dark-800 font-semibold block hover:bg-primary-900 hover:text-white"
-                      >
-                        FAQ
-                      </Link>
-                    </li>
+                    {menuItems.map((item) => {
+                      return (
+                        <li key={item.id}>
+                          <Link
+                            href={`#${item.id}`}
+                            className={getMenuClass(item.id)}
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </ul>
 
                   <div className="tabs-content">
