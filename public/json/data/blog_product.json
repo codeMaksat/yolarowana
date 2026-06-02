@@ -91,6 +91,15 @@
         "image": "/assets/images/popular-tours-img8.jpg",
         "alt": "Turkmenistan visa guide",
         "date": "Visa Guide"
+      },
+      {
+        "id": 11,
+        "slug": "/how-to-plan-five-stans-tour",
+        "title": "How to Plan a Five Stans Tour",
+        "short_des": "Learn how to plan a complete Central Asia route through Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan.",
+        "image": "/assets/images/tour-product-detail-img.jpg",
+        "alt": "How to plan a Five Stans tour",
+        "date": "Planning Guide"
       }
     ]
   }

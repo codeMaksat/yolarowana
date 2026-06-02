@@ -592,18 +592,33 @@
     "twitter_description": "Discover Silk Road travel routes across Uzbekistan, Turkmenistan and wider Central Asia with practical planning tips and tour ideas.",
     "twitter_site": "@YolaRowana",
     "twitter_creator": "@YolaRowana"
-  }, "blog_turkmenistan_visa_guide_meta": {
-  "title": "Turkmenistan Visa Guide | Letter of Invitation & Tourist Visa",
-  "og_title": "Turkmenistan Visa Guide | Yola Rowana",
-  "description": "Plan your Turkmenistan visa with Yola Rowana, including Letter of Invitation, tourist visa planning, Ashgabat airport entry, land border routes and travel tips.",
-  "locale": "en_US",
-  "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
-  "image_alt": "Turkmenistan visa guide",
-  "twitter_card": "summary_large_image",
-  "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
-  "twitter_title": "Turkmenistan Visa Guide | Yola Rowana",
-  "twitter_description": "Practical guide to Turkmenistan Letter of Invitation, tourist visa planning, border entry and Central Asia route ideas.",
-  "twitter_site": "@YolaRowana",
-  "twitter_creator": "@YolaRowana"
-}
+  },
+  "blog_turkmenistan_visa_guide_meta": {
+    "title": "Turkmenistan Visa Guide | Letter of Invitation & Tourist Visa",
+    "og_title": "Turkmenistan Visa Guide | Yola Rowana",
+    "description": "Plan your Turkmenistan visa with Yola Rowana, including Letter of Invitation, tourist visa planning, Ashgabat airport entry, land border routes and travel tips.",
+    "locale": "en_US",
+    "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "image_alt": "Turkmenistan visa guide",
+    "twitter_card": "summary_large_image",
+    "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "twitter_title": "Turkmenistan Visa Guide | Yola Rowana",
+    "twitter_description": "Practical guide to Turkmenistan Letter of Invitation, tourist visa planning, border entry and Central Asia route ideas.",
+    "twitter_site": "@YolaRowana",
+    "twitter_creator": "@YolaRowana"
+  },
+  "blog_how_to_plan_five_stans_tour_meta": {
+    "title": "How to Plan a Five Stans Tour | Central Asia Route Guide",
+    "og_title": "How to Plan a Five Stans Tour | Yola Rowana",
+    "description": "Learn how to plan a Five Stans tour across Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan, including route order, duration, visas, borders and travel tips.",
+    "locale": "en_US",
+    "image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "image_alt": "How to plan a Five Stans tour",
+    "twitter_card": "summary_large_image",
+    "twitter_image": "https://yolarowana.vercel.app/assets/images/yola-rowana-og-image.jpg",
+    "twitter_title": "How to Plan a Five Stans Tour | Yola Rowana",
+    "twitter_description": "Practical guide to planning a Five Stans Central Asia tour with route order, timing, visas, borders and itinerary tips.",
+    "twitter_site": "@YolaRowana",
+    "twitter_creator": "@YolaRowana"
+  }
 }

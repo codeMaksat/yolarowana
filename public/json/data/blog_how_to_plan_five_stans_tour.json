@@ -1,0 +1,208 @@
+[
+  {
+    "hero": [
+      {
+        "title": "How to Plan a Five Stans Tour",
+        "home_label": "Home",
+        "home_slug": "/",
+        "image": "/assets/images/inner-banner-img.jpg",
+        "alt": "How to Plan a Five Stans Tour"
+      }
+    ],
+    "title": "How to Plan a Five Stans Tour: Route, Timing, Visas & Practical Tips",
+    "intro": "A practical guide to planning a complete Central Asia journey through Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan.",
+    "main_image": "/assets/images/tour-product-detail-img.jpg",
+    "main_image_alt": "Five Stans Central Asia route planning",
+    "meta": [
+      {
+        "icon": "fa-regular fa-calendar",
+        "label": "Best time: Spring & Autumn"
+      },
+      {
+        "icon": "fa-regular fa-clock",
+        "label": "Recommended: 15–18 days"
+      },
+      {
+        "icon": "fa-regular fa-location-dot",
+        "label": "Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan, Turkmenistan"
+      }
+    ],
+    "content_preview": [
+      {
+        "slug": "#why-plan-carefully",
+        "label": "Why planning matters"
+      },
+      {
+        "slug": "#route-comparison",
+        "label": "Route options"
+      },
+      {
+        "slug": "#route-order",
+        "label": "Best route order"
+      },
+      {
+        "slug": "#how-many-days",
+        "label": "How many days?"
+      },
+      {
+        "slug": "#visas-borders",
+        "label": "Visas & borders"
+      },
+      {
+        "slug": "#travel-style",
+        "label": "Travel style"
+      },
+      {
+        "slug": "#tips",
+        "label": "Planning tips"
+      }
+    ],
+    "overview": {
+      "id": "why-plan-carefully",
+      "title": "Why a Five Stans Tour Needs Careful Planning",
+      "paragraphs": [
+        "A Five Stans tour is one of the most rewarding journeys in Central Asia. It connects Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan in one regional route, combining mountains, lakes, deserts, Silk Road cities, local culture and border crossings.",
+        "At the same time, this is not a simple copy-paste itinerary. Distances are long, border crossings matter, visa rules differ by nationality, and the best route depends on your travel dates, comfort level and available time. A good Five Stans tour should feel connected, not rushed."
+      ]
+    },
+    "mid_images": [
+      {
+        "image": "/assets/images/popular-tours-img1.jpg",
+        "alt": "Central Asia Five Stans tour"
+      },
+      {
+        "image": "/assets/images/top-destinations-img-3.jpg",
+        "alt": "Silk Road city on a Five Stans route"
+      }
+    ],
+    "quote": "The best Five Stans tour is not about visiting five countries as fast as possible. It is about building a route where every border, road, city and landscape has a clear reason to be included.",
+    "comparison": {
+      "id": "route-comparison",
+      "title": "Five Stans Route Options",
+      "items": [
+        {
+          "days": "12–14 Days",
+          "title": "Fast Five Stans Route",
+          "route": "Kazakhstan → Kyrgyzstan → Tajikistan → Uzbekistan → Turkmenistan",
+          "best_for": "Travelers with limited time",
+          "highlight": "Covers all five countries, but the pace can feel tight"
+        },
+        {
+          "days": "15–18 Days",
+          "title": "Classic Five Stans Tour",
+          "route": "Almaty → Bishkek → Dushanbe → Samarkand → Bukhara → Khiva → Darvaza → Ashgabat",
+          "best_for": "Most first-time Central Asia travelers",
+          "highlight": "Best balance of countries, landscapes, history and travel flow"
+        },
+        {
+          "days": "20+ Days",
+          "title": "Slow Five Stans Journey",
+          "route": "Five Stans route with extra mountain, desert and cultural extensions",
+          "best_for": "Slow travelers and deeper explorers",
+          "highlight": "More time for local life, rest days and optional side routes"
+        },
+        {
+          "days": "Custom",
+          "title": "Tailor-Made Central Asia Route",
+          "route": "Adjusted according to flights, visas, interests and comfort level",
+          "best_for": "Private travelers, couples, families and special-interest groups",
+          "highlight": "Most flexible way to make the route realistic and personal"
+        }
+      ]
+    },
+    "guide_sections": [
+      {
+        "id": "route-order",
+        "title": "What Is the Best Route Order for a Five Stans Tour?",
+        "image": "/assets/images/tour-product-detail-img.jpg",
+        "alt": "Five Stans route order",
+        "paragraphs": [
+          "A common and practical route is to begin in Kazakhstan, continue through Kyrgyzstan and Tajikistan, then move into Uzbekistan and finish in Turkmenistan. This route creates a natural flow from mountains and landscapes into Silk Road cities and desert highlights.",
+          "Another route direction may work better depending on flights, visas, borders and seasonal conditions. The most important point is that the route should reduce backtracking and allow enough time for each country to feel meaningful."
+        ]
+      },
+      {
+        "id": "how-many-days",
+        "title": "How Many Days Do You Need for All Five Stans?",
+        "image": "/assets/images/popular-tours-img1.jpg",
+        "alt": "Five Stans tour duration",
+        "paragraphs": [
+          "For most travelers, 15 to 18 days is the best practical duration for a complete Five Stans tour. This gives enough time to include Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan without making every day feel like a transfer day.",
+          "A shorter 12 to 14 day route is possible, but it requires more compromise. A longer 20+ day route allows extra time for places such as Kolsai Lakes, Song-Kul, the Fann Mountains, Khiva, Darvaza or Yangykala Canyon."
+        ]
+      },
+      {
+        "id": "visas-borders",
+        "title": "Visas, Border Crossings and Route Timing",
+        "image": "/assets/images/top-destinations-img-5.jpg",
+        "alt": "Central Asia border and visa planning",
+        "paragraphs": [
+          "Visa planning is one of the most important parts of a Five Stans journey. Requirements depend on nationality, passport, route direction and length of stay. Some countries may be visa-free for certain travelers, while others may require e-visas, permits or invitation support.",
+          "Turkmenistan usually needs the most advance planning because tourist travel often involves an invitation process. Tajikistan routes may also require special attention if the itinerary includes the Pamir region. The final route should be checked before flights are fixed."
+        ]
+      },
+      {
+        "id": "travel-style",
+        "title": "Private Tour, Small Group or Custom Journey?",
+        "image": "/assets/images/popular-tours-img6.jpg",
+        "alt": "Central Asia private and small group tours",
+        "paragraphs": [
+          "A Five Stans tour can be arranged as a private journey, small group route or tailor-made program. Private trips give more flexibility with pacing, hotels, interests and route adjustments. Small group tours can be more cost-effective and social.",
+          "Because Central Asia travel involves borders, guides, transport and changing conditions, travelers should choose a style that matches their comfort level. The best option is the one that keeps the route enjoyable rather than stressful."
+        ]
+      }
+    ],
+    "tips": {
+      "id": "tips",
+      "title": "Five Stans Tour Planning Tips",
+      "items": [
+        {
+          "title": "Do Not Rush the Route",
+          "text": "All five countries can be visited in one trip, but the itinerary should leave enough time for landscapes, cities, borders and rest."
+        },
+        {
+          "title": "Plan Visas Early",
+          "text": "Visa and permit rules differ by country and nationality. Turkmenistan and some Tajikistan routes usually need special attention."
+        },
+        {
+          "title": "Balance Cities and Nature",
+          "text": "A strong Five Stans tour should include both Silk Road cities and natural landscapes such as mountains, lakes, canyons and deserts."
+        },
+        {
+          "title": "Use Local Route Knowledge",
+          "text": "Distances, road conditions and border timing can change the feeling of the trip. Local planning helps make the route realistic."
+        }
+      ]
+    },
+    "sidebar": {
+      "help_title": "Plan Your Five Stans Tour",
+      "help_text": "Tell us your travel dates, nationality, group size and preferred pace. We will help you shape a realistic Five Stans route.",
+      "help_button": "Ask Consultant",
+      "help_slug": "/contact",
+      "recommended_title": "Recommended Tours",
+      "recommended_tours": [
+        {
+          "title": "Five Stans Central Asia Tour",
+          "label": "15 days from $2950",
+          "slug": "/tour-five-stans"
+        },
+        {
+          "title": "Kazakhstan & Kyrgyzstan Tour",
+          "label": "Ask for details",
+          "slug": "/tour-kazakhstan-kyrgyzstan"
+        },
+        {
+          "title": "Uzbekistan & Turkmenistan Tour",
+          "label": "12 days from $1680",
+          "slug": "/tour-uzbekistan-turkmenistan"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Want Help Planning Your Five Stans Tour?",
+      "text": "Share your dates, nationality, group size and preferred travel style. We will help you build a Central Asia route that is realistic, connected and meaningful.",
+      "button": "Plan My Five Stans Tour",
+      "slug": "/contact"
+    }
+  }
+]
