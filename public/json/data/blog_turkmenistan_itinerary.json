@@ -5,13 +5,13 @@
         "title": "Turkmenistan Itinerary Guide",
         "home_label": "Home",
         "home_slug": "/",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blog-turkmenistan-itinerary-inner-banner-img.jpg",
         "alt": "Turkmenistan Itinerary Guide"
       }
     ],
     "title": "Turkmenistan Itinerary: 3, 5, 7 & 10 Day Route Ideas",
     "intro": "A practical guide to choosing the right Turkmenistan travel route based on your available time, interests and travel pace.",
-    "main_image": "/assets/images/popular-tours-img8.jpg",
+    "main_image": "/assets/images/blog-turkmenistan-itinerary-main-img.jpg",
     "main_image_alt": "Darvaza Gas Crater Turkmenistan",
     "meta": [
       {
@@ -63,11 +63,11 @@
     },
     "mid_images": [
       {
-        "image": "/assets/images/tour-product-detail-img.jpg",
+        "image": "/assets/images/blog-turkmenistan-itinerary-mid-img-merv.jpg",
         "alt": "Ancient Merv Turkmenistan"
       },
       {
-        "image": "/assets/images/special-offers-img1.jpg",
+        "image": "/assets/images/blog-turkmenistan-itinerary-mid-img-desert.jpg",
         "alt": "Turkmenistan desert route"
       }
     ],
@@ -110,7 +110,7 @@
       {
         "id": "three-days",
         "title": "3 Days Turkmenistan Itinerary",
-        "image": "/assets/images/popular-tours-img8.jpg",
+        "image": "/assets/images/blog-turkmenistan-itinerary-mid-img-3-days.jpg",
         "alt": "Darvaza Gas Crater Turkmenistan",
         "days": [
           {
@@ -133,8 +133,8 @@
       {
         "id": "five-days",
         "title": "5 Days Turkmenistan Itinerary",
-        "image": "/assets/images/tour-product-detail-img.jpg",
-        "alt": "Ancient Merv Turkmenistan",
+        "image": "/assets/images/blog-turkmenistan-itinerary-mid-img-ashgabat.jpg",
+        "alt": "Ashgabat Turkmenistan",
         "days": [
           {
             "day": "Day 1",
@@ -166,8 +166,8 @@
       {
         "id": "seven-days",
         "title": "7 Days Turkmenistan Highlights Itinerary",
-        "image": "/assets/images/special-offers-img1.jpg",
-        "alt": "Turkmenistan Highlights Tour",
+        "image": "/assets/images/blog-turkmenistan-itinerary-mid-img-yangikala.jpg",
+        "alt": "Yangikala Turkmenistan",
         "days": [
           {
             "day": "Day 1",
