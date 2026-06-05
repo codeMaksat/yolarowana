@@ -5,13 +5,13 @@
         "title": "Uzbekistan Silk Road Guide",
         "home_label": "Home",
         "home_slug": "/",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blog-uzbekistan-silk-road-guide-inner-banner-img.jpg",
         "alt": "Uzbekistan Silk Road Guide"
       }
     ],
     "title": "Uzbekistan Silk Road Travel Guide: Samarkand, Bukhara, Khiva & Tashkent",
     "intro": "A practical guide to planning an Uzbekistan Silk Road journey, including the best cities to visit, how many days you need, suggested route order, travel tips and recommended tours.",
-    "main_image": "/assets/images/popular-tours-img2.jpg",
+    "main_image": "/assets/images/blog-uzbekistan-silk-road-guide-main-img.jpg",
     "main_image_alt": "Uzbekistan Silk Road architecture",
     "meta": [
       {
@@ -67,11 +67,11 @@
     },
     "mid_images": [
       {
-        "image": "/assets/images/top-destinations-img-3.jpg",
+        "image": "/assets/images/blog-uzbekistan-silk-road-guide-mid-img-samarkand.jpg",
         "alt": "Samarkand Registan Uzbekistan"
       },
       {
-        "image": "/assets/images/top-destinations-img-4.jpg",
+        "image": "/assets/images/blog-uzbekistan-silk-road-guide-mid-img-bukhara.jpg",
         "alt": "Bukhara old city Uzbekistan"
       }
     ],
@@ -114,7 +114,7 @@
       {
         "id": "tashkent",
         "title": "Tashkent: The Starting Point of the Journey",
-        "image": "/assets/images/popular-tours-img2.jpg",
+        "image": "/assets/images/blog-uzbekistan-silk-road-guide-1-img.jpg",
         "alt": "Tashkent Uzbekistan travel",
         "paragraphs": [
           "Tashkent is the capital of Uzbekistan and the usual starting point for international arrivals. It combines Soviet-era urban planning, modern streets, museums, metro stations, old city areas and local markets.",
@@ -124,7 +124,7 @@
       {
         "id": "samarkand",
         "title": "Samarkand: The Icon of the Silk Road",
-        "image": "/assets/images/top-destinations-img-3.jpg",
+        "image": "/assets/images/blog-uzbekistan-silk-road-guide-2-img.jpg",
         "alt": "Samarkand Silk Road Uzbekistan",
         "paragraphs": [
           "Samarkand is one of the most famous cities on the Silk Road. Registan Square, mausoleums, mosques and blue-tiled architecture make it one of the visual highlights of Uzbekistan.",
@@ -134,7 +134,7 @@
       {
         "id": "bukhara",
         "title": "Bukhara: Old City Atmosphere and Caravan History",
-        "image": "/assets/images/top-destinations-img-4.jpg",
+        "image": "/assets/images/blog-uzbekistan-silk-road-guide-3-img.jpg",
         "alt": "Bukhara old city Uzbekistan",
         "paragraphs": [
           "Bukhara feels more compact and atmospheric than many other cities. Its old streets, trading domes, madrasahs, mosques and caravanserais create a strong sense of historical continuity.",
@@ -144,7 +144,7 @@
       {
         "id": "khiva",
         "title": "Khiva: The Walled Desert City",
-        "image": "/assets/images/top-destinations-img-5.jpg",
+        "image": "/assets/images/blog-uzbekistan-silk-road-guide-4-img.jpg",
         "alt": "Khiva walled city Uzbekistan",
         "paragraphs": [
           "Khiva is famous for Itchan Kala, the historic walled inner city. Its narrow streets, minarets, palaces and city walls make it feel different from Samarkand and Bukhara.",
