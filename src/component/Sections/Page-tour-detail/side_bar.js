@@ -6,6 +6,8 @@ const Side_Bar = ({ sideBar_data }) => {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedPriceTier, setSelectedPriceTier] = useState(null);
+  const [selectedTravelers, setSelectedTravelers] = useState("");
 
   const inputClass =
     "w-full rounded-full border border-[#E2CFAF] bg-white px-4 py-3 text-sm text-dark-900 placeholder:text-dark-800/70 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all";
@@ -16,7 +18,7 @@ const Side_Bar = ({ sideBar_data }) => {
   const textareaClass =
     "w-full rounded-2xl border border-[#E2CFAF] bg-white px-4 py-3 text-sm text-dark-900 placeholder:text-dark-800/70 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-none";
 
-  const validateInquiry = inquiry => {
+  const validateInquiry = (inquiry) => {
     const error = {};
 
     if (!inquiry.name || inquiry.name.trim() === "") {
@@ -38,14 +40,34 @@ const Side_Bar = ({ sideBar_data }) => {
     return error;
   };
 
-  const handleSubmit = async (event, formTitle, tourName) => {
+  const handleSubmit = async (event, formDataConfig) => {
     event.preventDefault();
 
     const formElement = event.currentTarget;
     const formData = new FormData(formElement);
 
     const finalTourName =
-      tourName && tourName.trim() !== "" ? tourName : formTitle || "Tour Detail Inquiry";
+      formDataConfig?.tour_name && formDataConfig.tour_name.trim() !== ""
+        ? formDataConfig.tour_name
+        : formDataConfig?.title || "Tour Detail Inquiry";
+
+    const defaultPriceTierIndex =
+      formDataConfig?.price_tiers?.findIndex((tier) => tier.default) ?? 0;
+
+    const activePriceTierIndex =
+      selectedPriceTier !== null
+        ? selectedPriceTier
+        : defaultPriceTierIndex >= 0
+        ? defaultPriceTierIndex
+        : 0;
+
+    const selectedTier = formDataConfig?.price_tiers?.[activePriceTierIndex];
+
+    const estimatedPriceText = selectedTier
+      ? selectedTier.price
+        ? `${selectedTier.travelers}: $${selectedTier.price.toLocaleString()} per person`
+        : `${selectedTier.travelers}: Price on request`
+      : "Price not selected";
 
     const inquiry = {
       name: formData.get("name"),
@@ -53,7 +75,6 @@ const Side_Bar = ({ sideBar_data }) => {
       phone: formData.get("phone"),
       travelDates: formData.get("travel_dates"),
       travelers: formData.get("travelers"),
-      travelStyle: formData.get("travel_style"),
       message: formData.get("message"),
       tourName: finalTourName,
     };
@@ -77,9 +98,13 @@ const Side_Bar = ({ sideBar_data }) => {
         phone: inquiry.phone || null,
         travel_dates: inquiry.travelDates || null,
         countries: "Not specified",
-        travel_style: inquiry.travelStyle || null,
+        travel_style: null,
         travelers: inquiry.travelers || null,
-        message: `Tour inquiry: ${inquiry.tourName}\n\n${inquiry.message}`,
+        message: `Tour inquiry: ${inquiry.tourName}
+
+Estimated price: ${estimatedPriceText}
+
+${inquiry.message}`,
         source: "tour_detail",
         status: "new",
       },
@@ -93,9 +118,11 @@ const Side_Bar = ({ sideBar_data }) => {
     }
 
     formElement.reset();
+    setSelectedPriceTier(null);
+    setSelectedTravelers("");
 
     setSuccessMessage(
-      "Thank you! Your inquiry has been sent. Our consultant will contact you soon."
+      "Thank you! Your trip request has been sent. Our team will contact you soon with details."
     );
 
     setIsSubmitting(false);
@@ -104,26 +131,85 @@ const Side_Bar = ({ sideBar_data }) => {
   return (
     sideBar_data &&
     sideBar_data.map((form_data, index) => {
+      const defaultPriceTierIndex =
+        form_data.price_tiers?.findIndex((tier) => tier.default) ?? 0;
+
+      const activePriceTierIndex =
+        selectedPriceTier !== null
+          ? selectedPriceTier
+          : defaultPriceTierIndex >= 0
+          ? defaultPriceTierIndex
+          : 0;
+
+      const activeTier = form_data.price_tiers?.[activePriceTierIndex];
+
       return (
         <div
           className="right-sidebar lg:max-w-[300px] w-full shrink-0"
           key={index}
         >
           <div className="mb-7 bg-[#FAF7F2] border border-[#E2CFAF] py-6 px-5 rounded-2xl shadow-sm">
+            {form_data.price_tiers && form_data.price_tiers.length > 0 && (
+              <div className="mb-5 rounded-2xl bg-white border border-[#E2CFAF] px-4 py-4">
+                <div className="text-sm text-dark-800 mb-1">
+                  {form_data.total_title || "Estimated From"}
+                </div>
+
+                {activeTier?.price ? (
+                  <div className="text-3xl font-bold text-dark-900 leading-tight">
+                    ${activeTier.price.toLocaleString()}
+                    <span className="text-base font-semibold text-dark-800">
+                      {" "}
+                      / person
+                    </span>
+                  </div>
+                ) : (
+                  <div className="text-2xl font-bold text-dark-900 leading-tight">
+                    Price on Request
+                  </div>
+                )}
+
+                <div className="mt-4 space-y-2">
+                  {form_data.price_tiers.map((tier, tierIndex) => (
+                    <button
+                      type="button"
+                      key={tierIndex}
+                      onClick={() => setSelectedPriceTier(tierIndex)}
+                      className={`w-full flex items-center justify-between rounded-xl border px-3 py-2 text-sm transition-all ${
+                        activePriceTierIndex === tierIndex
+                          ? "border-primary-900 bg-primary-900 text-white"
+                          : "border-[#E2CFAF] bg-[#FAF7F2] text-dark-900 hover:border-primary-900"
+                      }`}
+                    >
+                      <span>{tier.travelers}</span>
+                      <span className="font-semibold">
+                        {tier.price
+                          ? `$${tier.price.toLocaleString()}`
+                          : "On request"}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+
+                <p className="mb-0 mt-3 text-sm leading-6 text-dark-800">
+                  {form_data.price_note ||
+                    "Final price may vary by group size, hotel level, season, and route arrangements."}
+                </p>
+              </div>
+            )}
+
             <h5 className="text-xl mb-2 font-bold text-dark-900">
-              {form_data.title}
+              Request This Itinerary
             </h5>
 
             <p className="text-sm leading-6 text-dark-800 mb-5">
-              Tell us your travel dates, group size, and route ideas. We will
-              help you plan the best Central Asia journey.
+              Share your dates, group size, and travel preferences. We’ll
+              confirm the best route, availability, and price for your trip.
             </p>
 
             <form
               className="space-y-3"
-              onSubmit={event =>
-                handleSubmit(event, form_data.title, form_data.tour_name)
-              }
+              onSubmit={(event) => handleSubmit(event, form_data)}
             >
               <div>
                 <input
@@ -164,25 +250,48 @@ const Side_Bar = ({ sideBar_data }) => {
               />
 
               <div className="relative">
-                <select name="travelers" className={selectClass}>
-                  <option>Number of travelers</option>
-                  <option>1 traveler</option>
-                  <option>2 travelers</option>
-                  <option>3–5 travelers</option>
-                  <option>6–10 travelers</option>
-                  <option>10+ travelers</option>
-                </select>
+                <select
+                  name="travelers"
+                  className={selectClass}
+                  value={
+                    form_data.price_tiers && form_data.price_tiers.length > 0
+                      ? activeTier?.travelers || ""
+                      : selectedTravelers
+                  }
+                  onChange={(event) => {
+                    if (
+                      form_data.price_tiers &&
+                      form_data.price_tiers.length > 0
+                    ) {
+                      const tierIndex = form_data.price_tiers.findIndex(
+                        (tier) => tier.travelers === event.target.value
+                      );
 
-                <i className="fa-regular fa-chevron-down pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-dark-800 text-sm"></i>
-              </div>
+                      if (tierIndex >= 0) {
+                        setSelectedPriceTier(tierIndex);
+                      }
+                    } else {
+                      setSelectedTravelers(event.target.value);
+                    }
+                  }}
+                >
+                  <option value="">Number of travelers</option>
 
-              <div className="relative">
-                <select name="travel_style" className={selectClass}>
-                  <option>Travel style</option>
-                  <option>Private tour</option>
-                  <option>Small group tour</option>
-                  <option>Family trip</option>
-                  <option>Custom Silk Road journey</option>
+                  {form_data.price_tiers && form_data.price_tiers.length > 0 ? (
+                    form_data.price_tiers.map((tier, tierIndex) => (
+                      <option value={tier.travelers} key={tierIndex}>
+                        {tier.travelers}
+                      </option>
+                    ))
+                  ) : (
+                    <>
+                      <option value="1 traveler">1 traveler</option>
+                      <option value="2 travelers">2 travelers</option>
+                      <option value="3–5 travelers">3–5 travelers</option>
+                      <option value="6–10 travelers">6–10 travelers</option>
+                      <option value="10+ travelers">10+ travelers</option>
+                    </>
+                  )}
                 </select>
 
                 <i className="fa-regular fa-chevron-down pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-dark-800 text-sm"></i>
@@ -208,7 +317,7 @@ const Side_Bar = ({ sideBar_data }) => {
                 disabled={isSubmitting}
                 className="btn btn-primary flex items-center justify-center gap-2 max-w-full rounded-full w-full py-3 mt-2 font-semibold"
               >
-                {isSubmitting ? "Sending..." : "Send to Consultant"}
+                {isSubmitting ? "Sending..." : "Send Trip Request"}
                 <i className="fa-regular fa-paper-plane ml-1"></i>
               </button>
 

@@ -122,9 +122,8 @@ const All_Tour_Detail = ({ initialValues }) => {
     const inactiveClass =
       "text-dark-800 hover:bg-primary-900 hover:text-white";
 
-    return `${baseClass} ${
-      activeSection === id ? activeClass : inactiveClass
-    }`;
+    return `${baseClass} ${activeSection === id ? activeClass : inactiveClass
+      }`;
   };
 
   return (
@@ -138,6 +137,18 @@ const All_Tour_Detail = ({ initialValues }) => {
               <div className="text-md md:text-lg leading-normal mb-5 flex items-center gap-2">
                 <i className={`${data.icon} text-primary-900`}></i>
                 {data.icon_label}
+              </div>
+
+              <div className="mb-6 flex flex-wrap items-center gap-2 text-sm md:text-md text-dark-800">
+                <span className="inline-flex items-center rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-4 py-2">
+                  Real itinerary
+                </span>
+                <span className="inline-flex items-center rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-4 py-2">
+                  Customizable dates
+                </span>
+                <span className="inline-flex items-center rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-4 py-2">
+                  Price confirmed after inquiry
+                </span>
               </div>
 
               <div

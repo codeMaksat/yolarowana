@@ -228,6 +228,26 @@
         "ticket2": "Children / family travelers",
         "ticket2_price": 0.0,
         "total_title": "Estimated From",
+        "price_tiers": [
+          {
+            "travelers": "1 traveler",
+            "price": 2950
+          },
+          {
+            "travelers": "2 travelers",
+            "price": 2450,
+            "default": true
+          },
+          {
+            "travelers": "3–5 travelers",
+            "price": 2150
+          },
+          {
+            "travelers": "6+ travelers",
+            "price": null
+          }
+        ],
+        "price_note": "Price is estimated per person and may vary by group size, hotel level, season, transport, and border arrangements.",
         "product": [
           {
             "slug": "/tour-turkmenistan-highlights",

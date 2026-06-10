@@ -85,41 +85,41 @@ export default function Dashboard() {
     setUpdatingId(null);
   };
 
-const deleteInquiry = async id => {
-  const confirmDelete = window.confirm(
-    "Are you sure you want to delete this inquiry? This action cannot be undone."
-  );
+  const deleteInquiry = async id => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this inquiry? This action cannot be undone."
+    );
 
-  if (!confirmDelete) return;
+    if (!confirmDelete) return;
 
-  setUpdatingId(id);
+    setUpdatingId(id);
 
-  const { data, error } = await supabase
-    .from("inquiries")
-    .delete()
-    .eq("id", id)
-    .select();
+    const { data, error } = await supabase
+      .from("inquiries")
+      .delete()
+      .eq("id", id)
+      .select();
 
-  if (error) {
-    console.error("Error deleting inquiry:", error);
-    alert("Could not delete inquiry. Please check Supabase delete permission.");
+    if (error) {
+      console.error("Error deleting inquiry:", error);
+      alert("Could not delete inquiry. Please check Supabase delete permission.");
+      setUpdatingId(null);
+      return;
+    }
+
+    if (!data || data.length === 0) {
+      console.warn("No inquiry was deleted. Check RLS DELETE policy or ID.");
+      alert("No inquiry was deleted. Please check Supabase DELETE policy.");
+      setUpdatingId(null);
+      return;
+    }
+
+    setInquiries(prevInquiries =>
+      prevInquiries.filter(inquiry => inquiry.id !== id)
+    );
+
     setUpdatingId(null);
-    return;
-  }
-
-  if (!data || data.length === 0) {
-    console.warn("No inquiry was deleted. Check RLS DELETE policy or ID.");
-    alert("No inquiry was deleted. Please check Supabase DELETE policy.");
-    setUpdatingId(null);
-    return;
-  }
-
-  setInquiries(prevInquiries =>
-    prevInquiries.filter(inquiry => inquiry.id !== id)
-  );
-
-  setUpdatingId(null);
-};
+  };
 
   const totalInquiries = inquiries.length;
   const newInquiries = inquiries.filter(item => item.status === "new").length;
@@ -223,12 +223,39 @@ const deleteInquiry = async id => {
       : "General Inquiry";
   };
 
+  const getEstimatedPrice = inquiry => {
+    if (inquiry.estimated_price) {
+      return inquiry.estimated_price;
+    }
+
+    if (!inquiry.message) return "-";
+
+    const priceLine = inquiry.message
+      .split("\n")
+      .find(line => line.startsWith("Estimated price:"));
+
+    if (!priceLine) return "-";
+
+    return priceLine.replace("Estimated price:", "").trim();
+  };
+
   const getCleanMessage = message => {
     if (!message) return "-";
 
     if (message.startsWith("Tour inquiry:")) {
-      const lines = message.split("\n");
-      return lines.slice(2).join("\n").trim() || "-";
+      const lines = message
+        .split("\n")
+        .filter(line => {
+          const trimmed = line.trim();
+
+          return (
+            trimmed !== "" &&
+            !trimmed.startsWith("Tour inquiry:") &&
+            !trimmed.startsWith("Estimated price:")
+          );
+        });
+
+      return lines.join("\n").trim() || "-";
     }
 
     return message;
@@ -389,7 +416,7 @@ const deleteInquiry = async id => {
                 </div>
 
                 <div className="w-full overflow-x-auto">
-                  <table className="table-list table-auto whitespace-nowrap min-w-[1750px]">
+                  <table className="table-list table-auto whitespace-nowrap min-w-[1900px]">
                     <thead>
                       <tr>
                         <th>Date</th>
@@ -401,6 +428,7 @@ const deleteInquiry = async id => {
                         <th>Travel dates</th>
                         <th>Travel style</th>
                         <th>Travelers</th>
+                        <th>Estimated price</th>
                         <th>Source</th>
                         <th>Status</th>
                         <th>Update status</th>
@@ -412,7 +440,7 @@ const deleteInquiry = async id => {
                     <tbody>
                       {!loading && inquiries.length === 0 && (
                         <tr>
-                          <td colSpan="14">No inquiries yet.</td>
+                          <td colSpan="15">No inquiries yet.</td>
                         </tr>
                       )}
 
@@ -456,6 +484,11 @@ const deleteInquiry = async id => {
                             <td>{inquiry.travel_dates || "-"}</td>
                             <td>{inquiry.travel_style || "-"}</td>
                             <td>{inquiry.travelers || "-"}</td>
+
+                            <td className="max-w-[220px] whitespace-normal font-semibold text-dark-900">
+                              {getEstimatedPrice(inquiry)}
+                            </td>
+
                             <td>{getSourceLabel(inquiry.source)}</td>
 
                             <td>
