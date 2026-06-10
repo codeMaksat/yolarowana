@@ -7,10 +7,10 @@ const Comman_Hero = ({ initialValues }) => {
     initialValues.map((data, index) => {
       return (
         <section
-          className="hero-section min-h-[170px] sm:min-h-[200px] md:min-h-[300px] lg:min-h-[340px] relative grid content-center py-8 sm:py-10 md:py-16 lg:py-24"
+          className="hero-section min-h-[210px] sm:min-h-[240px] md:min-h-[300px] lg:min-h-[340px] relative grid content-center py-10 sm:py-12 md:py-16 lg:py-24 overflow-hidden"
           key={index}
         >
-          <div className="absolute top-0 left-0 w-full h-full before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-dark-900/50">
+          <div className="absolute top-0 left-0 w-full h-full before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-dark-900/40">
             <Image
               src={data.image}
               alt={data.alt}
