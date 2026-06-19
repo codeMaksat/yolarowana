@@ -377,11 +377,13 @@ export default async function handler(req, res) {
             waitUntil: "networkidle0",
         });
 
-        const pdfBuffer = await page.pdf({
+        const pdfArray = await page.pdf({
             format: "A4",
             printBackground: true,
             preferCSSPageSize: true,
         });
+
+        const pdfBuffer = Buffer.from(pdfArray);
 
         await browser.close();
 
@@ -392,6 +394,7 @@ export default async function handler(req, res) {
             "Content-Disposition",
             `attachment; filename="${fileName}"`
         );
+        res.setHeader("Content-Length", pdfBuffer.length);
 
         return res.send(pdfBuffer);
     } catch (pdfError) {

@@ -1122,7 +1122,7 @@ export default function EditTourPage() {
                                     <div className="md:col-span-2">
                                         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                                             <div>
-                                                <h3 className="text-xl mb-1">What's Included</h3>
+                                                <h3 className="text-xl mb-1">What&apos;s Included</h3>
                                                 <p className="mb-0 text-sm text-dark-800">
                                                     Edit the included services JSON. Keep the same structure so the public
                                                     tour page displays correctly.
@@ -1145,7 +1145,7 @@ export default function EditTourPage() {
                                     <div className="md:col-span-2">
                                         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                                             <div>
-                                                <h3 className="text-xl mb-1">What's Not Included</h3>
+                                                <h3 className="text-xl mb-1">What&apos;s Not Included</h3>
                                                 <p className="mb-0 text-sm text-dark-800">
                                                     Edit the excluded services JSON. Keep the same structure so the public
                                                     tour page displays correctly.
@@ -1230,7 +1230,11 @@ export default function EditTourPage() {
                                         ></textarea>
 
                                         <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Example: [{"{"}"title": "Tour Map", "url": "https://www.google.com/maps/embed?pb=..."{"}"}]
+                                            Example: [
+                                            {"{"}
+                                            &quot;title&quot;: &quot;Tour Map&quot;, &quot;url&quot;: &quot;https://www.google.com/maps/embed?pb=...&quot;
+                                            {"}"}
+                                            ]
                                         </p>
                                     </div>
 
