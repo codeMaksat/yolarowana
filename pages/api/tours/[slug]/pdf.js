@@ -406,10 +406,7 @@ export default async function handler(req, res) {
 
         return res.status(500).json({
             error: "Could not generate PDF.",
-            detail:
-                process.env.NODE_ENV === "development"
-                    ? String(pdfError?.message || pdfError)
-                    : undefined,
+            detail: String(pdfError?.message || pdfError),
         });
     }
 }
