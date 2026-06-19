@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   // Fetch header data using a custom hook
-  const { data: header_data } = useFetchData("json/data/header.json");
+  const { data: header_data } = useFetchData("/json/data/header.json");
 
   // Define a state variable to handle loading state
   const [loading, setLoading] = useState(true);
@@ -44,7 +44,7 @@ export default function App({ Component, pageProps }) {
   if (router.asPath === "/home-2") {
     footer_url = "json/data/footer2.json";
   } else {
-    footer_url = "json/data/footer.json";
+    footer_url = "/json/data/footer.json";
   }
 
   const { data: footer_data } = useFetchData(footer_url);

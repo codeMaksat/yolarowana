@@ -283,7 +283,16 @@ export default function Dashboard() {
                     <span>
                       <img src="/assets/images/dashboard.svg" alt="dashboard" />
                     </span>
-                    Dashboard
+                    Inquiries
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="/tour-dashboard">
+                    <span>
+                      <img src="/assets/images/hiking-icon-1.svg" alt="tours" />
+                    </span>
+                    Tours
                   </Link>
                 </li>
 

@@ -78,7 +78,7 @@
             "title": "Popular Routes",
             "sub_menu": [
               {
-                "slug": "/tour-five-stans",
+                "slug": "/tours/five-stans-central-asia-tour",
                 "label": "Five Stans Tour"
               },
               {
@@ -108,7 +108,7 @@
         "label": "Tours",
         "sub_menu": [
           {
-            "slug": "/tour-five-stans",
+            "slug": "/tours/five-stans-central-asia-tour",
             "label": "Five Stans"
           },
           {
