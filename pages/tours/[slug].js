@@ -118,6 +118,7 @@ export default function DynamicTourPage() {
                         {
                             title: "Plan This Tour",
                             tour_name: data?.title || "Tour Inquiry",
+                            pdf_slug: data?.slug || slug,
                             total_title: "Estimated From",
                             price_tiers: Array.isArray(data?.price_tiers)
                                 ? data.price_tiers

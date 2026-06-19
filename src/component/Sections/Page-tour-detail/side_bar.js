@@ -58,8 +58,8 @@ const Side_Bar = ({ sideBar_data }) => {
       selectedPriceTier !== null
         ? selectedPriceTier
         : defaultPriceTierIndex >= 0
-        ? defaultPriceTierIndex
-        : 0;
+          ? defaultPriceTierIndex
+          : 0;
 
     const selectedTier = formDataConfig?.price_tiers?.[activePriceTierIndex];
 
@@ -138,8 +138,8 @@ ${inquiry.message}`,
         selectedPriceTier !== null
           ? selectedPriceTier
           : defaultPriceTierIndex >= 0
-          ? defaultPriceTierIndex
-          : 0;
+            ? defaultPriceTierIndex
+            : 0;
 
       const activeTier = form_data.price_tiers?.[activePriceTierIndex];
 
@@ -175,11 +175,10 @@ ${inquiry.message}`,
                       type="button"
                       key={tierIndex}
                       onClick={() => setSelectedPriceTier(tierIndex)}
-                      className={`w-full flex items-center justify-between rounded-xl border px-3 py-2 text-sm transition-all ${
-                        activePriceTierIndex === tierIndex
+                      className={`w-full flex items-center justify-between rounded-xl border px-3 py-2 text-sm transition-all ${activePriceTierIndex === tierIndex
                           ? "border-primary-900 bg-primary-900 text-white"
                           : "border-[#E2CFAF] bg-[#FAF7F2] text-dark-900 hover:border-primary-900"
-                      }`}
+                        }`}
                     >
                       <span>{tier.travelers}</span>
                       <span className="font-semibold">
@@ -197,7 +196,17 @@ ${inquiry.message}`,
                 </p>
               </div>
             )}
-
+            {form_data.pdf_slug && (
+              <a
+                href={`/api/tours/${form_data.pdf_slug}/pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary flex items-center justify-center gap-2 max-w-full rounded-full w-full py-3 mb-4 font-semibold"
+              >
+                Download Brochure
+                <i className="fa-regular fa-file-pdf ml-1"></i>
+              </a>
+            )}
             <h5 className="text-xl mb-2 font-bold text-dark-900">
               Request This Itinerary
             </h5>
