@@ -4,6 +4,12 @@ const nextConfig = {
 
   experimental: {
     serverComponentsExternalPackages: ["@sparticuz/chromium"],
+
+    outputFileTracingIncludes: {
+      "/api/tours/[slug]/pdf": [
+        "./node_modules/@sparticuz/chromium/bin/**/*",
+      ],
+    },
   },
 
   webpack: (config, { isServer }) => {
