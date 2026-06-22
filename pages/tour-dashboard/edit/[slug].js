@@ -30,6 +30,7 @@ export default function EditTourPage() {
         meta_title: "",
         meta_description: "",
         meta_image: "",
+        brochure_pdf: "",
         price_tiers: [],
         overview: [],
         itinerary: [],
@@ -111,6 +112,7 @@ export default function EditTourPage() {
                 meta_title: data.meta_title || "",
                 meta_description: data.meta_description || "",
                 meta_image: data.meta_image || "",
+                brochure_pdf: data.brochure_pdf || "",
                 price_tiers: Array.isArray(data.price_tiers) ? data.price_tiers : [],
                 overview: Array.isArray(data.overview) ? data.overview : [],
                 itinerary: Array.isArray(data.itinerary) ? data.itinerary : [],
@@ -272,6 +274,7 @@ export default function EditTourPage() {
             meta_title: tour.meta_title,
             meta_description: tour.meta_description,
             meta_image: tour.meta_image,
+            brochure_pdf: tour.brochure_pdf,
             price_tiers: tour.price_tiers,
             overview: parsedOverview,
             itinerary: parsedItinerary,
@@ -955,6 +958,23 @@ export default function EditTourPage() {
                                                     className={inputClass}
                                                     placeholder="/assets/images/tour-product-detail-img.jpg"
                                                 />
+                                            </div>
+
+                                            <div className="md:col-span-2">
+                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                                    Brochure PDF
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="brochure_pdf"
+                                                    value={tour.brochure_pdf}
+                                                    onChange={handleChange}
+                                                    className={inputClass}
+                                                    placeholder="/assets/pdf/five-stans-central-asia-tour.pdf"
+                                                />
+                                                <p className="mt-2 mb-0 text-xs text-dark-800">
+                                                    Upload the PDF into public/assets/pdf/ and enter the path here.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>

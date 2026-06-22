@@ -176,8 +176,8 @@ ${inquiry.message}`,
                       key={tierIndex}
                       onClick={() => setSelectedPriceTier(tierIndex)}
                       className={`w-full flex items-center justify-between rounded-xl border px-3 py-2 text-sm transition-all ${activePriceTierIndex === tierIndex
-                          ? "border-primary-900 bg-primary-900 text-white"
-                          : "border-[#E2CFAF] bg-[#FAF7F2] text-dark-900 hover:border-primary-900"
+                        ? "border-primary-900 bg-primary-900 text-white"
+                        : "border-[#E2CFAF] bg-[#FAF7F2] text-dark-900 hover:border-primary-900"
                         }`}
                     >
                       <span>{tier.travelers}</span>
@@ -196,11 +196,10 @@ ${inquiry.message}`,
                 </p>
               </div>
             )}
-            {form_data.pdf_slug && (
+            {form_data.brochure_pdf && (
               <a
-                href={`/api/tours/${form_data.pdf_slug}/pdf`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={form_data.brochure_pdf}
+                download
                 className="btn btn-primary flex items-center justify-center gap-2 max-w-full rounded-full w-full py-3 mb-4 font-semibold"
               >
                 Download Brochure
