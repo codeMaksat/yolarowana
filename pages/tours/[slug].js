@@ -152,33 +152,29 @@ export default function DynamicTourPage() {
     }, [slug, preview]);
 
     useEffect(() => {
-        if (loading || tourError || !tourData.length) return;
+    if (loading || tourError || !tourData.length) return;
 
-        const scrollToTop = () => {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "auto",
-            });
-
-            document.documentElement.scrollTop = 0;
-            document.body.scrollTop = 0;
-        };
-
-        requestAnimationFrame(() => {
-            scrollToTop();
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "auto",
         });
 
-        const timerOne = setTimeout(scrollToTop, 100);
-        const timerTwo = setTimeout(scrollToTop, 500);
-        const timerThree = setTimeout(scrollToTop, 1000);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+    };
 
-        return () => {
-            clearTimeout(timerOne);
-            clearTimeout(timerTwo);
-            clearTimeout(timerThree);
-        };
-    }, [loading, tourError, tourData.length, router.asPath]);
+    requestAnimationFrame(scrollToTop);
+
+    const timerOne = setTimeout(scrollToTop, 100);
+    const timerTwo = setTimeout(scrollToTop, 500);
+
+    return () => {
+        clearTimeout(timerOne);
+        clearTimeout(timerTwo);
+    };
+}, [loading, tourError, tourData.length, slug]);
 
     if (loading) {
         return (
