@@ -1,4 +1,3 @@
-import chromium from "@sparticuz/chromium";
 import puppeteer from "puppeteer-core";
 import { supabase } from "@/utils/supabaseClient";
 
@@ -6,7 +5,6 @@ export const config = {
     api: {
         responseLimit: false,
     },
-    maxDuration: 60,
 };
 
 const escapeHtml = value => {
@@ -348,10 +346,22 @@ const buildHtml = (tour, baseUrl) => {
 };
 
 export default async function handler(req, res) {
+    if (process.env.NODE_ENV === "production") {
+        return res.status(403).json({
+            error: "PDF generation is available locally/admin only.",
+        });
+    }
+
     const { slug } = req.query;
 
     if (!slug) {
         return res.status(400).json({ error: "Missing tour slug." });
+    }
+
+    if (!process.env.CHROME_EXECUTABLE_PATH) {
+        return res.status(500).json({
+            error: "Missing CHROME_EXECUTABLE_PATH in .env.local.",
+        });
     }
 
     const { data: tour, error } = await supabase
@@ -372,48 +382,21 @@ export default async function handler(req, res) {
         });
     }
 
-    if (tour.status !== "published") {
-        return res.status(403).json({
-            error: "Tour is not published.",
-            debug: {
-                slug,
-                status: tour.status,
-            },
-        });
-    }
-
     let browser;
 
     try {
-        const isProduction = process.env.NODE_ENV === "production";
-
-        const protocol =
-            req.headers["x-forwarded-proto"] ||
-            (isProduction ? "https" : "http");
-
+        const protocol = req.headers["x-forwarded-proto"] || "http";
         const host = req.headers.host;
-
         const baseUrl = `${protocol}://${host}`;
 
-        const executablePath = isProduction
-            ? await chromium.executablePath()
-            : process.env.CHROME_EXECUTABLE_PATH;
-
         browser = await puppeteer.launch({
-            args: isProduction
-                ? [
-                      ...chromium.args,
-                      "--no-sandbox",
-                      "--disable-setuid-sandbox",
-                      "--disable-dev-shm-usage",
-                      "--disable-gpu",
-                      "--hide-scrollbars",
-                      "--font-render-hinting=none",
-                  ]
-                : [],
-            defaultViewport: chromium.defaultViewport,
-            executablePath,
-            headless: isProduction ? chromium.headless : true,
+            args: [],
+            defaultViewport: {
+                width: 1280,
+                height: 720,
+            },
+            executablePath: process.env.CHROME_EXECUTABLE_PATH,
+            headless: true,
         });
 
         const page = await browser.newPage();
