@@ -1,12 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
 
-  images: {
-    domains: ["localhost", "images.unsplash.com", "flowbite.s3.amazonaws.com"],
+  experimental: {
+    serverComponentsExternalPackages: ["@sparticuz/chromium"],
+  },
+
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals = config.externals || [];
+      config.externals.push("@sparticuz/chromium");
+    }
+
+    return config;
   },
 };
 
 module.exports = nextConfig;
-
-//"http://localhost:3000/",
