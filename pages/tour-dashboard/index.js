@@ -1,6 +1,6 @@
 import { Head_Meta, useFetchData } from "@/component/comman";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "@/utils/supabaseClient";
 
@@ -13,6 +13,10 @@ export default function TourDashboard() {
     const [sortOption, setSortOption] = useState("newest");
     const [checkingAuth, setCheckingAuth] = useState(true);
     const [updatingId, setUpdatingId] = useState(null);
+
+    const topScrollRef = useRef(null);
+    const tableScrollRef = useRef(null);
+
     const router = useRouter();
 
     useEffect(() => {
@@ -31,8 +35,6 @@ export default function TourDashboard() {
 
         checkUser();
     }, [router]);
-
-
 
     const handleLogout = async () => {
         await supabase.auth.signOut();
@@ -71,12 +73,7 @@ export default function TourDashboard() {
             newSlug = `${baseSlug}-${counter}`;
         }
 
-        const {
-            id,
-            created_at,
-            updated_at,
-            ...tourWithoutSystemFields
-        } = tour;
+        const { id, created_at, updated_at, ...tourWithoutSystemFields } = tour;
 
         const duplicatedTour = {
             ...tourWithoutSystemFields,
@@ -126,9 +123,9 @@ export default function TourDashboard() {
             prevTours.map(item =>
                 item.id === tour.id
                     ? {
-                        ...item,
-                        status: "archived",
-                    }
+                          ...item,
+                          status: "archived",
+                      }
                     : item
             )
         );
@@ -159,9 +156,9 @@ export default function TourDashboard() {
             prevTours.map(item =>
                 item.id === tour.id
                     ? {
-                        ...item,
-                        status: "draft",
-                    }
+                          ...item,
+                          status: "draft",
+                      }
                     : item
             )
         );
@@ -300,6 +297,18 @@ export default function TourDashboard() {
         });
     };
 
+    const syncTopScroll = event => {
+        if (tableScrollRef.current) {
+            tableScrollRef.current.scrollLeft = event.currentTarget.scrollLeft;
+        }
+    };
+
+    const syncTableScroll = event => {
+        if (topScrollRef.current) {
+            topScrollRef.current.scrollLeft = event.currentTarget.scrollLeft;
+        }
+    };
+
     if (checkingAuth) {
         return (
             <div className="py-20 text-center">
@@ -334,6 +343,7 @@ export default function TourDashboard() {
                                         Tours
                                     </Link>
                                 </li>
+
                                 <li>
                                     <Link href="/contact">
                                         <span>
@@ -342,6 +352,7 @@ export default function TourDashboard() {
                                         Contact page
                                     </Link>
                                 </li>
+
                                 <li>
                                     <Link href="/">
                                         <span>
@@ -450,15 +461,17 @@ export default function TourDashboard() {
                                         key={filter.value}
                                         type="button"
                                         onClick={() => setStatusFilter(filter.value)}
-                                        className={`rounded-full px-5 py-2 text-sm font-semibold border transition-all ${statusFilter === filter.value
-                                            ? "bg-primary-900 text-white border-primary-900"
-                                            : "bg-white text-dark-900 border-[#E2CFAF] hover:border-primary-900"
-                                            }`}
+                                        className={`rounded-full px-5 py-2 text-sm font-semibold border transition-all ${
+                                            statusFilter === filter.value
+                                                ? "bg-primary-900 text-white border-primary-900"
+                                                : "bg-white text-dark-900 border-[#E2CFAF] hover:border-primary-900"
+                                        }`}
                                     >
                                         {filter.label}
                                     </button>
                                 ))}
                             </div>
+
                             <div className="mt-6 grid md:grid-cols-[1fr_260px] gap-4">
                                 <input
                                     type="text"
@@ -481,6 +494,7 @@ export default function TourDashboard() {
                                     <option value="draft-first">Draft first</option>
                                 </select>
                             </div>
+
                             <div className="mt-4 rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-5 py-4">
                                 <p className="mb-0 text-sm text-dark-800">
                                     <strong>Published</strong> tours are visible to customers.{" "}
@@ -498,7 +512,19 @@ export default function TourDashboard() {
                                     )}
                                 </div>
 
-                                <div className="w-full overflow-x-auto">
+                                <div
+                                    ref={topScrollRef}
+                                    onScroll={syncTopScroll}
+                                    className="w-full overflow-x-auto mb-3"
+                                >
+                                    <div className="min-w-[1350px] h-3"></div>
+                                </div>
+
+                                <div
+                                    ref={tableScrollRef}
+                                    onScroll={syncTableScroll}
+                                    className="w-full overflow-x-auto"
+                                >
                                     <table className="table-list table-auto whitespace-nowrap min-w-[1350px]">
                                         <thead>
                                             <tr>
@@ -525,8 +551,8 @@ export default function TourDashboard() {
                                                         {searchTerm.trim()
                                                             ? "No tours match your search."
                                                             : statusFilter === "all"
-                                                                ? "No tours yet."
-                                                                : `No ${statusFilter} tours found.`}
+                                                            ? "No tours yet."
+                                                            : `No ${statusFilter} tours found.`}
                                                     </td>
                                                 </tr>
                                             )}
@@ -576,6 +602,7 @@ export default function TourDashboard() {
                                                                 <option value="archived">Archived</option>
                                                             </select>
                                                         </td>
+
                                                         <td>
                                                             {tour.slug && tour.status === "published" ? (
                                                                 <Link
@@ -591,6 +618,7 @@ export default function TourDashboard() {
                                                                 </span>
                                                             )}
                                                         </td>
+
                                                         <td>
                                                             {tour.slug ? (
                                                                 <Link
@@ -604,6 +632,7 @@ export default function TourDashboard() {
                                                                 "-"
                                                             )}
                                                         </td>
+
                                                         <td>
                                                             {tour.slug ? (
                                                                 <Link
@@ -616,6 +645,7 @@ export default function TourDashboard() {
                                                                 "-"
                                                             )}
                                                         </td>
+
                                                         <td>
                                                             <button
                                                                 type="button"
@@ -625,6 +655,7 @@ export default function TourDashboard() {
                                                                 Duplicate
                                                             </button>
                                                         </td>
+
                                                         <td>
                                                             {tour.status !== "archived" ? (
                                                                 <button
@@ -654,8 +685,7 @@ export default function TourDashboard() {
 
                             <div className="mt-6 bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl px-5 py-4">
                                 <p className="mb-0 text-sm text-dark-800">
-                                    This page reads tours from Supabase. Next step: add edit and
-                                    create tour forms.
+                                    This page reads tours from Supabase. Next step: add edit and create tour forms.
                                 </p>
                             </div>
                         </div>

@@ -340,6 +340,7 @@ export default function EditTourPage() {
                     meta_title: importedData.meta_title || "",
                     meta_description: importedData.meta_description || "",
                     meta_image: importedData.meta_image || "",
+                    brochure_pdf: importedData.brochure_pdf || "",
                     price_tiers: Array.isArray(importedData.price_tiers)
                         ? importedData.price_tiers
                         : [],
@@ -590,6 +591,7 @@ export default function EditTourPage() {
                 meta_title: tour.meta_title,
                 meta_description: tour.meta_description,
                 meta_image: tour.meta_image,
+                brochure_pdf: tour.brochure_pdf,
                 price_tiers: tour.price_tiers,
                 overview: parsedOverview,
                 itinerary: parsedItinerary,
@@ -712,6 +714,14 @@ export default function EditTourPage() {
                                     >
                                         {tour.status === "published" ? "View Tour" : "Preview Tour"}
                                     </Link>
+                                    <a
+    href={`/api/tours/${slug}/pdf`}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-6 py-3 text-sm font-semibold text-dark-900 hover:border-primary-900"
+>
+    Generate PDF
+</a>
 
                                     <button
                                         type="button"
