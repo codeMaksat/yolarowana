@@ -148,6 +148,19 @@ export default function DynamicTourPage({ initialTour = null }) {
     const { data: seo_data } = useFetchData("/json/data/site_meta_link.json");
 
     useEffect(() => {
+        console.log("CLIENT TOUR DETAIL: initialTour exists:", Boolean(initialTour));
+
+        if (initialTour) {
+            console.log(
+                "CLIENT TOUR DETAIL: server/static tour already loaded:",
+                initialTour.title
+            );
+        } else {
+            console.log("CLIENT TOUR DETAIL: no initialTour, browser fallback may run");
+        }
+    }, [initialTour]);
+
+    useEffect(() => {
         if (!router.isReady || !slug) return;
 
         const shouldUseStaticData =
@@ -156,12 +169,19 @@ export default function DynamicTourPage({ initialTour = null }) {
             preview !== "true";
 
         if (shouldUseStaticData) {
+            console.log(
+                "CLIENT TOUR DETAIL: fallback skipped, using server/static data:",
+                initialTour.title
+            );
+
             setTourData(initialFormattedData.tourData);
             setHeroData(initialFormattedData.heroData);
             setLoading(false);
             setTourError("");
             return;
         }
+
+        console.log("CLIENT TOUR DETAIL: browser fallback running for:", slug);
 
         const fetchTourClientSide = async () => {
             setLoading(true);
@@ -192,6 +212,8 @@ export default function DynamicTourPage({ initialTour = null }) {
                 setLoading(false);
                 return;
             }
+
+            console.log("CLIENT TOUR DETAIL: fallback loaded tour:", data?.title);
 
             const formattedData = formatTourForPage(data);
 
@@ -250,10 +272,7 @@ export default function DynamicTourPage({ initialTour = null }) {
             <>
                 <Head>
                     <title>Tour not found</title>
-                    <meta
-                        name="robots"
-                        content="noindex, nofollow"
-                    />
+                    <meta name="robots" content="noindex, nofollow" />
                 </Head>
 
                 <div className="py-20 text-center">
@@ -299,6 +318,8 @@ export default function DynamicTourPage({ initialTour = null }) {
 
 export async function getStaticPaths() {
     try {
+        console.log("SERVER TOUR DETAIL: loading published tour paths");
+
         const { data, error } = await serverSupabase
             .from("tours")
             .select("slug")
@@ -306,11 +327,17 @@ export async function getStaticPaths() {
 
         if (error) {
             console.error("Error loading tour paths:", error.message);
+
             return {
                 paths: [],
                 fallback: "blocking",
             };
         }
+
+        console.log(
+            "SERVER TOUR DETAIL: published paths count:",
+            Array.isArray(data) ? data.length : 0
+        );
 
         return {
             paths: (data || []).map((tour) => ({
@@ -333,6 +360,8 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const slug = params?.slug || "";
 
+    console.log("SERVER TOUR DETAIL: loading tour for SEO:", slug);
+
     if (!slug) {
         return {
             props: {
@@ -351,7 +380,10 @@ export async function getStaticProps({ params }) {
             .single();
 
         if (error || !data) {
-            console.error("Server-side tour fetch failed or not published:", error?.message);
+            console.error(
+                "SERVER TOUR DETAIL: fetch failed or not published:",
+                error?.message
+            );
 
             return {
                 props: {
@@ -360,6 +392,8 @@ export async function getStaticProps({ params }) {
                 revalidate: 10,
             };
         }
+
+        console.log("SERVER TOUR DETAIL: loaded tour for SEO:", data.title);
 
         return {
             props: {
