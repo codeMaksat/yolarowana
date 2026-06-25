@@ -4,6 +4,133 @@ import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "@/utils/supabaseClient";
 
+const defaultTour = {
+    title: "",
+    slug: "",
+    hero_image: "",
+    card_image: "",
+    hero_alt: "",
+    icon: "fa-solid fa-location-dot",
+    icon_label: "",
+    duration: "",
+    travel_style: "",
+    route: "",
+    support_label: "",
+    price_note: "",
+    meta_title: "",
+    meta_description: "",
+    meta_image: "",
+    brochure_pdf: "",
+    price_tiers: [],
+    overview: [],
+    itinerary: [],
+    included: [],
+    not_included: [],
+    faq: [],
+    photos: [],
+    map: [],
+    related_tours: [],
+    status: "draft",
+};
+
+const jsonFieldConfig = [
+    {
+        key: "overview",
+        title: "Overview",
+        help: "Edit the overview JSON. Keep the same structure so the public tour page displays correctly.",
+        minHeight: "320px",
+    },
+    {
+        key: "itinerary",
+        title: "Itinerary",
+        help: "Edit the itinerary JSON. Keep the same structure so each day displays correctly on the public tour page.",
+        minHeight: "520px",
+    },
+    {
+        key: "included",
+        title: "What's Included",
+        help: "Edit the included services JSON. Keep the same structure so the public tour page displays correctly.",
+        minHeight: "360px",
+    },
+    {
+        key: "not_included",
+        title: "What's Not Included",
+        help: "Edit the excluded services JSON. Keep the same structure so the public tour page displays correctly.",
+        minHeight: "360px",
+    },
+    {
+        key: "faq",
+        title: "FAQ",
+        help: "Edit the FAQ JSON. Keep the same question and answer structure.",
+        minHeight: "420px",
+    },
+    {
+        key: "photos",
+        title: "Photos",
+        help: "Edit the gallery photos JSON. Each image should include image path and alt text.",
+        minHeight: "360px",
+    },
+    {
+        key: "map",
+        title: "Map",
+        help: "Edit the Google Maps embed JSON. Use an embed URL that starts with https://www.google.com/maps/embed.",
+        minHeight: "260px",
+    },
+    {
+        key: "related_tours",
+        title: "Related Tours",
+        help: "Edit the recommended tour cards shown in the sidebar. Use /tours/your-tour-slug for new Supabase tour pages.",
+        minHeight: "360px",
+    },
+];
+
+function normalizeTour(data = {}) {
+    return {
+        title: data.title || "",
+        slug: data.slug || "",
+        hero_image: data.hero_image || "",
+        card_image: data.card_image || "",
+        hero_alt: data.hero_alt || "",
+        icon: data.icon || "fa-solid fa-location-dot",
+        icon_label: data.icon_label || "",
+        duration: data.duration || "",
+        travel_style: data.travel_style || "",
+        route: data.route || "",
+        support_label: data.support_label || "",
+        price_note: data.price_note || "",
+        meta_title: data.meta_title || "",
+        meta_description: data.meta_description || "",
+        meta_image: data.meta_image || "",
+        brochure_pdf: data.brochure_pdf || "",
+        price_tiers: Array.isArray(data.price_tiers) ? data.price_tiers : [],
+        overview: Array.isArray(data.overview) ? data.overview : [],
+        itinerary: Array.isArray(data.itinerary) ? data.itinerary : [],
+        included: Array.isArray(data.included) ? data.included : [],
+        not_included: Array.isArray(data.not_included) ? data.not_included : [],
+        faq: Array.isArray(data.faq) ? data.faq : [],
+        photos: Array.isArray(data.photos) ? data.photos : [],
+        map: Array.isArray(data.map) ? data.map : [],
+        related_tours: Array.isArray(data.related_tours)
+            ? data.related_tours
+            : [],
+        status: data.status || "draft",
+    };
+}
+
+function buildJsonText(tourData) {
+    const jsonText = {};
+
+    jsonFieldConfig.forEach(field => {
+        jsonText[field.key] = JSON.stringify(
+            Array.isArray(tourData[field.key]) ? tourData[field.key] : [],
+            null,
+            2
+        );
+    });
+
+    return jsonText;
+}
+
 export default function EditTourPage() {
     const { data: seo_data } = useFetchData("/json/data/site_meta_link.json");
 
@@ -13,44 +140,10 @@ export default function EditTourPage() {
     const [checkingAuth, setCheckingAuth] = useState(true);
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
+    const [tour, setTour] = useState(defaultTour);
+    const [jsonText, setJsonText] = useState(buildJsonText(defaultTour));
+
     const importFileInputRef = useRef(null);
-
-    const [tour, setTour] = useState({
-        title: "",
-        slug: "",
-        hero_image: "",
-        hero_alt: "",
-        icon: "fa-solid fa-location-dot",
-        icon_label: "",
-        duration: "",
-        travel_style: "",
-        route: "",
-        support_label: "",
-        price_note: "",
-        meta_title: "",
-        meta_description: "",
-        meta_image: "",
-        brochure_pdf: "",
-        price_tiers: [],
-        overview: [],
-        itinerary: [],
-        included: [],
-        not_included: [],
-        faq: [],
-        photos: [],
-        map: [],
-        related_tours: [],
-        status: "draft",
-    });
-
-    const [overviewJson, setOverviewJson] = useState("[]");
-    const [itineraryJson, setItineraryJson] = useState("[]");
-    const [includedJson, setIncludedJson] = useState("[]");
-    const [notIncludedJson, setNotIncludedJson] = useState("[]");
-    const [faqJson, setFaqJson] = useState("[]");
-    const [photosJson, setPhotosJson] = useState("[]");
-    const [mapJson, setMapJson] = useState("[]");
-    const [relatedToursJson, setRelatedToursJson] = useState("[]");
 
     const inputClass =
         "w-full rounded-full border border-[#E2CFAF] bg-white px-4 py-3 text-sm text-dark-900 placeholder:text-dark-800/70 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all";
@@ -97,67 +190,10 @@ export default function EditTourPage() {
                 return;
             }
 
-            setTour({
-                title: data.title || "",
-                slug: data.slug || "",
-                hero_image: data.hero_image || "",
-                hero_alt: data.hero_alt || "",
-                icon: data.icon || "fa-solid fa-location-dot",
-                icon_label: data.icon_label || "",
-                duration: data.duration || "",
-                travel_style: data.travel_style || "",
-                route: data.route || "",
-                support_label: data.support_label || "",
-                price_note: data.price_note || "",
-                meta_title: data.meta_title || "",
-                meta_description: data.meta_description || "",
-                meta_image: data.meta_image || "",
-                brochure_pdf: data.brochure_pdf || "",
-                price_tiers: Array.isArray(data.price_tiers) ? data.price_tiers : [],
-                overview: Array.isArray(data.overview) ? data.overview : [],
-                itinerary: Array.isArray(data.itinerary) ? data.itinerary : [],
-                included: Array.isArray(data.included) ? data.included : [],
-                not_included: Array.isArray(data.not_included) ? data.not_included : [],
-                faq: Array.isArray(data.faq) ? data.faq : [],
-                photos: Array.isArray(data.photos) ? data.photos : [],
-                map: Array.isArray(data.map) ? data.map : [],
-                related_tours: Array.isArray(data.related_tours) ? data.related_tours : [],
-                status: data.status || "draft",
-            });
+            const normalizedTour = normalizeTour(data);
 
-            setOverviewJson(
-                JSON.stringify(Array.isArray(data.overview) ? data.overview : [], null, 2)
-            );
-            setItineraryJson(
-                JSON.stringify(Array.isArray(data.itinerary) ? data.itinerary : [], null, 2)
-            );
-            setIncludedJson(
-                JSON.stringify(Array.isArray(data.included) ? data.included : [], null, 2)
-            );
-            setNotIncludedJson(
-                JSON.stringify(
-                    Array.isArray(data.not_included) ? data.not_included : [],
-                    null,
-                    2
-                )
-            );
-            setFaqJson(
-                JSON.stringify(Array.isArray(data.faq) ? data.faq : [], null, 2)
-            );
-            setPhotosJson(
-                JSON.stringify(Array.isArray(data.photos) ? data.photos : [], null, 2)
-            );
-            setMapJson(
-                JSON.stringify(Array.isArray(data.map) ? data.map : [], null, 2)
-            );
-            setRelatedToursJson(
-                JSON.stringify(
-                    Array.isArray(data.related_tours) ? data.related_tours : [],
-                    null,
-                    2
-                )
-            );
-
+            setTour(normalizedTour);
+            setJsonText(buildJsonText(normalizedTour));
             setLoading(false);
         };
 
@@ -171,6 +207,35 @@ export default function EditTourPage() {
             ...prevTour,
             [name]: value,
         }));
+    };
+
+    const handleJsonChange = (key, value) => {
+        setJsonText(prev => ({
+            ...prev,
+            [key]: value,
+        }));
+    };
+
+    const parseJsonFields = () => {
+        const parsed = {};
+
+        for (const field of jsonFieldConfig) {
+            try {
+                const value = JSON.parse(jsonText[field.key] || "[]");
+
+                if (!Array.isArray(value)) {
+                    alert(`${field.title} JSON must be an array.`);
+                    return null;
+                }
+
+                parsed[field.key] = value;
+            } catch (error) {
+                alert(`${field.title} JSON is not valid. Please check commas and brackets.`);
+                return null;
+            }
+        }
+
+        return parsed;
     };
 
     const handlePriceTierChange = (tierIndex, field, value) => {
@@ -236,33 +301,15 @@ export default function EditTourPage() {
     };
 
     const exportTourJson = () => {
-        let parsedOverview = [];
-        let parsedItinerary = [];
-        let parsedIncluded = [];
-        let parsedNotIncluded = [];
-        let parsedFaq = [];
-        let parsedPhotos = [];
-        let parsedMap = [];
-        let parsedRelatedTours = [];
+        const parsedJsonFields = parseJsonFields();
 
-        try {
-            parsedOverview = JSON.parse(overviewJson);
-            parsedItinerary = JSON.parse(itineraryJson);
-            parsedIncluded = JSON.parse(includedJson);
-            parsedNotIncluded = JSON.parse(notIncludedJson);
-            parsedFaq = JSON.parse(faqJson);
-            parsedPhotos = JSON.parse(photosJson);
-            parsedMap = JSON.parse(mapJson);
-            parsedRelatedTours = JSON.parse(relatedToursJson);
-        } catch (error) {
-            alert("Some JSON fields are not valid. Please fix JSON before exporting.");
-            return;
-        }
+        if (!parsedJsonFields) return;
 
         const exportData = {
             title: tour.title,
             slug: tour.slug,
             hero_image: tour.hero_image,
+            card_image: tour.card_image,
             hero_alt: tour.hero_alt,
             icon: tour.icon,
             icon_label: tour.icon_label,
@@ -276,14 +323,14 @@ export default function EditTourPage() {
             meta_image: tour.meta_image,
             brochure_pdf: tour.brochure_pdf,
             price_tiers: tour.price_tiers,
-            overview: parsedOverview,
-            itinerary: parsedItinerary,
-            included: parsedIncluded,
-            not_included: parsedNotIncluded,
-            faq: parsedFaq,
-            photos: parsedPhotos,
-            map: parsedMap,
-            related_tours: parsedRelatedTours,
+            overview: parsedJsonFields.overview,
+            itinerary: parsedJsonFields.itinerary,
+            included: parsedJsonFields.included,
+            not_included: parsedJsonFields.not_included,
+            faq: parsedJsonFields.faq,
+            photos: parsedJsonFields.photos,
+            map: parsedJsonFields.map,
+            related_tours: parsedJsonFields.related_tours,
             status: tour.status,
             exported_at: new Date().toISOString(),
         };
@@ -291,7 +338,6 @@ export default function EditTourPage() {
         const jsonString = JSON.stringify(exportData, null, 2);
         const blob = new Blob([jsonString], { type: "application/json" });
         const url = URL.createObjectURL(blob);
-
         const fileName = `${tour.slug || "tour-export"}.json`;
 
         const link = document.createElement("a");
@@ -324,116 +370,13 @@ export default function EditTourPage() {
                     return;
                 }
 
-                setTour(prevTour => ({
-                    ...prevTour,
-                    title: importedData.title || "",
-                    slug: importedData.slug || "",
-                    hero_image: importedData.hero_image || "",
-                    hero_alt: importedData.hero_alt || "",
-                    icon: importedData.icon || "fa-solid fa-location-dot",
-                    icon_label: importedData.icon_label || "",
-                    duration: importedData.duration || "",
-                    travel_style: importedData.travel_style || "",
-                    route: importedData.route || "",
-                    support_label: importedData.support_label || "",
-                    price_note: importedData.price_note || "",
-                    meta_title: importedData.meta_title || "",
-                    meta_description: importedData.meta_description || "",
-                    meta_image: importedData.meta_image || "",
-                    brochure_pdf: importedData.brochure_pdf || "",
-                    price_tiers: Array.isArray(importedData.price_tiers)
-                        ? importedData.price_tiers
-                        : [],
-                    overview: Array.isArray(importedData.overview)
-                        ? importedData.overview
-                        : [],
-                    itinerary: Array.isArray(importedData.itinerary)
-                        ? importedData.itinerary
-                        : [],
-                    included: Array.isArray(importedData.included)
-                        ? importedData.included
-                        : [],
-                    not_included: Array.isArray(importedData.not_included)
-                        ? importedData.not_included
-                        : [],
-                    faq: Array.isArray(importedData.faq) ? importedData.faq : [],
-                    photos: Array.isArray(importedData.photos)
-                        ? importedData.photos
-                        : [],
-                    map: Array.isArray(importedData.map) ? importedData.map : [],
-                    related_tours: Array.isArray(importedData.related_tours)
-                        ? importedData.related_tours
-                        : [],
-                    status: prevTour.status || "draft",
-                }));
+                const normalizedImportedTour = normalizeTour({
+                    ...importedData,
+                    status: tour.status || importedData.status || "draft",
+                });
 
-                setOverviewJson(
-                    JSON.stringify(
-                        Array.isArray(importedData.overview) ? importedData.overview : [],
-                        null,
-                        2
-                    )
-                );
-
-                setItineraryJson(
-                    JSON.stringify(
-                        Array.isArray(importedData.itinerary) ? importedData.itinerary : [],
-                        null,
-                        2
-                    )
-                );
-
-                setIncludedJson(
-                    JSON.stringify(
-                        Array.isArray(importedData.included) ? importedData.included : [],
-                        null,
-                        2
-                    )
-                );
-
-                setNotIncludedJson(
-                    JSON.stringify(
-                        Array.isArray(importedData.not_included)
-                            ? importedData.not_included
-                            : [],
-                        null,
-                        2
-                    )
-                );
-
-                setFaqJson(
-                    JSON.stringify(
-                        Array.isArray(importedData.faq) ? importedData.faq : [],
-                        null,
-                        2
-                    )
-                );
-
-                setPhotosJson(
-                    JSON.stringify(
-                        Array.isArray(importedData.photos) ? importedData.photos : [],
-                        null,
-                        2
-                    )
-                );
-
-                setMapJson(
-                    JSON.stringify(
-                        Array.isArray(importedData.map) ? importedData.map : [],
-                        null,
-                        2
-                    )
-                );
-
-                setRelatedToursJson(
-                    JSON.stringify(
-                        Array.isArray(importedData.related_tours)
-                            ? importedData.related_tours
-                            : [],
-                        null,
-                        2
-                    )
-                );
+                setTour(normalizedImportedTour);
+                setJsonText(buildJsonText(normalizedImportedTour));
 
                 alert("JSON imported into editor. Please review, then click Save Tour.");
             } catch (error) {
@@ -460,117 +403,9 @@ export default function EditTourPage() {
             return;
         }
 
-        let parsedOverview = [];
+        const parsedJsonFields = parseJsonFields();
 
-        try {
-            parsedOverview = JSON.parse(overviewJson);
-
-            if (!Array.isArray(parsedOverview)) {
-                alert("Overview JSON must be an array.");
-                return;
-            }
-        } catch (error) {
-            alert("Overview JSON is not valid. Please check commas and brackets.");
-            return;
-        }
-
-        let parsedItinerary = [];
-
-        try {
-            parsedItinerary = JSON.parse(itineraryJson);
-
-            if (!Array.isArray(parsedItinerary)) {
-                alert("Itinerary JSON must be an array.");
-                return;
-            }
-        } catch (error) {
-            alert("Itinerary JSON is not valid. Please check commas and brackets.");
-            return;
-        }
-
-        let parsedIncluded = [];
-
-        try {
-            parsedIncluded = JSON.parse(includedJson);
-
-            if (!Array.isArray(parsedIncluded)) {
-                alert("Included JSON must be an array.");
-                return;
-            }
-        } catch (error) {
-            alert("Included JSON is not valid. Please check commas and brackets.");
-            return;
-        }
-
-        let parsedNotIncluded = [];
-
-        try {
-            parsedNotIncluded = JSON.parse(notIncludedJson);
-
-            if (!Array.isArray(parsedNotIncluded)) {
-                alert("Not Included JSON must be an array.");
-                return;
-            }
-        } catch (error) {
-            alert("Not Included JSON is not valid. Please check commas and brackets.");
-            return;
-        }
-
-        let parsedFaq = [];
-
-        try {
-            parsedFaq = JSON.parse(faqJson);
-
-            if (!Array.isArray(parsedFaq)) {
-                alert("FAQ JSON must be an array.");
-                return;
-            }
-        } catch (error) {
-            alert("FAQ JSON is not valid. Please check commas and brackets.");
-            return;
-        }
-
-        let parsedPhotos = [];
-
-        try {
-            parsedPhotos = JSON.parse(photosJson);
-
-            if (!Array.isArray(parsedPhotos)) {
-                alert("Photos JSON must be an array.");
-                return;
-            }
-        } catch (error) {
-            alert("Photos JSON is not valid. Please check commas and brackets.");
-            return;
-        }
-
-        let parsedMap = [];
-
-        try {
-            parsedMap = JSON.parse(mapJson);
-
-            if (!Array.isArray(parsedMap)) {
-                alert("Map JSON must be an array.");
-                return;
-            }
-        } catch (error) {
-            alert("Map JSON is not valid. Please check commas and brackets.");
-            return;
-        }
-
-        let parsedRelatedTours = [];
-
-        try {
-            parsedRelatedTours = JSON.parse(relatedToursJson);
-
-            if (!Array.isArray(parsedRelatedTours)) {
-                alert("Related Tours JSON must be an array.");
-                return;
-            }
-        } catch (error) {
-            alert("Related Tours JSON is not valid. Please check commas and brackets.");
-            return;
-        }
+        if (!parsedJsonFields) return;
 
         setSaving(true);
 
@@ -580,6 +415,7 @@ export default function EditTourPage() {
                 title: tour.title,
                 slug: tour.slug,
                 hero_image: tour.hero_image,
+                card_image: tour.card_image,
                 hero_alt: tour.hero_alt,
                 icon: tour.icon,
                 icon_label: tour.icon_label,
@@ -593,22 +429,22 @@ export default function EditTourPage() {
                 meta_image: tour.meta_image,
                 brochure_pdf: tour.brochure_pdf,
                 price_tiers: tour.price_tiers,
-                overview: parsedOverview,
-                itinerary: parsedItinerary,
-                included: parsedIncluded,
-                not_included: parsedNotIncluded,
-                faq: parsedFaq,
+                overview: parsedJsonFields.overview,
+                itinerary: parsedJsonFields.itinerary,
+                included: parsedJsonFields.included,
+                not_included: parsedJsonFields.not_included,
+                faq: parsedJsonFields.faq,
+                photos: parsedJsonFields.photos,
+                map: parsedJsonFields.map,
+                related_tours: parsedJsonFields.related_tours,
                 status: tour.status,
-                photos: parsedPhotos,
-                map: parsedMap,
-                related_tours: parsedRelatedTours,
                 updated_at: new Date().toISOString(),
             })
             .eq("slug", slug);
 
         if (error) {
             console.error("Error saving tour:", error);
-            alert("Could not save tour. Please try again.");
+            alert(error.message || "Could not save tour. Please try again.");
             setSaving(false);
             return;
         }
@@ -690,8 +526,7 @@ export default function EditTourPage() {
                                 <div>
                                     <h2 className="text-xl md:text-25 mb-2">Edit Tour</h2>
                                     <p className="mb-0">
-                                        Update the main content and price tiers for this Supabase
-                                        tour.
+                                        Update the main content, images, price tiers and JSON sections for this Supabase tour.
                                     </p>
                                 </div>
 
@@ -714,14 +549,15 @@ export default function EditTourPage() {
                                     >
                                         {tour.status === "published" ? "View Tour" : "Preview Tour"}
                                     </Link>
+
                                     <a
-    href={`/api/tours/${slug}/pdf`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-6 py-3 text-sm font-semibold text-dark-900 hover:border-primary-900"
->
-    Generate PDF
-</a>
+                                        href={`/api/tours/${slug}/pdf`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-6 py-3 text-sm font-semibold text-dark-900 hover:border-primary-900"
+                                    >
+                                        Generate PDF
+                                    </a>
 
                                     <button
                                         type="button"
@@ -730,6 +566,7 @@ export default function EditTourPage() {
                                     >
                                         Export JSON
                                     </button>
+
                                     <button
                                         type="button"
                                         onClick={() => importFileInputRef.current?.click()}
@@ -737,6 +574,7 @@ export default function EditTourPage() {
                                     >
                                         Import JSON
                                     </button>
+
                                     <input
                                         ref={importFileInputRef}
                                         type="file"
@@ -818,8 +656,28 @@ export default function EditTourPage() {
                                             value={tour.hero_image}
                                             onChange={handleChange}
                                             className={inputClass}
-                                            placeholder="/assets/images/example.jpg"
+                                            placeholder="/assets/images/inner-banner-example.jpg"
                                         />
+                                        <p className="mt-2 mb-0 text-xs text-dark-800">
+                                            Wide image for the tour detail page hero/banner.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                            Card image
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="card_image"
+                                            value={tour.card_image}
+                                            onChange={handleChange}
+                                            className={inputClass}
+                                            placeholder="/assets/images/cards/tour-name-card.jpg"
+                                        />
+                                        <p className="mt-2 mb-0 text-xs text-dark-800">
+                                            Used on /tour listing cards. Recommended ratio: 4:3, for example 800x600 or 1200x900.
+                                        </p>
                                     </div>
 
                                     <div>
@@ -900,7 +758,7 @@ export default function EditTourPage() {
                                             onChange={handleChange}
                                             className={textareaClass}
                                             rows="3"
-                                        ></textarea>
+                                        />
                                     </div>
 
                                     <div className="md:col-span-2">
@@ -913,7 +771,7 @@ export default function EditTourPage() {
                                             onChange={handleChange}
                                             className={textareaClass}
                                             rows="3"
-                                        ></textarea>
+                                        />
                                     </div>
 
                                     <div className="md:col-span-2">
@@ -921,8 +779,7 @@ export default function EditTourPage() {
                                             <div>
                                                 <h3 className="text-xl mb-1">SEO Settings</h3>
                                                 <p className="mb-0 text-sm text-dark-800">
-                                                    These fields control the browser title, Google description and social
-                                                    sharing image for this tour page.
+                                                    These fields control the browser title, Google description and social sharing image for this tour page.
                                                 </p>
                                             </div>
                                         </div>
@@ -953,7 +810,7 @@ export default function EditTourPage() {
                                                     className={textareaClass}
                                                     rows="3"
                                                     placeholder="Travel across Kazakhstan, Kyrgyzstan, Uzbekistan, Tajikistan and Turkmenistan on a complete Central Asia itinerary."
-                                                ></textarea>
+                                                />
                                             </div>
 
                                             <div className="md:col-span-2">
@@ -994,8 +851,7 @@ export default function EditTourPage() {
                                             <div>
                                                 <h3 className="text-xl mb-1">Price Tiers</h3>
                                                 <p className="mb-0 text-sm text-dark-800">
-                                                    Add per-person prices by number of travelers. Leave
-                                                    price empty for “On request”.
+                                                    Add per-person prices by number of travelers. Leave price empty for “On request”.
                                                 </p>
                                             </div>
 
@@ -1010,288 +866,122 @@ export default function EditTourPage() {
 
                                         <div className="space-y-4">
                                             {tour.price_tiers && tour.price_tiers.length > 0 ? (
-                                                tour.price_tiers.map((tier, tierIndex) => {
-                                                    return (
-                                                        <div
-                                                            key={tierIndex}
-                                                            className="rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] p-4"
-                                                        >
-                                                            <div className="grid md:grid-cols-[1fr_1fr_auto_auto] gap-4 items-end">
-                                                                <div>
-                                                                    <label className="text-sm font-semibold text-dark-900 mb-2 block">
-                                                                        Travelers
-                                                                    </label>
-                                                                    <input
-                                                                        type="text"
-                                                                        value={tier.travelers || ""}
-                                                                        onChange={event =>
-                                                                            handlePriceTierChange(
-                                                                                tierIndex,
-                                                                                "travelers",
-                                                                                event.target.value
-                                                                            )
-                                                                        }
-                                                                        className={inputClass}
-                                                                        placeholder="2 travelers"
-                                                                    />
-                                                                </div>
+                                                tour.price_tiers.map((tier, tierIndex) => (
+                                                    <div
+                                                        key={tierIndex}
+                                                        className="rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] p-4"
+                                                    >
+                                                        <div className="grid md:grid-cols-[1fr_1fr_auto_auto] gap-4 items-end">
+                                                            <div>
+                                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                                                    Travelers
+                                                                </label>
+                                                                <input
+                                                                    type="text"
+                                                                    value={tier.travelers || ""}
+                                                                    onChange={event =>
+                                                                        handlePriceTierChange(
+                                                                            tierIndex,
+                                                                            "travelers",
+                                                                            event.target.value
+                                                                        )
+                                                                    }
+                                                                    className={inputClass}
+                                                                    placeholder="2 travelers"
+                                                                />
+                                                            </div>
 
-                                                                <div>
-                                                                    <label className="text-sm font-semibold text-dark-900 mb-2 block">
-                                                                        Price per person
-                                                                    </label>
-                                                                    <input
-                                                                        type="number"
-                                                                        value={tier.price ?? ""}
-                                                                        onChange={event =>
-                                                                            handlePriceTierChange(
-                                                                                tierIndex,
-                                                                                "price",
-                                                                                event.target.value
-                                                                            )
-                                                                        }
-                                                                        className={inputClass}
-                                                                        placeholder="2450"
-                                                                    />
-                                                                </div>
+                                                            <div>
+                                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                                                    Price per person
+                                                                </label>
+                                                                <input
+                                                                    type="number"
+                                                                    value={tier.price ?? ""}
+                                                                    onChange={event =>
+                                                                        handlePriceTierChange(
+                                                                            tierIndex,
+                                                                            "price",
+                                                                            event.target.value
+                                                                        )
+                                                                    }
+                                                                    className={inputClass}
+                                                                    placeholder="2450"
+                                                                />
+                                                            </div>
 
-                                                                <div>
-                                                                    <label className="text-sm font-semibold text-dark-900 mb-2 block">
-                                                                        Default
-                                                                    </label>
-                                                                    <button
-                                                                        type="button"
-                                                                        onClick={() =>
-                                                                            handleDefaultPriceTier(tierIndex)
-                                                                        }
-                                                                        className={`rounded-full px-5 py-3 text-sm font-semibold border transition-all ${tier.default
+                                                            <div>
+                                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                                                    Default
+                                                                </label>
+                                                                <button
+                                                                    type="button"
+                                                                    onClick={() =>
+                                                                        handleDefaultPriceTier(tierIndex)
+                                                                    }
+                                                                    className={`rounded-full px-5 py-3 text-sm font-semibold border transition-all ${
+                                                                        tier.default
                                                                             ? "bg-primary-900 text-white border-primary-900"
                                                                             : "bg-white text-dark-900 border-[#E2CFAF] hover:border-primary-900"
-                                                                            }`}
-                                                                    >
-                                                                        {tier.default ? "Default" : "Set Default"}
-                                                                    </button>
-                                                                </div>
+                                                                    }`}
+                                                                >
+                                                                    {tier.default ? "Default" : "Set Default"}
+                                                                </button>
+                                                            </div>
 
-                                                                <div>
-                                                                    <label className="text-sm font-semibold text-dark-900 mb-2 block">
-                                                                        Action
-                                                                    </label>
-                                                                    <button
-                                                                        type="button"
-                                                                        onClick={() =>
-                                                                            removePriceTier(tierIndex)
-                                                                        }
-                                                                        className="rounded-full bg-red-100 px-5 py-3 text-sm font-semibold text-red-700 hover:bg-red-200"
-                                                                    >
-                                                                        Remove
-                                                                    </button>
-                                                                </div>
+                                                            <div>
+                                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                                                    Action
+                                                                </label>
+                                                                <button
+                                                                    type="button"
+                                                                    onClick={() =>
+                                                                        removePriceTier(tierIndex)
+                                                                    }
+                                                                    className="rounded-full bg-red-100 px-5 py-3 text-sm font-semibold text-red-700 hover:bg-red-200"
+                                                                >
+                                                                    Remove
+                                                                </button>
                                                             </div>
                                                         </div>
-                                                    );
-                                                })
+                                                    </div>
+                                                ))
                                             ) : (
                                                 <div className="rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] p-5">
                                                     <p className="mb-0 text-sm text-dark-800">
-                                                        No price tiers yet. Click “Add Price Tier” to create
-                                                        one.
+                                                        No price tiers yet. Click “Add Price Tier” to create one.
                                                     </p>
                                                 </div>
                                             )}
                                         </div>
                                     </div>
-                                    {/* Overview */}
-                                    <div className="md:col-span-2">
-                                        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                                            <div>
-                                                <h3 className="text-xl mb-1">Overview</h3>
-                                                <p className="mb-0 text-sm text-dark-800">
-                                                    Edit the overview JSON. Keep the same structure so the public tour page
-                                                    displays correctly.
-                                                </p>
+
+                                    {jsonFieldConfig.map(field => (
+                                        <div className="md:col-span-2" key={field.key}>
+                                            <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                                                <div>
+                                                    <h3 className="text-xl mb-1">{field.title}</h3>
+                                                    <p className="mb-0 text-sm text-dark-800">
+                                                        {field.help}
+                                                    </p>
+                                                </div>
                                             </div>
+
+                                            <textarea
+                                                value={jsonText[field.key]}
+                                                onChange={event =>
+                                                    handleJsonChange(field.key, event.target.value)
+                                                }
+                                                className="w-full rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
+                                                style={{ minHeight: field.minHeight }}
+                                                spellCheck="false"
+                                            />
+
+                                            <p className="mt-2 mb-0 text-xs text-dark-800">
+                                                Tip: keep the main square brackets [ ]. Save only valid JSON.
+                                            </p>
                                         </div>
-
-                                        <textarea
-                                            value={overviewJson}
-                                            onChange={event => setOverviewJson(event.target.value)}
-                                            className="w-full min-h-[320px] rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
-                                            spellCheck="false"
-                                        ></textarea>
-
-                                        <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Tip: do not remove square brackets [ ]. Save only valid JSON.
-                                        </p>
-                                    </div>
-                                    {/* Itinerary */}
-                                    <div className="md:col-span-2">
-                                        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                                            <div>
-                                                <h3 className="text-xl mb-1">Itinerary</h3>
-                                                <p className="mb-0 text-sm text-dark-800">
-                                                    Edit the itinerary JSON. Keep the same structure so each day displays
-                                                    correctly on the public tour page.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <textarea
-                                            value={itineraryJson}
-                                            onChange={event => setItineraryJson(event.target.value)}
-                                            className="w-full min-h-[520px] rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
-                                            spellCheck="false"
-                                        ></textarea>
-
-                                        <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Tip: each day must stay inside the main square brackets [ ]. Save only valid
-                                            JSON.
-                                        </p>
-                                    </div>
-                                    {/* include */}
-                                    <div className="md:col-span-2">
-                                        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                                            <div>
-                                                <h3 className="text-xl mb-1">What&apos;s Included</h3>
-                                                <p className="mb-0 text-sm text-dark-800">
-                                                    Edit the included services JSON. Keep the same structure so the public
-                                                    tour page displays correctly.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <textarea
-                                            value={includedJson}
-                                            onChange={event => setIncludedJson(event.target.value)}
-                                            className="w-full min-h-[360px] rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
-                                            spellCheck="false"
-                                        ></textarea>
-
-                                        <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Tip: keep the main square brackets [ ]. Save only valid JSON.
-                                        </p>
-                                    </div>
-                                    {/* Not included */}
-                                    <div className="md:col-span-2">
-                                        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                                            <div>
-                                                <h3 className="text-xl mb-1">What&apos;s Not Included</h3>
-                                                <p className="mb-0 text-sm text-dark-800">
-                                                    Edit the excluded services JSON. Keep the same structure so the public
-                                                    tour page displays correctly.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <textarea
-                                            value={notIncludedJson}
-                                            onChange={event => setNotIncludedJson(event.target.value)}
-                                            className="w-full min-h-[360px] rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
-                                            spellCheck="false"
-                                        ></textarea>
-
-                                        <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Tip: keep the main square brackets [ ]. Save only valid JSON.
-                                        </p>
-                                    </div>
-
-                                    {/* FAQ */}
-                                    <div className="md:col-span-2">
-                                        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                                            <div>
-                                                <h3 className="text-xl mb-1">FAQ</h3>
-                                                <p className="mb-0 text-sm text-dark-800">
-                                                    Edit the FAQ JSON. Keep the same question and answer structure.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <textarea
-                                            value={faqJson}
-                                            onChange={event => setFaqJson(event.target.value)}
-                                            className="w-full min-h-[420px] rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
-                                            spellCheck="false"
-                                        ></textarea>
-
-                                        <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Tip: each FAQ item should keep “question” and “answer”. Save only valid JSON.
-                                        </p>
-                                    </div>
-
-                                    {/* Photos */}
-                                    <div className="md:col-span-2">
-                                        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                                            <div>
-                                                <h3 className="text-xl mb-1">Photos</h3>
-                                                <p className="mb-0 text-sm text-dark-800">
-                                                    Edit the gallery photos JSON. Each image should include image path and
-                                                    alt text.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <textarea
-                                            value={photosJson}
-                                            onChange={event => setPhotosJson(event.target.value)}
-                                            className="w-full min-h-[360px] rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
-                                            spellCheck="false"
-                                        ></textarea>
-
-                                        <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Tip: image paths should start with /assets/images/. Save only valid JSON.
-                                        </p>
-                                    </div>
-                                    {/* Map */}
-                                    <div className="md:col-span-2">
-                                        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                                            <div>
-                                                <h3 className="text-xl mb-1">Map</h3>
-                                                <p className="mb-0 text-sm text-dark-800">
-                                                    Edit the Google Maps embed JSON. Use an embed URL that starts with https://www.google.com/maps/embed.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <textarea
-                                            value={mapJson}
-                                            onChange={event => setMapJson(event.target.value)}
-                                            className="w-full min-h-[260px] rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
-                                            spellCheck="false"
-                                        ></textarea>
-
-                                        <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Example: [
-                                            {"{"}
-                                            &quot;title&quot;: &quot;Tour Map&quot;, &quot;url&quot;: &quot;https://www.google.com/maps/embed?pb=...&quot;
-                                            {"}"}
-                                            ]
-                                        </p>
-                                    </div>
-
-                                    {/* related tours */}
-                                    <div className="md:col-span-2">
-                                        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                                            <div>
-                                                <h3 className="text-xl mb-1">Related Tours</h3>
-                                                <p className="mb-0 text-sm text-dark-800">
-                                                    Edit the recommended tour cards shown in the sidebar.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <textarea
-                                            value={relatedToursJson}
-                                            onChange={event => setRelatedToursJson(event.target.value)}
-                                            className="w-full min-h-[360px] rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
-                                            spellCheck="false"
-                                        ></textarea>
-
-                                        <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Tip: use /tours/your-tour-slug for new Supabase tour pages. Save only valid
-                                            JSON.
-                                        </p>
-                                    </div>
-
+                                    ))}
                                 </div>
 
                                 <div className="mt-6 flex flex-wrap gap-3">
@@ -1314,9 +1004,7 @@ export default function EditTourPage() {
 
                             <div className="mt-6 bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl px-5 py-4">
                                 <p className="mb-0 text-sm text-dark-800">
-                                    This editor now updates the main tour fields and price tiers.
-                                    Itinerary, FAQ, photos, included and excluded sections can be
-                                    added next.
+                                    This editor updates Supabase tour fields, including card image, hero image, SEO, PDF, prices and JSON content sections.
                                 </p>
                             </div>
                         </div>

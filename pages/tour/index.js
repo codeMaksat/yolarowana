@@ -1,10 +1,9 @@
-import Footer from "@/Layout/Footer";
-import Header from "@/Layout/Header";
 import { Comman_Hero } from "@/component/Sections/Page-commen";
 import { All_Tour } from "@/component/Sections/Page-tour";
 import { Head_Meta, useFetchData } from "@/component/comman";
+import { supabase } from "@/utils/supabaseClient";
 import { getPublishedTours } from "../../lib/getPublishedTours";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function getStartingPrice(priceTiers = []) {
   if (!Array.isArray(priceTiers) || priceTiers.length === 0) return "";
@@ -20,7 +19,7 @@ function getStartingPrice(priceTiers = []) {
 
 function getDays(duration = "") {
   const match = String(duration).match(/\d+/);
-  return match ? match[0] : "";
+  return match ? Number(match[0]) : "";
 }
 
 function getCardImage(tour) {
@@ -35,18 +34,55 @@ function getCardImage(tour) {
   );
 }
 
+function makeShortDescription(tour) {
+  if (tour.short_des) return tour.short_des;
+
+  if (tour.support_label) return tour.support_label;
+
+  if (tour.route) {
+    const routePlaces = tour.route
+      .split("–")
+      .map((item) => item.trim())
+      .filter(Boolean)
+      .slice(0, 5)
+      .join(", ");
+
+    return routePlaces ? `${routePlaces}.` : "";
+  }
+
+  const firstOverviewLabel =
+    tour.overview?.[0]?.labels?.[0]?.label || tour.meta_description || "";
+
+  if (firstOverviewLabel.length > 120) {
+    return `${firstOverviewLabel.slice(0, 117)}...`;
+  }
+
+  return firstOverviewLabel;
+}
+
 function formatToursForOldCards(tours = []) {
-  return tours.map((tour) => {
+  return tours.map((tour, index) => {
     const image = getCardImage(tour);
     const price = getStartingPrice(tour.price_tiers);
-    const days = getDays(tour.duration);
+    const day = getDays(tour.duration);
     const tourUrl = `/tours/${tour.slug}`;
 
     return {
       ...tour,
 
-      // Image fields for old card component
+      id: tour.id || index + 1,
+      slug: tourUrl,
+      title: tour.title || "",
+      short_des: makeShortDescription(tour),
+      description: tour.description || "",
       image,
+      alt: tour.hero_alt || tour.title || "",
+      date: tour.travel_style || "Private",
+      day,
+      rating: tour.rating || "4.9",
+      price,
+      old_price: tour.old_price || 0,
+
       img: image,
       photo: image,
       thumbnail: image,
@@ -55,66 +91,92 @@ function formatToursForOldCards(tours = []) {
       tour_image: image,
       product_image: image,
 
-      // Link fields for old card component
-      slug: tour.slug,
       url: tourUrl,
       link: tourUrl,
       path: tourUrl,
       href: tourUrl,
       btn_url: tourUrl,
 
-      // Title fields
-      title: tour.title,
-      name: tour.title,
+      days: day,
+      tour_days: day,
 
-      // Duration fields
-      days,
-      day: days,
-      duration: tour.duration,
-      tour_days: days,
-
-      // Price fields
-      price,
       tour_price: price,
       starting_price: price,
       start_price: price,
 
-      // Location / route fields
       location: tour.icon_label || tour.route || "",
       country: tour.icon_label || "",
       route: tour.route || "",
       destination: tour.icon_label || "",
-
-      // Extra fields
       travel_style: tour.travel_style || "",
       support_label: tour.support_label || "",
     };
   });
 }
 
-export default function Tour({ tours }) {
+export default function Tour({ initialTours = [] }) {
   const { data: hero_tour_data } = useFetchData("json/data/hero_tour.json");
-
   const { data: seo_data } = useFetchData("/json/data/site_meta_link.json");
+
+  const [tours, setTours] = useState(initialTours || []);
+  const [loadingTours, setLoadingTours] = useState(
+    !initialTours || initialTours.length === 0
+  );
+
+  useEffect(() => {
+    console.log("CLIENT: browser fallback running");
+    if (initialTours && initialTours.length > 0) {
+      return;
+    }
+
+    const fetchPublishedToursClientSide = async () => {
+      setLoadingTours(true);
+
+      const { data, error } = await supabase
+        .from("tours")
+        .select("*")
+        .eq("status", "published")
+        .order("created_at", { ascending: false });
+
+      if (error) {
+        console.error("Client-side tour fallback error:", error);
+        setTours([]);
+        setLoadingTours(false);
+        return;
+      }
+
+      setTours(data || []);
+      setLoadingTours(false);
+    };
+
+    fetchPublishedToursClientSide();
+  }, [initialTours]);
 
   const formattedTours = formatToursForOldCards(tours || []);
 
   return (
     <>
-      <Head_Meta meta_data={seo_data.tour_meta} comman_meta={seo_data} />
+      <Head_Meta meta_data={seo_data?.tour_meta} comman_meta={seo_data} />
       <Comman_Hero initialValues={hero_tour_data} />
 
-      <All_Tour initialValues={[{ product: formattedTours }]} />
+      {loadingTours ? (
+        <div className="py-20 text-center">
+          <p>Loading tours...</p>
+        </div>
+      ) : (
+        <All_Tour initialValues={[{ product: formattedTours }]} />
+      )}
     </>
   );
 }
 
 export async function getStaticProps() {
+  console.log("SERVER: loading tours for SEO");
   const tours = await getPublishedTours();
 
   return {
     props: {
-      tours: tours || [],
+      initialTours: tours || [],
     },
     revalidate: 60,
   };

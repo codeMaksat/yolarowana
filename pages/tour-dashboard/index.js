@@ -536,9 +536,9 @@ export default function TourDashboard() {
                                                 <th>Route</th>
                                                 <th>Status</th>
                                                 <th>Update status</th>
+                                                <th>Edit</th>
                                                 <th>View</th>
                                                 <th>Preview</th>
-                                                <th>Edit</th>
                                                 <th>Duplicate</th>
                                                 <th>Archive / Restore</th>
                                             </tr>
@@ -604,6 +604,19 @@ export default function TourDashboard() {
                                                         </td>
 
                                                         <td>
+                                                            {tour.slug ? (
+                                                                <Link
+                                                                    href={`/tour-dashboard/edit/${tour.slug}`}
+                                                                    className="rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-4 py-2 text-sm font-medium text-dark-900 hover:border-primary-900"
+                                                                >
+                                                                    Edit
+                                                                </Link>
+                                                            ) : (
+                                                                "-"
+                                                            )}
+                                                        </td>
+
+                                                        <td>
                                                             {tour.slug && tour.status === "published" ? (
                                                                 <Link
                                                                     href={`/tours/${tour.slug}`}
@@ -627,19 +640,6 @@ export default function TourDashboard() {
                                                                     target="_blank"
                                                                 >
                                                                     Preview
-                                                                </Link>
-                                                            ) : (
-                                                                "-"
-                                                            )}
-                                                        </td>
-
-                                                        <td>
-                                                            {tour.slug ? (
-                                                                <Link
-                                                                    href={`/tour-dashboard/edit/${tour.slug}`}
-                                                                    className="rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-4 py-2 text-sm font-medium text-dark-900 hover:border-primary-900"
-                                                                >
-                                                                    Edit
                                                                 </Link>
                                                             ) : (
                                                                 "-"
