@@ -120,39 +120,45 @@ export default function Tour({ initialTours = [] }) {
 
   const [tours, setTours] = useState(initialTours || []);
   const [loadingTours, setLoadingTours] = useState(
-    !initialTours || initialTours.length === 0
+    !Array.isArray(initialTours) || initialTours.length === 0
   );
 
-useEffect(() => {
-  if (initialTours && initialTours.length > 0) {
-    console.log("CLIENT: fallback skipped, server/static tours already loaded");
-    return;
-  }
+  useEffect(() => {
+    const initialCount = Array.isArray(initialTours) ? initialTours.length : 0;
 
-  console.log("CLIENT: browser fallback running");
+    console.log("CLIENT: initialTours count:", initialCount);
 
-  const fetchPublishedToursClientSide = async () => {
-    setLoadingTours(true);
-
-    const { data, error } = await supabase
-      .from("tours")
-      .select("*")
-      .eq("status", "published")
-      .order("created_at", { ascending: false });
-
-    if (error) {
-      console.error("Client-side tour fallback error:", error);
-      setTours([]);
+    if (initialCount > 0) {
+      console.log("CLIENT: fallback skipped, server-side tours already loaded");
+      setTours(initialTours);
       setLoadingTours(false);
       return;
     }
 
-    setTours(data || []);
-    setLoadingTours(false);
-  };
+    console.log("CLIENT: browser fallback running");
 
-  fetchPublishedToursClientSide();
-}, [initialTours]);
+    const fetchPublishedToursClientSide = async () => {
+      setLoadingTours(true);
+
+      const { data, error } = await supabase
+        .from("tours")
+        .select("*")
+        .eq("status", "published")
+        .order("created_at", { ascending: false });
+
+      if (error) {
+        console.error("Client-side tour fallback error:", error);
+        setTours([]);
+        setLoadingTours(false);
+        return;
+      }
+
+      setTours(data || []);
+      setLoadingTours(false);
+    };
+
+    fetchPublishedToursClientSide();
+  }, [initialTours]);
 
   const formattedTours = formatToursForOldCards(tours || []);
 
@@ -165,21 +171,30 @@ useEffect(() => {
         <div className="py-20 text-center">
           <p>Loading tours...</p>
         </div>
-      ) : (
+      ) : formattedTours.length > 0 ? (
         <All_Tour initialValues={[{ product: formattedTours }]} />
+      ) : (
+        <div className="py-20 text-center">
+          <p>No published tours found.</p>
+        </div>
       )}
     </>
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   console.log("SERVER: loading tours for SEO");
+
   const tours = await getPublishedTours();
+
+  console.log(
+    "SERVER: published tours count:",
+    Array.isArray(tours) ? tours.length : 0
+  );
 
   return {
     props: {
       initialTours: tours || [],
     },
-    revalidate: 60,
   };
 }
