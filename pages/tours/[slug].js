@@ -148,7 +148,6 @@ export default function DynamicTourPage({ initialTour = null }) {
     const { data: seo_data } = useFetchData("/json/data/site_meta_link.json");
 
     useEffect(() => {
-        console.log("CLIENT TOUR DETAIL: initialTour exists:", Boolean(initialTour));
 
         if (initialTour) {
             console.log(
@@ -156,7 +155,7 @@ export default function DynamicTourPage({ initialTour = null }) {
                 initialTour.title
             );
         } else {
-            console.log("CLIENT TOUR DETAIL: no initialTour, browser fallback may run");
+
         }
     }, [initialTour]);
 
@@ -181,7 +180,6 @@ export default function DynamicTourPage({ initialTour = null }) {
             return;
         }
 
-        console.log("CLIENT TOUR DETAIL: browser fallback running for:", slug);
 
         const fetchTourClientSide = async () => {
             setLoading(true);
@@ -212,8 +210,6 @@ export default function DynamicTourPage({ initialTour = null }) {
                 setLoading(false);
                 return;
             }
-
-            console.log("CLIENT TOUR DETAIL: fallback loaded tour:", data?.title);
 
             const formattedData = formatTourForPage(data);
 
@@ -256,6 +252,9 @@ export default function DynamicTourPage({ initialTour = null }) {
         return (
             <>
                 <Head>
+                    {preview === "true" && (
+                        <meta name="robots" content="noindex, nofollow" />
+                    )}
                     <title>{seoMeta.title}</title>
                     <meta name="description" content={seoMeta.description} />
                 </Head>
@@ -318,7 +317,6 @@ export default function DynamicTourPage({ initialTour = null }) {
 
 export async function getStaticPaths() {
     try {
-        console.log("SERVER TOUR DETAIL: loading published tour paths");
 
         const { data, error } = await serverSupabase
             .from("tours")
@@ -360,7 +358,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const slug = params?.slug || "";
 
-    console.log("SERVER TOUR DETAIL: loading tour for SEO:", slug);
 
     if (!slug) {
         return {
@@ -393,7 +390,6 @@ export async function getStaticProps({ params }) {
             };
         }
 
-        console.log("SERVER TOUR DETAIL: loaded tour for SEO:", data.title);
 
         return {
             props: {
