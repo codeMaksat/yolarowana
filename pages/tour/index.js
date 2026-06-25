@@ -123,34 +123,36 @@ export default function Tour({ initialTours = [] }) {
     !initialTours || initialTours.length === 0
   );
 
-  useEffect(() => {
-    console.log("CLIENT: browser fallback running");
-    if (initialTours && initialTours.length > 0) {
+useEffect(() => {
+  if (initialTours && initialTours.length > 0) {
+    console.log("CLIENT: fallback skipped, server/static tours already loaded");
+    return;
+  }
+
+  console.log("CLIENT: browser fallback running");
+
+  const fetchPublishedToursClientSide = async () => {
+    setLoadingTours(true);
+
+    const { data, error } = await supabase
+      .from("tours")
+      .select("*")
+      .eq("status", "published")
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      console.error("Client-side tour fallback error:", error);
+      setTours([]);
+      setLoadingTours(false);
       return;
     }
 
-    const fetchPublishedToursClientSide = async () => {
-      setLoadingTours(true);
+    setTours(data || []);
+    setLoadingTours(false);
+  };
 
-      const { data, error } = await supabase
-        .from("tours")
-        .select("*")
-        .eq("status", "published")
-        .order("created_at", { ascending: false });
-
-      if (error) {
-        console.error("Client-side tour fallback error:", error);
-        setTours([]);
-        setLoadingTours(false);
-        return;
-      }
-
-      setTours(data || []);
-      setLoadingTours(false);
-    };
-
-    fetchPublishedToursClientSide();
-  }, [initialTours]);
+  fetchPublishedToursClientSide();
+}, [initialTours]);
 
   const formattedTours = formatToursForOldCards(tours || []);
 
