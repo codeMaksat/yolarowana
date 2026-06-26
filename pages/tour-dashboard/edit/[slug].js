@@ -9,6 +9,7 @@ const defaultTour = {
     slug: "",
     hero_image: "",
     card_image: "",
+    card_description: "",
     hero_alt: "",
     icon: "fa-solid fa-location-dot",
     icon_label: "",
@@ -30,6 +31,9 @@ const defaultTour = {
     photos: [],
     map: [],
     related_tours: [],
+    is_featured: false,
+    home_order: 999,
+    tour_order: 999,
     status: "draft",
 };
 
@@ -76,13 +80,15 @@ const jsonFieldConfig = [
         help: "Edit the Google Maps embed JSON. Use an embed URL that starts with https://www.google.com/maps/embed.",
         minHeight: "260px",
     },
-    {
-        key: "related_tours",
-        title: "Related Tours",
-        help: "Edit the recommended tour cards shown in the sidebar. Use /tours/your-tour-slug for new Supabase tour pages.",
-        minHeight: "360px",
-    },
 ];
+
+function normalizeOrderNumber(value) {
+    if (value === "" || value === null || value === undefined) return 999;
+
+    const numberValue = Number(value);
+
+    return Number.isFinite(numberValue) ? numberValue : 999;
+}
 
 function normalizeTour(data = {}) {
     return {
@@ -90,6 +96,7 @@ function normalizeTour(data = {}) {
         slug: data.slug || "",
         hero_image: data.hero_image || "",
         card_image: data.card_image || "",
+        card_description: data.card_description || "",
         hero_alt: data.hero_alt || "",
         icon: data.icon || "fa-solid fa-location-dot",
         icon_label: data.icon_label || "",
@@ -113,6 +120,9 @@ function normalizeTour(data = {}) {
         related_tours: Array.isArray(data.related_tours)
             ? data.related_tours
             : [],
+        is_featured: data.is_featured === true,
+        home_order: data.home_order ?? 999,
+        tour_order: data.tour_order ?? 999,
         status: data.status || "draft",
     };
 }
@@ -120,7 +130,7 @@ function normalizeTour(data = {}) {
 function buildJsonText(tourData) {
     const jsonText = {};
 
-    jsonFieldConfig.forEach(field => {
+    jsonFieldConfig.forEach((field) => {
         jsonText[field.key] = JSON.stringify(
             Array.isArray(tourData[field.key]) ? tourData[field.key] : [],
             null,
@@ -129,6 +139,52 @@ function buildJsonText(tourData) {
     });
 
     return jsonText;
+}
+
+function getStartingPrice(priceTiers = []) {
+    if (!Array.isArray(priceTiers) || priceTiers.length === 0) return "";
+
+    const defaultTier = priceTiers.find(
+        (tier) => tier.default === true && tier.price
+    );
+
+    const firstTierWithPrice = priceTiers.find((tier) => tier.price);
+
+    return defaultTier?.price || firstTierWithPrice?.price || "";
+}
+
+function getRelatedTourImage(tour) {
+    const firstGalleryImage = tour?.photos?.[0]?.images?.[0]?.image || "";
+
+    return (
+        tour.card_image ||
+        firstGalleryImage ||
+        tour.hero_image ||
+        tour.meta_image ||
+        "/assets/images/blog-img1.jpg"
+    );
+}
+
+function getSlugFromRelatedValue(value = "") {
+    return String(value)
+        .replace(/^https?:\/\/[^/]+/i, "")
+        .replace(/^\/tours\//, "")
+        .replace(/^tours\//, "")
+        .replace(/^\//, "")
+        .trim();
+}
+
+function buildRelatedTourCard(selectedTour) {
+    const image = getRelatedTourImage(selectedTour);
+
+    return {
+        alt: selectedTour.hero_alt || selectedTour.title || "",
+        slug: `/tours/${selectedTour.slug}`,
+        image,
+        price: getStartingPrice(selectedTour.price_tiers),
+        title: selectedTour.title || "",
+        btn_label: "View Tour",
+    };
 }
 
 export default function EditTourPage() {
@@ -142,6 +198,8 @@ export default function EditTourPage() {
     const [saving, setSaving] = useState(false);
     const [tour, setTour] = useState(defaultTour);
     const [jsonText, setJsonText] = useState(buildJsonText(defaultTour));
+    const [allTours, setAllTours] = useState([]);
+    const [selectedRelatedSlug, setSelectedRelatedSlug] = useState("");
 
     const importFileInputRef = useRef(null);
 
@@ -172,6 +230,31 @@ export default function EditTourPage() {
     }, [router]);
 
     useEffect(() => {
+        if (checkingAuth) return;
+
+        const fetchAllTours = async () => {
+            const { data, error } = await supabase
+                .from("tours")
+                .select(
+                    "title, slug, hero_image, card_image, hero_alt, meta_image, price_tiers, photos, status, tour_order, created_at"
+                )
+                .eq("status", "published")
+                .order("tour_order", { ascending: true })
+                .order("created_at", { ascending: false });
+
+            if (error) {
+                console.error("Error loading tours for related dropdown:", error);
+                setAllTours([]);
+                return;
+            }
+
+            setAllTours(data || []);
+        };
+
+        fetchAllTours();
+    }, [checkingAuth]);
+
+    useEffect(() => {
         if (!slug || checkingAuth) return;
 
         const fetchTour = async () => {
@@ -200,17 +283,27 @@ export default function EditTourPage() {
         fetchTour();
     }, [slug, checkingAuth]);
 
-    const handleChange = event => {
-        const { name, value } = event.target;
+    const handleChange = (event) => {
+        const { name, value, type, checked } = event.target;
 
-        setTour(prevTour => ({
+        let finalValue = value;
+
+        if (type === "checkbox") {
+            finalValue = checked;
+        }
+
+        if (name === "home_order" || name === "tour_order") {
+            finalValue = value === "" ? "" : Number(value);
+        }
+
+        setTour((prevTour) => ({
             ...prevTour,
-            [name]: value,
+            [name]: finalValue,
         }));
     };
 
     const handleJsonChange = (key, value) => {
-        setJsonText(prev => ({
+        setJsonText((prev) => ({
             ...prev,
             [key]: value,
         }));
@@ -239,7 +332,7 @@ export default function EditTourPage() {
     };
 
     const handlePriceTierChange = (tierIndex, field, value) => {
-        setTour(prevTour => {
+        setTour((prevTour) => {
             const updatedPriceTiers = [...prevTour.price_tiers];
 
             updatedPriceTiers[tierIndex] = {
@@ -259,8 +352,8 @@ export default function EditTourPage() {
         });
     };
 
-    const handleDefaultPriceTier = tierIndex => {
-        setTour(prevTour => {
+    const handleDefaultPriceTier = (tierIndex) => {
+        setTour((prevTour) => {
             const updatedPriceTiers = prevTour.price_tiers.map((tier, index) => ({
                 ...tier,
                 default: index === tierIndex,
@@ -274,7 +367,7 @@ export default function EditTourPage() {
     };
 
     const addPriceTier = () => {
-        setTour(prevTour => ({
+        setTour((prevTour) => ({
             ...prevTour,
             price_tiers: [
                 ...prevTour.price_tiers,
@@ -287,17 +380,100 @@ export default function EditTourPage() {
         }));
     };
 
-    const removePriceTier = tierIndex => {
+    const removePriceTier = (tierIndex) => {
         const confirmRemove = window.confirm("Remove this price tier?");
 
         if (!confirmRemove) return;
 
-        setTour(prevTour => ({
+        setTour((prevTour) => ({
             ...prevTour,
             price_tiers: prevTour.price_tiers.filter(
                 (_, index) => index !== tierIndex
             ),
         }));
+    };
+
+    const availableRelatedTours = allTours.filter((item) => {
+        if (!item?.slug) return false;
+        if (item.slug === tour.slug) return false;
+
+        const alreadySelected = tour.related_tours.some(
+            (relatedTour) => getSlugFromRelatedValue(relatedTour.slug) === item.slug
+        );
+
+        return !alreadySelected;
+    });
+
+    const handleAddRelatedTour = () => {
+        if (!selectedRelatedSlug) {
+            alert("Please select a tour first.");
+            return;
+        }
+
+        const selectedTour = allTours.find(
+            (item) => item.slug === selectedRelatedSlug
+        );
+
+        if (!selectedTour) {
+            alert("Selected tour was not found.");
+            return;
+        }
+
+        if (selectedTour.slug === tour.slug) {
+            alert("You cannot add the current tour as a related tour.");
+            return;
+        }
+
+        const alreadySelected = tour.related_tours.some(
+            (relatedTour) =>
+                getSlugFromRelatedValue(relatedTour.slug) === selectedTour.slug
+        );
+
+        if (alreadySelected) {
+            alert("This tour is already added.");
+            return;
+        }
+
+        const newRelatedTour = buildRelatedTourCard(selectedTour);
+
+        setTour((prevTour) => ({
+            ...prevTour,
+            related_tours: [...prevTour.related_tours, newRelatedTour],
+        }));
+
+        setSelectedRelatedSlug("");
+    };
+
+    const handleRemoveRelatedTour = (relatedIndex) => {
+        setTour((prevTour) => ({
+            ...prevTour,
+            related_tours: prevTour.related_tours.filter(
+                (_, index) => index !== relatedIndex
+            ),
+        }));
+    };
+
+    const handleMoveRelatedTour = (relatedIndex, direction) => {
+        setTour((prevTour) => {
+            const updatedRelatedTours = [...prevTour.related_tours];
+            const targetIndex = relatedIndex + direction;
+
+            if (
+                targetIndex < 0 ||
+                targetIndex >= updatedRelatedTours.length
+            ) {
+                return prevTour;
+            }
+
+            const currentItem = updatedRelatedTours[relatedIndex];
+            updatedRelatedTours[relatedIndex] = updatedRelatedTours[targetIndex];
+            updatedRelatedTours[targetIndex] = currentItem;
+
+            return {
+                ...prevTour,
+                related_tours: updatedRelatedTours,
+            };
+        });
     };
 
     const exportTourJson = () => {
@@ -310,6 +486,7 @@ export default function EditTourPage() {
             slug: tour.slug,
             hero_image: tour.hero_image,
             card_image: tour.card_image,
+            card_description: tour.card_description,
             hero_alt: tour.hero_alt,
             icon: tour.icon,
             icon_label: tour.icon_label,
@@ -330,7 +507,10 @@ export default function EditTourPage() {
             faq: parsedJsonFields.faq,
             photos: parsedJsonFields.photos,
             map: parsedJsonFields.map,
-            related_tours: parsedJsonFields.related_tours,
+            related_tours: tour.related_tours,
+            is_featured: tour.is_featured,
+            home_order: normalizeOrderNumber(tour.home_order),
+            tour_order: normalizeOrderNumber(tour.tour_order),
             status: tour.status,
             exported_at: new Date().toISOString(),
         };
@@ -350,14 +530,14 @@ export default function EditTourPage() {
         URL.revokeObjectURL(url);
     };
 
-    const importTourJson = event => {
+    const importTourJson = (event) => {
         const file = event.target.files?.[0];
 
         if (!file) return;
 
         const reader = new FileReader();
 
-        reader.onload = loadEvent => {
+        reader.onload = (loadEvent) => {
             try {
                 const importedData = JSON.parse(loadEvent.target.result);
 
@@ -390,7 +570,7 @@ export default function EditTourPage() {
         reader.readAsText(file);
     };
 
-    const handleSave = async event => {
+    const handleSave = async (event) => {
         event.preventDefault();
 
         if (!tour.title.trim()) {
@@ -416,6 +596,7 @@ export default function EditTourPage() {
                 slug: tour.slug,
                 hero_image: tour.hero_image,
                 card_image: tour.card_image,
+                card_description: tour.card_description,
                 hero_alt: tour.hero_alt,
                 icon: tour.icon,
                 icon_label: tour.icon_label,
@@ -436,7 +617,10 @@ export default function EditTourPage() {
                 faq: parsedJsonFields.faq,
                 photos: parsedJsonFields.photos,
                 map: parsedJsonFields.map,
-                related_tours: parsedJsonFields.related_tours,
+                related_tours: tour.related_tours,
+                is_featured: tour.is_featured === true,
+                home_order: normalizeOrderNumber(tour.home_order),
+                tour_order: normalizeOrderNumber(tour.tour_order),
                 status: tour.status,
                 updated_at: new Date().toISOString(),
             })
@@ -526,7 +710,7 @@ export default function EditTourPage() {
                                 <div>
                                     <h2 className="text-xl md:text-25 mb-2">Edit Tour</h2>
                                     <p className="mb-0">
-                                        Update the main content, images, price tiers and JSON sections for this Supabase tour.
+                                        Update the tour content, homepage visibility, page order, related tours and SEO.
                                     </p>
                                 </div>
 
@@ -646,6 +830,65 @@ export default function EditTourPage() {
                                         </select>
                                     </div>
 
+                                    <div className="md:col-span-2 rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] p-5">
+                                        <div className="grid md:grid-cols-3 gap-5 items-end">
+                                            <div>
+                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                                    Show on homepage
+                                                </label>
+                                                <label className="flex items-center gap-3 rounded-full bg-white border border-[#E2CFAF] px-4 py-3 cursor-pointer">
+                                                    <input
+                                                        type="checkbox"
+                                                        name="is_featured"
+                                                        checked={tour.is_featured}
+                                                        onChange={handleChange}
+                                                        className="h-4 w-4"
+                                                    />
+                                                    <span className="text-sm font-semibold text-dark-900">
+                                                        Featured tour
+                                                    </span>
+                                                </label>
+                                                <p className="mt-2 mb-0 text-xs text-dark-800">
+                                                    If checked, this tour can appear on the homepage.
+                                                </p>
+                                            </div>
+
+                                            <div>
+                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                                    Homepage order
+                                                </label>
+                                                <input
+                                                    type="number"
+                                                    name="home_order"
+                                                    value={tour.home_order}
+                                                    onChange={handleChange}
+                                                    className={inputClass}
+                                                    placeholder="1"
+                                                />
+                                                <p className="mt-2 mb-0 text-xs text-dark-800">
+                                                    Used only when Featured tour is checked.
+                                                </p>
+                                            </div>
+
+                                            <div>
+                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                                    /tour page order
+                                                </label>
+                                                <input
+                                                    type="number"
+                                                    name="tour_order"
+                                                    value={tour.tour_order}
+                                                    onChange={handleChange}
+                                                    className={inputClass}
+                                                    placeholder="1"
+                                                />
+                                                <p className="mt-2 mb-0 text-xs text-dark-800">
+                                                    Controls order on the main /tour page.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div>
                                         <label className="text-sm font-semibold text-dark-900 mb-2 block">
                                             Hero image
@@ -676,7 +919,24 @@ export default function EditTourPage() {
                                             placeholder="/assets/images/cards/tour-name-card.jpg"
                                         />
                                         <p className="mt-2 mb-0 text-xs text-dark-800">
-                                            Used on /tour listing cards. Recommended ratio: 4:3, for example 800x600 or 1200x900.
+                                            Used on homepage and /tour cards. Recommended ratio: 4:3.
+                                        </p>
+                                    </div>
+
+                                    <div className="md:col-span-2">
+                                        <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                            Card description
+                                        </label>
+                                        <textarea
+                                            name="card_description"
+                                            value={tour.card_description}
+                                            onChange={handleChange}
+                                            className={textareaClass}
+                                            rows="3"
+                                            placeholder="Short marketing text for homepage and /tour cards."
+                                        />
+                                        <p className="mt-2 mb-0 text-xs text-dark-800">
+                                            Used on homepage and /tour listing cards. Keep this attractive, short and experience-focused.
                                         </p>
                                     </div>
 
@@ -879,7 +1139,7 @@ export default function EditTourPage() {
                                                                 <input
                                                                     type="text"
                                                                     value={tier.travelers || ""}
-                                                                    onChange={event =>
+                                                                    onChange={(event) =>
                                                                         handlePriceTierChange(
                                                                             tierIndex,
                                                                             "travelers",
@@ -898,7 +1158,7 @@ export default function EditTourPage() {
                                                                 <input
                                                                     type="number"
                                                                     value={tier.price ?? ""}
-                                                                    onChange={event =>
+                                                                    onChange={(event) =>
                                                                         handlePriceTierChange(
                                                                             tierIndex,
                                                                             "price",
@@ -956,7 +1216,142 @@ export default function EditTourPage() {
                                         </div>
                                     </div>
 
-                                    {jsonFieldConfig.map(field => (
+                                    <div className="md:col-span-2">
+                                        <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                                            <div>
+                                                <h3 className="text-xl mb-1">Related Tours</h3>
+                                                <p className="mb-0 text-sm text-dark-800">
+                                                    Choose sidebar suggested tours from the dropdown. The title, price, image and link are filled automatically.
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div className="rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] p-5">
+                                            <div className="grid md:grid-cols-[1fr_auto] gap-4 items-end">
+                                                <div>
+                                                    <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                                                        Select related tour
+                                                    </label>
+                                                    <select
+                                                        value={selectedRelatedSlug}
+                                                        onChange={(event) =>
+                                                            setSelectedRelatedSlug(event.target.value)
+                                                        }
+                                                        className={selectClass}
+                                                    >
+                                                        <option value="">Choose a tour</option>
+                                                        {availableRelatedTours.map((item) => (
+                                                            <option key={item.slug} value={item.slug}>
+                                                                {item.title}
+                                                            </option>
+                                                        ))}
+                                                    </select>
+                                                </div>
+
+                                                <button
+                                                    type="button"
+                                                    onClick={handleAddRelatedTour}
+                                                    className="btn btn-primary rounded-full px-6"
+                                                >
+                                                    Add Related Tour
+                                                </button>
+                                            </div>
+
+                                            <div className="mt-5 space-y-3">
+                                                {tour.related_tours && tour.related_tours.length > 0 ? (
+                                                    tour.related_tours.map((relatedTour, relatedIndex) => (
+                                                        <div
+                                                            key={`${relatedTour.slug}-${relatedIndex}`}
+                                                            className="rounded-2xl bg-white border border-[#E2CFAF] p-4"
+                                                        >
+                                                            <div className="grid md:grid-cols-[80px_1fr_auto] gap-4 items-center">
+                                                                <div className="h-[60px] w-[80px] rounded-xl overflow-hidden bg-[#FAF7F2]">
+                                                                    <img
+                                                                        src={
+                                                                            relatedTour.image ||
+                                                                            "/assets/images/blog-img1.jpg"
+                                                                        }
+                                                                        alt={
+                                                                            relatedTour.alt ||
+                                                                            relatedTour.title ||
+                                                                            "Related tour"
+                                                                        }
+                                                                        className="h-full w-full object-cover"
+                                                                    />
+                                                                </div>
+
+                                                                <div>
+                                                                    <h4 className="mb-1 text-base">
+                                                                        {relatedTour.title}
+                                                                    </h4>
+                                                                    <p className="mb-0 text-sm text-dark-800">
+                                                                        {relatedTour.slug}
+                                                                    </p>
+                                                                    <p className="mb-0 text-sm text-dark-800">
+                                                                        Price:{" "}
+                                                                        {relatedTour.price
+                                                                            ? `$${relatedTour.price}`
+                                                                            : "On request"}
+                                                                    </p>
+                                                                </div>
+
+                                                                <div className="flex flex-wrap gap-2 justify-start md:justify-end">
+                                                                    <button
+                                                                        type="button"
+                                                                        onClick={() =>
+                                                                            handleMoveRelatedTour(
+                                                                                relatedIndex,
+                                                                                -1
+                                                                            )
+                                                                        }
+                                                                        disabled={relatedIndex === 0}
+                                                                        className="rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-4 py-2 text-sm font-semibold text-dark-900 disabled:opacity-40"
+                                                                    >
+                                                                        Up
+                                                                    </button>
+
+                                                                    <button
+                                                                        type="button"
+                                                                        onClick={() =>
+                                                                            handleMoveRelatedTour(
+                                                                                relatedIndex,
+                                                                                1
+                                                                            )
+                                                                        }
+                                                                        disabled={
+                                                                            relatedIndex ===
+                                                                            tour.related_tours.length - 1
+                                                                        }
+                                                                        className="rounded-full bg-[#FAF7F2] border border-[#E2CFAF] px-4 py-2 text-sm font-semibold text-dark-900 disabled:opacity-40"
+                                                                    >
+                                                                        Down
+                                                                    </button>
+
+                                                                    <button
+                                                                        type="button"
+                                                                        onClick={() =>
+                                                                            handleRemoveRelatedTour(
+                                                                                relatedIndex
+                                                                            )
+                                                                        }
+                                                                        className="rounded-full bg-red-100 px-4 py-2 text-sm font-semibold text-red-700 hover:bg-red-200"
+                                                                    >
+                                                                        Remove
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ))
+                                                ) : (
+                                                    <p className="mb-0 text-sm text-dark-800">
+                                                        No related tours selected yet.
+                                                    </p>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {jsonFieldConfig.map((field) => (
                                         <div className="md:col-span-2" key={field.key}>
                                             <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                                                 <div>
@@ -969,7 +1364,7 @@ export default function EditTourPage() {
 
                                             <textarea
                                                 value={jsonText[field.key]}
-                                                onChange={event =>
+                                                onChange={(event) =>
                                                     handleJsonChange(field.key, event.target.value)
                                                 }
                                                 className="w-full rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] px-4 py-4 font-mono text-sm text-dark-900 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-y"
@@ -1004,7 +1399,7 @@ export default function EditTourPage() {
 
                             <div className="mt-6 bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl px-5 py-4">
                                 <p className="mb-0 text-sm text-dark-800">
-                                    This editor updates Supabase tour fields, including card image, hero image, SEO, PDF, prices and JSON content sections.
+                                    Homepage tours are controlled by Featured tour and Homepage order. The /tour page is controlled by /tour page order. Sidebar suggestions are controlled by Related Tours.
                                 </p>
                             </div>
                         </div>

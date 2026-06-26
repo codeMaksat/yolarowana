@@ -2,7 +2,7 @@ import { Comman_Hero } from "@/component/Sections/Page-commen";
 import { All_Tour } from "@/component/Sections/Page-tour";
 import { Head_Meta, useFetchData } from "@/component/comman";
 import { supabase } from "@/utils/supabaseClient";
-import { getPublishedTours } from "../../lib/getPublishedTours";
+import { supabase as serverSupabase } from "../../lib/supabaseClient";
 import React, { useEffect, useState } from "react";
 
 function getStartingPrice(priceTiers = []) {
@@ -35,29 +35,38 @@ function getCardImage(tour) {
 }
 
 function makeShortDescription(tour) {
+  if (tour.card_description) return tour.card_description;
+
   if (tour.short_des) return tour.short_des;
 
-  if (tour.support_label) return tour.support_label;
+  if (tour.meta_description) {
+    return tour.meta_description.length > 135
+      ? `${tour.meta_description.slice(0, 132)}...`
+      : tour.meta_description;
+  }
+
+  const firstOverviewLabel = tour.overview?.[0]?.labels?.[0]?.label || "";
+
+  if (firstOverviewLabel) {
+    return firstOverviewLabel.length > 135
+      ? `${firstOverviewLabel.slice(0, 132)}...`
+      : firstOverviewLabel;
+  }
 
   if (tour.route) {
     const routePlaces = tour.route
       .split("–")
       .map((item) => item.trim())
       .filter(Boolean)
-      .slice(0, 5)
+      .slice(0, 4)
       .join(", ");
 
-    return routePlaces ? `${routePlaces}.` : "";
+    return routePlaces
+      ? `Explore ${routePlaces} on a private Central Asia journey.`
+      : "";
   }
 
-  const firstOverviewLabel =
-    tour.overview?.[0]?.labels?.[0]?.label || tour.meta_description || "";
-
-  if (firstOverviewLabel.length > 120) {
-    return `${firstOverviewLabel.slice(0, 117)}...`;
-  }
-
-  return firstOverviewLabel;
+  return "";
 }
 
 function formatToursForOldCards(tours = []) {
@@ -126,16 +135,11 @@ export default function Tour({ initialTours = [] }) {
   useEffect(() => {
     const initialCount = Array.isArray(initialTours) ? initialTours.length : 0;
 
-    console.log("CLIENT: initialTours count:", initialCount);
-
     if (initialCount > 0) {
-      console.log("CLIENT: fallback skipped, server-side tours already loaded");
       setTours(initialTours);
       setLoadingTours(false);
       return;
     }
-
-    console.log("CLIENT: browser fallback running");
 
     const fetchPublishedToursClientSide = async () => {
       setLoadingTours(true);
@@ -144,6 +148,7 @@ export default function Tour({ initialTours = [] }) {
         .from("tours")
         .select("*")
         .eq("status", "published")
+        .order("tour_order", { ascending: true })
         .order("created_at", { ascending: false });
 
       if (error) {
@@ -183,18 +188,20 @@ export default function Tour({ initialTours = [] }) {
 }
 
 export async function getServerSideProps() {
-  console.log("SERVER: loading tours for SEO");
+  const { data, error } = await serverSupabase
+    .from("tours")
+    .select("*")
+    .eq("status", "published")
+    .order("tour_order", { ascending: true })
+    .order("created_at", { ascending: false });
 
-  const tours = await getPublishedTours();
-
-  console.log(
-    "SERVER: published tours count:",
-    Array.isArray(tours) ? tours.length : 0
-  );
+  if (error) {
+    console.error("Server-side /tour page tours error:", error.message);
+  }
 
   return {
     props: {
-      initialTours: tours || [],
+      initialTours: data || [],
     },
   };
 }

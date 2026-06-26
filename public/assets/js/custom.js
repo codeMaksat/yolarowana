@@ -42,7 +42,7 @@
       this.slider_open();
       this.popup_open();
       this.Isotope_js();
-      this.Preloader_js();
+      //this.Preloader_js();
 
     },
 

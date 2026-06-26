@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "@/utils/supabaseClient";
 
+const defaultTourImage = "/assets/images/tour-product-detail-img.jpg";
+
 export default function CreateTourPage() {
   const { data: seo_data } = useFetchData("/json/data/site_meta_link.json");
   const router = useRouter();
@@ -17,6 +19,9 @@ export default function CreateTourPage() {
     duration: "",
     travel_style: "",
     route: "",
+    hero_image: "",
+    card_image: "",
+    card_description: "",
     status: "draft",
   });
 
@@ -43,7 +48,7 @@ export default function CreateTourPage() {
     checkUser();
   }, [router]);
 
-  const createSlug = value => {
+  const createSlug = (value) => {
     return value
       .toLowerCase()
       .trim()
@@ -52,10 +57,10 @@ export default function CreateTourPage() {
       .replace(/^-+|-+$/g, "");
   };
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     const { name, value } = event.target;
 
-    setTour(prevTour => {
+    setTour((prevTour) => {
       const updatedTour = {
         ...prevTour,
         [name]: value,
@@ -69,7 +74,7 @@ export default function CreateTourPage() {
     });
   };
 
-  const handleSave = async event => {
+  const handleSave = async (event) => {
     event.preventDefault();
 
     if (!tour.title.trim()) {
@@ -84,6 +89,9 @@ export default function CreateTourPage() {
 
     setSaving(true);
 
+    const heroImage = tour.hero_image || defaultTourImage;
+    const cardImage = tour.card_image || "";
+
     const { data, error } = await supabase
       .from("tours")
       .insert([
@@ -94,8 +102,10 @@ export default function CreateTourPage() {
           travel_style: tour.travel_style,
           route: tour.route,
 
-          hero_image: "/assets/images/tour-product-detail-img.jpg",
+          hero_image: heroImage,
+          card_image: cardImage,
           hero_alt: tour.title,
+          card_description: tour.card_description,
 
           icon: "fa-solid fa-location-dot",
           icon_label: tour.route || tour.title,
@@ -106,7 +116,7 @@ export default function CreateTourPage() {
 
           meta_title: tour.title,
           meta_description: "",
-          meta_image: "/assets/images/tour-product-detail-img.jpg",
+          meta_image: heroImage,
 
           services: [
             {
@@ -204,12 +214,14 @@ export default function CreateTourPage() {
               title: "Photos",
               images: [
                 {
-                  image: "/assets/images/tour-product-detail-img.jpg",
+                  image: heroImage,
                   alt: tour.title,
                 },
               ],
             },
           ],
+
+          map: [],
 
           price_tiers: [
             {
@@ -236,7 +248,7 @@ export default function CreateTourPage() {
       if (error.message?.includes("duplicate key")) {
         alert("This slug already exists. Please use a different slug.");
       } else {
-        alert("Could not create tour. Please try again.");
+        alert(error.message || "Could not create tour. Please try again.");
       }
 
       setSaving(false);
@@ -393,7 +405,7 @@ export default function CreateTourPage() {
                     />
                   </div>
 
-                  <div>
+                  <div className="md:col-span-2">
                     <label className="text-sm font-semibold text-dark-900 mb-2 block">
                       Route
                     </label>
@@ -405,6 +417,56 @@ export default function CreateTourPage() {
                       className={inputClass}
                       placeholder="Tashkent – Samarkand – Bukhara – Khiva"
                     />
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                      Hero image
+                    </label>
+                    <input
+                      type="text"
+                      name="hero_image"
+                      value={tour.hero_image}
+                      onChange={handleChange}
+                      className={inputClass}
+                      placeholder="/assets/images/inner-banner-tour-name.jpg"
+                    />
+                    <p className="mt-2 mb-0 text-xs text-dark-800">
+                      Wide banner image for the tour detail page.
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                      Card image
+                    </label>
+                    <input
+                      type="text"
+                      name="card_image"
+                      value={tour.card_image}
+                      onChange={handleChange}
+                      className={inputClass}
+                      placeholder="/assets/images/cards/tour-name-card.jpg"
+                    />
+                    <p className="mt-2 mb-0 text-xs text-dark-800">
+                      Used on /tour listing cards. Recommended size: 1200x900 or 800x600.
+                    </p>
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="text-sm font-semibold text-dark-900 mb-2 block">
+                      Card description
+                    </label>
+                    <textarea
+                      name="card_description"
+                      value={tour.card_description}
+                      onChange={handleChange}
+                      className="w-full rounded-2xl border border-[#E2CFAF] bg-white px-4 py-3 text-sm text-dark-900 placeholder:text-dark-800/70 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-none"
+                      rows="3"
+                      placeholder="Short marketing text for homepage and /tour cards."
+                    />
+                    <p className="mt-2 mb-0 text-xs text-dark-800">
+                      Used on homepage and /tour cards. Keep it short, attractive and experience-focused.
+                    </p>
                   </div>
 
                   <div>
