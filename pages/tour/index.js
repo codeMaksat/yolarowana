@@ -187,7 +187,7 @@ export default function Tour({ initialTours = [] }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { data, error } = await serverSupabase
     .from("tours")
     .select("*")
@@ -196,12 +196,13 @@ export async function getServerSideProps() {
     .order("created_at", { ascending: false });
 
   if (error) {
-    console.error("Server-side /tour page tours error:", error.message);
+    console.error("Static /tour page tours error:", error.message);
   }
 
   return {
     props: {
       initialTours: data || [],
     },
+    revalidate: 3600,
   };
 }

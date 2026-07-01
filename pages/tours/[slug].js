@@ -395,7 +395,7 @@ export async function getStaticProps({ params }) {
             props: {
                 initialTour: data,
             },
-            revalidate: 60,
+            revalidate: 3600,
         };
     } catch (error) {
         console.error("getStaticProps tour fetch failed:", error);
@@ -404,7 +404,7 @@ export async function getStaticProps({ params }) {
             props: {
                 initialTour: null,
             },
-            revalidate: 10,
+            revalidate: 60,
         };
     }
 }

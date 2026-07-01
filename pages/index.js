@@ -247,7 +247,7 @@ export default function Index({ initialTours = [] }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { data, error } = await serverSupabase
     .from("tours")
     .select("*")
@@ -258,12 +258,13 @@ export async function getServerSideProps() {
     .limit(6);
 
   if (error) {
-    console.error("Server-side homepage featured tours error:", error.message);
+    console.error("Static homepage featured tours error:", error.message);
   }
 
   return {
     props: {
       initialTours: data || [],
     },
+    revalidate: 3600,
   };
 }
