@@ -202,6 +202,7 @@ export default function EditTourPage() {
     const [selectedRelatedSlug, setSelectedRelatedSlug] = useState("");
 
     const importFileInputRef = useRef(null);
+    const imageImportFileInputRef = useRef(null);
 
     const inputClass =
         "w-full rounded-full border border-[#E2CFAF] bg-white px-4 py-3 text-sm text-dark-900 placeholder:text-dark-800/70 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all";
@@ -570,6 +571,89 @@ export default function EditTourPage() {
         reader.readAsText(file);
     };
 
+    const importImageFieldsFile = (event) => {
+        const file = event.target.files?.[0];
+
+        if (!file) return;
+
+        const reader = new FileReader();
+
+        reader.onload = (loadEvent) => {
+            try {
+                const importedData = JSON.parse(loadEvent.target.result);
+
+                if (
+                    !importedData ||
+                    typeof importedData !== "object" ||
+                    Array.isArray(importedData)
+                ) {
+                    alert("Image JSON must be an object.");
+                    event.target.value = "";
+                    return;
+                }
+
+                const hasImageFields =
+                    typeof importedData.hero_image === "string" ||
+                    typeof importedData.card_image === "string" ||
+                    typeof importedData.meta_image === "string" ||
+                    Array.isArray(importedData.photos);
+
+                if (!hasImageFields) {
+                    alert(
+                        "This JSON does not contain hero_image, card_image, meta_image or photos."
+                    );
+                    event.target.value = "";
+                    return;
+                }
+
+                const nextHeroImage =
+                    typeof importedData.hero_image === "string"
+                        ? importedData.hero_image
+                        : tour.hero_image;
+
+                const nextCardImage =
+                    typeof importedData.card_image === "string"
+                        ? importedData.card_image
+                        : tour.card_image;
+
+                const nextMetaImage =
+                    typeof importedData.meta_image === "string"
+                        ? importedData.meta_image
+                        : nextHeroImage || tour.meta_image;
+
+                const nextPhotos = Array.isArray(importedData.photos)
+                    ? importedData.photos
+                    : null;
+
+                setTour((prevTour) => ({
+                    ...prevTour,
+                    hero_image: nextHeroImage,
+                    card_image: nextCardImage,
+                    meta_image: nextMetaImage,
+                    photos: nextPhotos || prevTour.photos,
+                }));
+
+                if (nextPhotos) {
+                    setJsonText((prevJsonText) => ({
+                        ...prevJsonText,
+                        photos: JSON.stringify(nextPhotos, null, 2),
+                    }));
+                }
+
+                alert(
+                    "Image JSON file imported. Please review hero image, card image, meta image and photos, then click Save Tour."
+                );
+            } catch (error) {
+                console.error("Image JSON file import error:", error);
+                alert("Invalid image JSON file. Please check the file.");
+            }
+
+            event.target.value = "";
+        };
+
+        reader.readAsText(file);
+    };
+
     const handleSave = async (event) => {
         event.preventDefault();
 
@@ -831,61 +915,32 @@ export default function EditTourPage() {
                                     </div>
 
                                     <div className="md:col-span-2 rounded-2xl border border-[#E2CFAF] bg-[#FAF7F2] p-5">
-                                        <div className="grid md:grid-cols-3 gap-5 items-end">
+                                        <div className="flex flex-wrap items-center justify-between gap-3">
                                             <div>
-                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
-                                                    Show on homepage
-                                                </label>
-                                                <label className="flex items-center gap-3 rounded-full bg-white border border-[#E2CFAF] px-4 py-3 cursor-pointer">
-                                                    <input
-                                                        type="checkbox"
-                                                        name="is_featured"
-                                                        checked={tour.is_featured}
-                                                        onChange={handleChange}
-                                                        className="h-4 w-4"
-                                                    />
-                                                    <span className="text-sm font-semibold text-dark-900">
-                                                        Featured tour
-                                                    </span>
-                                                </label>
+                                                <h3 className="text-xl mb-1">Import Image JSON</h3>
+                                                <p className="mb-0 text-sm text-dark-800">
+                                                    Choose the generated image JSON file. It will fill Hero image, Card image, Meta image and Photos only.
+                                                </p>
                                                 <p className="mt-2 mb-0 text-xs text-dark-800">
-                                                    If checked, this tour can appear on the homepage.
+                                                    After importing, review the fields and click Save Tour.
                                                 </p>
                                             </div>
 
-                                            <div>
-                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
-                                                    Homepage order
-                                                </label>
-                                                <input
-                                                    type="number"
-                                                    name="home_order"
-                                                    value={tour.home_order}
-                                                    onChange={handleChange}
-                                                    className={inputClass}
-                                                    placeholder="1"
-                                                />
-                                                <p className="mt-2 mb-0 text-xs text-dark-800">
-                                                    Used only when Featured tour is checked.
-                                                </p>
-                                            </div>
+                                            <button
+                                                type="button"
+                                                onClick={() => imageImportFileInputRef.current?.click()}
+                                                className="btn btn-primary rounded-full px-6"
+                                            >
+                                                Choose Image JSON File
+                                            </button>
 
-                                            <div>
-                                                <label className="text-sm font-semibold text-dark-900 mb-2 block">
-                                                    /tour page order
-                                                </label>
-                                                <input
-                                                    type="number"
-                                                    name="tour_order"
-                                                    value={tour.tour_order}
-                                                    onChange={handleChange}
-                                                    className={inputClass}
-                                                    placeholder="1"
-                                                />
-                                                <p className="mt-2 mb-0 text-xs text-dark-800">
-                                                    Controls order on the main /tour page.
-                                                </p>
-                                            </div>
+                                            <input
+                                                ref={imageImportFileInputRef}
+                                                type="file"
+                                                accept="application/json,.json"
+                                                onChange={importImageFieldsFile}
+                                                className="hidden"
+                                            />
                                         </div>
                                     </div>
 
@@ -1179,11 +1234,10 @@ export default function EditTourPage() {
                                                                     onClick={() =>
                                                                         handleDefaultPriceTier(tierIndex)
                                                                     }
-                                                                    className={`rounded-full px-5 py-3 text-sm font-semibold border transition-all ${
-                                                                        tier.default
-                                                                            ? "bg-primary-900 text-white border-primary-900"
-                                                                            : "bg-white text-dark-900 border-[#E2CFAF] hover:border-primary-900"
-                                                                    }`}
+                                                                    className={`rounded-full px-5 py-3 text-sm font-semibold border transition-all ${tier.default
+                                                                        ? "bg-primary-900 text-white border-primary-900"
+                                                                        : "bg-white text-dark-900 border-[#E2CFAF] hover:border-primary-900"
+                                                                        }`}
                                                                 >
                                                                     {tier.default ? "Default" : "Set Default"}
                                                                 </button>
