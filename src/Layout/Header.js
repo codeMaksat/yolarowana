@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+
+const NAV_TOUR_LIMIT = 6;
 
 export default function Header({ initialValues }) {
   const router = useRouter();
@@ -8,19 +10,28 @@ export default function Header({ initialValues }) {
   const [OpenMenu, setOpenMenu] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
+  const [publishedTours, setPublishedTours] = useState([]);
 
   const active_class_slug = slug => {
-    const path = router.asPath.split("#")[0];
+    const path = router.asPath.split(/[?#]/)[0];
 
     if (path === slug) {
       return "active";
     }
 
-    if (path.startsWith("/destination-") && slug === "/destination") {
+    if (
+      path.startsWith("/destination-") &&
+      slug === "/destination-central-asia"
+    ) {
       return "active";
     }
 
-    if (path.startsWith("/tour-") && slug === "/tour") {
+    if (
+      (path === "/tour" ||
+        path.startsWith("/tours/") ||
+        path.startsWith("/tour-")) &&
+      slug === "/tour"
+    ) {
       return "active";
     }
 
@@ -61,11 +72,138 @@ export default function Header({ initialValues }) {
     };
   }, []);
 
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadPublishedTours = async () => {
+      try {
+        // Load Supabase only in the browser.
+        // This keeps the global Header safe during server-side rendering.
+        const { supabase } = await import("@/utils/supabaseClient");
+
+        const { data, error } = await supabase
+          .from("tours")
+          .select(
+            "title, slug, tour_order, is_featured, home_order, created_at"
+          )
+          .eq("status", "published")
+          .order("tour_order", { ascending: true })
+          .order("created_at", { ascending: false });
+
+        if (error) {
+          console.error("Header tours error:", error.message);
+          return;
+        }
+
+        if (isMounted) {
+          setPublishedTours(
+            (data || []).filter(tour => tour?.title && tour?.slug)
+          );
+        }
+      } catch (error) {
+        console.error("Header tours loading error:", error);
+      }
+    };
+
+    loadPublishedTours();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const dynamicHeaderValues = useMemo(() => {
+    const normalizeOrder = value => {
+      const numberValue = Number(value);
+      return Number.isFinite(numberValue) ? numberValue : 999;
+    };
+
+    const featuredTours = publishedTours
+      .filter(tour => tour.is_featured === true)
+      .sort((a, b) => {
+        const orderDifference =
+          normalizeOrder(a.home_order) - normalizeOrder(b.home_order);
+
+        if (orderDifference !== 0) {
+          return orderDifference;
+        }
+
+        return normalizeOrder(a.tour_order) - normalizeOrder(b.tour_order);
+      });
+
+    // The Tours dropdown should stay short.
+    // Prefer featured tours; if none are featured, use the first published tours.
+    const navbarTours = (
+      featuredTours.length > 0 ? featuredTours : publishedTours
+    ).slice(0, NAV_TOUR_LIMIT);
+
+    const navbarTourLinks = navbarTours.map(tour => ({
+      slug: `/tours/${tour.slug}`,
+      label: tour.title,
+    }));
+
+    const popularTourLinks = (
+      featuredTours.length > 0 ? featuredTours : publishedTours
+    )
+      .slice(0, 4)
+      .map(tour => ({
+        slug: `/tours/${tour.slug}`,
+        label: tour.title,
+      }));
+
+    return (initialValues || []).map(headerData => ({
+      ...headerData,
+      mega_menu: (headerData.mega_menu || []).map(menuItem => {
+        if (menuItem.slug === "/tour" || menuItem.label === "Tours") {
+          return {
+            ...menuItem,
+            sub_menu: [
+              {
+                slug: "/tour",
+                label: "All Tours",
+              },
+              ...navbarTourLinks,
+            ],
+          };
+        }
+
+        if (
+          menuItem.label === "Destinations" &&
+          Array.isArray(menuItem.menu)
+        ) {
+          return {
+            ...menuItem,
+            menu: menuItem.menu.map(menuSection => {
+              if (menuSection.title !== "Popular Routes") {
+                return menuSection;
+              }
+
+              return {
+                ...menuSection,
+                sub_menu:
+                  popularTourLinks.length > 0
+                    ? popularTourLinks
+                    : [
+                        {
+                          slug: "/tour",
+                          label: "Browse All Tours",
+                        },
+                      ],
+              };
+            }),
+          };
+        }
+
+        return menuItem;
+      }),
+    }));
+  }, [initialValues, publishedTours]);
+
   const headerClasses = isScrolled ? "sticky-header" : "";
 
   return (
-    initialValues &&
-    initialValues.map((data, index) => {
+    dynamicHeaderValues.length > 0 &&
+    dynamicHeaderValues.map((data, index) => {
       return (
         <React.Fragment key={index}>
           <header
@@ -365,9 +503,9 @@ export default function Header({ initialValues }) {
                                       </div>
 
                                       <ul
-                                        className={`sub-menu-list text-lg text-dark-800 lg:absolute lg:top-[calc(100%+7px)] lg:left-0 lg:border lg:border-gray-100 lg:w-[240px] lg:bg-white lg:p-5 lg:rounded-xl lg:shadow-box lg:transition-all lg:translate-y-4 lg:invisible lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100 lg:group-hover:translate-y-0 ${
+                                        className={`sub-menu-list text-base text-dark-800 overflow-hidden lg:absolute lg:top-[calc(100%+7px)] lg:left-0 lg:border lg:border-gray-100 lg:w-[360px] lg:bg-white lg:p-2 lg:rounded-xl lg:shadow-box lg:transition-all lg:translate-y-4 lg:invisible lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100 lg:group-hover:translate-y-0 ${
                                           isMobileDropdownOpen
-                                            ? "block mt-2 pl-4 pb-3 space-y-3"
+                                            ? "block mt-2 pl-4 pb-3"
                                             : "hidden lg:block"
                                         }`}
                                       >
@@ -376,14 +514,25 @@ export default function Header({ initialValues }) {
                                             (sub_menu_data, index) => {
                                               return (
                                                 <li
-                                                  key={index}
-                                                  className={active_class_slug(
+                                                  key={
+                                                    sub_menu_data.slug || index
+                                                  }
+                                                  className={`border-b border-gray-100 last:border-b-0 ${
+                                                    index === 0
+                                                      ? "font-semibold"
+                                                      : ""
+                                                  } ${active_class_slug(
                                                     sub_menu_data.slug
-                                                  )}
+                                                  )}`}
                                                 >
                                                   <Link
                                                     href={sub_menu_data.slug}
                                                     onClick={closeMobileMenu}
+                                                    className={`block px-4 py-3 leading-snug rounded-lg transition-colors hover:bg-primary-800/40 hover:text-primary-900 ${
+                                                      index === 0
+                                                        ? "text-primary-900"
+                                                        : ""
+                                                    }`}
                                                   >
                                                     {sub_menu_data.label}
                                                   </Link>

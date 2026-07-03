@@ -19,7 +19,7 @@
         ],
         "call_slug": "tel:+99363229627",
         "call_icon": "fa-solid fa-phone",
-        "call_label": "+993 63229627",
+        "call_label": "+993 63 229627",
         "logout_slug": "/contact",
         "logout_label": "PLAN A TRIP"
       }
@@ -42,12 +42,16 @@
         "label": "Home"
       },
       {
-        "slug": "/destination",
+        "slug": "/destination-central-asia",
         "label": "Destinations",
         "menu": [
           {
-            "title": "Central Asia Countries",
+            "title": "Explore Central Asia",
             "sub_menu": [
+              {
+                "slug": "/destination-central-asia",
+                "label": "Central Asia Overview"
+              },
               {
                 "slug": "/destination-turkmenistan",
                 "label": "Turkmenistan"
@@ -67,10 +71,6 @@
               {
                 "slug": "/destination-tajikistan",
                 "label": "Tajikistan"
-              },
-              {
-                "slug": "/destination-central-asia",
-                "label": "Multi-Country Tours"
               }
             ]
           },
@@ -82,16 +82,16 @@
                 "label": "Five Stans Tour"
               },
               {
-                "slug": "/tour-uzbekistan-turkmenistan",
+                "slug": "/tours/uzbekistan-turkmenistan-tour",
                 "label": "Uzbekistan & Turkmenistan"
               },
               {
-                "slug": "/tour-kazakhstan-kyrgyzstan",
+                "slug": "/tours/kazakhstan-kyrgyzstan-tour",
                 "label": "Kazakhstan & Kyrgyzstan"
               },
               {
-                "slug": "/tour-pamir-highway",
-                "label": "Pamir Highway"
+                "slug": "/tours/pamir-highway-adventure",
+                "label": "Pamir Highway Adventure"
               }
             ]
           }
@@ -112,24 +112,24 @@
             "label": "Five Stans"
           },
           {
-            "slug": "/tour-turkmenistan-highlights",
+            "slug": "/tours/turkmenistan-highlights-tour",
             "label": "Turkmenistan Highlights"
           },
           {
-            "slug": "/tour-uzbekistan-silk-road",
+            "slug": "/tours/uzbekistan-silk-road-classic",
             "label": "Uzbekistan Silk Road"
           },
           {
-            "slug": "/tour-uzbekistan-turkmenistan",
+            "slug": "/tours/uzbekistan-turkmenistan-tour",
             "label": "Uzbekistan & Turkmenistan"
           },
           {
-            "slug": "/tour-kazakhstan-kyrgyzstan",
+            "slug": "/tours/kazakhstan-kyrgyzstan-tour",
             "label": "Kazakhstan & Kyrgyzstan"
           },
           {
-            "slug": "/tour-pamir-highway",
-            "label": "Pamir Highway"
+            "slug": "/tours/pamir-highway-adventure",
+            "label": "Pamir Highway Adventure"
           }
         ]
       },
