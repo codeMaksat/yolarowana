@@ -1,154 +1,150 @@
 [
-    {
-        "sign_up_mail": [
-            {
-                "title": "Sign up for our newsletter",
-                "label": "Save up to 50% on tours and trips. Get instant access to lower prices.",
-                "btn_label": "Submit"
-            }
+  {
+    "sign_up_mail": [
+      {
+        "title": "Sign up for our newsletter",
+        "label": "Save up to 50% on tours and trips. Get instant access to lower prices.",
+        "btn_label": "Submit"
+      }
+    ],
+    "mid_data": [
+      {
+        "logo": [
+          {
+            "slug": "/",
+            "img": "/assets/images/logo-dark.png",
+            "alt": "Yola Rowana logo"
+          }
         ],
-        "mid_data": [
+        "details": "Yola Rowana creates private and small group journeys across Central Asia — from Silk Road cities and desert routes to mountain roads, nomad culture, and local experiences.",
+        "icons": [
+          {
+            "slug": "https://www.facebook.com/",
+            "icon": "fa-brands fa-facebook"
+          },
+          {
+            "slug": "https://twitter.com/",
+            "icon": "fa-brands fa-twitter"
+          },
+          {
+            "slug": "https://www.youtube.com/",
+            "icon": "fa-brands fa-youtube"
+          },
+          {
+            "slug": "https://www.instagram.com/",
+            "icon": "fa-brands fa-instagram"
+          }
+        ]
+      }
+    ],
+    "page_list": {
+      "quick_links": [
+        {
+          "title": "Quick Links",
+          "menu": [
             {
-                "logo": [
-                    {
-                        "slug": "/",
-                        "img": "/assets/images/logo-dark.png",
-                        "alt": "Yola Rowana logo"
-                    }
-                ],
-                "details": "Yola Rowana creates private and small group journeys across Central Asia — from Silk Road cities and desert routes to mountain roads, nomad culture, and local experiences.",
-                "icons": [
-                    {
-                        "slug": "https://www.facebook.com/",
-                        "icon": "fa-brands fa-facebook"
-                    },
-                    {
-                        "slug": "https://twitter.com/",
-                        "icon": "fa-brands fa-twitter"
-                    },
-                    {
-                        "slug": "https://www.youtube.com/",
-                        "icon": "fa-brands fa-youtube"
-                    },
-                    {
-                        "slug": "https://www.instagram.com/",
-                        "icon": "fa-brands fa-instagram"
-                    }
-                ]
-            }
-        ],
-        "page_list": {
-            "quick_links": [
-                {
-                    "title": "Quick Links",
-                    "menu": [
-                        {
-                            "slug": "/about",
-                            "label": "About Yola Rowana"
-                        },
-                        {
-                            "slug": "/tour",
-                            "label": "Central Asia Tours"
-                        },
-                        {
-                            "slug": "/tour/group-tours",
-                            "label": "Group Tours"
-                        },
-                        {
-                            "slug": "/tailor-made",
-                            "label": "Tailor-Made Trips"
-                        },
-                        {
-                            "slug": "/blog",
-                            "label": "Travel Guide"
-                        },
-                        {
-                            "slug": "/contact",
-                            "label": "Plan a Custom Trip"
-                        }
-                    ]
-                }
-            ],
-            "contact_us": [
-                {
-                    "title": "Contact Us",
-                    "menu": [
-                        {
-                            "img": "/assets/images/pin.svg",
-                            "alt": "call-sharp",
-                            "label": "Ashgabat, Turkmenistan"
-                        },
-                        {
-                            "img": "/assets/images/call-sharp.svg",
-                            "alt": "call-sharp",
-                            "slug": "tel:+99363229627",
-                            "label": "+993 63229627"
-                        },
-                        {
-                            "img": "/assets/images/mail-unread.svg",
-                            "alt": "mail-sharp",
-                            "slug": "mailto:info@yolarowana.com",
-                            "label": "info@yolarowana.com"
-                        }
-                    ]
-                }
-            ],
-            "gallery": [
-                {
-                    "title": "Central Asia Gallery",
-                    "menu": [
-                        {
-                            "slug": "/gallery",
-                            "img": "/assets/images/footer-gallery-img1.jpg",
-                            "alt": "footer-gallery-img1"
-                        },
-                        {
-                            "slug": "/gallery",
-                            "img": "/assets/images/footer-gallery-img2.jpg",
-                            "alt": "footer-gallery-img2"
-                        },
-                        {
-                            "slug": "/gallery",
-                            "img": "/assets/images/footer-gallery-img3.jpg",
-                            "alt": "footer-gallery-img3"
-                        },
-                        {
-                            "slug": "/gallery",
-                            "img": "/assets/images/footer-gallery-img4.jpg",
-                            "alt": "footer-gallery-img4"
-                        },
-                        {
-                            "slug": "/gallery",
-                            "img": "/assets/images/footer-gallery-img4.jpg",
-                            "alt": "footer-gallery-img4"
-                        },
-                        {
-                            "slug": "/gallery",
-                            "img": "/assets/images/footer-gallery-img6.jpg",
-                            "alt": "footer-gallery-img6"
-                        },
-                        {
-                            "slug": "/gallery",
-                            "img": "/assets/images/footer-gallery-img7.jpg",
-                            "alt": "footer-gallery-img7"
-                        },
-                        {
-                            "slug": "/gallery",
-                            "img": "/assets/images/footer-gallery-img8.jpg",
-                            "alt": "footer-gallery-img8"
-                        }
-                    ]
-                }
-            ]
-        },
-        "last_data": [
+              "slug": "/about",
+              "label": "About Yola Rowana"
+            },
             {
-                "label": "Copyright 2026",
-                "label1": "Yola Rowana",
-                "label2": ". All Rights Reserved."
+              "slug": "/tour",
+              "label": "Central Asia Tours"
+            },
+            {
+              "slug": "/tour/group-tours",
+              "label": "Group Tours"
+            },
+            {
+              "slug": "/tailor-made",
+              "label": "Tailor-Made Trips"
+            },
+            {
+              "slug": "/blog",
+              "label": "Travel Guide"
+            },
+            {
+              "slug": "/contact",
+              "label": "Plan a Custom Trip"
             }
-        ],
-        "bg_image": "/assets/images/footer-bg-img.jpg",
-        "bg_alt": "/assets/images/footer-bg-img.jpg"
-    }
+          ]
+        }
+      ],
+      "contact_us": [
+        {
+          "title": "Contact Us",
+          "menu": [
+            {
+              "img": "/assets/images/pin.svg",
+              "alt": "call-sharp",
+              "label": "Ashgabat, Turkmenistan"
+            },
+            {
+              "img": "/assets/images/call-sharp.svg",
+              "alt": "call-sharp",
+              "slug": "tel:+99363229627",
+              "label": "+993 63229627"
+            },
+            {
+              "img": "/assets/images/mail-unread.svg",
+              "alt": "mail-sharp",
+              "slug": "mailto:info@yolarowana.com",
+              "label": "info@yolarowana.com"
+            }
+          ]
+        }
+      ],
+      "gallery": [
+        {
+          "title": "Explore Destinations",
+          "menu": [
+            {
+              "title": "Turkmenistan",
+              "slug": "/destination-turkmenistan",
+              "img": "/assets/images/blog-turkmenistan-itinerary-main-img.jpg",
+              "alt": "Travel in Turkmenistan"
+            },
+            {
+              "title": "Uzbekistan",
+              "slug": "/destination-uzbekistan",
+              "img": "/assets/images/blog-best-time-central-asia-1-img.jpg",
+              "alt": "Travel in Uzbekistan"
+            },
+            {
+              "title": "Kazakhstan",
+              "slug": "/destination-kazakhstan",
+              "img": "/assets/images/five-stan-tour-banner.jpg",
+              "alt": "Travel in Kazakhstan"
+            },
+            {
+              "title": "Kyrgyzstan",
+              "slug": "/destination-kyrgyzstan",
+              "img": "/assets/images/blog-best-time-central-asia-2-img.jpg",
+              "alt": "Travel in Kyrgyzstan"
+            },
+            {
+              "title": "Tajikistan",
+              "slug": "/destination-tajikistan",
+              "img": "/assets/images/categories-img-3.jpg",
+              "alt": "Travel in Tajikistan"
+            },
+            {
+              "title": "Central Asia",
+              "slug": "/destination-central-asia",
+              "img": "/assets/images/blog-silk-road-guide-mid-img-darvaza.jpg",
+              "alt": "Multi-country travel across Central Asia"
+            }
+          ]
+        }
+      ]
+    },
+    "last_data": [
+      {
+        "label": "Copyright 2026",
+        "label1": "Yola Rowana",
+        "label2": ". All Rights Reserved."
+      }
+    ],
+    "bg_image": "/assets/images/footer-bg-img.jpg",
+    "bg_alt": "/assets/images/footer-bg-img.jpg"
+  }
 ]

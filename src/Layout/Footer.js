@@ -147,27 +147,41 @@ export default function Footer({ initialValues }) {
                               <h4 className="footer-title">
                                 {gallery_data.title}
                               </h4>
-                              <div className="grid grid-cols-4 gap-3">
+
+                              <div className="grid grid-cols-3 gap-2.5">
                                 {gallery_data.menu &&
-                                  gallery_data.menu.map((menu_data, index) => {
-                                    return (
-                                      <div
-                                        className="overflow-hidden relative group rounded-xl before:block before:pt-full"
-                                        key={index}>
-                                        <Link
-                                          href={menu_data.slug}
-                                          className="absolute top-0 left-0 h-full w-full block">
-                                          <Image
-                                            src={menu_data.img}
-                                            alt={menu_data.alt}
-                                            width={54}
-                                            height={54}
-                                            className="transition-all group-hover:scale-105 w-full h-full object-cover duration-300"
-                                          />
-                                        </Link>
-                                      </div>
-                                    );
-                                  })}
+                                  gallery_data.menu.map(
+                                    (menu_data, itemIndex) => {
+                                      return (
+                                        <div
+                                          className="relative overflow-hidden rounded-xl group aspect-square"
+                                          key={
+                                            menu_data.slug ||
+                                            menu_data.title ||
+                                            itemIndex
+                                          }>
+                                          <Link
+                                            href={menu_data.slug}
+                                            aria-label={`Explore ${menu_data.title}`}
+                                            className="absolute inset-0 block">
+                                            <Image
+                                              src={menu_data.img}
+                                              alt={menu_data.alt}
+                                              fill
+                                              sizes="(max-width: 640px) 30vw, 90px"
+                                              className="object-cover transition-transform duration-300 group-hover:scale-110"
+                                            />
+
+                                            <span className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"></span>
+
+                                            <span className="absolute bottom-2 left-2 right-2 text-[11px] leading-tight font-semibold text-white drop-shadow-md">
+                                              {menu_data.title}
+                                            </span>
+                                          </Link>
+                                        </div>
+                                      );
+                                    }
+                                  )}
                               </div>
                             </div>
                           );
