@@ -1,25 +1,84 @@
 [
   {
     "title": "Plan Your Central Asia Trip",
-    "inqure_title": "Tell us about your journey",
-    "inqure_label": "Share your travel dates, countries of interest, group size, and preferred travel style. We will help you shape the right route across Central Asia.",
+    "description": "Tell us where you want to go, when you plan to travel, and what kind of experience you want. We will help you build a practical Central Asia route with local support.",
+    "inqure_title": "Request a Central Asia Trip Plan",
+    "inqure_label": "Share your travel dates, countries of interest, group size, and preferred travel style. We will reply with practical route advice and the next planning steps.",
     "submit_btn_label": "Send Inquiry",
     "location": [
       {
         "title": "Yola Rowana",
         "bg_image": "/assets/images/contact-info-bg-img.jpg",
-        "street": "Central Asia travel planning",
-        "city": "Ashgabat",
+        "street": "Paytagt Shopping Center",
+        "city": "Ashgabat, Turkmenistan",
         "state": "",
-        "country": "Turkmenistan",
+        "country": "",
         "pin_code": "",
         "tel_title": "WhatsApp",
-        "tel_label": "+993 63229627",
+        "tel_label": "+993 63 229627",
         "tel_slug": "tel:+99363229627",
         "mail_title": "Email",
         "mail_label": "info@yolarowana.com",
         "mail_slug": "mailto:info@yolarowana.com",
-        "location_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4950410.22452773!2d51.42389821549355!3d39.07463379114525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f6ffe35a8435ec5%3A0xc22468e70d0c80c1!2sTurkmenistan!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+        "location_url": "https://www.google.com/maps?ll=37.8942278,58.3898750&z=17&t=m&output=embed"
+      }
+    ],
+    "contact_cards": [
+      {
+        "title": "WhatsApp",
+        "icon": "fa-brands fa-whatsapp",
+        "label": "+993 63 229627",
+        "slug": "https://wa.me/99363229627",
+        "description": "Fastest way to contact us for route advice and quick questions."
+      },
+      {
+        "title": "Email",
+        "icon": "fa-regular fa-envelope",
+        "label": "info@yolarowana.com",
+        "slug": "mailto:info@yolarowana.com",
+        "description": "Best for detailed itineraries, group requests and travel dates."
+      },
+      {
+        "title": "Custom Trip Request",
+        "icon": "fa-regular fa-route",
+        "label": "Send request",
+        "slug": "#account_details_form",
+        "description": "Tell us your countries, dates and travel style. We will suggest the next steps."
+      }
+    ],
+    "planning_steps": [
+      {
+        "title": "We review your route",
+        "description": "We check your dates, countries of interest and realistic travel pace."
+      },
+      {
+        "title": "We suggest the best connections",
+        "description": "We help with border crossings, flight logic and overland route planning."
+      },
+      {
+        "title": "We prepare a practical plan",
+        "description": "You receive route advice, itinerary direction and the next quotation steps."
+      },
+      {
+        "title": "We adjust around your style",
+        "description": "Private, small group, family, comfort or adventure routes can be customized."
+      }
+    ],
+    "office_details": [
+      {
+        "title": "Location",
+        "label": "Paytagt Shopping Center, Ashgabat, Turkmenistan",
+        "icon": "fa-regular fa-location-dot"
+      },
+      {
+        "title": "Working hours",
+        "label": "Monday – Friday: 09:00 – 18:00. Saturday by appointment.",
+        "icon": "fa-regular fa-clock"
+      },
+      {
+        "title": "Response time",
+        "label": "Most travel requests are reviewed within 24 hours.",
+        "icon": "fa-regular fa-message-check"
       }
     ]
   }

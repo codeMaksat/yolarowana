@@ -229,16 +229,15 @@ export default function Index({ initialTours = [] }) {
 
       <Hero initialValues={hero_data} />
       <Top_Destinations initialValues={top_destinations_data} />
-      <Travel_Confidence />
 
       {!loadingTours && formattedTours.length > 0 && (
         <Popular_Tours initialValues={[homepageTourSection]} />
       )}
-
-      <How_It_Works />
-      <Start_About initialValues={start_about_data} />
       <Perfect_Travel_Planner initialValues={perfect_travel_planner_data} />
+      <Travel_Confidence />
+      <How_It_Works />
       <Full_Video initialValues={full_video_data} />
+      <Start_About initialValues={start_about_data} />
       {/* <Why_Choose_Us initialValues={why_choose_us_data} /> */}
       <Start_Testimonial initialValues={start_testimonial_data} />
       <Latest_Blog_News initialValues={latest_blog_news_data} />

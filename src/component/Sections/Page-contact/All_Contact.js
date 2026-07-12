@@ -2,6 +2,49 @@ import Link from "next/link";
 import { useState } from "react";
 import { supabase } from "@/utils/supabaseClient";
 
+const defaultContactCards = [
+  {
+    title: "WhatsApp",
+    icon: "fa-brands fa-whatsapp",
+    label: "+993 63 229627",
+    slug: "https://wa.me/99363229627",
+    description: "Fastest way to contact us for route advice and quick questions.",
+  },
+  {
+    title: "Email",
+    icon: "fa-regular fa-envelope",
+    label: "info@yolarowana.com",
+    slug: "mailto:info@yolarowana.com",
+    description: "Best for detailed itineraries, group requests and travel dates.",
+  },
+  {
+    title: "Custom Trip Request",
+    icon: "fa-regular fa-route",
+    label: "Send request",
+    slug: "#account_details_form",
+    description: "Tell us your countries, dates and travel style. We will suggest the next steps.",
+  },
+];
+
+const defaultPlanningSteps = [
+  {
+    title: "We review your route",
+    description: "We check your dates, countries of interest and realistic travel pace.",
+  },
+  {
+    title: "We suggest the best connections",
+    description: "We help with border crossings, flight logic and overland route planning.",
+  },
+  {
+    title: "We prepare a practical plan",
+    description: "You receive route advice, itinerary direction and the next quotation steps.",
+  },
+  {
+    title: "We adjust around your style",
+    description: "Private, small group, family, comfort or adventure routes can be customized.",
+  },
+];
+
 const All_Contact = ({ initialValues }) => {
   const [address_save_errors, setaddress_save_errors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,7 +64,19 @@ const All_Contact = ({ initialValues }) => {
 
   const getInquiryData = () => {
     const formElement = document.querySelector("#account_details_form");
+
+    if (!formElement) {
+      return {};
+    }
+
     const formData = new FormData(formElement);
+
+    const cleanSelectValue = value => {
+      if (!value) return "";
+      if (value === "Travel style") return "";
+      if (value === "Number of travelers") return "";
+      return value;
+    };
 
     return {
       name: formData.get("Fullname"),
@@ -29,8 +84,8 @@ const All_Contact = ({ initialValues }) => {
       phone: formData.get("phone"),
       travelDates: formData.get("travel_dates"),
       countries: formData.get("countries"),
-      travelStyle: formData.get("travel_style"),
-      travelers: formData.get("travelers"),
+      travelStyle: cleanSelectValue(formData.get("travel_style")),
+      travelers: cleanSelectValue(formData.get("travelers")),
       messages: formData.get("messages"),
     };
   };
@@ -45,7 +100,7 @@ const All_Contact = ({ initialValues }) => {
     if (!inquiry.email || inquiry.email.trim() === "") {
       error.email = "Email is required*";
     } else if (
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(inquiry.email)
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(inquiry.email)
     ) {
       error.email = "Invalid email address";
     }
@@ -123,7 +178,7 @@ ${inquiry.messages}
     }
 
     setSuccessMessage(
-      "Thank you! Your inquiry has been sent. Our consultant will contact you soon."
+      "Thank you! Your inquiry has been received. Our consultant will contact you soon."
     );
 
     const formElement = document.querySelector("#account_details_form");
@@ -131,18 +186,14 @@ ${inquiry.messages}
       formElement.reset();
     }
 
-
-    const inquiryMessage = createMessage(inquiry);
-
     if (method === "whatsapp") {
+      const inquiryMessage = createMessage(inquiry);
       const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
         inquiryMessage
       )}`;
 
-      setTimeout(() => {
-        window.location.href = whatsappUrl;
-      }, 800);
-
+      setIsSubmitting(false);
+      window.location.href = whatsappUrl;
       return;
     }
 
@@ -150,17 +201,25 @@ ${inquiry.messages}
   };
 
   return (
-    <section>
+    <section className="py-12 md:py-16">
       {initialValues &&
         initialValues.map((data, index) => {
+          const contactCards = data.contact_cards || defaultContactCards;
+          const planningSteps = data.planning_steps || defaultPlanningSteps;
+          const officeDetails = data.office_details || [];
+
           return (
             <div className="container" key={index}>
-              <div className="text-left mb-5 md:mb-8">
-                <h2>{data.title}</h2>
-                <p className="max-w-[760px] text-dark-800">
-                  Tell us where you want to go, when you plan to travel, and
-                  what kind of experience you want. We will help you build a
-                  practical Central Asia route with local support.
+              <div className="text-left mb-6 md:mb-9">
+                <span className="inline-block text-primary-900 uppercase tracking-[0.2em] text-xs font-semibold mb-3">
+                  Contact Yola Rowana
+                </span>
+
+                <h2 className="mb-4">{data.title}</h2>
+
+                <p className="max-w-[780px] text-dark-800 mb-0">
+                  {data.description ||
+                    "Tell us where you want to go, when you plan to travel, and what kind of experience you want. We will help you build a practical Central Asia route with local support."}
                 </p>
               </div>
 
@@ -168,12 +227,12 @@ ${inquiry.messages}
                 data.location.map((location_data, index) => {
                   return (
                     <div
-                      className="flex flex-wrap rounded-xl overflow-hidden shadow-card-1"
+                      className="flex flex-wrap rounded-xl overflow-hidden shadow-card-1 bg-white"
                       key={index}
                     >
                       <div className="w-full md:w-2/5">
                         <div
-                          className="grid relative h-full text-left content-center text-white bg-cover bg-no-repeat bg-center p-10 px-7 xl:px-14 xl:p-14 before:block before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-dark-900/50"
+                          className="grid relative h-full min-h-[420px] text-left content-center text-white bg-cover bg-no-repeat bg-center p-10 px-7 xl:px-14 xl:p-14 before:block before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-dark-900/55"
                           style={{
                             backgroundImage: `url('${location_data.bg_image}')`,
                           }}
@@ -183,25 +242,35 @@ ${inquiry.messages}
                               {location_data.title}
                             </h2>
 
-                            <p>
+                            <p className="text-lg leading-normal">
                               {location_data.street}
                               <br />
                               {location_data.city}
                               {location_data.state
                                 ? `, ${location_data.state}`
                                 : ""}
-                              <br />
-                              {location_data.country} {location_data.pin_code}
+                              {location_data.country ? (
+                                <>
+                                  <br />
+                                  {location_data.country} {location_data.pin_code}
+                                </>
+                              ) : null}
                             </p>
 
-                            <p className="mb-0">
+                            <p className="mb-0 text-lg leading-normal">
                               {location_data.tel_title}:{" "}
-                              <Link href={location_data.tel_slug}>
+                              <Link
+                                href={location_data.tel_slug}
+                                className="hover:text-primary-800"
+                              >
                                 {location_data.tel_label}
                               </Link>
                               <br />
                               {location_data.mail_title}:{" "}
-                              <Link href={location_data.mail_slug}>
+                              <Link
+                                href={location_data.mail_slug}
+                                className="hover:text-primary-800"
+                              >
                                 {location_data.mail_label}
                               </Link>
                             </p>
@@ -215,6 +284,7 @@ ${inquiry.messages}
 
                       <div className="w-full md:w-3/5">
                         <iframe
+                          title="Yola Rowana location map - Paytagt Shopping Center, Ashgabat"
                           src={location_data.location_url}
                           width="100%"
                           height="100%"
@@ -229,10 +299,43 @@ ${inquiry.messages}
                   );
                 })}
 
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8 md:mt-10">
+                {contactCards.map((card, cardIndex) => {
+                  return (
+                    <Link
+                      href={card.slug}
+                      key={cardIndex}
+                      target={card.slug?.startsWith("http") ? "_blank" : undefined}
+                      className="group bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl p-5 shadow-sm hover:shadow-card-1 transition-all"
+                    >
+                      <div className="w-11 h-11 rounded-full bg-white border border-[#E2CFAF] flex items-center justify-center text-primary-900 mb-4 group-hover:bg-primary-900 group-hover:text-white transition-all">
+                        <i className={card.icon}></i>
+                      </div>
+
+                      <h3 className="text-xl mb-2">{card.title}</h3>
+
+                      <p className="text-dark-800 leading-normal mb-3">
+                        {card.description}
+                      </p>
+
+                      <span className="text-primary-900 font-semibold">
+                        {card.label}
+                        <i className="fa-regular fa-arrow-right ml-2"></i>
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+
               <div className="mt-10 md:mt-16 mx-auto max-w-[820px] bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl p-5 md:p-8 shadow-sm">
                 <div className="text-center mb-8 md:mb-10">
+                  <span className="inline-block text-primary-900 uppercase tracking-[0.2em] text-xs font-semibold mb-3">
+                    Trip Request
+                  </span>
+
                   <h2>{data.inqure_title}</h2>
-                  <p className="max-w-[590px] mx-auto">{data.inqure_label}</p>
+
+                  <p className="max-w-[610px] mx-auto">{data.inqure_label}</p>
                 </div>
 
                 <form
@@ -382,9 +485,76 @@ ${inquiry.messages}
                           {emailAddress}
                         </Link>
                       </p>
+
+                      <p className="text-center text-xs text-dark-800/80 mt-3 mb-0">
+                        We only use your details to reply to your travel request. No spam.
+                      </p>
                     </div>
                   </div>
                 </form>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_0.8fr] gap-6 md:gap-8 mt-10 md:mt-16 mb-4">
+                <div className="bg-white border border-[#E2CFAF] rounded-2xl p-5 md:p-7 shadow-sm">
+                  <span className="inline-block text-primary-900 uppercase tracking-[0.2em] text-xs font-semibold mb-3">
+                    After You Contact Us
+                  </span>
+
+                  <h2 className="mb-5">What happens next?</h2>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {planningSteps.map((step, stepIndex) => {
+                      return (
+                        <div
+                          className="bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl p-4"
+                          key={stepIndex}
+                        >
+                          <span className="text-primary-900 font-bold text-lg">
+                            {String(stepIndex + 1).padStart(2, "0")}
+                          </span>
+
+                          <h3 className="text-lg mb-2">{step.title}</h3>
+
+                          <p className="text-dark-800 leading-normal mb-0">
+                            {step.description}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div className="bg-[#FAF7F2] border border-[#E2CFAF] rounded-2xl p-5 md:p-7 shadow-sm">
+                  <span className="inline-block text-primary-900 uppercase tracking-[0.2em] text-xs font-semibold mb-3">
+                    Local Support
+                  </span>
+
+                  <h2 className="mb-4">Yola Rowana Office</h2>
+
+                  <p className="text-dark-800 leading-normal">
+                    Paytagt Shopping Center
+                    <br />
+                    Ashgabat, Turkmenistan
+                    <br />
+                    Central Asia travel planning, private tours and local support.
+                  </p>
+
+                  <div className="space-y-3 mt-5">
+                    {officeDetails.map((item, itemIndex) => {
+                      return (
+                        <div className="flex gap-3" key={itemIndex}>
+                          <i className={`${item.icon} text-primary-900 mt-1`}></i>
+                          <div>
+                            <h3 className="text-base mb-1">{item.title}</h3>
+                            <p className="text-dark-800 text-sm leading-normal mb-0">
+                              {item.label}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           );
