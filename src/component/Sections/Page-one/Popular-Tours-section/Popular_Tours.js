@@ -45,7 +45,7 @@ const Popular_Tours = ({ initialValues }) => {
   };
 
   return (
-    <section className="customers-purchased-section py-10 md:py-20 lg:py-28 overflow-hidden">
+    <section className="customers-purchased-section py-10 md:py-20 lg:py-10 overflow-hidden">
       {Array.isArray(initialValues) &&
         initialValues.map((data, index) => {
           const products = Array.isArray(data?.product) ? data.product : [];

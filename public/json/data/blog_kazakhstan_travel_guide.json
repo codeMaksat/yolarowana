@@ -5,13 +5,13 @@
         "title": "Kazakhstan Travel Guide",
         "home_label": "Home",
         "home_slug": "/",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blog-kazakhstan-travel-guide-inner-banner-img.jpg",
         "alt": "Kazakhstan Travel Guide"
       }
     ],
     "title": "Kazakhstan Travel Guide: Almaty, Charyn Canyon, Kolsai Lakes & Astana",
     "intro": "A practical guide to planning a Kazakhstan journey, including the best places to visit, suggested route ideas, travel timing, nature highlights and recommended tours.",
-    "main_image": "/assets/images/popular-tours-img6.jpg",
+    "main_image": "/assets/images/blog-kazakhstan-travel-guide-main-img.jpg",
     "main_image_alt": "Kazakhstan mountain and canyon landscape",
     "meta": [
       {
@@ -67,11 +67,11 @@
     },
     "mid_images": [
       {
-        "image": "/assets/images/top-destinations-img-1.jpg",
+        "image": "/assets/images/blog-kazakhstan-travel-guide-1-img.jpg",
         "alt": "Almaty Kazakhstan travel"
       },
       {
-        "image": "/assets/images/special-offers-img1.jpg",
+        "image": "/assets/images/blog-kazakhstan-travel-guide-2-img.jpg",
         "alt": "Kazakhstan nature route"
       }
     ],
@@ -114,7 +114,7 @@
       {
         "id": "almaty",
         "title": "Almaty: The Best Starting Point",
-        "image": "/assets/images/popular-tours-img6.jpg",
+        "image": "/assets/images/blog-kazakhstan-travel-guide-main-1-img.jpg",
         "alt": "Almaty Kazakhstan travel",
         "paragraphs": [
           "Almaty is often the best starting point for a Kazakhstan trip. The city has mountain views, green parks, local markets, cafes, museums and easy access to nearby nature routes.",
@@ -124,7 +124,7 @@
       {
         "id": "charyn",
         "title": "Charyn Canyon: Kazakhstan’s Dramatic Desert Landscape",
-        "image": "/assets/images/special-offers-img1.jpg",
+        "image": "/assets/images/blog-kazakhstan-travel-guide-main-2-img.jpg",
         "alt": "Charyn Canyon Kazakhstan",
         "paragraphs": [
           "Charyn Canyon is one of Kazakhstan’s most famous natural attractions. Its red rock formations, deep valley views and unusual shapes make it one of the strongest day trips or overnight extensions from Almaty.",
@@ -134,7 +134,7 @@
       {
         "id": "kolsai-kaindy",
         "title": "Kolsai Lakes and Kaindy Lake",
-        "image": "/assets/images/top-destinations-img-1.jpg",
+        "image": "/assets/images/blog-kazakhstan-travel-guide-main-3-img.jpg",
         "alt": "Kolsai and Kaindy Lakes Kazakhstan",
         "paragraphs": [
           "Kolsai Lakes are among the most beautiful mountain lake areas in Kazakhstan. The landscape includes clear water, forested slopes, mountain views and peaceful village surroundings.",
@@ -144,7 +144,7 @@
       {
         "id": "astana",
         "title": "Astana: Kazakhstan’s Modern Capital",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blog-kazakhstan-travel-guide-main-4-img.jpg",
         "alt": "Astana Kazakhstan travel",
         "paragraphs": [
           "Astana shows a very different side of Kazakhstan. The capital is known for modern architecture, wide avenues, government buildings, museums and futuristic city design.",

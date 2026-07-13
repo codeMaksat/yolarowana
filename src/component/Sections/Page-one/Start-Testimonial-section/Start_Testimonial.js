@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -295,13 +294,12 @@ const Start_Testimonial = ({ initialValues }) => {
 
                             <div className="flex border-t border-gray-100 pt-3">
                               <figcaption className="flex justify-center items-center space-x-3">
-                                <Image
-                                  className="w-10 h-10 rounded-full shrink-0"
-                                  src={review_data.image}
-                                  alt={review_data.alt}
-                                  width={40}
-                                  height={40}
-                                />
+                                <div
+                                  className="w-10 h-10 rounded-full bg-[#E8F3EC] border border-[#D8B46A]/30 flex items-center justify-center text-primary-900 shrink-0"
+                                  aria-hidden="true"
+                                >
+                                  <i className="fa-regular fa-user text-lg"></i>
+                                </div>
 
                                 <div className="space-y-0.5 font-medium dark:text-white text-left">
                                   <div className="text-dark-900 text-sm font-bold leading-normal">
