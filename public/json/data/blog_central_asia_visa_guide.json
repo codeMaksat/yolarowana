@@ -5,13 +5,13 @@
         "title": "Central Asia Visa Guide",
         "home_label": "Home",
         "home_slug": "/",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/central-asia-visa-guide/inner-banner.jpg",
         "alt": "Central Asia Visa Guide"
       }
     ],
     "title": "Central Asia Visa Guide: Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan & Turkmenistan",
     "intro": "A practical visa planning guide for Central Asia travelers, covering the main entry considerations for Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan.",
-    "main_image": "/assets/images/popular-tours-img1.jpg",
+    "main_image": "/assets/images/blogs/central-asia-visa-guide/card-1.jpg",
     "main_image_alt": "Central Asia travel visa planning",
     "meta": [
       {
@@ -67,11 +67,11 @@
     },
     "mid_images": [
       {
-        "image": "/assets/images/top-destinations-img-1.jpg",
+        "image": "/assets/images/blogs/central-asia-visa-guide/image-1.jpg",
         "alt": "Central Asia border and travel planning"
       },
       {
-        "image": "/assets/images/top-destinations-img-5.jpg",
+        "image": "/assets/images/blogs/central-asia-visa-guide/image-2.jpg",
         "alt": "Silk Road visa and route planning"
       }
     ],
@@ -121,7 +121,7 @@
       {
         "id": "kazakhstan",
         "title": "Kazakhstan Visa Planning",
-        "image": "/assets/images/popular-tours-img6.jpg",
+        "image": "/assets/images/blogs/central-asia-visa-guide/card-2.jpg",
         "alt": "Kazakhstan visa and travel planning",
         "paragraphs": [
           "Kazakhstan is often used as a starting point for Central Asia travel, especially for routes beginning in Almaty. Many travelers check whether their passport qualifies for visa-free entry, e-visa options or embassy application requirements.",
@@ -131,7 +131,7 @@
       {
         "id": "kyrgyzstan",
         "title": "Kyrgyzstan Visa Planning",
-        "image": "/assets/images/popular-tours-img7.jpg",
+        "image": "/assets/images/blogs/central-asia-visa-guide/card-3.jpg",
         "alt": "Kyrgyzstan visa and travel planning",
         "paragraphs": [
           "Kyrgyzstan is popular for mountain and lake routes, including Bishkek, Issyk-Kul, Karakol and Song-Kul. Visa planning is usually connected to passport nationality and length of stay.",
@@ -141,7 +141,7 @@
       {
         "id": "tajikistan",
         "title": "Tajikistan Visa and GBAO Planning",
-        "image": "/assets/images/popular-tours-img9.jpg",
+        "image": "/assets/images/blogs/central-asia-visa-guide/card-4.jpg",
         "alt": "Tajikistan visa and Pamir Highway planning",
         "paragraphs": [
           "Tajikistan is important for travelers interested in the Fann Mountains, Pamir Highway and Wakhan Valley. Depending on nationality, travelers may need to use official visa or e-visa systems before arrival.",
@@ -151,7 +151,7 @@
       {
         "id": "turkmenistan",
         "title": "Turkmenistan Visa and Letter of Invitation",
-        "image": "/assets/images/popular-tours-img8.jpg",
+        "image": "/assets/images/blogs/central-asia-visa-guide/card-5.jpg",
         "alt": "Turkmenistan visa and invitation planning",
         "paragraphs": [
           "Turkmenistan usually requires the most careful visa planning in Central Asia. Tourist travel commonly involves a Letter of Invitation or approved invitation process, and arrangements should be started before the travel date.",
