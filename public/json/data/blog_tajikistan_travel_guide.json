@@ -5,13 +5,13 @@
         "title": "Tajikistan Travel Guide",
         "home_label": "Home",
         "home_slug": "/",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/tajikistan-travel-guide/inner-banner.jpg",
         "alt": "Tajikistan Travel Guide"
       }
     ],
     "title": "Tajikistan Travel Guide: Pamir Highway, Fann Mountains, Lakes & Mountain Culture",
     "intro": "A practical guide to planning a Tajikistan journey, including Dushanbe, Iskanderkul, the Fann Mountains, Pamir Highway, Wakhan Valley, route ideas, travel timing and recommended tours.",
-    "main_image": "/assets/images/popular-tours-img9.jpg",
+    "main_image": "/assets/images/blogs/tajikistan-travel-guide/card-1.jpg",
     "main_image_alt": "Tajikistan mountain landscape",
     "meta": [
       {
@@ -67,11 +67,11 @@
     },
     "mid_images": [
       {
-        "image": "/assets/images/top-destinations-img-6.jpg",
+        "image": "/assets/images/blogs/tajikistan-travel-guide/image-1.jpg",
         "alt": "Tajikistan mountain route"
       },
       {
-        "image": "/assets/images/special-offers-img1.jpg",
+        "image": "/assets/images/blogs/tajikistan-travel-guide/image-2.jpg",
         "alt": "Pamir Highway Tajikistan"
       }
     ],
@@ -114,7 +114,7 @@
       {
         "id": "dushanbe",
         "title": "Dushanbe: The Starting Point",
-        "image": "/assets/images/popular-tours-img9.jpg",
+        "image": "/assets/images/blogs/tajikistan-travel-guide/card-2.jpg",
         "alt": "Dushanbe Tajikistan travel",
         "paragraphs": [
           "Dushanbe is the capital of Tajikistan and the usual starting point for most journeys. The city offers museums, parks, wide avenues, local markets and an introduction to Tajik culture before travelers continue into the mountains.",
@@ -124,7 +124,7 @@
       {
         "id": "fann-mountains",
         "title": "Fann Mountains and Iskanderkul",
-        "image": "/assets/images/top-destinations-img-6.jpg",
+        "image": "/assets/images/blogs/tajikistan-travel-guide/card-3.jpg",
         "alt": "Fann Mountains Tajikistan",
         "paragraphs": [
           "The Fann Mountains are among the most beautiful and accessible mountain areas in Tajikistan. They are known for alpine scenery, lakes, valleys, village life and strong photography opportunities.",
@@ -134,7 +134,7 @@
       {
         "id": "pamir-highway",
         "title": "Pamir Highway: Tajikistan’s Great Road Journey",
-        "image": "/assets/images/special-offers-img1.jpg",
+        "image": "/assets/images/blogs/tajikistan-travel-guide/card-4.jpg",
         "alt": "Pamir Highway Tajikistan",
         "paragraphs": [
           "The Pamir Highway is one of the most famous overland routes in Central Asia. It is known for high-altitude roads, remote villages, mountain passes, river valleys and changing landscapes across eastern Tajikistan.",
@@ -144,7 +144,7 @@
       {
         "id": "wakhan-valley",
         "title": "Wakhan Valley: Remote Culture and Borderland Scenery",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/tajikistan-travel-guide/card-5.jpg",
         "alt": "Wakhan Valley Tajikistan",
         "paragraphs": [
           "The Wakhan Valley is one of the most atmospheric parts of a deeper Tajikistan journey. It combines remote settlements, river landscapes, mountain views, historical sites and a strong sense of borderland culture.",

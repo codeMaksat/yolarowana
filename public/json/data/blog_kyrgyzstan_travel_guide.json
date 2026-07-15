@@ -5,13 +5,13 @@
         "title": "Kyrgyzstan Travel Guide",
         "home_label": "Home",
         "home_slug": "/",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/kyrgyzstan-travel-guide/inner-banner-kg.jpg",
         "alt": "Kyrgyzstan Travel Guide"
       }
     ],
     "title": "Kyrgyzstan Travel Guide: Mountains, Lakes, Yurts & Nomadic Culture",
     "intro": "A practical guide to planning a Kyrgyzstan journey, including the best places to visit, suggested routes, mountain lakes, yurt stays, travel timing and recommended tours.",
-    "main_image": "/assets/images/popular-tours-img7.jpg",
+    "main_image": "/assets/images/blogs/kyrgyzstan-travel-guide/card-1.jpg",
     "main_image_alt": "Kyrgyzstan mountain and lake landscape",
     "meta": [
       {
@@ -67,11 +67,11 @@
     },
     "mid_images": [
       {
-        "image": "/assets/images/top-destinations-img-2.jpg",
+        "image": "/assets/images/blogs/kyrgyzstan-travel-guide/image-1.jpg",
         "alt": "Kyrgyzstan mountain landscape"
       },
       {
-        "image": "/assets/images/special-offers-img1.jpg",
+        "image": "/assets/images/blogs/kyrgyzstan-travel-guide/image-2.jpg",
         "alt": "Kyrgyzstan yurt and lake route"
       }
     ],
@@ -114,7 +114,7 @@
       {
         "id": "bishkek",
         "title": "Bishkek: The Starting Point",
-        "image": "/assets/images/popular-tours-img7.jpg",
+        "image": "/assets/images/blogs/kyrgyzstan-travel-guide/card-2.jpg",
         "alt": "Bishkek Kyrgyzstan travel",
         "paragraphs": [
           "Bishkek is the capital of Kyrgyzstan and the usual starting point for international arrivals. It is a relaxed city with parks, squares, museums, local markets and Soviet-era urban character.",
@@ -124,7 +124,7 @@
       {
         "id": "issyk-kul",
         "title": "Issyk-Kul Lake: Kyrgyzstan’s Great Lake",
-        "image": "/assets/images/top-destinations-img-2.jpg",
+        "image": "/assets/images/blogs/kyrgyzstan-travel-guide/card-3.jpg",
         "alt": "Issyk-Kul Lake Kyrgyzstan",
         "paragraphs": [
           "Issyk-Kul Lake is one of Kyrgyzstan’s most important travel highlights. Surrounded by mountain scenery, the lake is ideal for scenic drives, photography, cultural stops and relaxed overnight stays.",
@@ -134,7 +134,7 @@
       {
         "id": "karakol",
         "title": "Karakol: Gateway to Mountains and Valleys",
-        "image": "/assets/images/special-offers-img1.jpg",
+        "image": "/assets/images/blogs/kyrgyzstan-travel-guide/card-4.jpg",
         "alt": "Karakol Kyrgyzstan mountain route",
         "paragraphs": [
           "Karakol is one of the best bases for exploring eastern Kyrgyzstan. The town is connected to mountain valleys, trekking areas, cultural sites and scenic road routes.",
@@ -144,7 +144,7 @@
       {
         "id": "song-kul",
         "title": "Song-Kul Lake: Yurt Stays and Nomadic Atmosphere",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/kyrgyzstan-travel-guide/card-5.jpg",
         "alt": "Song-Kul Lake Kyrgyzstan yurt stay",
         "paragraphs": [
           "Song-Kul Lake is one of Kyrgyzstan’s most memorable highland destinations. It is known for open pastures, yurt camps, horses, mountain air and a strong nomadic atmosphere.",
