@@ -5,13 +5,13 @@
         "title": "Turkmenistan Visa Guide",
         "home_label": "Home",
         "home_slug": "/",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/turkmenistan-visa-guide/inner-banner.jpg",
         "alt": "Turkmenistan Visa Guide"
       }
     ],
     "title": "Turkmenistan Visa Guide: Letter of Invitation, Tourist Visa & Travel Planning",
     "intro": "A practical guide to understanding Turkmenistan visa planning, including the Letter of Invitation process, tourist visa steps, border planning, timing and recommended tours.",
-    "main_image": "/assets/images/popular-tours-img8.jpg",
+    "main_image": "/assets/images/blogs/turkmenistan-visa-guide/card-1.jpg",
     "main_image_alt": "Turkmenistan visa and travel planning",
     "meta": [
       {
@@ -67,11 +67,11 @@
     },
     "mid_images": [
       {
-        "image": "/assets/images/popular-tours-img8.jpg",
+        "image": "/assets/images/blogs/turkmenistan-visa-guide/image-1.jpg",
         "alt": "Darvaza Gas Crater Turkmenistan"
       },
       {
-        "image": "/assets/images/tour-product-detail-img.jpg",
+        "image": "/assets/images/blogs/turkmenistan-visa-guide/image-2.jpg",
         "alt": "Ancient Merv Turkmenistan visa route"
       }
     ],
@@ -114,7 +114,7 @@
       {
         "id": "loi",
         "title": "Letter of Invitation for Turkmenistan",
-        "image": "/assets/images/popular-tours-img8.jpg",
+        "image": "/assets/images/blogs/turkmenistan-visa-guide/card-2.jpg",
         "alt": "Turkmenistan Letter of Invitation planning",
         "paragraphs": [
           "The Letter of Invitation, often called LOI, is one of the most important documents for Turkmenistan tourist visa planning. For tourist travel, the LOI is normally arranged through a tourist agency and connected to the planned route, dates and travel services.",
@@ -124,7 +124,7 @@
       {
         "id": "tourist-visa",
         "title": "Turkmenistan Tourist Visa",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/turkmenistan-visa-guide/card-3.jpg",
         "alt": "Turkmenistan tourist visa guide",
         "paragraphs": [
           "After the invitation process is approved, travelers use the approved invitation to continue the visa process according to the relevant embassy, airport or border entry instructions. The exact procedure can vary depending on nationality and where the traveler enters Turkmenistan.",
@@ -134,7 +134,7 @@
       {
         "id": "border-entry",
         "title": "Airport and Land Border Entry Planning",
-        "image": "/assets/images/top-destinations-img-5.jpg",
+        "image": "/assets/images/blogs/turkmenistan-visa-guide/card-4.jpg",
         "alt": "Turkmenistan border entry planning",
         "paragraphs": [
           "Turkmenistan can be entered through different points depending on the route, including Ashgabat airport or land borders connected with neighboring countries. For Silk Road routes, travelers often combine Uzbekistan and Turkmenistan, especially around Khiva, Dashoguz, Mary or Ashgabat.",
@@ -144,7 +144,7 @@
       {
         "id": "route-planning",
         "title": "Best Routes for Turkmenistan Visa-Based Trips",
-        "image": "/assets/images/tour-product-detail-img",
+        "image": "/assets/images/blogs/turkmenistan-visa-guide/card-5.jpg",
         "alt": "Turkmenistan route and visa planning",
         "paragraphs": [
           "The most popular Turkmenistan routes usually include Ashgabat, Darvaza Gas Crater and Ancient Merv. Shorter trips focus on Ashgabat and Darvaza, while longer routes can add Mary, Merv, Dashoguz or connections with Uzbekistan.",
