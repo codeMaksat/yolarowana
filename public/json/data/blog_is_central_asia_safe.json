@@ -5,13 +5,13 @@
         "title": "Is Central Asia Safe?",
         "home_label": "Home",
         "home_slug": "/",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/is-central-asia-safe/inner-banner.jpg",
         "alt": "Is Central Asia Safe?"
       }
     ],
     "title": "Is Central Asia Safe to Visit? Practical Safety Tips for First-Time Travelers",
     "intro": "A balanced guide to travel safety in Central Asia, including city safety, border areas, mountain routes, desert travel, solo travel, health preparation and practical planning tips.",
-    "main_image": "/assets/images/popular-tours-img1.jpg",
+    "main_image": "/assets/images/blogs/is-central-asia-safe/card-1.jpg",
     "main_image_alt": "Central Asia travel safety guide",
     "meta": [
       {
@@ -67,11 +67,11 @@
     },
     "mid_images": [
       {
-        "image": "/assets/images/top-destinations-img-3.jpg",
+        "image": "/assets/images/blogs/is-central-asia-safe/image-1.jpg",
         "alt": "Safe travel in Silk Road cities"
       },
       {
-        "image": "/assets/images/popular-tours-img7.jpg",
+        "image": "/assets/images/blogs/is-central-asia-safe/image-2.jpg",
         "alt": "Mountain travel safety in Central Asia"
       }
     ],
@@ -114,7 +114,7 @@
       {
         "id": "city-safety",
         "title": "City Safety in Central Asia",
-        "image": "/assets/images/top-destinations-img-3.jpg",
+        "image": "/assets/images/blogs/is-central-asia-safe/card-2.jpg",
         "alt": "Central Asia city safety",
         "paragraphs": [
           "Major Central Asian cities are usually comfortable for travelers who use normal city precautions. Keep valuables secure, avoid flashing expensive items, use trusted taxis or arranged transfers, and be careful in crowded markets, stations and nightlife areas.",
@@ -124,7 +124,7 @@
       {
         "id": "borders",
         "title": "Border Areas and Sensitive Regions",
-        "image": "/assets/images/top-destinations-img-5.jpg",
+        "image": "/assets/images/blogs/is-central-asia-safe/card-3.jpg",
         "alt": "Central Asia border safety",
         "paragraphs": [
           "Border planning is one of the most important safety topics in Central Asia. Some border areas can be sensitive, remote or affected by changing conditions. Travelers should not assume that every crossing is open or suitable for tourists at all times.",
@@ -134,7 +134,7 @@
       {
         "id": "nature-routes",
         "title": "Mountain, Desert and Road Safety",
-        "image": "/assets/images/popular-tours-img7.jpg",
+        "image": "/assets/images/blogs/is-central-asia-safe/card-4.jpg",
         "alt": "Central Asia mountain and desert safety",
         "paragraphs": [
           "Some of Central Asia’s best experiences are outside the cities: mountain lakes, canyons, high passes, desert routes and remote valleys. These places are rewarding, but they require realistic timing and proper transport.",
@@ -144,7 +144,7 @@
       {
         "id": "solo-travel",
         "title": "Is Central Asia Safe for Solo Travelers?",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/is-central-asia-safe/card-5.jpg",
         "alt": "Solo travel in Central Asia",
         "paragraphs": [
           "Many solo travelers visit Central Asia successfully, especially on well-known routes in Uzbekistan, Kazakhstan and Kyrgyzstan. Solo travel is easier in cities and popular tourist areas than in remote mountain or desert regions.",

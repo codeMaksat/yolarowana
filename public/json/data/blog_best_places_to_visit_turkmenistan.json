@@ -5,13 +5,13 @@
         "title": "Best Places to Visit in Turkmenistan",
         "home_label": "Home",
         "home_slug": "/",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/best-places-turkmenistan/inner-banner.jpg",
         "alt": "Best Places to Visit in Turkmenistan"
       }
     ],
     "title": "Best Places to Visit in Turkmenistan: Ashgabat, Darvaza, Ancient Merv & Desert Landscapes",
     "intro": "A practical guide to Turkmenistan’s most important places to visit, including Ashgabat, Darvaza Gas Crater, Ancient Merv, Yangykala Canyon, Nisa, Mary and Silk Road routes.",
-    "main_image": "/assets/images/popular-tours-img8.jpg",
+    "main_image": "/assets/images/blogs/best-places-turkmenistan/card-1.jpg",
     "main_image_alt": "Best places to visit in Turkmenistan",
     "meta": [
       {
@@ -67,11 +67,11 @@
     },
     "mid_images": [
       {
-        "image": "/assets/images/tour-product-detail-img.jpg",
+        "image": "/assets/images/blogs/best-places-turkmenistan/image-1.jpg",
         "alt": "Ancient Merv Turkmenistan"
       },
       {
-        "image": "/assets/images/categories-img-3.jpg",
+        "image": "/assets/images/blogs/best-places-turkmenistan/image-2.jpg",
         "alt": "Darvaza Gas Crater Turkmenistan"
       }
     ],
@@ -114,7 +114,7 @@
       {
         "id": "ashgabat",
         "title": "Ashgabat: Turkmenistan’s Distinctive Capital",
-        "image": "/assets/images/inner-banner-img.jpg",
+        "image": "/assets/images/blogs/best-places-turkmenistan/card-2.jpg",
         "alt": "Ashgabat Turkmenistan travel",
         "paragraphs": [
           "Ashgabat is usually the starting point for most Turkmenistan journeys. The city is known for wide avenues, white marble buildings, monuments, museums, parks and a very distinctive urban style.",
@@ -124,7 +124,7 @@
       {
         "id": "darvaza",
         "title": "Darvaza Gas Crater: The Desert Highlight",
-        "image": "/assets/images/categories-img-3.jpg",
+        "image": "/assets/images/blogs/best-places-turkmenistan/card-3.jpg",
         "alt": "Darvaza Gas Crater Turkmenistan",
         "paragraphs": [
           "Darvaza Gas Crater is one of Turkmenistan’s most famous sights. Located in the Karakum Desert, it is best visited around sunset and after dark, when the crater becomes most dramatic.",
@@ -134,7 +134,7 @@
       {
         "id": "merv",
         "title": "Ancient Merv: Silk Road History",
-        "image": "/assets/images/tour-product-detail-img.jpg",
+        "image": "/assets/images/blogs/best-places-turkmenistan/card-4.jpg",
         "alt": "Ancient Merv Turkmenistan",
         "paragraphs": [
           "Ancient Merv is one of the most important historical places in Turkmenistan. It was once a major city on the Silk Road and remains a powerful archaeological landscape with old city walls, mausoleums, fortresses and ruins spread across a wide area.",
@@ -144,7 +144,7 @@
       {
         "id": "yangykala",
         "title": "Yangykala Canyon: Turkmenistan’s Colorful Landscape",
-        "image": "/assets/images/special-offers-img1.jpg",
+        "image": "/assets/images/blogs/best-places-turkmenistan/card-5.jpg",
         "alt": "Yangykala Canyon Turkmenistan",
         "paragraphs": [
           "Yangykala Canyon is one of Turkmenistan’s most dramatic natural landscapes. The canyon is known for layered cliffs, desert colors and wide open views that are especially attractive for photography.",
