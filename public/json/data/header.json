@@ -138,10 +138,6 @@
         "label": "Travel Guide"
       },
       {
-        "slug": "/about",
-        "label": "About"
-      },
-      {
         "slug": "/contact",
         "label": "Contact"
       }
