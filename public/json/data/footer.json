@@ -43,10 +43,6 @@
           "title": "Quick Links",
           "menu": [
             {
-              "slug": "/about",
-              "label": "About Yola Rowana"
-            },
-            {
               "slug": "/tour",
               "label": "Central Asia Tours"
             },
