@@ -8,6 +8,13 @@ const Side_Bar = ({ sideBar_data }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [selectedPriceTier, setSelectedPriceTier] = useState(null);
   const [selectedTravelers, setSelectedTravelers] = useState("");
+  const [isShareOpen, setIsShareOpen] = useState(false);
+  const [shareData, setShareData] = useState({
+    title: "",
+    text: "",
+    url: "",
+  });
+  const [copyMessage, setCopyMessage] = useState("");
 
   const inputClass =
     "w-full rounded-full border border-[#E2CFAF] bg-white px-4 py-3 text-sm text-dark-900 placeholder:text-dark-800/70 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all";
@@ -17,6 +24,100 @@ const Side_Bar = ({ sideBar_data }) => {
 
   const textareaClass =
     "w-full rounded-2xl border border-[#E2CFAF] bg-white px-4 py-3 text-sm text-dark-900 placeholder:text-dark-800/70 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all resize-none";
+
+
+  const getCurrentShareUrl = () => {
+    const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "").replace(/\/$/, "");
+
+    if (typeof window === "undefined") {
+      return siteUrl || "";
+    }
+
+    const cleanCurrentPath = `${window.location.pathname}${window.location.search}`;
+
+    if (
+      siteUrl &&
+      (window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1")
+    ) {
+      return `${siteUrl}${cleanCurrentPath}`;
+    }
+
+    return window.location.href.split("#")[0];
+  };
+
+  const getTourShareData = (formDataConfig) => {
+    const tourTitle =
+      formDataConfig?.tour_name && formDataConfig.tour_name.trim() !== ""
+        ? formDataConfig.tour_name
+        : formDataConfig?.title || "Yola Rowana Tour";
+
+    const url = getCurrentShareUrl();
+
+    return {
+      title: tourTitle,
+      text: `Check this Yola Rowana tour: ${tourTitle}`,
+      url,
+    };
+  };
+
+  const handleShareTour = async (formDataConfig) => {
+    const nextShareData = getTourShareData(formDataConfig);
+
+    setShareData(nextShareData);
+    setCopyMessage("");
+
+    if (
+      typeof navigator !== "undefined" &&
+      navigator.share &&
+      typeof window !== "undefined" &&
+      window.innerWidth < 768
+    ) {
+      try {
+        await navigator.share(nextShareData);
+        return;
+      } catch (error) {
+        if (error?.name === "AbortError") {
+          return;
+        }
+      }
+    }
+
+    setIsShareOpen((prev) => !prev);
+  };
+
+  const copyTextToClipboard = async (text) => {
+    if (
+      typeof navigator !== "undefined" &&
+      navigator.clipboard &&
+      window.isSecureContext
+    ) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+  };
+
+  const handleCopyShareLink = async () => {
+    const url = shareData.url || getCurrentShareUrl();
+
+    try {
+      await copyTextToClipboard(url);
+      setCopyMessage("Link copied");
+    } catch (error) {
+      console.error("Copy link error:", error);
+      setCopyMessage("Copy failed");
+    }
+  };
 
   const validateInquiry = (inquiry) => {
     const error = {};
@@ -200,12 +301,84 @@ ${inquiry.message}`,
               <a
                 href={form_data.brochure_pdf}
                 download
-                className="btn btn-primary flex items-center justify-center gap-2 max-w-full rounded-full w-full py-3 mb-4 font-semibold"
+                className="btn btn-primary flex items-center justify-center gap-2 max-w-full rounded-full w-full py-3 mb-3 font-semibold"
               >
                 Download Brochure
                 <i className="fa-regular fa-file-pdf ml-1"></i>
               </a>
             )}
+
+            <div className="relative mb-4">
+              <button
+                type="button"
+                onClick={() => handleShareTour(form_data)}
+                className="btn btn-light flex items-center justify-center gap-2 max-w-full rounded-full w-full py-3 border border-primary-900 font-semibold"
+              >
+                Share Tour
+                <i className="fa-regular fa-share-nodes ml-1"></i>
+              </button>
+
+              {isShareOpen && (
+                <div className="absolute left-0 right-0 top-[calc(100%+8px)] z-10 rounded-2xl border border-[#E2CFAF] bg-white p-3 shadow-card-1">
+                  <p className="mb-2 text-sm font-semibold text-dark-900">
+                    Share this tour
+                  </p>
+
+                  <div className="grid grid-cols-2 gap-2">
+                    <a
+                      href={`https://wa.me/?text=${encodeURIComponent(
+                        `${shareData.text} ${shareData.url}`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-xl border border-[#E2CFAF] px-3 py-2 text-sm text-dark-800 hover:border-primary-900 hover:text-primary-900"
+                    >
+                      <i className="fa-brands fa-whatsapp mr-2"></i>
+                      WhatsApp
+                    </a>
+
+                    <a
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                        shareData.url
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-xl border border-[#E2CFAF] px-3 py-2 text-sm text-dark-800 hover:border-primary-900 hover:text-primary-900"
+                    >
+                      <i className="fa-brands fa-facebook mr-2"></i>
+                      Facebook
+                    </a>
+
+                    <a
+                      href={`https://t.me/share/url?url=${encodeURIComponent(
+                        shareData.url
+                      )}&text=${encodeURIComponent(shareData.text)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-xl border border-[#E2CFAF] px-3 py-2 text-sm text-dark-800 hover:border-primary-900 hover:text-primary-900"
+                    >
+                      <i className="fa-brands fa-telegram mr-2"></i>
+                      Telegram
+                    </a>
+
+                    <button
+                      type="button"
+                      onClick={handleCopyShareLink}
+                      className="rounded-xl border border-[#E2CFAF] px-3 py-2 text-left text-sm text-dark-800 hover:border-primary-900 hover:text-primary-900"
+                    >
+                      <i className="fa-regular fa-link mr-2"></i>
+                      Copy Link
+                    </button>
+                  </div>
+
+                  {copyMessage && (
+                    <p className="mb-0 mt-2 text-center text-xs font-semibold text-primary-900">
+                      {copyMessage}
+                    </p>
+                  )}
+                </div>
+              )}
+            </div>
             <h5 className="text-xl mb-2 font-bold text-dark-900">
               Request This Itinerary
             </h5>
