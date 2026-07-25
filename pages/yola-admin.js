@@ -70,7 +70,7 @@ export default function Login() {
               <h1 className="text-xl mb-2">Admin login</h1>
 
               <p className="text-dark-800 md:mb-10">
-                Sign in to manage Yola Rowana inquiries.
+                Sign in to manage Belet travel inquiries.
               </p>
 
               {address_save_errors.general && (

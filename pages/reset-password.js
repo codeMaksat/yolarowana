@@ -83,7 +83,7 @@ export default function ResetPassword() {
               <h1 className="text-xl mb-2">Create new password</h1>
 
               <p className="text-dark-800 md:mb-6">
-                Enter a new password for your Yola Rowana admin account.
+                Enter a new password for your Belet Travel admin account.
               </p>
 
               {address_save_errors.general && (

@@ -379,6 +379,32 @@ ${inquiry.message}`,
                 </div>
               )}
             </div>
+            <div className="mb-5 rounded-2xl bg-white border border-[#E2CFAF] px-4 py-4">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#E8F3EC] flex items-center justify-center text-primary-900 shrink-0">
+                  <i className="fa-regular fa-users"></i>
+                </div>
+
+                <div>
+                  <h5 className="text-md mb-2 font-bold text-dark-900">
+                    Want to share this tour?
+                  </h5>
+
+                  <p className="text-sm leading-6 text-dark-800 mb-3">
+                    Solo travelers and small groups can post a travel mate
+                    request and look for other travelers to join this route.
+                  </p>
+
+                  <Link
+                    href="/travel-mates"
+                    className="inline-flex items-center text-sm font-semibold text-primary-900"
+                  >
+                    Find Travel Mates
+                    <i className="fa-regular fa-arrow-right ml-2"></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
             <h5 className="text-xl mb-2 font-bold text-dark-900">
               Request This Itinerary
             </h5>

@@ -65,11 +65,11 @@ const LoadingScreen = () => {
         </div>
 
         <h2 className="mb-2 text-2xl font-bold tracking-wide text-white">
-          Yola Rowana
+          BELET TRAVEL
         </h2>
 
         <p className="mb-5 text-sm uppercase tracking-[0.25em] text-[#D8B46A]">
-          Central Asia Tours
+          CENTRAL ASIA, KNOWN BY LOCALS
         </p>
 
         <div className="mx-auto mb-5 h-[2px] w-40 overflow-hidden rounded-full bg-white/10">

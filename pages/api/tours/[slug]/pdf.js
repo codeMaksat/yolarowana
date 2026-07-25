@@ -250,7 +250,7 @@ const renderContactBlock = (tour, contact, heroImage) => {
                                 <div class="qr-wrap">
                                     <img
                                         src="${escapeHtml(contact.qrImage)}"
-                                        alt="Yola Rowana QR code"
+                                        alt="Belet Travel QR code"
                                     />
                                     <span>Scan to contact us</span>
                                 </div>
@@ -276,7 +276,7 @@ const renderContactBlock = (tour, contact, heroImage) => {
 
                 <div class="closing-signoff">
                     <div>
-                        <div class="closing-brand">Yola Rowana</div>
+                        <div class="closing-brand">Belet Travel</div>
                         <div class="closing-tagline">
                             Tailor-made journeys across Central Asia
                         </div>
@@ -300,7 +300,7 @@ const buildFooterTemplate = tour => `
         align-items: center;
         justify-content: space-between;
     ">
-        <span>Yola Rowana | ${escapeHtml(tour.title)}</span>
+        <span>Belet Travel | ${escapeHtml(tour.title)}</span>
         <span>
             Page <span class="pageNumber"></span>
             of <span class="totalPages"></span>
@@ -796,7 +796,7 @@ const buildHtml = (tour, baseUrl) => {
 
             <body>
                 <section class="cover">
-                    <div class="brand">Yola Rowana</div>
+                    <div class="brand">Belet Travel</div>
 
                     <h1>${escapeHtml(tour.title)}</h1>
 

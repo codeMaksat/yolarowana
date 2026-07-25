@@ -46,7 +46,7 @@ function formatRecommendedTour(tour) {
     short_des:
       tour.card_description ||
       tour.meta_description ||
-      "Discover this Central Asia journey with Yola Rowana.",
+      "Discover this Central Asia journey with Belet Travel.",
     image: getTourCardImage(tour),
     alt: tour.hero_alt || tour.title || "Central Asia tour",
     travel_style: tour.travel_style || "Private",

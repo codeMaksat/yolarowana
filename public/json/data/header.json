@@ -134,6 +134,10 @@
         ]
       },
       {
+        "label": "Travel Mates",
+        "slug": "/travel-mates"
+      },
+      {
         "slug": "/blog",
         "label": "Travel Guide"
       },

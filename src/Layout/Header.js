@@ -301,8 +301,8 @@ export default function Header({ initialValues }) {
                                   alt={mid_bar_logo_data.alt}
                                   className={`transition-all ${
                                     isScrolled
-                                      ? "w-[170px] lg:w-[115px]"
-                                      : "w-[190px] lg:w-[140px]"
+                                      ? "w-[170px] lg:w-[160px]"
+                                      : "w-[190px] lg:w-[180px]"
                                   }`}
                                 />
                               </Link>

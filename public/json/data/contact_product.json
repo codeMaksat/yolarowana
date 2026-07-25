@@ -7,7 +7,7 @@
     "submit_btn_label": "Send Inquiry",
     "location": [
       {
-        "title": "Yola Rowana",
+        "title": "Belet Travel",
         "bg_image": "/assets/images/contact-info-bg-img.jpg",
         "street": "Paytagt Shopping Center",
         "city": "Ashgabat, Turkmenistan",
@@ -18,8 +18,8 @@
         "tel_label": "+993 63 229627",
         "tel_slug": "tel:+99363229627",
         "mail_title": "Email",
-        "mail_label": "info@yolarowana.com",
-        "mail_slug": "mailto:info@yolarowana.com",
+        "mail_label": "info@belettravel.com",
+        "mail_slug": "mailto:info@belettravel.com",
         "location_url": "https://www.google.com/maps?ll=37.8942278,58.3898750&z=17&t=m&output=embed"
       }
     ],
@@ -34,8 +34,8 @@
       {
         "title": "Email",
         "icon": "fa-regular fa-envelope",
-        "label": "info@yolarowana.com",
-        "slug": "mailto:info@yolarowana.com",
+        "label": "info@belettravel.com",
+        "slug": "mailto:info@belettravel.com",
         "description": "Best for detailed itineraries, group requests and travel dates."
       },
       {

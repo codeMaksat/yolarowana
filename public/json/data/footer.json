@@ -13,10 +13,10 @@
           {
             "slug": "/",
             "img": "/assets/images/logo-dark.png",
-            "alt": "Yola Rowana logo"
+            "alt": "Belet Travel logo"
           }
         ],
-        "details": "Yola Rowana creates private and small group journeys across Central Asia — from Silk Road cities and desert routes to mountain roads, nomad culture, and local experiences.",
+        "details": "Belet Travel creates private and small group journeys across Central Asia — from Silk Road cities and desert routes to mountain roads, nomad culture, and local experiences.",
         "icons": [
           {
             "slug": "https://www.facebook.com/",
@@ -55,6 +55,10 @@
               "label": "Tailor-Made Trips"
             },
             {
+              "slug": "/travel-mates",
+              "label": "Travel Mates"
+            },
+            {
               "slug": "/blog",
               "label": "Travel Guide"
             },
@@ -83,8 +87,8 @@
             {
               "img": "/assets/images/mail-unread.svg",
               "alt": "mail-sharp",
-              "slug": "mailto:info@yolarowana.com",
-              "label": "info@yolarowana.com"
+              "slug": "mailto:info@belettravel.com",
+              "label": "info@belettravel.com"
             }
           ]
         }
@@ -136,7 +140,7 @@
     "last_data": [
       {
         "label": "Copyright 2026",
-        "label1": "Yola Rowana",
+        "label1": "Belet Travel",
         "label2": ". All Rights Reserved."
       }
     ],

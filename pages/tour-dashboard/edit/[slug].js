@@ -1110,7 +1110,7 @@ export default function EditTourPage() {
                                                     value={tour.meta_title}
                                                     onChange={handleChange}
                                                     className={inputClass}
-                                                    placeholder="Five Stans Central Asia Tour | Yola Rowana"
+                                                    placeholder="Five Stans Central Asia Tour | Belet Travel"
                                                 />
                                             </div>
 
