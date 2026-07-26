@@ -185,7 +185,7 @@ export default function TravelMateRequestPage() {
     }
 
     setSuccessMessage(
-      "Thank you. Your travel mate request has been sent for review. It will appear on the website after Yola Rowana approves it."
+      "Thank you. Your travel mate request has been sent for review. It will appear on the website after Belet Travel approves it."
     );
 
     setForm({
@@ -216,10 +216,10 @@ export default function TravelMateRequestPage() {
   return (
     <>
       <Head>
-        <title>Post a Travel Mate Request | Yola Rowana</title>
+        <title>Post a Travel Mate Request | Belet Travel</title>
         <meta
           name="description"
-          content="Submit a moderated travel mate request for a Central Asia tour with Yola Rowana."
+          content="Submit a moderated travel mate request for a Central Asia tour with Belet Travel."
         />
       </Head>
 
@@ -516,7 +516,7 @@ export default function TravelMateRequestPage() {
                   className="mt-1"
                 />
                 <span>
-                  I agree that Yola Rowana may publish my first name, country,
+                  I agree that Belet Travel may publish my first name, country,
                   route, dates and public message. My email and WhatsApp will not
                   be displayed publicly.
                 </span>
@@ -557,7 +557,7 @@ export default function TravelMateRequestPage() {
                 <div>
                   <div className="font-bold text-dark-900">3. Travelers send interest</div>
                   <p className="text-sm text-dark-800 mb-0">
-                    Interested travelers send a message through Yola Rowana.
+                    Interested travelers send a message through Belet Travel.
                   </p>
                 </div>
 

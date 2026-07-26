@@ -67,7 +67,7 @@ const PriceEstimateBlock = ({ request }) => {
           <i className="fa-regular fa-circle-info text-primary-900 mt-1"></i>
           <span>
             Estimated per-person price may reduce when more travelers join.
-            Final price will be confirmed by Yola Rowana after dates, hotels,
+            Final price will be confirmed by Belet Travel after dates, hotels,
             route and group size are checked.
           </span>
         </div>
@@ -117,7 +117,7 @@ const PriceEstimateBlock = ({ request }) => {
 
       <p className="text-xs leading-5 text-dark-800 mb-0 mt-3">
         {request.price_note ||
-          "Final price will be confirmed by Yola Rowana after dates, hotels, route and group size are checked."}
+          "Final price will be confirmed by Belet Travel after dates, hotels, route and group size are checked."}
       </p>
     </div>
   );
@@ -362,7 +362,7 @@ export default function TravelMatesPage() {
     }
 
     setInterestSuccess(
-      "Thank you. Your message has been sent to Yola Rowana. We will review it and contact you before connecting travelers."
+      "Thank you. Your message has been sent to Belet Travel. We will review it and contact you before connecting travelers."
     );
 
     setInterestForm({
@@ -379,7 +379,7 @@ export default function TravelMatesPage() {
   return (
     <>
       <Head>
-        <title>Find Travel Mates for Central Asia Tours | Yola Rowana</title>
+        <title>Find Travel Mates for Central Asia Tours | Belet Travel</title>
         <meta
           name="description"
           content="Find travel mates for Central Asia tours. Browse moderated travel mate requests or submit interest in joining a traveler on a planned route."
@@ -411,10 +411,10 @@ export default function TravelMatesPage() {
               </Link>
 
               <a
-                href="mailto:info@yolarowana.com"
+                href="mailto:info@belettravel.com"
                 className="btn btn-secondary rounded-full px-6 py-3 font-semibold"
               >
-                Ask Yola Rowana
+                Ask Belet Travel
               </a>
             </div>
           </div>
@@ -511,7 +511,7 @@ export default function TravelMatesPage() {
               </div>
               <h3 className="text-xl mb-2">Tour Coordination</h3>
               <p className="text-dark-800 mb-0">
-                Once travelers agree, Yola Rowana helps combine them into one tour plan.
+                Once travelers agree, Belet Travel helps combine them into one tour plan.
               </p>
             </div>
           </div>
@@ -536,7 +536,7 @@ export default function TravelMatesPage() {
               </span>
               <h3 className="mb-2">Interested in this tour?</h3>
               <p className="text-dark-800 leading-7 mb-5">
-                Your message will be reviewed by Yola Rowana before any traveler is connected.
+                Your message will be reviewed by Belet Travel before any traveler is connected.
               </p>
             </div>
 
@@ -632,7 +632,7 @@ export default function TravelMatesPage() {
                   className="mt-1"
                 />
                 <span>
-                  I agree that Yola Rowana may contact me about this request and
+                  I agree that Belet Travel may contact me about this request and
                   may connect me with the traveler after both sides agree.
                 </span>
               </label>

@@ -340,7 +340,7 @@ export default function TravelMateDashboard() {
     const priceNote = window.prompt(
       "Public price note:",
       request.price_note ||
-        "Final price will be confirmed by Yola Rowana after dates, hotels, route and group size are checked."
+        "Final price will be confirmed by Belet Travel after dates, hotels, route and group size are checked."
     );
 
     if (priceNote === null) return;
