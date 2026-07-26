@@ -5,7 +5,7 @@ const visaSupportItems = [
   {
     title: "Letter of Invitation Support",
     description:
-      "Tour-based LOI support for travelers booking a Turkmenistan trip with Yola Rowana.",
+      "Tour-based LOI support for travelers booking a Turkmenistan trip with Belet Travel.",
     icon: "fa-regular fa-file-signature",
   },
   {
@@ -30,7 +30,7 @@ const sectionImage =
 
   const sectionImageAlt =
     firstData?.mid_contain?.[0]?.alt ||
-    "Turkmenistan visa support with Yola Rowana";
+    "Turkmenistan visa support with Belet Travel";
 
   return (
     <section className="perfect-travel-section py-10 md:py-16 lg:py-20 relative bg-white">
@@ -86,7 +86,7 @@ const sectionImage =
             </h2>
 
             <p className="text-dark-800 text-lg leading-relaxed mb-5">
-              Planning to visit Turkmenistan? Yola Rowana helps travelers
+              Planning to visit Turkmenistan? Belet Travel helps travelers
               booking a Turkmenistan tour with Letter of Invitation support for
               the tourist visa process.
             </p>

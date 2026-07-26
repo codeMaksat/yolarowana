@@ -1,13 +1,13 @@
 [
   {
-    "title": "Why Travel Central Asia With Yola Rowana?",
-    "label": "Central Asia is not a simple copy-paste destination. Routes, borders, visas, seasons and travel timing all matter. Yola Rowana focuses on this region deeply, helping travelers build journeys that feel realistic, local and meaningful.",
+    "title": "Why Travel Central Asia With Belet Travel?",
+    "label": "Central Asia is not a simple copy-paste destination. Routes, borders, visas, seasons and travel timing all matter. Belet Travel focuses on this region deeply, helping travelers build journeys that feel realistic, local and meaningful.",
     "first_image": "/assets/images/about-img1.jpg",
     "first_alt": "Central Asia local travel planning",
     "second_image": "/assets/images/about-img2.jpg",
     "second_alt": "Silk Road and Central Asia journey",
     "third_image": "/assets/images/about-img3.jpg",
-    "third_alt": "Yola Rowana Central Asia travel support",
+    "third_alt": "Belet Travel Central Asia travel support",
     "points": [
       {
         "label": "Central Asia is our focus, not one destination among hundreds"
@@ -32,9 +32,9 @@
         "label": "+993 63229627"
       },
       {
-        "slug": "mailto:info@yolarowana.com",
+        "slug": "mailto:info@belettravel.com",
         "icon": "fa-solid fa-envelope",
-        "label": "info@yolarowana.com"
+        "label": "info@belettravel.com"
       }
     ]
   }

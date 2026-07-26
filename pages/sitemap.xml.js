@@ -1,7 +1,7 @@
 import { supabase as serverSupabase } from "../lib/supabaseClient";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://yolarowana.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://belettravel.com";
 
 function escapeXml(value = "") {
   return String(value)
@@ -129,6 +129,12 @@ export async function getServerSideProps({ res }) {
       path: "/uzbekistan-silk-road-guide",
       lastmod: now,
       changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/travel-mates",
+      lastmod: now,
+      changefreq: "weekly",
       priority: "0.70",
     },
     {

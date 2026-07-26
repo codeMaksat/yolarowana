@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yolarowana.vercel.app/sitemap.xml
+# Keep admin and form-only pages out of search results
+Disallow: /tour-dashboard/
+Disallow: /booking-dashboard/
+Disallow: /yola-admin
+Disallow: /travel-mates/request
+
+Sitemap: https://belettravel.com/sitemap.xml

@@ -13,8 +13,8 @@ const defaultContactCards = [
   {
     title: "Email",
     icon: "fa-regular fa-envelope",
-    label: "info@yolarowana.com",
-    slug: "mailto:info@yolarowana.com",
+    label: "info@belettravel.com",
+    slug: "mailto:info@belettravel.com",
     description: "Best for detailed itineraries, group requests and travel dates.",
   },
   {
@@ -51,7 +51,7 @@ const All_Contact = ({ initialValues }) => {
   const [successMessage, setSuccessMessage] = useState("");
 
   const whatsappNumber = "99363229627";
-  const emailAddress = "info@yolarowana.com";
+  const emailAddress = "info@belettravel.com";
 
   const inputClass =
     "w-full rounded-full bg-white border border-[#E2CFAF] px-5 py-3 text-[15px] text-dark-900 placeholder:text-dark-800/60 outline-none focus:border-primary-900 focus:ring-2 focus:ring-primary-900/10 transition-all";
@@ -118,7 +118,7 @@ const All_Contact = ({ initialValues }) => {
 
   const createMessage = inquiry => {
     return `
-Hello Yola Rowana, I would like to plan a Central Asia trip.
+Hello Belet Travel, I would like to plan a Central Asia trip.
 
 Name: ${inquiry.name}
 Email: ${inquiry.email}
@@ -212,7 +212,7 @@ ${inquiry.messages}
             <div className="container" key={index}>
               <div className="text-left mb-6 md:mb-9">
                 <span className="inline-block text-primary-900 uppercase tracking-[0.2em] text-xs font-semibold mb-3">
-                  Contact Yola Rowana
+                  Contact Belet Travel
                 </span>
 
                 <h2 className="mb-4">{data.title}</h2>
@@ -284,7 +284,7 @@ ${inquiry.messages}
 
                       <div className="w-full md:w-3/5">
                         <iframe
-                          title="Yola Rowana location map - Paytagt Shopping Center, Ashgabat"
+                          title="Belet Travel location map - Paytagt Shopping Center, Ashgabat"
                           src={location_data.location_url}
                           width="100%"
                           height="100%"
@@ -529,7 +529,7 @@ ${inquiry.messages}
                     Local Support
                   </span>
 
-                  <h2 className="mb-4">Yola Rowana Office</h2>
+                  <h2 className="mb-4">Belet Travel Office</h2>
 
                   <p className="text-dark-800 leading-normal">
                     Paytagt Shopping Center

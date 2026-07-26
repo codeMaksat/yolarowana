@@ -50,13 +50,13 @@ const Side_Bar = ({ sideBar_data }) => {
     const tourTitle =
       formDataConfig?.tour_name && formDataConfig.tour_name.trim() !== ""
         ? formDataConfig.tour_name
-        : formDataConfig?.title || "Yola Rowana Tour";
+        : formDataConfig?.title || "Belet Travel Tour";
 
     const url = getCurrentShareUrl();
 
     return {
       title: tourTitle,
-      text: `Check this Yola Rowana tour: ${tourTitle}`,
+      text: `Check this Belet Travel tour: ${tourTitle}`,
       url,
     };
   };
