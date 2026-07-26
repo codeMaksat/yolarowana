@@ -7,7 +7,7 @@ const Head_Meta = ({ meta_data = {}, comman_meta = {} }) => {
   const cleanPath = (router.asPath || "/").split("?")[0].split("#")[0];
 
   const noIndexPaths = [
-    "/yola-admin",
+    "/belet-admin",
     "/tour-dashboard",
     "/booking-dashboard",
     "/travel-mates/request",

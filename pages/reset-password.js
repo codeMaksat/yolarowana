@@ -61,7 +61,7 @@ export default function ResetPassword() {
     formElement.reset();
 
     setTimeout(() => {
-      router.push("/yola-admin");
+      router.push("/belet-admin");
     }, 1200);
 
     setIsSubmitting(false);
@@ -147,7 +147,7 @@ export default function ResetPassword() {
                   <p className="text-dark-800 m-0">
                     Back to{" "}
                     <Link
-                      href="/yola-admin"
+                      href="/belet-admin"
                       className="text-primary-900 underline hover:text-black hover:no-underline"
                     >
                       Login

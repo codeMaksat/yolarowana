@@ -4,7 +4,7 @@ Allow: /
 # Keep admin and form-only pages out of search results
 Disallow: /tour-dashboard/
 Disallow: /booking-dashboard/
-Disallow: /yola-admin
+Disallow: /belet-admin
 Disallow: /travel-mates/request
 
 Sitemap: https://belettravel.com/sitemap.xml

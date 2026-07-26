@@ -220,7 +220,7 @@ export default function EditTourPage() {
             } = await supabase.auth.getUser();
 
             if (!user) {
-                router.push("/yola-admin");
+                router.push("/belet-admin");
                 return;
             }
 
@@ -727,7 +727,7 @@ export default function EditTourPage() {
 
     const handleLogout = async () => {
         await supabase.auth.signOut();
-        router.push("/yola-admin");
+        router.push("/belet-admin");
     };
 
     if (checkingAuth || loading) {
@@ -762,6 +762,15 @@ export default function EditTourPage() {
                                             <img src="/assets/images/hiking-icon-1.svg" alt="tours" />
                                         </span>
                                         Tours
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/tour-dashboard/travel-mates">
+                                        <span>
+                                            <img src="/assets/images/group-user-icon.svg" alt="travel mates" />
+                                        </span>
+                                        Travel Mates
                                     </Link>
                                 </li>
 

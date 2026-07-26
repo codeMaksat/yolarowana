@@ -20,7 +20,7 @@ export default function Dashboard() {
       } = await supabase.auth.getUser();
 
       if (!user) {
-        router.push("/yola-admin");
+        router.push("/belet-admin");
         return;
       }
 
@@ -32,7 +32,7 @@ export default function Dashboard() {
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    router.push("/yola-admin");
+    router.push("/belet-admin");
   };
 
   const fetchInquiries = async () => {
@@ -295,6 +295,15 @@ export default function Dashboard() {
                     Tours
                   </Link>
                 </li>
+                <li>
+                  <Link href="/tour-dashboard/travel-mates">
+                    <span>
+                      <img src="/assets/images/group-user-icon.svg" alt="travel mates" />
+                    </span>
+                    Travel Mates
+                  </Link>
+                </li>
+
 
                 <li>
                   <Link href="/contact">

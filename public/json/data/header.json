@@ -17,9 +17,9 @@
             "slug": "#"
           }
         ],
-        "call_slug": "tel:+99363229627",
-        "call_icon": "fa-solid fa-phone",
-        "call_label": "+993 63 229627",
+        "call_slug": "https://wa.me/99363229627",
+        "call_icon": "fa-brands fa-whatsapp",
+        "call_label": "Message on WhatsApp",
         "logout_slug": "/contact",
         "logout_label": "PLAN A TRIP"
       }

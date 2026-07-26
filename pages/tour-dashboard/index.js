@@ -26,7 +26,7 @@ export default function TourDashboard() {
             } = await supabase.auth.getUser();
 
             if (!user) {
-                router.push("/yola-admin");
+                router.push("/belet-admin");
                 return;
             }
 
@@ -38,7 +38,7 @@ export default function TourDashboard() {
 
     const handleLogout = async () => {
         await supabase.auth.signOut();
-        router.push("/yola-admin");
+        router.push("/belet-admin");
     };
 
     const duplicateTour = async tour => {
@@ -123,9 +123,9 @@ export default function TourDashboard() {
             prevTours.map(item =>
                 item.id === tour.id
                     ? {
-                          ...item,
-                          status: "archived",
-                      }
+                        ...item,
+                        status: "archived",
+                    }
                     : item
             )
         );
@@ -156,9 +156,9 @@ export default function TourDashboard() {
             prevTours.map(item =>
                 item.id === tour.id
                     ? {
-                          ...item,
-                          status: "draft",
-                      }
+                        ...item,
+                        status: "draft",
+                    }
                     : item
             )
         );
@@ -345,6 +345,15 @@ export default function TourDashboard() {
                                 </li>
 
                                 <li>
+                                    <Link href="/tour-dashboard/travel-mates">
+                                        <span>
+                                            <img src="/assets/images/group-user-icon.svg" alt="travel mates" />
+                                        </span>
+                                        Travel Mates
+                                    </Link>
+                                </li>
+
+                                <li>
                                     <Link href="/contact">
                                         <span>
                                             <img src="/assets/images/data-blob.svg" alt="contact" />
@@ -461,11 +470,10 @@ export default function TourDashboard() {
                                         key={filter.value}
                                         type="button"
                                         onClick={() => setStatusFilter(filter.value)}
-                                        className={`rounded-full px-5 py-2 text-sm font-semibold border transition-all ${
-                                            statusFilter === filter.value
+                                        className={`rounded-full px-5 py-2 text-sm font-semibold border transition-all ${statusFilter === filter.value
                                                 ? "bg-primary-900 text-white border-primary-900"
                                                 : "bg-white text-dark-900 border-[#E2CFAF] hover:border-primary-900"
-                                        }`}
+                                            }`}
                                     >
                                         {filter.label}
                                     </button>
@@ -551,8 +559,8 @@ export default function TourDashboard() {
                                                         {searchTerm.trim()
                                                             ? "No tours match your search."
                                                             : statusFilter === "all"
-                                                            ? "No tours yet."
-                                                            : `No ${statusFilter} tours found.`}
+                                                                ? "No tours yet."
+                                                                : `No ${statusFilter} tours found.`}
                                                     </td>
                                                 </tr>
                                             )}

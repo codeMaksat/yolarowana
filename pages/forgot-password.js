@@ -118,7 +118,7 @@ export default function ForgotPassword() {
                   <p className="text-dark-800 m-0">
                     Back to{" "}
                     <Link
-                      href="/yola-admin"
+                      href="/belet-admin"
                       className="text-primary-900 underline hover:text-black hover:no-underline"
                     >
                       Login

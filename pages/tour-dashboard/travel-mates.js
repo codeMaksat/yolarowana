@@ -39,7 +39,7 @@ export default function TravelMateDashboard() {
       } = await supabase.auth.getUser();
 
       if (!user) {
-        router.push("/yola-admin");
+        router.push("/belet-admin");
         return;
       }
 
@@ -51,7 +51,7 @@ export default function TravelMateDashboard() {
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    router.push("/yola-admin");
+    router.push("/belet-admin");
   };
 
   const fetchTravelMates = async () => {
