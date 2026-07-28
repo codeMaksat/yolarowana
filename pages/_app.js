@@ -237,9 +237,7 @@ export default function App({ Component, pageProps }) {
   const { header: HeaderComponent, footer: FooterComponent } =
     selectHeaderAndFooter(router.asPath);
 
-  return isLoading ? (
-    <LoadingScreen />
-  ) : (
+  return (
     <>
       <CartProvider>
         <Head>
@@ -249,16 +247,22 @@ export default function App({ Component, pageProps }) {
           />
         </Head>
 
-        {!isExcludedPage && <HeaderComponent initialValues={header_data} />}
+        {!isExcludedPage && (
+          <HeaderComponent initialValues={header_data || []} />
+        )}
 
         <Component {...pageProps} />
 
         <StickyWhatsApp />
 
-        {!isExcludedPage && <FooterComponent initialValues={footer_data} />}
+        {!isExcludedPage && (
+          <FooterComponent initialValues={footer_data || []} />
+        )}
 
         {routeLoading && <SmallRouteLoader />}
       </CartProvider>
+
+      {isLoading && <LoadingScreen />}
     </>
   );
 }
