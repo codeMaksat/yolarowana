@@ -4,6 +4,7 @@ import { Head_Meta, useFetchData } from "@/component/comman";
 import { supabase } from "@/utils/supabaseClient";
 import { supabase as serverSupabase } from "../../lib/supabaseClient";
 import React, { useEffect, useState } from "react";
+import siteMetaData from "../../public/json/data/site_meta_link.json";
 
 function getStartingPrice(priceTiers = []) {
   if (!Array.isArray(priceTiers) || priceTiers.length === 0) return "";
@@ -125,7 +126,6 @@ function formatToursForOldCards(tours = []) {
 
 export default function Tour({ initialTours = [] }) {
   const { data: hero_tour_data } = useFetchData("json/data/hero_tour.json");
-  const { data: seo_data } = useFetchData("/json/data/site_meta_link.json");
 
   const [tours, setTours] = useState(initialTours || []);
   const [loadingTours, setLoadingTours] = useState(
@@ -169,7 +169,10 @@ export default function Tour({ initialTours = [] }) {
 
   return (
     <>
-      <Head_Meta meta_data={seo_data?.tour_meta} comman_meta={seo_data} />
+      <Head_Meta
+        meta_data={siteMetaData.tour_meta}
+        comman_meta={siteMetaData}
+      />
       <Comman_Hero initialValues={hero_tour_data} />
 
       {loadingTours ? (
