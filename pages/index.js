@@ -17,6 +17,7 @@ import { Head_Meta, useFetchData } from "@/component/comman";
 import { supabase } from "@/utils/supabaseClient";
 import { supabase as serverSupabase } from "../lib/supabaseClient";
 import React, { useEffect, useState } from "react";
+import siteMetaData from "../public/json/data/site_meta_link.json";
 
 function getStartingPrice(priceTiers = []) {
   if (!Array.isArray(priceTiers) || priceTiers.length === 0) return "";
@@ -167,8 +168,6 @@ export default function Index({ initialTours = [] }) {
     "json/data/latest_blog_news.json"
   );
 
-  const { data: seo_data } = useFetchData("/json/data/site_meta_link.json");
-
   const [tours, setTours] = useState(initialTours || []);
   const [loadingTours, setLoadingTours] = useState(
     !Array.isArray(initialTours) || initialTours.length === 0
@@ -225,7 +224,10 @@ export default function Index({ initialTours = [] }) {
 
   return (
     <>
-      <Head_Meta meta_data={seo_data?.home_meta} comman_meta={seo_data} />
+      <Head_Meta
+        meta_data={siteMetaData.home_meta}
+        comman_meta={siteMetaData}
+      />
 
       <Hero initialValues={hero_data} />
       <Top_Destinations initialValues={top_destinations_data} />
