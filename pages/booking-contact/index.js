@@ -1,7 +1,7 @@
 import { Head_Meta, useFetchData } from "@/component/comman";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { useCart } from "react-use-cart";
 
 export default function Contact() {
@@ -13,9 +13,13 @@ export default function Contact() {
   // Fetch Seo data
   const { data: seo_data } = useFetchData("/json/data/site_meta_link.json"); // Fetch Seo data using the custom hook
 
-  if (isEmpty) {
-    router.push("/booking-cart");
-  }
+  useEffect(() => {
+    if (!router.isReady) return;
+
+    if (isEmpty) {
+      router.replace("/booking-cart");
+    }
+  }, [isEmpty, router]);
   return (
     <>
       {/* Render the Seo component with SeoData */}
