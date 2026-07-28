@@ -4,6 +4,7 @@ import { Head_Meta, useFetchData } from "@/component/comman";
 import { supabase } from "@/utils/supabaseClient";
 import { supabase as serverSupabase } from "../../lib/supabaseClient";
 import React, { useEffect, useState } from "react";
+import siteMetaData from "../../public/json/data/site_meta_link.json";
 
 const DESTINATION_NAME = "Uzbekistan";
 
@@ -107,10 +108,6 @@ export default function Destination({
     "/json/data/destination_uzbekistan_product.json"
   );
 
-  const { data: seoData } = useFetchData(
-    "/json/data/site_meta_link.json"
-  );
-
   useEffect(() => {
     if (initialRecommendedTours.length > 0) {
       setRecommendedToursLoading(false);
@@ -148,8 +145,8 @@ export default function Destination({
   return (
     <>
       <Head_Meta
-        meta_data={seoData?.destination_uzbekistan_meta}
-        comman_meta={seoData}
+        meta_data={siteMetaData.destination_uzbekistan_meta}
+        comman_meta={siteMetaData}
       />
 
       <Comman_Hero initialValues={heroDestinationData} />
