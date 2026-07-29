@@ -389,6 +389,7 @@ export async function getStaticProps({ params }) {
         if (!tour) {
             return {
                 notFound: true,
+                revalidate: 60,
             };
         }
 
@@ -401,6 +402,9 @@ export async function getStaticProps({ params }) {
     } catch (error) {
         console.error("getStaticProps tour fetch failed:", error);
 
-        throw error;
+        return {
+            notFound: true,
+            revalidate: 60,
+        };
     }
 }
