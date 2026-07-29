@@ -1,8 +1,9 @@
 import Head from "next/head";
 import { Comman_Hero } from "@/component/Sections/Page-commen";
 import { All_Tour_Detail } from "@/component/Sections/Page-tour-detail";
-import { Head_Meta, useFetchData } from "@/component/comman";
+import { Head_Meta } from "@/component/comman";
 import React, { useEffect, useMemo, useState } from "react";
+import siteMetaData from "../../public/json/data/site_meta_link.json";
 import { useRouter } from "next/router";
 import { supabase } from "@/utils/supabaseClient";
 import { supabase as serverSupabase } from "../../lib/supabaseClient";
@@ -31,6 +32,8 @@ function formatTourForPage(data) {
             meta_title: data?.meta_title || "",
             meta_description: data?.meta_description || "",
             meta_image: data?.meta_image || "",
+            route: data?.route || "",
+            duration: data?.duration || "",
             icon: data?.icon || "fa-solid fa-location-dot",
             icon_label: data?.icon_label || data?.route || "",
             image: data?.hero_image || "/assets/images/tour-product-detail-img.jpg",
@@ -112,22 +115,44 @@ function formatTourForPage(data) {
 
 function buildSeoMeta(tourData, seoData) {
     const tour = tourData?.[0];
+    const tourTitle = tour?.title || "Central Asia Tour";
+
+    const fallbackDescription = tour?.route
+        ? `Explore ${tourTitle} with Belet Travel. Follow the route ${tour.route}${
+              tour?.duration ? ` over ${tour.duration}` : ""
+          } on a locally planned Central Asia journey.`
+        : `Explore ${tourTitle} with Belet Travel on a locally planned Central Asia journey.`;
 
     return {
         title:
             tour?.meta_title ||
-            tour?.title ||
-            seoData?.tour_five_stans_meta?.title ||
-            "Tour",
+            `${tourTitle} | Belet Travel`,
+        og_title:
+            tour?.meta_title ||
+            `${tourTitle} | Belet Travel`,
         description:
             tour?.meta_description ||
-            seoData?.tour_five_stans_meta?.description ||
-            "",
+            fallbackDescription,
         image:
             tour?.meta_image ||
             tour?.image ||
-            seoData?.tour_five_stans_meta?.image ||
+            seoData?.home_meta?.image ||
             "",
+        image_alt:
+            tour?.alt ||
+            `${tourTitle} with Belet Travel`,
+        twitter_title:
+            tour?.meta_title ||
+            `${tourTitle} | Belet Travel`,
+        twitter_description:
+            tour?.meta_description ||
+            fallbackDescription,
+        twitter_image:
+            tour?.meta_image ||
+            tour?.image ||
+            seoData?.home_meta?.image ||
+            "",
+        twitter_card: "summary_large_image",
     };
 }
 
@@ -144,8 +169,6 @@ export default function DynamicTourPage({ initialTour = null }) {
     const [heroData, setHeroData] = useState(initialFormattedData.heroData);
     const [loading, setLoading] = useState(!initialTour);
     const [tourError, setTourError] = useState("");
-
-    const { data: seo_data } = useFetchData("/json/data/site_meta_link.json");
 
     useEffect(() => {
 
@@ -246,7 +269,7 @@ export default function DynamicTourPage({ initialTour = null }) {
         };
     }, [loading, tourError, tourData.length, slug]);
 
-    const seoMeta = buildSeoMeta(tourData, seo_data);
+    const seoMeta = buildSeoMeta(tourData, siteMetaData);
 
     if (loading) {
         return (
@@ -284,30 +307,10 @@ export default function DynamicTourPage({ initialTour = null }) {
 
     return (
         <>
-            <Head>
-                <title>{seoMeta.title}</title>
-                <meta name="description" content={seoMeta.description} />
-
-                <meta property="og:title" content={seoMeta.title} />
-                <meta property="og:description" content={seoMeta.description} />
-                {seoMeta.image && (
-                    <meta property="og:image" content={seoMeta.image} />
-                )}
-
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={seoMeta.title} />
-                <meta name="twitter:description" content={seoMeta.description} />
-                {seoMeta.image && (
-                    <meta name="twitter:image" content={seoMeta.image} />
-                )}
-            </Head>
-
-            {seo_data && (
-                <Head_Meta
-                    meta_data={seoMeta}
-                    comman_meta={seo_data}
-                />
-            )}
+            <Head_Meta
+                meta_data={seoMeta}
+                comman_meta={siteMetaData}
+            />
 
             <Comman_Hero initialValues={heroData} />
             <All_Tour_Detail initialValues={tourData} />
