@@ -1,10 +1,12 @@
 import { Comman_Hero } from "@/component/Sections/Page-commen";
 import { All_Destination_Detail } from "@/component/Sections/Page-destination-detail";
-import { Head_Meta, useFetchData } from "@/component/comman";
+import { Head_Meta } from "@/component/comman";
 import { supabase } from "@/utils/supabaseClient";
 import { supabase as serverSupabase } from "../../lib/supabaseClient";
 import React, { useEffect, useState } from "react";
 import siteMetaData from "../../public/json/data/site_meta_link.json";
+import heroDestinationData from "../../public/json/data/hero_destination_turkmenistan.json";
+import destinationDetailData from "../../public/json/data/destination_turkmenistan_product.json";
 
 function getStartingPrice(priceTiers = []) {
   if (!Array.isArray(priceTiers) || priceTiers.length === 0) {
@@ -99,14 +101,6 @@ export default function Destination({
 
   const [toursLoading, setToursLoading] = useState(
     initialRecommendedTours.length === 0
-  );
-
-  const { data: heroDestinationData } = useFetchData(
-    "/json/data/hero_destination_turkmenistan.json"
-  );
-
-  const { data: destinationDetailData } = useFetchData(
-    "/json/data/destination_turkmenistan_product.json"
   );
 
   useEffect(() => {
