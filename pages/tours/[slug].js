@@ -359,15 +359,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const slug = params?.slug || "";
-
+    const slug = String(params?.slug || "").trim();
 
     if (!slug) {
         return {
-            props: {
-                initialTour: null,
-            },
-            revalidate: 10,
+            notFound: true,
+            revalidate: 60,
         };
     }
 
@@ -377,22 +374,23 @@ export async function getStaticProps({ params }) {
             .select("*")
             .eq("slug", slug)
             .eq("status", "published")
-            .single();
+            .maybeSingle();
 
-        if (error || !data) {
+        if (error) {
             console.error(
-                "SERVER TOUR DETAIL: fetch failed or not published:",
-                error?.message
+                "SERVER TOUR DETAIL: Supabase fetch failed:",
+                error.message
             );
 
-            return {
-                props: {
-                    initialTour: null,
-                },
-                revalidate: 10,
-            };
+            throw error;
         }
 
+        if (!data) {
+            return {
+                notFound: true,
+                revalidate: 60,
+            };
+        }
 
         return {
             props: {
@@ -403,11 +401,6 @@ export async function getStaticProps({ params }) {
     } catch (error) {
         console.error("getStaticProps tour fetch failed:", error);
 
-        return {
-            props: {
-                initialTour: null,
-            },
-            revalidate: 60,
-        };
+        throw error;
     }
 }
