@@ -1,11 +1,8 @@
-import Head from "next/head";
 import { Comman_Hero } from "@/component/Sections/Page-commen";
 import { All_Tour_Detail } from "@/component/Sections/Page-tour-detail";
 import { Head_Meta } from "@/component/comman";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo } from "react";
 import siteMetaData from "../../public/json/data/site_meta_link.json";
-import { useRouter } from "next/router";
-import { supabase } from "@/utils/supabaseClient";
 import { supabase as serverSupabase } from "../../lib/supabaseClient";
 
 function formatTourForPage(data) {
@@ -156,97 +153,13 @@ function buildSeoMeta(tourData, seoData) {
     };
 }
 
-export default function DynamicTourPage({ initialTour = null }) {
-    const router = useRouter();
-    const { slug, preview } = router.query;
-
-    const initialFormattedData = useMemo(
+export default function DynamicTourPage({ initialTour }) {
+    const { heroData, tourData } = useMemo(
         () => formatTourForPage(initialTour),
         [initialTour]
     );
 
-    const [tourData, setTourData] = useState(initialFormattedData.tourData);
-    const [heroData, setHeroData] = useState(initialFormattedData.heroData);
-    const [loading, setLoading] = useState(!initialTour);
-    const [tourError, setTourError] = useState("");
-
     useEffect(() => {
-
-        if (initialTour) {
-            console.log(
-                "CLIENT TOUR DETAIL: server/static tour already loaded:",
-                initialTour.title
-            );
-        } else {
-
-        }
-    }, [initialTour]);
-
-    useEffect(() => {
-        if (!router.isReady || !slug) return;
-
-        const shouldUseStaticData =
-            initialTour &&
-            initialTour.slug === slug &&
-            preview !== "true";
-
-        if (shouldUseStaticData) {
-            console.log(
-                "CLIENT TOUR DETAIL: fallback skipped, using server/static data:",
-                initialTour.title
-            );
-
-            setTourData(initialFormattedData.tourData);
-            setHeroData(initialFormattedData.heroData);
-            setLoading(false);
-            setTourError("");
-            return;
-        }
-
-
-        const fetchTourClientSide = async () => {
-            setLoading(true);
-            setTourError("");
-
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "auto",
-            });
-
-            document.documentElement.scrollTop = 0;
-            document.body.scrollTop = 0;
-
-            let query = supabase.from("tours").select("*").eq("slug", slug);
-
-            if (preview !== "true") {
-                query = query.eq("status", "published");
-            }
-
-            const { data, error } = await query.single();
-
-            if (error) {
-                console.error("Client-side tour fallback error:", error);
-                setTourError("Tour not found or not published.");
-                setTourData([]);
-                setHeroData([]);
-                setLoading(false);
-                return;
-            }
-
-            const formattedData = formatTourForPage(data);
-
-            setHeroData(formattedData.heroData);
-            setTourData(formattedData.tourData);
-            setLoading(false);
-        };
-
-        fetchTourClientSide();
-    }, [router.isReady, slug, preview, initialTour, initialFormattedData]);
-
-    useEffect(() => {
-        if (loading || tourError || !tourData.length) return;
-
         const scrollToTop = () => {
             window.scrollTo({
                 top: 0,
@@ -267,43 +180,9 @@ export default function DynamicTourPage({ initialTour = null }) {
             clearTimeout(timerOne);
             clearTimeout(timerTwo);
         };
-    }, [loading, tourError, tourData.length, slug]);
+    }, [initialTour?.slug]);
 
     const seoMeta = buildSeoMeta(tourData, siteMetaData);
-
-    if (loading) {
-        return (
-            <>
-                <Head>
-                    {preview === "true" && (
-                        <meta name="robots" content="noindex, nofollow" />
-                    )}
-                    <title>{seoMeta.title}</title>
-                    <meta name="description" content={seoMeta.description} />
-                </Head>
-
-                <div className="py-20 text-center">
-                    <p>Loading tour...</p>
-                </div>
-            </>
-        );
-    }
-
-    if (tourError || !tourData.length) {
-        return (
-            <>
-                <Head>
-                    <title>Tour not found</title>
-                    <meta name="robots" content="noindex, nofollow" />
-                </Head>
-
-                <div className="py-20 text-center">
-                    <h2>Tour not found</h2>
-                    <p>{tourError || "This tour is not available at the moment."}</p>
-                </div>
-            </>
-        );
-    }
 
     return (
         <>
@@ -318,48 +197,9 @@ export default function DynamicTourPage({ initialTour = null }) {
     );
 }
 
-export async function getStaticPaths() {
-    try {
-
-        const { data, error } = await serverSupabase
-            .from("tours")
-            .select("slug")
-            .eq("status", "published");
-
-        if (error) {
-            console.error("Error loading tour paths:", error.message);
-
-            return {
-                paths: [],
-                fallback: "blocking",
-            };
-        }
-
-        console.log(
-            "SERVER TOUR DETAIL: published paths count:",
-            Array.isArray(data) ? data.length : 0
-        );
-
-        return {
-            paths: (data || []).map((tour) => ({
-                params: {
-                    slug: tour.slug,
-                },
-            })),
-            fallback: "blocking",
-        };
-    } catch (error) {
-        console.error("getStaticPaths failed:", error);
-
-        return {
-            paths: [],
-            fallback: "blocking",
-        };
-    }
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params, query }) {
     const slug = String(params?.slug || "").trim();
+    const isPreview = query?.preview === "true";
 
     if (!slug) {
         return {
@@ -367,44 +207,38 @@ export async function getStaticProps({ params }) {
         };
     }
 
-    try {
-        const { data, error } = await serverSupabase
-            .from("tours")
-            .select("*")
-            .eq("slug", slug)
-            .eq("status", "published")
-            .limit(1);
+    let tourQuery = serverSupabase
+        .from("tours")
+        .select("*")
+        .eq("slug", slug)
+        .limit(1);
 
-        if (error) {
-            console.error(
-                "SERVER TOUR DETAIL: Supabase fetch failed:",
-                error.message
-            );
+    if (!isPreview) {
+        tourQuery = tourQuery.eq("status", "published");
+    }
 
-            throw error;
-        }
+    const { data, error } = await tourQuery;
 
-        const tour = Array.isArray(data) ? data[0] : null;
+    if (error) {
+        console.error(
+            "SERVER TOUR DETAIL: Supabase fetch failed:",
+            error.message
+        );
 
-        if (!tour) {
-            return {
-                notFound: true,
-                revalidate: 60,
-            };
-        }
+        throw error;
+    }
 
-        return {
-            props: {
-                initialTour: tour,
-            },
-            revalidate: 3600,
-        };
-    } catch (error) {
-        console.error("getStaticProps tour fetch failed:", error);
+    const tour = Array.isArray(data) ? data[0] : null;
 
+    if (!tour) {
         return {
             notFound: true,
-            revalidate: 60,
         };
     }
+
+    return {
+        props: {
+            initialTour: tour,
+        },
+    };
 }
