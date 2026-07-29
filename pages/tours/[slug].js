@@ -3,7 +3,6 @@ import { All_Tour_Detail } from "@/component/Sections/Page-tour-detail";
 import { Head_Meta } from "@/component/comman";
 import React, { useEffect, useMemo } from "react";
 import siteMetaData from "../../public/json/data/site_meta_link.json";
-import { supabase as serverSupabase } from "../../lib/supabaseClient";
 
 function formatTourForPage(data) {
     if (!data) {
@@ -207,38 +206,69 @@ export async function getServerSideProps({ params, query }) {
         };
     }
 
-    let tourQuery = serverSupabase
-        .from("tours")
-        .select("*")
-        .eq("slug", slug)
-        .limit(1);
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-    if (!isPreview) {
-        tourQuery = tourQuery.eq("status", "published");
+    if (!supabaseUrl || !supabaseAnonKey) {
+        console.error("TOUR SSR: Missing Supabase environment variables.", {
+            hasUrl: Boolean(supabaseUrl),
+            hasAnonKey: Boolean(supabaseAnonKey),
+        });
+
+        throw new Error("Missing Supabase environment variables.");
     }
 
-    const { data, error } = await tourQuery;
+    const filters = [
+        `slug=eq.${encodeURIComponent(slug)}`,
+        "select=*",
+        "limit=1",
+    ];
 
-    if (error) {
-        console.error(
-            "SERVER TOUR DETAIL: Supabase fetch failed:",
-            error.message
-        );
+    if (!isPreview) {
+        filters.push("status=eq.published");
+    }
+
+    const endpoint = `${supabaseUrl}/rest/v1/tours?${filters.join("&")}`;
+
+    try {
+        const response = await fetch(endpoint, {
+            headers: {
+                apikey: supabaseAnonKey,
+                Authorization: `Bearer ${supabaseAnonKey}`,
+                Accept: "application/json",
+            },
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+
+            console.error("TOUR SSR: Supabase REST request failed.", {
+                status: response.status,
+                body: errorText,
+            });
+
+            throw new Error(
+                `Supabase REST request failed with status ${response.status}.`
+            );
+        }
+
+        const data = await response.json();
+        const tour = Array.isArray(data) ? data[0] : null;
+
+        if (!tour) {
+            return {
+                notFound: true,
+            };
+        }
+
+        return {
+            props: {
+                initialTour: tour,
+            },
+        };
+    } catch (error) {
+        console.error("TOUR SSR: Tour request failed.", error);
 
         throw error;
     }
-
-    const tour = Array.isArray(data) ? data[0] : null;
-
-    if (!tour) {
-        return {
-            notFound: true,
-        };
-    }
-
-    return {
-        props: {
-            initialTour: tour,
-        },
-    };
 }
