@@ -1,7 +1,4 @@
-import Footer from "@/Layout/Footer";
-import Header from "@/Layout/Header";
 import {
-  Full_Video,
   Hero,
   Latest_Blog_News,
   Perfect_Travel_Planner,
@@ -10,14 +7,19 @@ import {
   Start_Testimonial,
   Top_Destinations,
   Travel_Confidence,
-  How_It_Works,
-  Why_Choose_Us,
 } from "@/component/Sections/Page-one";
-import { Head_Meta, useFetchData } from "@/component/comman";
+import { Head_Meta } from "@/component/comman";
 import { supabase } from "@/utils/supabaseClient";
 import { supabase as serverSupabase } from "../lib/supabaseClient";
 import React, { useEffect, useState } from "react";
 import siteMetaData from "../public/json/data/site_meta_link.json";
+import heroData from "../public/json/data/hero.json";
+import topDestinationsData from "../public/json/data/top_destinations.json";
+import startAboutData from "../public/json/data/start_about.json";
+import popularToursData from "../public/json/data/popular_tours.json";
+import perfectTravelPlannerData from "../public/json/data/perfect_travel_planner.json";
+import startTestimonialData from "../public/json/data/start_testimonial.json";
+import latestBlogNewsData from "../public/json/data/latest_blog_news.json";
 
 function getStartingPrice(priceTiers = []) {
   if (!Array.isArray(priceTiers) || priceTiers.length === 0) return "";
@@ -138,36 +140,6 @@ function formatToursForHomepage(tours = []) {
 }
 
 export default function Index({ initialTours = [] }) {
-  const { data: hero_data } = useFetchData("json/data/hero.json");
-
-  const { data: top_destinations_data } = useFetchData(
-    "json/data/top_destinations.json"
-  );
-
-  const { data: start_about_data } = useFetchData("json/data/start_about.json");
-
-  const { data: popular_tours_data } = useFetchData(
-    "json/data/popular_tours.json"
-  );
-
-  const { data: full_video_data } = useFetchData("json/data/full_video.json");
-
-  const { data: perfect_travel_planner_data } = useFetchData(
-    "json/data/perfect_travel_planner.json"
-  );
-
-  const { data: why_choose_us_data } = useFetchData(
-    "json/data/why_choose_us.json"
-  );
-
-  const { data: start_testimonial_data } = useFetchData(
-    "json/data/start_testimonial.json"
-  );
-
-  const { data: latest_blog_news_data } = useFetchData(
-    "json/data/latest_blog_news.json"
-  );
-
   const [tours, setTours] = useState(initialTours || []);
   const [loadingTours, setLoadingTours] = useState(
     !Array.isArray(initialTours) || initialTours.length === 0
@@ -211,9 +183,9 @@ export default function Index({ initialTours = [] }) {
   const formattedTours = formatToursForHomepage(tours || []);
 
   const homepageTourSection =
-    Array.isArray(popular_tours_data) && popular_tours_data.length > 0
+    Array.isArray(popularToursData) && popularToursData.length > 0
       ? {
-          ...popular_tours_data[0],
+          ...popularToursData[0],
           product: formattedTours,
         }
       : {
@@ -229,21 +201,17 @@ export default function Index({ initialTours = [] }) {
         comman_meta={siteMetaData}
       />
 
-      <Hero initialValues={hero_data} />
-      <Top_Destinations initialValues={top_destinations_data} />
+      <Hero initialValues={heroData} />
+      <Top_Destinations initialValues={topDestinationsData} />
 
       {!loadingTours && formattedTours.length > 0 && (
         <Popular_Tours initialValues={[homepageTourSection]} />
       )}
-      <Perfect_Travel_Planner initialValues={perfect_travel_planner_data} />
-      {/* <Full_Video initialValues={full_video_data} /> */}
+      <Perfect_Travel_Planner initialValues={perfectTravelPlannerData} />
       <Travel_Confidence />
-      {/* <How_It_Works /> */}
-      <Start_About initialValues={start_about_data} />
-      {/* <Why_Choose_Us initialValues={why_choose_us_data} /> */}
-      <Start_Testimonial initialValues={start_testimonial_data} />
-      <Latest_Blog_News initialValues={latest_blog_news_data} />
-      {/* <Footer /> */}
+      <Start_About initialValues={startAboutData} />
+      <Start_Testimonial initialValues={startTestimonialData} />
+      <Latest_Blog_News initialValues={latestBlogNewsData} />
     </>
   );
 }
