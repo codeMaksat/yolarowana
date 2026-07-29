@@ -38,9 +38,19 @@ const Head_Meta = ({ meta_data = {}, comman_meta = {} }) => {
 
   const ogTitle = meta_data.og_title || title;
 
-  const image =
-    meta_data.image ||
-    `${siteUrl}/assets/images/belet-travel-social-cover.jpg`;
+  const makeAbsoluteUrl = value => {
+    if (!value) {
+      return `${siteUrl}/assets/images/belet-travel-og-image.jpg`;
+    }
+
+    if (/^https?:\/\//i.test(value)) {
+      return value;
+    }
+
+    return `${siteUrl}${value.startsWith("/") ? value : `/${value}`}`;
+  };
+
+  const image = makeAbsoluteUrl(meta_data.image);
 
   const imageAlt =
     meta_data.image_alt || "Belet Travel Central Asia Tours";
@@ -48,8 +58,9 @@ const Head_Meta = ({ meta_data = {}, comman_meta = {} }) => {
   const twitterCard =
     meta_data.twitter_card || "summary_large_image";
 
-  const twitterImage =
-    meta_data.twitter_image || image;
+  const twitterImage = makeAbsoluteUrl(
+    meta_data.twitter_image || meta_data.image
+  );
 
   const twitterTitle =
     meta_data.twitter_title || title;
