@@ -364,7 +364,6 @@ export async function getStaticProps({ params }) {
     if (!slug) {
         return {
             notFound: true,
-            revalidate: 60,
         };
     }
 
@@ -374,7 +373,7 @@ export async function getStaticProps({ params }) {
             .select("*")
             .eq("slug", slug)
             .eq("status", "published")
-            .maybeSingle();
+            .limit(1);
 
         if (error) {
             console.error(
@@ -385,16 +384,17 @@ export async function getStaticProps({ params }) {
             throw error;
         }
 
-        if (!data) {
+        const tour = Array.isArray(data) ? data[0] : null;
+
+        if (!tour) {
             return {
                 notFound: true,
-                revalidate: 60,
             };
         }
 
         return {
             props: {
-                initialTour: data,
+                initialTour: tour,
             },
             revalidate: 3600,
         };
