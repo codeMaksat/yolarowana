@@ -1,25 +1,29 @@
-import Footer from "@/Layout/Footer";
-import Header from "@/Layout/Header";
+import Head from "next/head";
 import { Comman_Hero } from "@/component/Sections/Page-commen";
 import { All_Error_404 } from "@/component/Sections/Page-404";
-import { Head_Meta, useFetchData } from "@/component/comman";
-import React from "react";
-export default function Tour() {
-  const { data: hero_404_data } = useFetchData("json/data/hero_404.json");
+import hero404Data from "../public/json/data/hero_404.json";
+import error404DetailData from "../public/json/data/error_404_detail.json";
+import siteMetaData from "../public/json/data/site_meta_link.json";
 
-  const { data: error_404_detail_data } = useFetchData(
-    "json/data/error_404_detail.json"
-  );
-
-  // Fetch Seo data
-  const { data: seo_data } = useFetchData("/json/data/site_meta_link.json"); // Fetch Seo data using the custom hook
+export default function Custom404() {
+  const errorMeta = siteMetaData?.error_meta || {};
 
   return (
     <>
-      {/* Render the Seo component with SeoData */}
-      <Head_Meta meta_data={seo_data.error_meta} comman_meta={seo_data} />
-      <Comman_Hero initialValues={hero_404_data} />
-      <All_Error_404 initialValues={error_404_detail_data} />
+      <Head>
+        <title>{errorMeta.title || "Page Not Found | Belet Travel"}</title>
+        <meta
+          name="description"
+          content={
+            errorMeta.description ||
+            "The page you are looking for could not be found."
+          }
+        />
+        <meta name="robots" content="noindex, follow" />
+      </Head>
+
+      <Comman_Hero initialValues={hero404Data} />
+      <All_Error_404 initialValues={error404DetailData} />
     </>
   );
 }
