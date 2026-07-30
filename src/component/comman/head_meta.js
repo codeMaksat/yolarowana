@@ -1,7 +1,11 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const Head_Meta = ({ meta_data = {}, comman_meta = {} }) => {
+const Head_Meta = ({
+  meta_data = {},
+  comman_meta = {},
+  structuredData = [],
+}) => {
   const router = useRouter();
 
   const cleanPath = (router.asPath || "/").split("?")[0].split("#")[0];
@@ -86,6 +90,46 @@ const Head_Meta = ({ meta_data = {}, comman_meta = {} }) => {
   const favicon =
     comman_meta.favicon || "/favicon.ico";
 
+  const serializeJsonLd = value =>
+    JSON.stringify(value).replace(/</g, "\\u003c");
+
+  const organizationId = `${siteUrl}/#organization`;
+  const websiteId = `${siteUrl}/#website`;
+
+  const homepageSchemas =
+    !shouldNoIndex && cleanPath === "/"
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": organizationId,
+            name: siteName,
+            url: `${siteUrl}/`,
+            image,
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": websiteId,
+            url: `${siteUrl}/`,
+            name: siteName,
+            publisher: {
+              "@id": organizationId,
+            },
+          },
+        ]
+      : [];
+
+  const extraSchemas = Array.isArray(structuredData)
+    ? structuredData.filter(Boolean)
+    : structuredData
+      ? [structuredData]
+      : [];
+
+  const schemas = shouldNoIndex
+    ? []
+    : [...homepageSchemas, ...extraSchemas];
+
   return (
     <Head>
       <title>{title}</title>
@@ -128,6 +172,16 @@ const Head_Meta = ({ meta_data = {}, comman_meta = {} }) => {
           content={meta_data.twitter_creator}
         />
       )}
+
+      {schemas.map((schema, index) => (
+        <script
+          key={`${schema["@type"] || "schema"}-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: serializeJsonLd(schema),
+          }}
+        />
+      ))}
     </Head>
   );
 };

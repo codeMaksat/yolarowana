@@ -156,6 +156,40 @@ function buildSeoMeta(tourData, seoData) {
     };
 }
 
+function buildTourBreadcrumbSchema(tour, slug, siteUrl) {
+    if (!tour?.title || !slug) return null;
+
+    const cleanSiteUrl = String(siteUrl || "https://belettravel.com").replace(
+        /\/$/,
+        ""
+    );
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: `${cleanSiteUrl}/`,
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Tours",
+                item: `${cleanSiteUrl}/tour`,
+            },
+            {
+                "@type": "ListItem",
+                position: 3,
+                name: tour.title,
+                item: `${cleanSiteUrl}/tours/${slug}`,
+            },
+        ],
+    };
+}
+
 export default function DynamicTourPage({ initialTour = null }) {
     const router = useRouter();
     const { slug, preview } = router.query;
@@ -271,6 +305,14 @@ export default function DynamicTourPage({ initialTour = null }) {
 
     const seoMeta = buildSeoMeta(tourData, siteMetaData);
 
+    const currentTour = tourData?.[0];
+    const currentSlug = initialTour?.slug || slug || "";
+    const breadcrumbSchema = buildTourBreadcrumbSchema(
+        currentTour,
+        currentSlug,
+        siteMetaData.http_url
+    );
+
     if (loading) {
         return (
             <>
@@ -310,6 +352,9 @@ export default function DynamicTourPage({ initialTour = null }) {
             <Head_Meta
                 meta_data={seoMeta}
                 comman_meta={siteMetaData}
+                structuredData={
+                    breadcrumbSchema ? [breadcrumbSchema] : []
+                }
             />
 
             <Comman_Hero initialValues={heroData} />
