@@ -10,7 +10,6 @@ import { useFetchData } from "@/component/comman";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import "../public/assets/css/all-fontawesome.min.css";
-import Head from "next/head";
 import { CartProvider } from "react-use-cart";
 import "swiper/css";
 
@@ -217,11 +216,6 @@ export default function App({ Component, pageProps }) {
   const excludeRoutes = ["/forget-password", "/login", "/register"];
   const isExcludedPage = excludeRoutes.includes(router.asPath);
 
-  if (!Component) {
-    router.push("/404");
-    return null;
-  }
-
   const selectHeaderAndFooter = (url) => {
     if (url.includes(`/home-3`)) {
       return { header: Header3, footer: Footer3 };
@@ -240,13 +234,6 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <CartProvider>
-        <Head>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet"
-          />
-        </Head>
-
         {!isExcludedPage && (
           <HeaderComponent initialValues={header_data || []} />
         )}
