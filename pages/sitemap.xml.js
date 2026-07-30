@@ -119,17 +119,12 @@ export async function getServerSideProps({ res }) {
       priority: "0.80",
     },
     {
-      path: "/travel-guide",
+      path: "/blog",
       changefreq: "weekly",
-      priority: "0.75",
+      priority: "0.80",
     },
     {
-      path: "/turkmenistan-itinerary",
-      changefreq: "monthly",
-      priority: "0.70",
-    },
-    {
-      path: "/darvaza-gas-crater-guide",
+      path: "/best-places-to-visit-turkmenistan",
       changefreq: "monthly",
       priority: "0.70",
     },
@@ -139,7 +134,62 @@ export async function getServerSideProps({ res }) {
       priority: "0.70",
     },
     {
+      path: "/central-asia-visa-guide",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/darvaza-gas-crater-guide",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/how-to-plan-five-stans-tour",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/is-central-asia-safe",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/kazakhstan-travel-guide",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/kyrgyzstan-travel-guide",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/silk-road-travel-guide",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/tajikistan-travel-guide",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/turkmenistan-itinerary",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/turkmenistan-visa-guide",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
       path: "/uzbekistan-silk-road-guide",
+      changefreq: "monthly",
+      priority: "0.70",
+    },
+    {
+      path: "/uzbekistan-to-turkmenistan-border-guide",
       changefreq: "monthly",
       priority: "0.70",
     },
