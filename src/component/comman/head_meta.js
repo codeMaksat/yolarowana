@@ -131,7 +131,8 @@ const Head_Meta = ({
     : [...homepageSchemas, ...extraSchemas];
 
   return (
-    <Head>
+    <>
+      <Head>
       <title>{title}</title>
 
       <link rel="icon" href={favicon} />
@@ -173,6 +174,8 @@ const Head_Meta = ({
         />
       )}
 
+      </Head>
+
       {schemas.map((schema, index) => (
         <script
           key={`${schema["@type"] || "schema"}-${index}`}
@@ -182,7 +185,7 @@ const Head_Meta = ({
           }}
         />
       ))}
-    </Head>
+    </>
   );
 };
 
