@@ -8,6 +8,33 @@ import siteMetaData from "../../public/json/data/site_meta_link.json";
 import heroDestinationData from "../../public/json/data/hero_destination_central-asia.json";
 import destinationDetailData from "../../public/json/data/destination_central_asia_product.json";
 
+function buildBreadcrumbSchema() {
+  const siteUrl = String(
+    siteMetaData.http_url || "https://belettravel.com"
+  ).replace(/\/$/, "");
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${siteUrl}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Central Asia Destinations",
+        item: `${siteUrl}/destination-central-asia`,
+      },
+    ],
+  };
+}
+
+const breadcrumbSchema = buildBreadcrumbSchema();
+
 const RECOMMENDED_TOUR_LIMIT = 3;
 
 function getStartingPrice(priceTiers = []) {
@@ -158,6 +185,7 @@ export default function Destination({
       <Head_Meta
         meta_data={siteMetaData.destination_central_asia_meta}
         comman_meta={siteMetaData}
+        structuredData={[breadcrumbSchema]}
       />
 
       <Comman_Hero

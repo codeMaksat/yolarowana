@@ -8,6 +8,39 @@ import siteMetaData from "../../public/json/data/site_meta_link.json";
 import heroDestinationData from "../../public/json/data/hero_destination_turkmenistan.json";
 import destinationDetailData from "../../public/json/data/destination_turkmenistan_product.json";
 
+function buildBreadcrumbSchema() {
+  const siteUrl = String(
+    siteMetaData.http_url || "https://belettravel.com"
+  ).replace(/\/$/, "");
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${siteUrl}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Central Asia Destinations",
+        item: `${siteUrl}/destination-central-asia`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Turkmenistan",
+        item: `${siteUrl}/destination-turkmenistan`,
+      },
+    ],
+  };
+}
+
+const breadcrumbSchema = buildBreadcrumbSchema();
+
 function getStartingPrice(priceTiers = []) {
   if (!Array.isArray(priceTiers) || priceTiers.length === 0) {
     return null;
@@ -142,6 +175,7 @@ export default function Destination({
       <Head_Meta
         meta_data={siteMetaData.destination_turkmenistan_meta}
         comman_meta={siteMetaData}
+        structuredData={[breadcrumbSchema]}
       />
 
       <Comman_Hero initialValues={heroDestinationData} />

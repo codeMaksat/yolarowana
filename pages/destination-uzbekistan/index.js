@@ -8,6 +8,39 @@ import siteMetaData from "../../public/json/data/site_meta_link.json";
 import heroDestinationData from "../../public/json/data/hero_destination_uzbekistan.json";
 import destinationDetailData from "../../public/json/data/destination_uzbekistan_product.json";
 
+function buildBreadcrumbSchema() {
+  const siteUrl = String(
+    siteMetaData.http_url || "https://belettravel.com"
+  ).replace(/\/$/, "");
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${siteUrl}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Central Asia Destinations",
+        item: `${siteUrl}/destination-central-asia`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Uzbekistan",
+        item: `${siteUrl}/destination-uzbekistan`,
+      },
+    ],
+  };
+}
+
+const breadcrumbSchema = buildBreadcrumbSchema();
+
 const DESTINATION_NAME = "Uzbekistan";
 
 function getStartingPrice(priceTiers = []) {
@@ -141,6 +174,7 @@ export default function Destination({
       <Head_Meta
         meta_data={siteMetaData.destination_uzbekistan_meta}
         comman_meta={siteMetaData}
+        structuredData={[breadcrumbSchema]}
       />
 
       <Comman_Hero initialValues={heroDestinationData} />
