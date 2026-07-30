@@ -1,29 +1,69 @@
-import Footer from "@/Layout/Footer";
-import Header from "@/Layout/Header";
 import { All_Blog } from "@/component/Sections/Page-blog";
 import { Comman_Hero } from "@/component/Sections/Page-commen";
-import { Head_Meta, useFetchData } from "@/component/comman";
+import { Head_Meta } from "@/component/comman";
 import React from "react";
+import heroBlogData from "../../public/json/data/hero_blog.json";
+import blogProductData from "../../public/json/data/blog_product.json";
+import sideBarData from "../../public/json/data/side_bar.json";
+import siteMetaData from "../../public/json/data/site_meta_link.json";
+
+const siteUrl = String(
+  siteMetaData.http_url || "https://belettravel.com"
+).replace(/\/$/, "");
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: `${siteUrl}/`,
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Travel Guide",
+      item: `${siteUrl}/blog`,
+    },
+  ],
+};
+
+const collectionPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name:
+    siteMetaData.blog_meta?.title ||
+    "Central Asia Travel Guide | Belet Travel",
+  description:
+    siteMetaData.blog_meta?.description ||
+    "Travel guides, practical advice and destination insights for Central Asia.",
+  url: `${siteUrl}/blog`,
+  isPartOf: {
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+  },
+};
+
 export default function Blog() {
-  const { data: hero_blog_data } = useFetchData("json/data/hero_blog.json");
-
-  const { data: blog_product_data } = useFetchData(
-    "json/data/blog_product.json"
-  );
-
-  const { data: side_bar_data } = useFetchData("json/data/side_bar.json");
-
-  // Fetch Seo data
-  const { data: seo_data } = useFetchData("/json/data/site_meta_link.json"); // Fetch Seo data using the custom hook
-
   return (
     <>
-      {/* Render the Seo component with SeoData */}
-      <Head_Meta meta_data={seo_data.blog_meta} comman_meta={seo_data} />
-      <Comman_Hero initialValues={hero_blog_data} />
+      <Head_Meta
+        meta_data={siteMetaData.blog_meta}
+        comman_meta={siteMetaData}
+        structuredData={[breadcrumbSchema, collectionPageSchema]}
+      />
+
+      <Comman_Hero initialValues={heroBlogData} />
+
       <All_Blog
-        initialValues={blog_product_data}
-        side_bar_data={side_bar_data}
+        initialValues={blogProductData}
+        side_bar_data={sideBarData}
       />
     </>
   );
