@@ -12,140 +12,149 @@ function escapeXml(value = "") {
     .replace(/'/g, "&apos;");
 }
 
+function formatLastmod(value) {
+  if (!value) return "";
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) return "";
+
+  return date.toISOString();
+}
+
+function generateUrlEntry({
+  loc,
+  lastmod = "",
+  changefreq = "",
+  priority = "",
+}) {
+  const safeLastmod = formatLastmod(lastmod);
+
+  return `
+  <url>
+    <loc>${escapeXml(loc)}</loc>${
+      safeLastmod ? `\n    <lastmod>${safeLastmod}</lastmod>` : ""
+    }${
+      changefreq
+        ? `\n    <changefreq>${escapeXml(changefreq)}</changefreq>`
+        : ""
+    }${
+      priority
+        ? `\n    <priority>${escapeXml(priority)}</priority>`
+        : ""
+    }
+  </url>`;
+}
+
 function generateSiteMap(staticPages = [], tours = []) {
   const staticUrls = staticPages
-    .map((page) => {
-      return `
-  <url>
-    <loc>${escapeXml(`${SITE_URL}${page.path}`)}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`;
-    })
+    .map((page) =>
+      generateUrlEntry({
+        loc: `${SITE_URL}${page.path}`,
+        changefreq: page.changefreq,
+        priority: page.priority,
+      })
+    )
     .join("");
 
   const tourUrls = tours
-    .map((tour) => {
-      const lastmod =
-        tour.updated_at || tour.created_at || new Date().toISOString();
-
-      return `
-  <url>
-    <loc>${escapeXml(`${SITE_URL}/tours/${tour.slug}`)}</loc>
-    <lastmod>${new Date(lastmod).toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>`;
-    })
+    .filter((tour) => tour?.slug)
+    .map((tour) =>
+      generateUrlEntry({
+        loc: `${SITE_URL}/tours/${tour.slug}`,
+        lastmod: tour.updated_at || tour.created_at,
+        changefreq: "weekly",
+        priority: "0.85",
+      })
+    )
     .join("");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${staticUrls}
 ${tourUrls}
 </urlset>`;
 }
 
 export async function getServerSideProps({ res }) {
-  const now = new Date().toISOString();
-
   const staticPages = [
     {
       path: "/",
-      lastmod: now,
       changefreq: "weekly",
       priority: "1.00",
     },
     {
       path: "/tour",
-      lastmod: now,
       changefreq: "weekly",
       priority: "0.95",
     },
     {
       path: "/destination-central-asia",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.85",
     },
     {
       path: "/destination-turkmenistan",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.80",
     },
     {
       path: "/destination-uzbekistan",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.80",
     },
     {
       path: "/destination-kazakhstan",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.80",
     },
     {
       path: "/destination-kyrgyzstan",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.80",
     },
     {
       path: "/destination-tajikistan",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.80",
     },
     {
       path: "/travel-guide",
-      lastmod: now,
       changefreq: "weekly",
       priority: "0.75",
     },
     {
       path: "/turkmenistan-itinerary",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.70",
     },
     {
       path: "/darvaza-gas-crater-guide",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.70",
     },
     {
       path: "/best-time-to-visit-central-asia",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.70",
     },
     {
       path: "/uzbekistan-silk-road-guide",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.70",
     },
     {
       path: "/travel-mates",
-      lastmod: now,
       changefreq: "weekly",
       priority: "0.70",
     },
     {
       path: "/about",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.60",
     },
     {
       path: "/contact",
-      lastmod: now,
       changefreq: "monthly",
       priority: "0.60",
     },
