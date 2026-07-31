@@ -9,7 +9,6 @@ import StickyWhatsApp from "@/component/StickyWhatsApp";
 import { useRouter } from "next/router";
 import { Red_Hat_Display } from "next/font/google";
 import { useEffect, useState } from "react";
-import "../public/assets/css/all-fontawesome.min.css";
 import { CartProvider } from "react-use-cart";
 import "swiper/css";
 import headerData from "../public/json/data/header.json";
@@ -76,6 +75,21 @@ export default function App({ Component, pageProps }) {
   const router = useRouter();
 
   const [routeLoading, setRouteLoading] = useState(false);
+
+  useEffect(() => {
+    const existingStylesheet = document.querySelector(
+      'link[data-fontawesome-stylesheet="true"]'
+    );
+
+    if (existingStylesheet) return;
+
+    const stylesheet = document.createElement("link");
+    stylesheet.rel = "stylesheet";
+    stylesheet.href = "/assets/css/all-fontawesome.min.css";
+    stylesheet.dataset.fontawesomeStylesheet = "true";
+
+    document.head.appendChild(stylesheet);
+  }, []);
 
   useEffect(() => {
     let finishTimer;
