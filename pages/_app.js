@@ -7,6 +7,7 @@ import Header2 from "@/Layout/Header2";
 import Header3 from "@/Layout/Header3";
 import StickyWhatsApp from "@/component/StickyWhatsApp";
 import { useRouter } from "next/router";
+import { Red_Hat_Display } from "next/font/google";
 import { useEffect, useState } from "react";
 import "../public/assets/css/all-fontawesome.min.css";
 import { CartProvider } from "react-use-cart";
@@ -14,6 +15,12 @@ import "swiper/css";
 import headerData from "../public/json/data/header.json";
 import footerData from "../public/json/data/footer.json";
 import footer2Data from "../public/json/data/footer2.json";
+
+const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+});
 
 const SmallRouteLoader = () => {
   return (
@@ -130,7 +137,9 @@ export default function App({ Component, pageProps }) {
     selectHeaderAndFooter(router.asPath);
 
   return (
-    <>
+    <div
+      className={`${redHatDisplay.className} text-md md:text-lg antialiased text-dark-800 leading-xl`}
+    >
       <CartProvider>
         {!isExcludedPage && (
           <HeaderComponent initialValues={headerData} />
@@ -146,6 +155,6 @@ export default function App({ Component, pageProps }) {
 
         {routeLoading && <SmallRouteLoader />}
       </CartProvider>
-    </>
+    </div>
   );
 }
