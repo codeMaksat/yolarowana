@@ -1,55 +1,58 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
-const Top_Destinations = ({ initialValues }) => {
+const Top_Destinations = ({ initialValues = [] }) => {
+  if (!Array.isArray(initialValues) || initialValues.length === 0) {
+    return null;
+  }
+
   return (
-    <section className="">
-      {initialValues &&
-        initialValues.map((data, index) => {
-          return (
-            <div className="container" key={index}>
-              <div className="text-center mb-8 md:mb-14">
-                <h2>{data.title}</h2>
-                <p className="max-w-[590px] mx-auto">{data.label}</p>
-              </div>
+    <section>
+      {initialValues.map((data, sectionIndex) => (
+        <div className="container" key={data.id || data.title || sectionIndex}>
+          <div className="mb-8 text-center md:mb-14">
+            <h2>{data.title}</h2>
+            <p className="mx-auto max-w-[590px]">{data.label}</p>
+          </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-7">
-                {data.product &&
-                  data.product.map((product_data, index) => {
-                    return (
-                      <div
-  className="category-box overflow-hidden group rounded-1xl relative"
-  key={index}
->
-  <Image
-    src={product_data.image}
-    alt={product_data.alt}
-    width={361}
-    height={252}
-    className="transition-all group-hover:scale-105"
-  />
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 md:gap-7">
+            {Array.isArray(data.product) &&
+              data.product.map((product) => (
+                <div
+                  className="category-box group relative overflow-hidden rounded-1xl"
+                  key={product.id || product.slug}
+                >
+                  <Image
+                    src={product.image}
+                    alt={product.alt || product.title}
+                    width={361}
+                    height={252}
+                    sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 767px) calc(50vw - 30px), (max-width: 1279px) calc(33vw - 32px), 361px"
+                    quality={70}
+                    loading="lazy"
+                    className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
+                  />
 
-  <div className="categories-detail" style={{ zIndex: 2 }}>
-    <Link href={product_data.slug}>
-      <div className="tours-btn">
-        {product_data.title}
-      </div>
-    </Link>
-  </div>
-</div>
-                    );
-                  })}
-              </div>
+                  <div className="categories-detail z-[2]">
+                    <Link href={product.slug}>
+                      <div className="tours-btn">{product.title}</div>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+          </div>
 
-              <div className="mt-12">
-                <Link href="destination" className="btn btn-primary mx-auto">
-                  Explore all <i className="fa-regular fa-arrow-right ml-3"></i>
-                </Link>
-              </div>
-            </div>
-          );
-        })}
+          <div className="mt-12">
+            <Link
+              href="/destination-central-asia"
+              className="btn btn-primary mx-auto"
+            >
+              Explore all
+              <i className="fa-regular fa-arrow-right ml-3"></i>
+            </Link>
+          </div>
+        </div>
+      ))}
     </section>
   );
 };
