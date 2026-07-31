@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 import React, { useEffect, useMemo, useState } from "react";
 
 const NAV_TOUR_LIMIT = 6;
@@ -296,10 +297,18 @@ export default function Header({ initialValues }) {
                                 className="block transition-all"
                                 onClick={closeMobileMenu}
                               >
-                                <img
+                                <Image
                                   src={mid_bar_logo_data.img}
-                                  alt={mid_bar_logo_data.alt}
-                                  className={`transition-all ${
+                                  alt={
+                                    mid_bar_logo_data.alt ||
+                                    "Belet Travel logo"
+                                  }
+                                  width={380}
+                                  height={91}
+                                  priority
+                                  sizes="(max-width: 1023px) 190px, 180px"
+                                  quality={85}
+                                  className={`h-auto transition-all ${
                                     isScrolled
                                       ? "w-[170px] lg:w-[160px]"
                                       : "w-[190px] lg:w-[180px]"
