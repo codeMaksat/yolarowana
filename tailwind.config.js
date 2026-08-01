@@ -73,8 +73,7 @@ module.exports = {
 
       fontFamily: {
         "red-hat-display": [
-          "Red Hat Display",
-          "sans-serif",
+          "var(--font-red-hat-display)",
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
@@ -84,10 +83,6 @@ module.exports = {
           "Arial",
           "Noto Sans",
           "sans-serif",
-          "Apple Color Emoji",
-          "Segoe UI Emoji",
-          "Segoe UI Symbol",
-          "Noto Color Emoji",
         ],
       },
 

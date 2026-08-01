@@ -19,6 +19,7 @@ const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
   display: "swap",
   preload: true,
+  variable: "--font-red-hat-display",
 });
 
 const SmallRouteLoader = () => {
@@ -152,7 +153,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <div
-      className={`${redHatDisplay.className} text-md md:text-lg antialiased text-dark-800 leading-xl`}
+      className={`${redHatDisplay.className} ${redHatDisplay.variable} text-md md:text-lg antialiased text-dark-800 leading-xl`}
     >
       <CartProvider>
         {!isExcludedPage && (
