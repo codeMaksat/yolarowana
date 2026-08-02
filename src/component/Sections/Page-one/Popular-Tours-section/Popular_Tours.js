@@ -113,9 +113,15 @@ const Popular_Tours = ({ initialValues }) => {
                             >
                               <Image
                                 src={productImage}
-                                alt={product_data?.alt || product_data?.title || "Tour"}
+                                alt={
+                                  product_data?.alt ||
+                                  product_data?.title ||
+                                  "Tour"
+                                }
                                 fill
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                sizes="(max-width: 639px) 380px, (max-width: 1023px) 360px, 380px"
+                                quality={60}
+                                loading="lazy"
                                 className="h-full w-full object-cover object-center"
                               />
                             </Link>
