@@ -1,32 +1,43 @@
-
-  [
-    {
+[
+  {
     "title": "Stories from the Road",
-    "label": "Real words from travelers who crossed deserts, cities, borders, and mountain roads with our local team.",
+    "label": "Real feedback from travelers who explored Turkmenistan and Central Asia with our local team.",
     "review": [
       {
         "user_name": "Chavetas",
-        "image": "",
-        "comment": "“My Turkmenistan tour was very well organised. Serdar, our guide, was professional, patient and kind. I also appreciated that Belet Travel made it possible for a solo traveler to join a fixed-price departure with confidence.”",
-        "alt": "traveler avatar",
+        "image": "/assets/images/testimonials/chavetas.jpg",
+        "comment": "“Belet Travel organized an incredible journey for us. Communication was clear from the first message, and the team handled the route, guides, hotels and border details with real care.”",
+        "alt": "Belet Travel traveler in Turkmenistan",
         "rating": 5,
-        "country": "New Zealand"
+        "country": "New Zealand",
+        "tour": "Turkmenistan Highlights Tour",
+        "travel_date": "May 2026",
+        "source": "Guest Feedback",
+        "source_url": ""
       },
       {
         "user_name": "Sarah M.",
-        "image": "",
-        "comment": "“Belet Travel organized an incredible five-country Central Asia journey for our group. Communication was clear from the first message, and the team handled the route, guides, hotels and border details with real care.”",
-        "alt": "traveler avatar",
+        "image": "/assets/images/testimonials/sarah.jpg",
+        "comment": "“My Turkmenistan tour was very well organised. Serdar, our guide, was professional, patient and kind. I also appreciated that Belet Travel made it possible for a solo traveler to join a fixed-price departure with confidence.”",
+        "alt": "Belet Travel traveler in Central Asia",
         "rating": 5,
-        "country": "United States"
+        "country": "United States",
+        "tour": "Turkmenistan Tour",
+        "travel_date": "April 2026",
+        "source": "Guest Feedback",
+        "source_url": ""
       },
       {
-        "user_name": "Anita T.",
-        "image": "",
+        "user_name": "Ethan",
+        "image": "/assets/images/testimonials/anita.jpg",
         "comment": "“Our April trip was smooth, educational and full of moments we could never have planned alone. The guides made the Silk Road cities feel alive, and the logistics were handled quietly in the background.”",
-        "alt": "traveler avatar",
+        "alt": "Belet Travel traveler on a Silk Road journey",
         "rating": 5,
-        "country": "Singapore"
+        "country": "Singapore",
+        "tour": "Central Asia Silk Road Journey",
+        "travel_date": "April 2026",
+        "source": "Guest Feedback",
+        "source_url": ""
       }
     ],
     "bg_image": [

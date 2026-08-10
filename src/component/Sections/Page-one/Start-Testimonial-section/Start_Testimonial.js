@@ -12,7 +12,8 @@ const Start_Testimonial = ({ initialValues }) => {
     const maxRating = 5;
 
     for (let i = 0; i < maxRating; i++) {
-      const starClass = i < rating ? "text-yellow-900" : "text-gray-300";
+      const starClass =
+        i < rating ? "text-yellow-900" : "text-gray-300";
 
       stars.push(
         <svg
@@ -29,6 +30,18 @@ const Start_Testimonial = ({ initialValues }) => {
     }
 
     return stars;
+  };
+
+  const getSourceClass = source => {
+    if (source === "Google Review") {
+      return "bg-[#F1F6FF] text-[#3567B7] border-[#D8E5FA]";
+    }
+
+    if (source === "Tripadvisor Review") {
+      return "bg-[#EDF8F1] text-[#246B45] border-[#D3ECDD]";
+    }
+
+    return "bg-[#FAF7F2] text-[#7A5B2E] border-[#E2CFAF]";
   };
 
   return (
@@ -148,7 +161,7 @@ const Start_Testimonial = ({ initialValues }) => {
                 strokeWidth="2"
               />
 
-              {/* Silk Road style route line */}
+              {/* Silk Road route */}
               <path
                 d="M245 245
                 C300 225 340 220 385 222
@@ -161,7 +174,6 @@ const Start_Testimonial = ({ initialValues }) => {
                 opacity="0.45"
               />
 
-              {/* Route points */}
               <circle cx="245" cy="245" r="7" fill="#D8B46A" opacity="0.88" />
               <circle cx="385" cy="222" r="7" fill="#D8B46A" opacity="0.88" />
               <circle cx="500" cy="212" r="7" fill="#D8B46A" opacity="0.88" />
@@ -174,7 +186,6 @@ const Start_Testimonial = ({ initialValues }) => {
               <circle cx="612" cy="225" r="17" stroke="#D8B46A" opacity="0.20" />
               <circle cx="695" cy="232" r="17" stroke="#D8B46A" opacity="0.20" />
 
-              {/* Country labels */}
               <text
                 x="360"
                 y="140"
@@ -242,6 +253,7 @@ const Start_Testimonial = ({ initialValues }) => {
 
           <div className="container relative z-10">
             <div className="flex flex-wrap items-center">
+              {/* LEFT CONTENT */}
               <div className="w-full md:w-2/5">
                 <div className="md:max-w-[406px]">
                   <span className="inline-block mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-primary-900">
@@ -249,10 +261,16 @@ const Start_Testimonial = ({ initialValues }) => {
                   </span>
 
                   <h2>{data.title}</h2>
+
                   <p>{data.label}</p>
+
+                  <p className="mt-4 text-[11px] text-dark-800/55">
+                    Traveler feedback and photos shared with permission.
+                  </p>
                 </div>
               </div>
 
+              {/* TESTIMONIALS */}
               <div className="testimonial-slider w-full md:w-3/5 lg:pl-14">
                 <div className="slider-arrow">
                   <div className="swiper-button-prev z-1 arrow"></div>
@@ -282,35 +300,100 @@ const Start_Testimonial = ({ initialValues }) => {
                   {data.review &&
                     data.review.map((review_data, index) => {
                       return (
-                        <SwiperSlide key={index}>
-                          <div className="shadow-card-3 p-5 bg-white rounded-4xl border border-[#D8B46A]/10">
+                        <SwiperSlide key={index} className="!h-auto">
+                          <div className="shadow-card-3 p-5 bg-white rounded-4xl border border-[#D8B46A]/10 h-full flex flex-col">
+                            {/* Rating */}
                             <div className="flex items-center space-x-1 text-yellow-900 mb-5">
                               {generateStarIcons(review_data.rating)}
                             </div>
 
-                            <p className="text-dark-900 text-md mb-10">
+                            {/* Review */}
+                            <p className="text-dark-900 text-md mb-8 flex-1">
                               {review_data.comment}
                             </p>
 
-                            <div className="flex border-t border-gray-100 pt-3">
-                              <figcaption className="flex justify-center items-center space-x-3">
-                                <div
-                                  className="w-10 h-10 rounded-full bg-[#E8F3EC] border border-[#D8B46A]/30 flex items-center justify-center text-primary-900 shrink-0"
-                                  aria-hidden="true"
-                                >
-                                  <i className="fa-regular fa-user text-lg"></i>
-                                </div>
+                            {/* Traveler */}
+                            <div className="border-t border-gray-100 pt-4">
+                              <div className="flex items-start gap-3">
+                                {/* Real photo when available */}
+                                {review_data.image ? (
+                                  <img
+                                    src={review_data.image}
+                                    alt={
+                                      review_data.alt ||
+                                      `${review_data.user_name} traveler photo`
+                                    }
+                                    className="w-16 h-16 rounded-full object-cover object-center border-2 border-[#E2CFAF] shrink-0"
+                                  />
+                                ) : (
+                                  <div
+                                    className="w-16 h-16 rounded-full bg-[#E8F3EC] border border-[#D8B46A]/30 flex items-center justify-center text-primary-900 shrink-0"
+                                    aria-hidden="true"
+                                  >
+                                    <i className="fa-regular fa-user text-lg"></i>
+                                  </div>
+                                )}
 
-                                <div className="space-y-0.5 font-medium dark:text-white text-left">
+                                <div className="min-w-0">
                                   <div className="text-dark-900 text-sm font-bold leading-normal">
                                     {review_data.user_name}
                                   </div>
 
-                                  <div className="text-10 font-light text-dark-800 leading-normal dark:text-gray-400">
-                                    {review_data.country}
-                                  </div>
+                                  {review_data.country && (
+                                    <div className="text-xs font-light text-dark-800 leading-normal mt-0.5">
+                                      {review_data.country}
+                                    </div>
+                                  )}
+
+                                  {(review_data.tour ||
+                                    review_data.travel_date) && (
+                                    <div className="text-xs text-dark-800/70 leading-normal mt-2">
+                                      {review_data.tour && (
+                                        <span>
+                                          {review_data.tour}
+                                        </span>
+                                      )}
+
+                                      {review_data.tour &&
+                                        review_data.travel_date && (
+                                          <span> · </span>
+                                        )}
+
+                                      {review_data.travel_date && (
+                                        <span>
+                                          {review_data.travel_date}
+                                        </span>
+                                      )}
+                                    </div>
+                                  )}
                                 </div>
-                              </figcaption>
+                              </div>
+
+                              {/* Source */}
+                              {review_data.source && (
+                                <div className="mt-4">
+                                  {review_data.source_url ? (
+                                    <a
+                                      href={review_data.source_url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className={`inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-medium ${getSourceClass(
+                                        review_data.source
+                                      )}`}
+                                    >
+                                      {review_data.source}
+                                    </a>
+                                  ) : (
+                                    <span
+                                      className={`inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-medium ${getSourceClass(
+                                        review_data.source
+                                      )}`}
+                                    >
+                                      {review_data.source}
+                                    </span>
+                                  )}
+                                </div>
+                              )}
                             </div>
                           </div>
                         </SwiperSlide>
