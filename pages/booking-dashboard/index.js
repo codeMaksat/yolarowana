@@ -288,6 +288,18 @@ export default function Dashboard() {
                 </li>
 
                 <li>
+                  <Link href="/booking-dashboard/reviews">
+                    <span>
+                      <img
+                        src="/assets/images/booking-icon.svg"
+                        alt="reviews"
+                      />
+                    </span>
+                    Review Requests
+                  </Link>
+                </li>
+
+                <li>
                   <Link href="/tour-dashboard">
                     <span>
                       <img src="/assets/images/hiking-icon-1.svg" alt="tours" />
@@ -303,6 +315,7 @@ export default function Dashboard() {
                     Travel Mates
                   </Link>
                 </li>
+
 
 
                 <li>
