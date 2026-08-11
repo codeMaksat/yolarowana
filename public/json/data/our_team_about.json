@@ -1,29 +1,71 @@
 [
-    {
-        "title": "Our Team",
-        "label": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-        "details": [
-            {
-                "slug": "/team-detail",
-                "user_name": "Alexa Bowers",
-                "position": "CEO",
-                "image": "/assets/images/team-pearson-img2.jpg",
-                "alt": "blog-img2"
-            },
-            {
-                "slug": "/team-detail",
-                "user_name": "Bruce Pearson",
-                "position": "Travel Guide",
-                "image": "/assets/images/team-pearson-img1.jpg",
-                "alt": "blog-img1"
-            },
-            {
-                "slug": "/team-detail",
-                "user_name": "Amber Griffin",
-                "position": "TManager",
-                "image": "/assets/images/team-pearson-img3.jpg",
-                "alt": "blog-img3"
-            }
-        ]
-    }
+  {
+    "title": "Local people. Personal service.",
+    "label": "Belet Travel is a local team based in Ashgabat, supported by experienced guides, drivers and trusted partners across Central Asia. From the first itinerary request to airport transfers, border crossings and the final day of the journey, our team stays closely involved in every trip.",
+    "details": [
+      {
+        "type": "founder",
+        "user_name": "Founder Name",
+        "position": "Founder & Managing Director",
+        "image": "/assets/images/team/founder.jpg",
+        "alt": "Founder and Managing Director of Belet Travel",
+        "bio": "Oversees Belet Travel's operations and works closely with travelers and international partners to create journeys across Turkmenistan and Central Asia.",
+        "languages": "Turkmen, Russian, English"
+      },
+      {
+        "type": "operations",
+        "user_name": "Team Member Name",
+        "position": "Tour Operations & Travel Consultant",
+        "image": "/assets/images/team/operations-1.jpg",
+        "alt": "Belet Travel tour operations consultant",
+        "bio": "Coordinates itineraries, accommodation, guides and travel logistics while assisting guests before and during their journey.",
+        "languages": "Turkmen, Russian, English"
+      },
+      {
+        "type": "operations",
+        "user_name": "Team Member Name",
+        "position": "Tour Operations & Travel Consultant",
+        "image": "/assets/images/team/operations-2.jpg",
+        "alt": "Belet Travel travel consultant",
+        "bio": "Helps travelers with itinerary planning, reservations, local arrangements and practical support throughout their Central Asia journey.",
+        "languages": "Turkmen, Russian, English"
+      },
+      {
+        "type": "guide",
+        "user_name": "Guide Name",
+        "position": "Local Guide",
+        "image": "/assets/images/team/guide-1.jpg",
+        "alt": "Belet Travel local guide",
+        "bio": "Introduces travelers to Turkmenistan's history, culture and everyday life, with personal insight into the places visited along the way.",
+        "languages": "Turkmen, Russian, English"
+      },
+      {
+        "type": "guide",
+        "user_name": "Guide Name",
+        "position": "Local Guide",
+        "image": "/assets/images/team/guide-2.jpg",
+        "alt": "Belet Travel local guide",
+        "bio": "Specializes in cultural and historical journeys, helping guests understand the stories behind Turkmenistan's cities and Silk Road heritage.",
+        "languages": "Turkmen, Russian, English"
+      },
+      {
+        "type": "guide",
+        "user_name": "Guide Name",
+        "position": "Local Guide",
+        "image": "/assets/images/team/guide-3.jpg",
+        "alt": "Belet Travel local guide",
+        "bio": "Guides travelers through both major sights and less-visited places while providing practical local knowledge throughout the journey.",
+        "languages": "Turkmen, Russian, English"
+      },
+      {
+        "type": "transportation",
+        "user_name": "Manager Name",
+        "position": "Transportation Manager",
+        "image": "/assets/images/team/transport-manager.jpg",
+        "alt": "Belet Travel transportation manager",
+        "bio": "Coordinates vehicles, drivers, airport transfers and overland logistics to keep every journey running safely and smoothly.",
+        "languages": "Turkmen, Russian"
+      }
+    ]
+  }
 ]

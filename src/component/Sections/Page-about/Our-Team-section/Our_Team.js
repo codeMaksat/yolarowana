@@ -1,78 +1,263 @@
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
 
 const Our_Team = ({ initialValues }) => {
+  if (!initialValues) return null;
+
+  const getMembers = (details = [], type) =>
+    details.filter(member => member.type === type);
+
   return (
-    <section className="">
-      {initialValues &&
-        initialValues.map((data, index) => {
-          return (
-            <div className="container" key={index}>
-              <div className="text-center mb-8 md:mb-14">
-                <h2>{data.title}</h2>
-                <p className="max-w-[590px] mx-auto">{data.label}</p>
+    <>
+      {initialValues.map((data, index) => {
+        const founder = getMembers(data.details, "founder")[0];
+
+        const operations = getMembers(
+          data.details,
+          "operations"
+        );
+
+        const guides = getMembers(
+          data.details,
+          "guide"
+        );
+
+        const transportation = getMembers(
+          data.details,
+          "transportation"
+        )[0];
+
+        return (
+          <section
+            key={index}
+            className="py-12 md:py-20 bg-[#FAF7F2]"
+          >
+            <div className="container">
+
+              {/* HEADING */}
+              <div className="max-w-[760px] mx-auto text-center mb-10 md:mb-16">
+                <span className="inline-block mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-primary-900">
+                  The People Behind Belet Travel
+                </span>
+
+                <h2 className="mb-5">
+                  {data.title}
+                </h2>
+
+                <p className="text-dark-800 mb-0">
+                  {data.label}
+                </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                {data.details &&
-                  data.details.map((details_data, index) => {
-                    return (
-                      <div className="relative group" key={index}>
-                        <div className="relative overflow-hidden before:pt-[113%] rounded-xl before:block after:w-full after:transition-all after:h-full after:absolute after:top-0 after:left-0 after:bg-dark-900 after:opacity-20 group-hover:after:opacity-40">
-                          <Image
-                            src={details_data.image}
-                            alt={details_data.alt}
-                            width={361}
-                            height={408}
-                            className="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300"
-                          />
-                        </div>
+              {/* FOUNDER */}
+              {founder && (
+                <div className="max-w-[1050px] mx-auto mb-14 md:mb-20">
+                  <div className="grid grid-cols-1 md:grid-cols-[340px_1fr] bg-white rounded-3xl overflow-hidden shadow-box-3 border border-[#D8B46A]/15">
 
-                        <div className="absolute bottom-0 left-0 p-5 w-full rounded-b-xl bg-dark-900/50 flex items-center justify-between">
-                          <div>
-                            <h3 className="text-white text-2xl leading-normal mb-0">
-                              <Link href={details_data.slug}>
-                                {details_data.user_name}
-                              </Link>
-                            </h3>
-                            <span className="block text-white text-md font-medium">
-                              {details_data.position}
-                            </span>
-                          </div>
-                          <div className="bg-primary-900 w-11 h-11 flex text-white hover:text-primary-900 hover:bg-white items-center justify-center z-1 rounded-full">
-                            <Link href={details_data.slug}>
-                              {" "}
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="23"
-                                height="23"
-                                viewBox="0 0 23 23"
-                                fill="none">
-                                <path
-                                  fillRule="evenodd"
-                                  clipRule="evenodd"
-                                  d="M20.125 3.59382C20.125 3.4032 20.0493 3.22038 19.9145 3.08559C19.7797 2.95079 19.5969 2.87507 19.4062 2.87507H10.7812C10.5906 2.87507 10.4078 2.95079 10.273 3.08559C10.1382 3.22038 10.0625 3.4032 10.0625 3.59382C10.0625 3.78444 10.1382 3.96726 10.273 4.10205C10.4078 4.23685 10.5906 4.31257 10.7812 4.31257H17.6712L3.08487 18.8974C3.01804 18.9643 2.96503 19.0436 2.92887 19.1309C2.8927 19.2182 2.87408 19.3118 2.87408 19.4063C2.87408 19.5008 2.8927 19.5944 2.92887 19.6817C2.96503 19.769 3.01804 19.8484 3.08487 19.9152C3.15169 19.982 3.23103 20.035 3.31834 20.0712C3.40565 20.1074 3.49924 20.126 3.59374 20.126C3.68825 20.126 3.78183 20.1074 3.86914 20.0712C3.95646 20.035 4.03579 19.982 4.10262 19.9152L18.6875 5.32888V12.2188C18.6875 12.4094 18.7632 12.5923 18.898 12.7271C19.0328 12.8618 19.2156 12.9376 19.4062 12.9376C19.5969 12.9376 19.7797 12.8618 19.9145 12.7271C20.0493 12.5923 20.125 12.4094 20.125 12.2188V3.59382Z"
-                                  fill="currentColor"
-                                  stroke="currentColor"
-                                />
-                              </svg>
-                            </Link>
-                          </div>
+                    <div className="relative min-h-[420px] md:min-h-[470px]">
+                      <Image
+                        src={founder.image}
+                        alt={
+                          founder.alt ||
+                          founder.user_name
+                        }
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 340px"
+                      />
+                    </div>
+
+                    <div className="p-7 md:p-10 lg:p-12 flex flex-col justify-center">
+
+                      <span className="text-xs uppercase tracking-[0.16em] font-semibold text-[#9A6D2E] mb-3">
+                        Founder
+                      </span>
+
+                      <h3 className="text-2xl md:text-3xl mb-1 text-dark-900">
+                        {founder.user_name}
+                      </h3>
+
+                      <p className="font-semibold text-primary-900 mb-5">
+                        {founder.position}
+                      </p>
+
+                      {founder.bio && (
+                        <p className="text-dark-800 leading-relaxed mb-5">
+                          {founder.bio}
+                        </p>
+                      )}
+
+                      {founder.languages && (
+                        <div className="pt-4 border-t border-[#E8DFD0]">
+                          <span className="block text-xs uppercase tracking-[0.12em] text-dark-800/60 mb-1">
+                            Languages
+                          </span>
+
+                          <span className="text-sm text-dark-900">
+                            {founder.languages}
+                          </span>
                         </div>
-                      </div>
-                    );
-                  })}
+                      )}
+
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* OPERATIONS */}
+              {operations.length > 0 && (
+                <div className="mb-14 md:mb-20">
+
+                  <div className="text-center mb-8">
+                    <span className="text-xs uppercase tracking-[0.16em] font-semibold text-[#9A6D2E]">
+                      Tour Planning & Operations
+                    </span>
+
+                    <h3 className="text-2xl mt-2 mb-0">
+                      Your contacts before and during the journey
+                    </h3>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-7 max-w-[900px] mx-auto">
+                    {operations.map((member, memberIndex) => (
+                      <TeamCard
+                        member={member}
+                        key={memberIndex}
+                      />
+                    ))}
+                  </div>
+
+                </div>
+              )}
+
+              {/* GUIDES */}
+              {guides.length > 0 && (
+                <div className="mb-14 md:mb-20">
+
+                  <div className="text-center mb-8">
+                    <span className="text-xs uppercase tracking-[0.16em] font-semibold text-[#9A6D2E]">
+                      Local Guides
+                    </span>
+
+                    <h3 className="text-2xl mt-2 mb-0">
+                      Local knowledge that brings each place to life
+                    </h3>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                    {guides.map((member, memberIndex) => (
+                      <TeamCard
+                        member={member}
+                        key={memberIndex}
+                      />
+                    ))}
+                  </div>
+
+                </div>
+              )}
+
+              {/* TRANSPORT */}
+              {transportation && (
+                <div className="max-w-[650px] mx-auto">
+
+                  <div className="text-center mb-8">
+                    <span className="text-xs uppercase tracking-[0.16em] font-semibold text-[#9A6D2E]">
+                      Transportation & Logistics
+                    </span>
+                  </div>
+
+                  <TeamCard
+                    member={transportation}
+                    horizontal
+                  />
+
+                </div>
+              )}
+
+              {/* TRUST NOTE */}
+              <div className="max-w-[820px] mx-auto text-center mt-14 md:mt-20 pt-8 border-t border-[#D8B46A]/25">
+
+                <p className="text-sm text-dark-800 mb-0">
+                  Our core team works closely with a trusted
+                  network of local drivers, guides and travel
+                  partners throughout Central Asia, allowing us
+                  to stay personally involved in every journey.
+                </p>
+
               </div>
-              <div className="mt-16 mb-10 text-center">
-                <Link href="team" className="btn btn-primary mx-auto">
-                  View all
-                </Link>
-              </div>
+
             </div>
-          );
-        })}
-    </section>
+          </section>
+        );
+      })}
+    </>
+  );
+};
+
+const TeamCard = ({ member, horizontal = false }) => {
+  return (
+    <article
+      className={`bg-white rounded-2xl overflow-hidden border border-[#D8B46A]/15 shadow-box-3 ${
+        horizontal
+          ? "sm:grid sm:grid-cols-[220px_1fr]"
+          : ""
+      }`}
+    >
+
+      {/* PHOTO */}
+      <div
+        className={`relative ${
+          horizontal
+            ? "min-h-[290px]"
+            : "h-[340px]"
+        }`}
+      >
+        <Image
+          src={member.image}
+          alt={
+            member.alt ||
+            `${member.user_name} - ${member.position}`
+          }
+          fill
+          className="object-cover object-center"
+          sizes={
+            horizontal
+              ? "(max-width: 640px) 100vw, 220px"
+              : "(max-width: 768px) 100vw, 33vw"
+          }
+        />
+      </div>
+
+      {/* INFORMATION */}
+      <div className="p-5 md:p-6">
+
+        <h3 className="text-xl mb-1 text-dark-900">
+          {member.user_name}
+        </h3>
+
+        <span className="block text-sm font-semibold text-primary-900 mb-4">
+          {member.position}
+        </span>
+
+        {member.bio && (
+          <p className="text-sm text-dark-800 leading-relaxed mb-4">
+            {member.bio}
+          </p>
+        )}
+
+        {member.languages && (
+          <div className="pt-3 border-t border-[#E8DFD0]">
+            <span className="text-xs text-dark-800/60">
+              Languages:
+            </span>
+
+            <span className="text-xs text-dark-900 ml-1">
+              {member.languages}
+            </span>
+          </div>
+        )}
+
+      </div>
+    </article>
   );
 };
 

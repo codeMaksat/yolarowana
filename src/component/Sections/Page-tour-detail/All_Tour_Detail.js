@@ -6,6 +6,7 @@ import Map_Sector from "./map_sector";
 import Photos_Sector from "./photos_sector";
 import Side_Bar from "./side_bar";
 import Detail_Sector from "./detail_sector";
+import Booking_Confidence from "./booking_confidence";
 
 const Included_Excluded_Sector = ({ detail_data }) => {
   return (
@@ -67,6 +68,7 @@ const All_Tour_Detail = ({ initialValues }) => {
     { id: "itinerary", label: "Itinerary" },
     { id: "included", label: "Included" },
     { id: "map", label: "Map" },
+    { id: "booking", label: "Booking" },
     { id: "faq", label: "FAQ" },
   ];
 
@@ -187,6 +189,8 @@ const All_Tour_Detail = ({ initialValues }) => {
                     <Included_Excluded_Sector detail_data={data.detail} />
 
                     <Map_Sector map_data={data.map} />
+                    
+                    <Booking_Confidence />
 
                     <Faq_Sector faq_data={data.faq} />
                   </div>
