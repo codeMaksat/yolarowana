@@ -42,8 +42,8 @@ function formatTourForPage(data) {
             detail: [
                 {
                     title: data?.title || "Tour",
-                    rating: 5,
-                    review: 24,
+                    rating: data?.rating ?? null,
+                    review: data?.review_count ?? null,
                     service: [
                         {
                             image: "/assets/images/clock-icon.svg",
@@ -118,9 +118,8 @@ function buildSeoMeta(tourData, seoData) {
     const tourTitle = tour?.title || "Central Asia Tour";
 
     const fallbackDescription = tour?.route
-        ? `Explore ${tourTitle} with Belet Travel. Follow the route ${tour.route}${
-              tour?.duration ? ` over ${tour.duration}` : ""
-          } on a locally planned Central Asia journey.`
+        ? `Explore ${tourTitle} with Belet Travel. Follow the route ${tour.route}${tour?.duration ? ` over ${tour.duration}` : ""
+        } on a locally planned Central Asia journey.`
         : `Explore ${tourTitle} with Belet Travel on a locally planned Central Asia journey.`;
 
     return {

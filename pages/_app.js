@@ -1,19 +1,49 @@
 import "../styles/globals.css";
+
 import Footer from "@/Layout/Footer";
 import Footer2 from "@/Layout/Footer2";
 import Footer3 from "@/Layout/Footer3";
+
 import Header from "@/Layout/Header";
 import Header2 from "@/Layout/Header2";
 import Header3 from "@/Layout/Header3";
+
 import StickyWhatsApp from "@/component/StickyWhatsApp";
+
+import Link from "next/link";
+import Script from "next/script";
 import { useRouter } from "next/router";
+
 import { Red_Hat_Display } from "next/font/google";
+
 import { useEffect, useState } from "react";
+
 import { CartProvider } from "react-use-cart";
+
 import "swiper/css";
+
 import headerData from "../public/json/data/header.json";
 import footerData from "../public/json/data/footer.json";
 import footer2Data from "../public/json/data/footer2.json";
+
+
+/*
+ * =========================================================
+ * GOOGLE ANALYTICS
+ * =========================================================
+ */
+
+const GA_MEASUREMENT_ID = "G-8CVX20ZB1M";
+
+const ANALYTICS_CONSENT_KEY =
+  "belet_analytics_consent";
+
+
+/*
+ * =========================================================
+ * FONT
+ * =========================================================
+ */
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
@@ -21,6 +51,13 @@ const redHatDisplay = Red_Hat_Display({
   preload: true,
   variable: "--font-red-hat-display",
 });
+
+
+/*
+ * =========================================================
+ * SMALL ROUTE LOADER
+ * =========================================================
+ */
 
 const SmallRouteLoader = () => {
   return (
@@ -35,7 +72,13 @@ const SmallRouteLoader = () => {
         <g id="route_loader_68">
           <g className="loader_circle_1">
             <g>
-              <circle cx="30" cy="30" r="26" fill="transparent" />
+              <circle
+                cx="30"
+                cy="30"
+                r="26"
+                fill="transparent"
+              />
+
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -47,7 +90,13 @@ const SmallRouteLoader = () => {
 
           <g className="loader_circle_2">
             <g>
-              <circle cx="30" cy="30" r="28" fill="transparent" />
+              <circle
+                cx="30"
+                cy="30"
+                r="28"
+                fill="transparent"
+              />
+
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
@@ -58,7 +107,13 @@ const SmallRouteLoader = () => {
           </g>
 
           <g className="loader_circle_3">
-            <circle cx="30" cy="30" r="30" fill="transparent" />
+            <circle
+              cx="30"
+              cy="30"
+              r="30"
+              fill="transparent"
+            />
+
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -72,104 +127,486 @@ const SmallRouteLoader = () => {
   );
 };
 
-export default function App({ Component, pageProps }) {
+
+/*
+ * =========================================================
+ * COOKIE / ANALYTICS CONSENT
+ * =========================================================
+ */
+
+const AnalyticsConsentBanner = ({
+  onAccept,
+  onDecline,
+}) => {
+  return (
+    <div className="fixed left-3 right-3 bottom-3 md:left-6 md:right-auto md:bottom-6 z-[99999] md:max-w-[440px]">
+
+      <div className="rounded-2xl border border-[#E2CFAF] bg-white shadow-2xl p-5 md:p-6">
+
+        <div className="flex items-start gap-4">
+
+          {/* ICON */}
+          <div className="w-10 h-10 shrink-0 rounded-full bg-[#FAF7F2] border border-[#E2CFAF] flex items-center justify-center text-primary-900">
+            <i className="fa-regular fa-chart-line"></i>
+          </div>
+
+          {/* CONTENT */}
+          <div className="min-w-0">
+
+            <h4 className="text-lg font-bold text-dark-900 mb-2">
+              Help us improve Belet Travel
+            </h4>
+
+            <p className="text-sm leading-6 text-dark-800 mb-3">
+              We use optional Google Analytics to
+              understand how visitors use our website
+              and improve our tours and booking
+              experience.
+            </p>
+
+            <p className="text-xs leading-5 text-dark-800/70 mb-4">
+              Analytics will only load if you accept.
+              You can learn more in our{" "}
+              <Link
+                href="/privacy-policy"
+                className="font-semibold text-primary-900 hover:underline"
+              >
+                Privacy Policy
+              </Link>
+              .
+            </p>
+
+            {/* BUTTONS */}
+            <div className="flex flex-col sm:flex-row gap-2">
+
+              <button
+                type="button"
+                onClick={onAccept}
+                className="btn btn-primary rounded-full px-5 py-2.5 text-sm font-semibold"
+              >
+                Accept analytics
+              </button>
+
+              <button
+                type="button"
+                onClick={onDecline}
+                className="rounded-full border border-[#E2CFAF] bg-white px-5 py-2.5 text-sm font-semibold text-dark-900 hover:border-primary-900 transition-all"
+              >
+                Decline
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+/*
+ * =========================================================
+ * APP
+ * =========================================================
+ */
+
+export default function App({
+  Component,
+  pageProps,
+}) {
   const router = useRouter();
 
-  const [routeLoading, setRouteLoading] = useState(false);
+  const [
+    routeLoading,
+    setRouteLoading,
+  ] = useState(false);
+
+  const [
+    analyticsConsent,
+    setAnalyticsConsent,
+  ] = useState("loading");
+
+
+  /*
+   * =========================================================
+   * LOAD SAVED ANALYTICS CONSENT
+   * =========================================================
+   */
 
   useEffect(() => {
-    const existingStylesheet = document.querySelector(
-      'link[data-fontawesome-stylesheet="true"]'
-    );
+    try {
+      const savedConsent =
+        localStorage.getItem(
+          ANALYTICS_CONSENT_KEY
+        );
 
-    if (existingStylesheet) return;
+      if (
+        savedConsent === "accepted" ||
+        savedConsent === "declined"
+      ) {
+        setAnalyticsConsent(
+          savedConsent
+        );
+      } else {
+        setAnalyticsConsent(
+          "unset"
+        );
+      }
+    } catch (error) {
+      console.error(
+        "Analytics consent read error:",
+        error
+      );
 
-    const stylesheet = document.createElement("link");
-    stylesheet.rel = "stylesheet";
-    stylesheet.href = "/assets/css/all-fontawesome.min.css";
-    stylesheet.dataset.fontawesomeStylesheet = "true";
-
-    document.head.appendChild(stylesheet);
+      setAnalyticsConsent(
+        "unset"
+      );
+    }
   }, []);
+
+
+  /*
+   * =========================================================
+   * ACCEPT ANALYTICS
+   * =========================================================
+   */
+
+  const acceptAnalytics = () => {
+    try {
+      localStorage.setItem(
+        ANALYTICS_CONSENT_KEY,
+        "accepted"
+      );
+    } catch (error) {
+      console.error(
+        "Analytics consent save error:",
+        error
+      );
+    }
+
+    setAnalyticsConsent(
+      "accepted"
+    );
+  };
+
+
+  /*
+   * =========================================================
+   * DECLINE ANALYTICS
+   * =========================================================
+   */
+
+  const declineAnalytics = () => {
+    try {
+      localStorage.setItem(
+        ANALYTICS_CONSENT_KEY,
+        "declined"
+      );
+    } catch (error) {
+      console.error(
+        "Analytics consent save error:",
+        error
+      );
+    }
+
+    setAnalyticsConsent(
+      "declined"
+    );
+  };
+
+
+  /*
+   * =========================================================
+   * FONT AWESOME
+   * =========================================================
+   */
+
+  useEffect(() => {
+    const existingStylesheet =
+      document.querySelector(
+        'link[data-fontawesome-stylesheet="true"]'
+      );
+
+    if (existingStylesheet) {
+      return;
+    }
+
+    const stylesheet =
+      document.createElement(
+        "link"
+      );
+
+    stylesheet.rel =
+      "stylesheet";
+
+    stylesheet.href =
+      "/assets/css/all-fontawesome.min.css";
+
+    stylesheet.dataset.fontawesomeStylesheet =
+      "true";
+
+    document.head.appendChild(
+      stylesheet
+    );
+  }, []);
+
+
+  /*
+   * =========================================================
+   * ROUTE LOADER
+   * =========================================================
+   */
 
   useEffect(() => {
     let finishTimer;
 
-    const handleRouteChangeStart = (url) => {
+    const handleRouteChangeStart = (
+      url
+    ) => {
       if (url !== router.asPath) {
-        clearTimeout(finishTimer);
-        setRouteLoading(true);
+        clearTimeout(
+          finishTimer
+        );
+
+        setRouteLoading(
+          true
+        );
       }
     };
 
-    const handleRouteChangeComplete = () => {
-      clearTimeout(finishTimer);
+    const handleRouteChangeComplete =
+      () => {
+        clearTimeout(
+          finishTimer
+        );
 
-      finishTimer = setTimeout(() => {
-        setRouteLoading(false);
-      }, 250);
-    };
+        finishTimer =
+          setTimeout(() => {
+            setRouteLoading(
+              false
+            );
+          }, 250);
+      };
 
-    const handleRouteChangeError = () => {
-      clearTimeout(finishTimer);
+    const handleRouteChangeError =
+      () => {
+        clearTimeout(
+          finishTimer
+        );
 
-      finishTimer = setTimeout(() => {
-        setRouteLoading(false);
-      }, 250);
-    };
+        finishTimer =
+          setTimeout(() => {
+            setRouteLoading(
+              false
+            );
+          }, 250);
+      };
 
-    router.events.on("routeChangeStart", handleRouteChangeStart);
-    router.events.on("routeChangeComplete", handleRouteChangeComplete);
-    router.events.on("routeChangeError", handleRouteChangeError);
+    router.events.on(
+      "routeChangeStart",
+      handleRouteChangeStart
+    );
+
+    router.events.on(
+      "routeChangeComplete",
+      handleRouteChangeComplete
+    );
+
+    router.events.on(
+      "routeChangeError",
+      handleRouteChangeError
+    );
 
     return () => {
-      clearTimeout(finishTimer);
-      router.events.off("routeChangeStart", handleRouteChangeStart);
-      router.events.off("routeChangeComplete", handleRouteChangeComplete);
-      router.events.off("routeChangeError", handleRouteChangeError);
+      clearTimeout(
+        finishTimer
+      );
+
+      router.events.off(
+        "routeChangeStart",
+        handleRouteChangeStart
+      );
+
+      router.events.off(
+        "routeChangeComplete",
+        handleRouteChangeComplete
+      );
+
+      router.events.off(
+        "routeChangeError",
+        handleRouteChangeError
+      );
     };
   }, [router]);
 
+
+  /*
+   * =========================================================
+   * FOOTER
+   * =========================================================
+   */
+
   const currentFooterData =
-    router.asPath === "/home-2" ? footer2Data : footerData;
+    router.asPath === "/home-2"
+      ? footer2Data
+      : footerData;
 
-  const excludeRoutes = ["/forget-password", "/login", "/register"];
-  const isExcludedPage = excludeRoutes.includes(router.asPath);
 
-  const selectHeaderAndFooter = (url) => {
-    if (url.includes(`/home-3`)) {
-      return { header: Header3, footer: Footer3 };
-    } else if (url.includes(`/home-2`)) {
-      return { header: Header2, footer: Footer2 };
-    } else if (url.includes(`/`)) {
-      return { header: Header, footer: Footer };
+  /*
+   * =========================================================
+   * EXCLUDED AUTH PAGES
+   * =========================================================
+   */
+
+  const excludeRoutes = [
+    "/forget-password",
+    "/login",
+    "/register",
+  ];
+
+  const isExcludedPage =
+    excludeRoutes.includes(
+      router.asPath
+    );
+
+
+  /*
+   * =========================================================
+   * HEADER / FOOTER SELECTOR
+   * =========================================================
+   */
+
+  const selectHeaderAndFooter = (
+    url
+  ) => {
+    if (
+      url.includes(`/home-3`)
+    ) {
+      return {
+        header: Header3,
+        footer: Footer3,
+      };
+    } else if (
+      url.includes(`/home-2`)
+    ) {
+      return {
+        header: Header2,
+        footer: Footer2,
+      };
     } else {
-      return { header: Header, footer: Footer };
+      return {
+        header: Header,
+        footer: Footer,
+      };
     }
   };
 
-  const { header: HeaderComponent, footer: FooterComponent } =
-    selectHeaderAndFooter(router.asPath);
+  const {
+    header: HeaderComponent,
+    footer: FooterComponent,
+  } =
+    selectHeaderAndFooter(
+      router.asPath
+    );
+
+
+  /*
+   * =========================================================
+   * RENDER
+   * =========================================================
+   */
 
   return (
-    <div
-      className={`${redHatDisplay.className} ${redHatDisplay.variable} text-md md:text-lg antialiased text-dark-800 leading-xl`}
-    >
-      <CartProvider>
-        {!isExcludedPage && (
-          <HeaderComponent initialValues={headerData} />
-        )}
+    <>
+      {/* ===============================================
+          GOOGLE ANALYTICS
+          ONLY LOAD AFTER ACCEPTANCE
+      =============================================== */}
 
-        <Component {...pageProps} />
+      {analyticsConsent ===
+        "accepted" && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            strategy="afterInteractive"
+          />
 
-        <StickyWhatsApp />
+          <Script
+            id="belet-google-analytics"
+            strategy="afterInteractive"
+          >
+            {`
+              window.dataLayer = window.dataLayer || [];
 
-        {!isExcludedPage && (
-          <FooterComponent initialValues={currentFooterData} />
-        )}
+              function gtag(){
+                dataLayer.push(arguments);
+              }
 
-        {routeLoading && <SmallRouteLoader />}
-      </CartProvider>
-    </div>
+              window.gtag = gtag;
+
+              gtag('js', new Date());
+
+              gtag(
+                'config',
+                '${GA_MEASUREMENT_ID}'
+              );
+            `}
+          </Script>
+        </>
+      )}
+
+      <div
+        className={`${redHatDisplay.className} ${redHatDisplay.variable} text-md md:text-lg antialiased text-dark-800 leading-xl`}
+      >
+        <CartProvider>
+
+          {!isExcludedPage && (
+            <HeaderComponent
+              initialValues={
+                headerData
+              }
+            />
+          )}
+
+          <Component
+            {...pageProps}
+          />
+
+          <StickyWhatsApp />
+
+          {!isExcludedPage && (
+            <FooterComponent
+              initialValues={
+                currentFooterData
+              }
+            />
+          )}
+
+          {routeLoading && (
+            <SmallRouteLoader />
+          )}
+
+        </CartProvider>
+      </div>
+
+      {/* ===============================================
+          CONSENT BANNER
+      =============================================== */}
+
+      {analyticsConsent ===
+        "unset" && (
+        <AnalyticsConsentBanner
+          onAccept={
+            acceptAnalytics
+          }
+          onDecline={
+            declineAnalytics
+          }
+        />
+      )}
+
+    </>
   );
 }
