@@ -1,7 +1,9 @@
 import { supabase as serverSupabase } from "../lib/supabaseClient";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://belettravel.com";
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://belettravel.com"
+).replace(/\/+$/, "");
 
 function escapeXml(value = "") {
   return String(value)
@@ -17,7 +19,9 @@ function formatLastmod(value) {
 
   const date = new Date(value);
 
-  if (Number.isNaN(date.getTime())) return "";
+  if (Number.isNaN(date.getTime())) {
+    return "";
+  }
 
   return date.toISOString();
 }
@@ -25,34 +29,28 @@ function formatLastmod(value) {
 function generateUrlEntry({
   loc,
   lastmod = "",
-  changefreq = "",
-  priority = "",
 }) {
-  const safeLastmod = formatLastmod(lastmod);
+  const safeLastmod =
+    formatLastmod(lastmod);
 
   return `
   <url>
     <loc>${escapeXml(loc)}</loc>${
-      safeLastmod ? `\n    <lastmod>${safeLastmod}</lastmod>` : ""
-    }${
-      changefreq
-        ? `\n    <changefreq>${escapeXml(changefreq)}</changefreq>`
-        : ""
-    }${
-      priority
-        ? `\n    <priority>${escapeXml(priority)}</priority>`
+      safeLastmod
+        ? `\n    <lastmod>${safeLastmod}</lastmod>`
         : ""
     }
   </url>`;
 }
 
-function generateSiteMap(staticPages = [], tours = []) {
+function generateSiteMap(
+  staticPages = [],
+  tours = []
+) {
   const staticUrls = staticPages
     .map((page) =>
       generateUrlEntry({
         loc: `${SITE_URL}${page.path}`,
-        changefreq: page.changefreq,
-        priority: page.priority,
       })
     )
     .join("");
@@ -62,9 +60,9 @@ function generateSiteMap(staticPages = [], tours = []) {
     .map((tour) =>
       generateUrlEntry({
         loc: `${SITE_URL}/tours/${tour.slug}`,
-        lastmod: tour.updated_at || tour.created_at,
-        changefreq: "weekly",
-        priority: "0.85",
+        lastmod:
+          tour.updated_at ||
+          tour.created_at,
       })
     )
     .join("");
@@ -76,153 +74,169 @@ ${tourUrls}
 </urlset>`;
 }
 
-export async function getServerSideProps({ res }) {
+export async function getServerSideProps({
+  res,
+}) {
   const staticPages = [
     {
       path: "/",
-      changefreq: "weekly",
-      priority: "1.00",
     },
+
     {
       path: "/tour",
-      changefreq: "weekly",
-      priority: "0.95",
     },
+
+    /* DESTINATIONS */
+
     {
       path: "/destination-central-asia",
-      changefreq: "monthly",
-      priority: "0.85",
     },
+
     {
       path: "/destination-turkmenistan",
-      changefreq: "monthly",
-      priority: "0.80",
     },
+
     {
       path: "/destination-uzbekistan",
-      changefreq: "monthly",
-      priority: "0.80",
     },
+
     {
       path: "/destination-kazakhstan",
-      changefreq: "monthly",
-      priority: "0.80",
     },
+
     {
       path: "/destination-kyrgyzstan",
-      changefreq: "monthly",
-      priority: "0.80",
     },
+
     {
       path: "/destination-tajikistan",
-      changefreq: "monthly",
-      priority: "0.80",
     },
+
+    /* BLOG */
+
     {
       path: "/blog",
-      changefreq: "weekly",
-      priority: "0.80",
     },
+
     {
       path: "/best-places-to-visit-turkmenistan",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/best-time-to-visit-central-asia",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/central-asia-visa-guide",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/darvaza-gas-crater-guide",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/how-to-plan-five-stans-tour",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/is-central-asia-safe",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/kazakhstan-travel-guide",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/kyrgyzstan-travel-guide",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/silk-road-travel-guide",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/tajikistan-travel-guide",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/turkmenistan-itinerary",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/turkmenistan-visa-guide",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/uzbekistan-silk-road-guide",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
     {
       path: "/uzbekistan-to-turkmenistan-border-guide",
-      changefreq: "monthly",
-      priority: "0.70",
     },
+
+    /* COMPANY */
+
     {
       path: "/travel-mates",
-      changefreq: "weekly",
-      priority: "0.70",
     },
+
     {
       path: "/about",
-      changefreq: "monthly",
-      priority: "0.60",
     },
+
     {
       path: "/contact",
-      changefreq: "monthly",
-      priority: "0.60",
+    },
+
+    /* POLICIES */
+
+    {
+      path: "/payment-cancellation-policy",
+    },
+
+    {
+      path: "/privacy-policy",
+    },
+
+    {
+      path: "/terms-and-conditions",
     },
   ];
 
-  const { data: tours, error } = await serverSupabase
+  const {
+    data: tours,
+    error,
+  } = await serverSupabase
     .from("tours")
-    .select("slug, created_at, updated_at")
+    .select(
+      "slug, created_at, updated_at"
+    )
     .eq("status", "published")
-    .order("created_at", { ascending: false });
+    .order(
+      "created_at",
+      {
+        ascending: false,
+      }
+    );
 
   if (error) {
-    console.error("Sitemap Supabase error:", error.message);
+    console.error(
+      "Sitemap Supabase error:",
+      error.message
+    );
   }
 
-  const sitemap = generateSiteMap(staticPages, tours || []);
+  const sitemap =
+    generateSiteMap(
+      staticPages,
+      tours || []
+    );
 
-  res.setHeader("Content-Type", "text/xml");
+  res.setHeader(
+    "Content-Type",
+    "text/xml"
+  );
+
   res.setHeader(
     "Cache-Control",
     "public, s-maxage=3600, stale-while-revalidate=86400"
