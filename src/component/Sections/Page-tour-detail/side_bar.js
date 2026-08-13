@@ -373,11 +373,11 @@ ${additionalMessage}`,
 
     trackEvent("generate_lead", {
       lead_source: "tour_detail",
+      tour_name: inquiry.tourName,
 
       items: [
         {
-          item_name:
-            inquiry.tourName,
+          item_name: inquiry.tourName,
         },
       ],
     });
