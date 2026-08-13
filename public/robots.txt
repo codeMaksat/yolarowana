@@ -1,10 +1,9 @@
 User-agent: *
 Allow: /
 
-# Keep admin and form-only pages out of search results
+# Prevent crawling of internal admin pages
 Disallow: /tour-dashboard/
 Disallow: /booking-dashboard/
 Disallow: /belet-admin
-Disallow: /travel-mates/request
 
 Sitemap: https://belettravel.com/sitemap.xml
