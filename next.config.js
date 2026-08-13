@@ -11,14 +11,6 @@ const nextConfig = {
     ],
   },
 
-  experimental: {
-    outputFileTracingIncludes: {
-      "/tours/*": [
-        "./node_modules/lodash.mapkeys/**/*",
-      ],
-    },
-  },
-
   async redirects() {
     return [
       {
