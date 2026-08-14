@@ -345,6 +345,15 @@ export default function TourDashboard() {
                                 </li>
 
                                 <li>
+                                    <Link href="/tour-dashboard/order">
+                                        <span>
+                                            <img src="/assets/images/data-blob.svg" alt="tour order" />
+                                        </span>
+                                        Tour Order
+                                    </Link>
+                                </li>
+
+                                <li>
                                     <Link href="/tour-dashboard/travel-mates">
                                         <span>
                                             <img src="/assets/images/group-user-icon.svg" alt="travel mates" />
@@ -403,6 +412,13 @@ export default function TourDashboard() {
                                     >
                                         Refresh
                                     </button>
+
+                                    <Link
+                                        href="/tour-dashboard/order"
+                                        className="rounded-full border border-[#E2CFAF] bg-white px-6 py-3 text-sm font-semibold text-dark-900 hover:border-primary-900"
+                                    >
+                                        Manage Tour Order
+                                    </Link>
 
                                     <Link
                                         href="/tour-dashboard/create"
