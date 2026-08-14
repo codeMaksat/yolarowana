@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "@/utils/supabaseClient";
+import AdminSidebar from "@/component/AdminSidebar";
 
 export default function TourDashboard() {
     const { data: seo_data } = useFetchData("/json/data/site_meta_link.json");
@@ -35,12 +36,6 @@ export default function TourDashboard() {
 
         checkUser();
     }, [router]);
-
-    const handleLogout = async () => {
-        await supabase.auth.signOut();
-        router.push("/belet-admin");
-    };
-
     const duplicateTour = async tour => {
         const confirmDuplicate = window.confirm(
             `Duplicate "${tour.title}" as a new draft tour?`
@@ -324,78 +319,9 @@ export default function TourDashboard() {
             <div className="bg-gray-200 mb-10 md:mb-14 py-10 md:py-0">
                 <div className="max-w-[1600px] mx-auto px-4 md:px-6">
                     <div className="md:flex">
-                        <div className="md:max-w-[220px] w-full shrink-0 py-6 md:py-10 px-4 md:px-5 bg-white">
-                            <ul className="dashboard-list">
-                                <li>
-                                    <Link href="/booking-dashboard">
-                                        <span>
-                                            <img src="/assets/images/dashboard.svg" alt="dashboard" />
-                                        </span>
-                                        Inquiries
-                                    </Link>
-                                </li>
+                                    <AdminSidebar />
 
-                                <li className="active">
-                                    <Link href="/tour-dashboard">
-                                        <span>
-                                            <img src="/assets/images/hiking-icon-1.svg" alt="tours" />
-                                        </span>
-                                        Tours
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link href="/tour-dashboard/order">
-                                        <span>
-                                            <img src="/assets/images/data-blob.svg" alt="tour order" />
-                                        </span>
-                                        Tour Order
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link href="/tour-dashboard/travel-mates">
-                                        <span>
-                                            <img src="/assets/images/group-user-icon.svg" alt="travel mates" />
-                                        </span>
-                                        Travel Mates
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link href="/contact">
-                                        <span>
-                                            <img src="/assets/images/data-blob.svg" alt="contact" />
-                                        </span>
-                                        Contact page
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link href="/">
-                                        <span>
-                                            <img src="/assets/images/logout.svg" alt="home" />
-                                        </span>
-                                        Back to website
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <button
-                                        type="button"
-                                        onClick={handleLogout}
-                                        className="w-full text-left flex items-center gap-3"
-                                    >
-                                        <span>
-                                            <img src="/assets/images/logout.svg" alt="logout" />
-                                        </span>
-                                        Logout
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="pt-8 mb-0 md:py-8 md:pb-14 md:px-5 xl:px-8 w-full md:w-[calc(100%-220px)]">
+            <div className="pt-8 mb-0 md:py-8 md:pb-14 md:px-5 xl:px-8 w-full md:w-[calc(100%-220px)]">
                             <div className="mb-7 flex flex-wrap items-center justify-between gap-4">
                                 <div>
                                     <h2 className="text-xl md:text-25 mb-2">Tour Dashboard</h2>

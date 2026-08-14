@@ -1,8 +1,8 @@
 import { Head_Meta, useFetchData } from "@/component/comman";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "@/utils/supabaseClient";
+import AdminSidebar from "@/component/AdminSidebar";
 
 export default function ReviewRequestsDashboard() {
   const { data: seo_data } = useFetchData(
@@ -50,11 +50,6 @@ export default function ReviewRequestsDashboard() {
   // --------------------------------
   // LOGOUT
   // --------------------------------
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push("/belet-admin");
-  };
-
   // --------------------------------
   // GET SUPABASE ACCESS TOKEN
   // --------------------------------
@@ -483,101 +478,8 @@ export default function ReviewRequestsDashboard() {
           <div className="md:flex">
 
             {/* SIDEBAR */}
-            <div className="md:max-w-[220px] w-full shrink-0 py-6 md:py-10 px-4 md:px-5 bg-white">
-              <ul className="dashboard-list">
+                        <AdminSidebar />
 
-                <li>
-                  <Link href="/booking-dashboard">
-                    <span>
-                      <img
-                        src="/assets/images/dashboard.svg"
-                        alt="dashboard"
-                      />
-                    </span>
-                    Inquiries
-                  </Link>
-                </li>
-
-                <li className="active">
-                  <Link href="/booking-dashboard/reviews">
-                    <span>
-                      <img
-                        src="/assets/images/booking-icon.svg"
-                        alt="reviews"
-                      />
-                    </span>
-                    Review Requests
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/tour-dashboard">
-                    <span>
-                      <img
-                        src="/assets/images/hiking-icon-1.svg"
-                        alt="tours"
-                      />
-                    </span>
-                    Tours
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/tour-dashboard/travel-mates">
-                    <span>
-                      <img
-                        src="/assets/images/group-user-icon.svg"
-                        alt="travel mates"
-                      />
-                    </span>
-                    Travel Mates
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/contact">
-                    <span>
-                      <img
-                        src="/assets/images/data-blob.svg"
-                        alt="contact"
-                      />
-                    </span>
-                    Contact page
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/">
-                    <span>
-                      <img
-                        src="/assets/images/logout.svg"
-                        alt="home"
-                      />
-                    </span>
-                    Back to website
-                  </Link>
-                </li>
-
-                <li>
-                  <button
-                    type="button"
-                    onClick={handleLogout}
-                    className="w-full text-left flex items-center gap-3"
-                  >
-                    <span>
-                      <img
-                        src="/assets/images/logout.svg"
-                        alt="logout"
-                      />
-                    </span>
-                    Logout
-                  </button>
-                </li>
-
-              </ul>
-            </div>
-
-            {/* MAIN */}
             <div className="pt-8 mb-0 md:py-8 md:pb-14 md:px-5 xl:px-8 w-full md:w-[calc(100%-220px)]">
 
               {/* HEADER */}
