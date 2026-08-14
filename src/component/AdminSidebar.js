@@ -26,12 +26,6 @@ const menuItems = [
       pathname.startsWith("/tour-dashboard/edit"),
   },
   {
-    label: "Tour Order",
-    href: "/tour-dashboard/order",
-    icon: "/assets/images/data-blob.svg",
-    match: pathname => pathname.startsWith("/tour-dashboard/order"),
-  },
-  {
     label: "Travel Mates",
     href: "/tour-dashboard/travel-mates",
     icon: "/assets/images/group-user-icon.svg",

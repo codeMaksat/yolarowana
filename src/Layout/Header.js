@@ -85,9 +85,11 @@ export default function Header({ initialValues }) {
         const { data, error } = await supabase
           .from("tours")
           .select(
-            "title, slug, tour_order, is_featured, home_order, created_at"
+            "title, slug, tour_order, home_order, created_at"
           )
           .eq("status", "published")
+          .eq("is_featured", true)
+          .order("home_order", { ascending: true })
           .order("tour_order", { ascending: true })
           .order("created_at", { ascending: false });
 
@@ -114,43 +116,15 @@ export default function Header({ initialValues }) {
   }, []);
 
   const dynamicHeaderValues = useMemo(() => {
-    const normalizeOrder = value => {
-      const numberValue = Number(value);
-      return Number.isFinite(numberValue) ? numberValue : 999;
-    };
-
-    const featuredTours = publishedTours
-      .filter(tour => tour.is_featured === true)
-      .sort((a, b) => {
-        const orderDifference =
-          normalizeOrder(a.home_order) - normalizeOrder(b.home_order);
-
-        if (orderDifference !== 0) {
-          return orderDifference;
-        }
-
-        return normalizeOrder(a.tour_order) - normalizeOrder(b.tour_order);
-      });
-
-    // The Tours dropdown should stay short.
-    // Prefer featured tours; if none are featured, use the first published tours.
-    const navbarTours = (
-      featuredTours.length > 0 ? featuredTours : publishedTours
-    ).slice(0, NAV_TOUR_LIMIT);
+    // "Homepage Featured Tours" in the admin controls this same list.
+    // Keep the navbar concise by showing the first 6 featured tours
+    // in home_order sequence.
+    const navbarTours = publishedTours.slice(0, NAV_TOUR_LIMIT);
 
     const navbarTourLinks = navbarTours.map(tour => ({
       slug: `/tours/${tour.slug}`,
       label: tour.title,
     }));
-
-    const popularTourLinks = (
-      featuredTours.length > 0 ? featuredTours : publishedTours
-    )
-      .slice(0, 4)
-      .map(tour => ({
-        slug: `/tours/${tour.slug}`,
-        label: tour.title,
-      }));
 
     return (initialValues || []).map(headerData => ({
       ...headerData,
@@ -168,33 +142,9 @@ export default function Header({ initialValues }) {
           };
         }
 
-        if (
-          menuItem.label === "Destinations" &&
-          Array.isArray(menuItem.menu)
-        ) {
-          return {
-            ...menuItem,
-            menu: menuItem.menu.map(menuSection => {
-              if (menuSection.title !== "Popular Routes") {
-                return menuSection;
-              }
-
-              return {
-                ...menuSection,
-                sub_menu:
-                  popularTourLinks.length > 0
-                    ? popularTourLinks
-                    : [
-                        {
-                          slug: "/tour",
-                          label: "Browse All Tours",
-                        },
-                      ],
-              };
-            }),
-          };
-        }
-
+        // Leave the Destinations mega-menu exactly as configured
+        // in the site's header JSON. Featured tours should control
+        // only the Tours dropdown and homepage Popular Tours.
         return menuItem;
       }),
     }));
