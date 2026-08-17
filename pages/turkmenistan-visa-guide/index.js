@@ -95,7 +95,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Travel Guide",
-      item: `${siteUrl}/travel-guide`,
+      item: `${siteUrl}/blog`,
     },
     {
       "@type": "ListItem",
@@ -117,14 +117,10 @@ const articleSchema = {
     "@id": articleUrl,
   },
   author: {
-    "@type": "Organization",
-    name: "Belet Travel",
-    url: `${siteUrl}/`,
+    "@id": `${siteUrl}/#travelagency`,
   },
   publisher: {
-    "@type": "Organization",
-    "@id": `${siteUrl}/#organization`,
-    name: "Belet Travel",
+    "@id": `${siteUrl}/#travelagency`,
   },
   ...(datePublished ? { datePublished } : {}),
   ...(dateModified ? { dateModified } : {}),

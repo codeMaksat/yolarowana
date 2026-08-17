@@ -3,15 +3,16 @@ import { All_Blog_Guide } from "@/component/Sections/Page-blog-guide";
 import { Head_Meta } from "@/component/comman";
 import React from "react";
 import siteMetaData from "../../public/json/data/site_meta_link.json";
-import guideData from "../../public/json/data/blog_turkmenistan_itinerary.json";
+import guideData from "../../public/json/data/blog_turkmenistan_tour_cost.json";
 
 const siteUrl = String(
   siteMetaData.http_url || "https://belettravel.com"
 ).replace(/\/$/, "");
 
-const articlePath = "/turkmenistan-itinerary";
+const articlePath = "/turkmenistan-tour-cost";
 const articleUrl = `${siteUrl}${articlePath}`;
-const articleMeta = siteMetaData.blog_turkmenistan_itinerary_meta || {};
+const articleMeta =
+  siteMetaData.blog_turkmenistan_tour_cost_meta || {};
 
 const firstGuide = Array.isArray(guideData) ? guideData[0] : guideData;
 
@@ -52,17 +53,17 @@ const articleTitle =
   firstGuide?.hero?.[0]?.title ||
   firstGuide?.hero?.title ||
   articleMeta.title ||
-  "Turkmenistan Itinerary Guide";
+  "Turkmenistan Tour Cost";
 
 const articleDescription =
   articleMeta.description ||
-  firstGuide?.description ||
-  "Turkmenistan Itinerary Guide by Belet Travel.";
+  firstGuide?.intro ||
+  "A practical guide to Turkmenistan tour prices and travel costs.";
 
 const articleImage = makeAbsoluteUrl(
   articleMeta.image ||
     firstGuide?.image ||
-    firstGuide?.banner_image ||
+    firstGuide?.main_image ||
     getHeroImage(firstGuide)
 );
 
@@ -125,7 +126,7 @@ const articleSchema = {
   ...(dateModified ? { dateModified } : {}),
 };
 
-export default function TurkmenistanItineraryGuide() {
+export default function TurkmenistanTourCostGuide() {
   const guides = Array.isArray(guideData) ? guideData : [guideData];
 
   return (

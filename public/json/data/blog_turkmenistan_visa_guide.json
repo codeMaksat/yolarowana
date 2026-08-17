@@ -9,32 +9,32 @@
         "alt": "Turkmenistan Visa Guide"
       }
     ],
-    "title": "Turkmenistan Visa Guide: Letter of Invitation, Tourist Visa & Travel Planning",
-    "intro": "A practical guide to understanding Turkmenistan visa planning, including the Letter of Invitation process, tourist visa steps, border planning, timing and recommended tours.",
+    "title": "How to Visit Turkmenistan: Visa, LOI & Entry Guide",
+    "intro": "For tourist travel to Turkmenistan, official embassy guidance describes a two-stage process: first obtain a Letter of Invitation (LOI) through a Turkmenistan travel agency, with approval from the State Migration Service of Turkmenistan; then obtain the visa sticker through a Turkmenistan embassy or consulate, or at an eligible border crossing with a valid LOI.",
     "main_image": "/assets/images/blogs/turkmenistan-visa-guide/card-1.jpg",
     "main_image_alt": "Turkmenistan visa and travel planning",
     "meta": [
       {
         "icon": "fa-regular fa-calendar",
-        "label": "Plan early before travel"
+        "label": "Start visa planning early"
       },
       {
         "icon": "fa-regular fa-clock",
-        "label": "Allow time for LOI approval"
+        "label": "LOI required for tourist visa"
       },
       {
         "icon": "fa-regular fa-location-dot",
-        "label": "Ashgabat, Darvaza, Merv"
+        "label": "Embassy, airport or land border"
       }
     ],
     "content_preview": [
       {
         "slug": "#why-plan-early",
-        "label": "Why plan early?"
+        "label": "Quick answer"
       },
       {
         "slug": "#visa-comparison",
-        "label": "Visa planning overview"
+        "label": "Visa process"
       },
       {
         "slug": "#loi",
@@ -42,11 +42,19 @@
       },
       {
         "slug": "#tourist-visa",
-        "label": "Tourist visa"
+        "label": "Visa sticker"
+      },
+      {
+        "slug": "#documents",
+        "label": "Documents"
       },
       {
         "slug": "#border-entry",
-        "label": "Border entry"
+        "label": "Airport & land border"
+      },
+      {
+        "slug": "#official-process",
+        "label": "Official guidance"
       },
       {
         "slug": "#route-planning",
@@ -59,10 +67,11 @@
     ],
     "overview": {
       "id": "why-plan-early",
-      "title": "Why Turkmenistan Visa Planning Should Start Early",
+      "title": "Do Tourists Need a Visa and Letter of Invitation for Turkmenistan?",
       "paragraphs": [
-        "Turkmenistan is one of the most distinctive destinations in Central Asia, but it usually requires more advance visa planning than neighboring countries. For most tourist trips, the process begins with a Letter of Invitation, often called LOI, which supports the visa application.",
-        "Because visa rules, approval timing and border procedures can depend on nationality, route, travel date and official confirmation, travelers should plan Turkmenistan early. This is especially important for trips that combine Turkmenistan with Uzbekistan, Darvaza Gas Crater, Ancient Merv or a wider Five Stans itinerary."
+        "For a Turkmenistan tourist visa, official Turkmenistan embassy guidance says travelers should work with a travel agency to obtain a Letter of Invitation from the State Migration Service of Turkmenistan. The LOI is the document that supports permission to enter and forms the basis for the tourist visa.",
+        "After the LOI is approved, the visa sticker can be obtained through a Turkmenistan embassy or consulate abroad. Current official embassy guidance also states that, with a valid LOI, the visa sticker may be issued on arrival at Turkmenistan border crossing points, including international airports.",
+        "Because the invitation is tied to the traveler, dates and travel arrangements, it is best to confirm the basic route before starting the visa process. Travelers should still check the Turkmenistan embassy or consular guidance relevant to their nationality and place of application before departure."
       ]
     },
     "mid_images": [
@@ -75,38 +84,38 @@
         "alt": "Ancient Merv Turkmenistan visa route"
       }
     ],
-    "quote": "For Turkmenistan, visa planning is part of the journey. The best route starts with the right invitation, the right dates and the right border plan.",
+    "quote": "For a tourist trip to Turkmenistan, think of the process in two parts: LOI approval first, then the visa sticker. Your route, dates and entry point should be planned before the paperwork is finalized.",
     "comparison": {
       "id": "visa-comparison",
-      "title": "Turkmenistan Visa Planning Overview",
+      "title": "Turkmenistan Tourist Visa Process",
       "items": [
         {
           "days": "Step 1",
-          "title": "Confirm Your Travel Route",
-          "route": "Choose arrival point, departure point, dates and main places to visit",
-          "best_for": "Ashgabat, Darvaza, Merv, Uzbekistan connection",
-          "highlight": "The route should be clear before visa support begins"
+          "title": "Confirm Your Basic Route and Dates",
+          "route": "Choose planned arrival, departure, travel dates and main places to visit",
+          "best_for": "Ashgabat, Darvaza, Merv and Uzbekistan connections",
+          "highlight": "The travel plan should be clear enough for invitation processing"
         },
         {
           "days": "Step 2",
-          "title": "Prepare Tourist Invitation Support",
-          "route": "Tourist agency prepares visa support information for the invitation process",
-          "best_for": "Travelers booking guided Turkmenistan arrangements",
-          "highlight": "The Letter of Invitation is the key document for tourist visa planning"
+          "title": "Apply for the Letter of Invitation",
+          "route": "A Turkmenistan national travel agency submits the tourist LOI application for official approval",
+          "best_for": "Tourists traveling on an organized Turkmenistan program",
+          "highlight": "The LOI is issued through the State Migration Service of Turkmenistan"
         },
         {
           "days": "Step 3",
-          "title": "Apply for Visa or Obtain on Arrival Where Applicable",
-          "route": "Use the approved invitation according to embassy, airport or border instructions",
-          "best_for": "Travelers with approved LOI and confirmed entry plan",
-          "highlight": "Final visa procedure depends on nationality and entry point"
+          "title": "Obtain the Visa Sticker",
+          "route": "Use the approved LOI at a Turkmenistan embassy/consulate or an eligible border crossing",
+          "best_for": "Travelers with an approved LOI and confirmed entry plan",
+          "highlight": "Official guidance allows visa stamping abroad or on arrival at border crossing points, including international airports"
         },
         {
           "days": "Step 4",
-          "title": "Travel with Printed Documents",
-          "route": "Carry passport, LOI, visa documents and final tour confirmation",
-          "best_for": "Border entry, airport arrival and guided route confirmation",
-          "highlight": "Printed documents help avoid problems during arrival"
+          "title": "Travel With the Required Documents",
+          "route": "Carry your passport, LOI copy and the documents required for your chosen visa procedure",
+          "best_for": "Airport arrival, land-border entry and consular applications",
+          "highlight": "Requirements can differ by embassy, nationality and place of application"
         }
       ]
     },
@@ -117,18 +126,30 @@
         "image": "/assets/images/blogs/turkmenistan-visa-guide/card-2.jpg",
         "alt": "Turkmenistan Letter of Invitation planning",
         "paragraphs": [
-          "The Letter of Invitation, often called LOI, is one of the most important documents for Turkmenistan tourist visa planning. For tourist travel, the LOI is normally arranged through a tourist agency and connected to the planned route, dates and travel services.",
-          "Travelers should not treat the LOI as a last-minute document. The approval process can take time, and the final result depends on official review. It is better to prepare passport details, travel dates and route information early."
+          "The Letter of Invitation, usually called the LOI, is the key document for a Turkmenistan tourist visa. Official Turkmenistan embassy guidance states that the tourist LOI application is submitted by a Turkmenistan national travel agency to the State Migration Service of Turkmenistan.",
+          "The LOI should be prepared around the traveler’s passport details, intended dates and travel program. Approval is an official process, so travelers should avoid building a tight multi-country schedule until the Turkmenistan portion has been properly planned.",
+          "The Turkmenistan Embassy in Washington states that an invitation certified by the State Migration Service is valid for three months from the date of certification. Travelers should nevertheless follow the validity dates shown on their own approved documentation."
         ]
       },
       {
         "id": "tourist-visa",
-        "title": "Turkmenistan Tourist Visa",
+        "title": "How the Turkmenistan Tourist Visa Is Issued",
         "image": "/assets/images/blogs/turkmenistan-visa-guide/card-3.jpg",
         "alt": "Turkmenistan tourist visa guide",
         "paragraphs": [
-          "After the invitation process is approved, travelers use the approved invitation to continue the visa process according to the relevant embassy, airport or border entry instructions. The exact procedure can vary depending on nationality and where the traveler enters Turkmenistan.",
-          "Because requirements can change, travelers should always confirm the latest official instructions before departure. A good tour plan should match the visa dates, arrival point, departure point and confirmed itinerary."
+          "Official Turkmenistan embassy guidance describes visa issuance as the second stage after the LOI. Once permission to enter has been granted through the LOI, the traveler obtains a visa sticker in the passport.",
+          "The visa sticker can be obtained at a Turkmenistan embassy or consulate abroad. Current official embassy guidance also states that a traveler with the required valid LOI can obtain the visa sticker on arrival at Turkmenistan border crossing points, including international airports.",
+          "The exact application documents, fees and processing arrangements depend on where the visa is issued. Check the relevant Turkmenistan embassy, consulate or official migration guidance before travel."
+        ]
+      },
+      {
+        "id": "documents",
+        "title": "What Documents Are Commonly Required?",
+        "image": "/assets/images/blogs/turkmenistan-visa-guide/card-3.jpg",
+        "alt": "Documents for Turkmenistan tourist visa",
+        "paragraphs": [
+          "The exact document list depends on the embassy or point of visa issuance, but official Turkmenistan embassy guidance commonly lists a valid passport, passport copy, visa application form, photograph and the approved Letter of Invitation.",
+          "Several Turkmenistan embassy pages state that the passport should remain valid for at least six months from the date of departure. Travelers should check the requirements of the embassy or consulate handling their own application because submission methods and supporting documents can differ."
         ]
       },
       {
@@ -137,18 +158,29 @@
         "image": "/assets/images/blogs/turkmenistan-visa-guide/card-4.jpg",
         "alt": "Turkmenistan border entry planning",
         "paragraphs": [
-          "Turkmenistan can be entered through different points depending on the route, including Ashgabat airport or land borders connected with neighboring countries. For Silk Road routes, travelers often combine Uzbekistan and Turkmenistan, especially around Khiva, Dashoguz, Mary or Ashgabat.",
-          "Border planning is important because route direction affects timing, transport, guide arrangements and visa procedure. Your entry and exit plan should be clear before final confirmation."
+          "Turkmenistan itineraries can begin at Ashgabat International Airport or at land-border crossings used for regional journeys. For Uzbekistan combinations, routes may connect through border points serving Khiva/Dashoguz or Bukhara/Turkmenabat, depending on the confirmed itinerary.",
+          "Official Turkmenistan embassy guidance states that visa stickers may be issued on arrival at border crossing points, including international airports, once the required LOI has been obtained. Your tour, transfer and border arrangements should match the entry and exit points shown in the confirmed travel plan."
+        ]
+      },
+      {
+        "id": "official-process",
+        "title": "What Official Turkmenistan Embassy Guidance Says",
+        "image": "/assets/images/blogs/turkmenistan-visa-guide/card-4.jpg",
+        "alt": "Official Turkmenistan visa guidance",
+        "paragraphs": [
+          "Turkmenistan embassy guidance published in Vienna and Abu Dhabi describes the visa process in two stages: permission to enter through an LOI issued by the State Migration Service, followed by the visa sticker in the passport.",
+          "The same official guidance states that for a tourist visa, the LOI application is handled by a Turkmenistan national travel agency. The visa sticker may then be obtained through a Turkmenistan diplomatic mission abroad or, with the required LOI, on arrival at a border crossing point.",
+          "Official requirements can be updated, and individual embassies may have different submission procedures. Before departure, travelers should confirm the current rules with the Turkmenistan embassy or consulate responsible for their place of application and with their tour organizer."
         ]
       },
       {
         "id": "route-planning",
-        "title": "Best Routes for Turkmenistan Visa-Based Trips",
+        "title": "How Route Planning Affects the Visa Process",
         "image": "/assets/images/blogs/turkmenistan-visa-guide/card-5.jpg",
         "alt": "Turkmenistan route and visa planning",
         "paragraphs": [
-          "The most popular Turkmenistan routes usually include Ashgabat, Darvaza Gas Crater and Ancient Merv. Shorter trips focus on Ashgabat and Darvaza, while longer routes can add Mary, Merv, Dashoguz or connections with Uzbekistan.",
-          "For travelers planning a larger Central Asia journey, Turkmenistan should be placed carefully in the itinerary because invitation timing, border direction and confirmed services affect the whole route."
+          "A tourist itinerary should be planned before the LOI process because the trip dates, entry point, exit point and local travel arrangements need to work together. Short routes often combine Ashgabat and Darvaza, while longer journeys add Mary, Ancient Merv, Old Nisa, Gokdepe or cross-border connections.",
+          "For travelers combining Turkmenistan with Uzbekistan or a Five Stans journey, the Turkmenistan segment should be positioned carefully in the overall itinerary. Border direction, domestic transport and the approved travel dates can affect the rest of the multi-country route."
         ]
       }
     ],
@@ -157,52 +189,57 @@
       "title": "Turkmenistan Visa Planning Tips",
       "items": [
         {
-          "title": "Start Early",
-          "text": "Begin visa and invitation planning before booking a tight travel schedule, especially if Turkmenistan is part of a multi-country Central Asia route."
+          "title": "Start With Your Route",
+          "text": "Before the LOI application begins, confirm your approximate travel dates, entry point, exit point and the main places you want to visit."
         },
         {
-          "title": "Confirm Your Route First",
-          "text": "Your arrival point, departure point, travel dates and main cities should be clear before the invitation process begins."
+          "title": "Allow Time for Official Approval",
+          "text": "The LOI is subject to official processing by the State Migration Service of Turkmenistan, so avoid leaving the process until the last minute."
         },
         {
-          "title": "Keep Printed Copies",
-          "text": "Carry printed copies of your invitation, passport information, visa documents and final travel confirmation when entering Turkmenistan."
+          "title": "Check the Correct Embassy Procedure",
+          "text": "Application forms, submission methods, fees and processing arrangements can differ between Turkmenistan embassies and consulates."
         },
         {
-          "title": "Check Official Rules",
-          "text": "Visa rules and entry procedures can change. Always check the latest official or consular requirements before travel."
+          "title": "Carry Your LOI and Passport Documents",
+          "text": "Keep the approved LOI and required passport/visa documents accessible when traveling to the airport or land border."
+        },
+        {
+          "title": "Reconfirm Before Departure",
+          "text": "Visa and entry rules can change. Recheck current official Turkmenistan consular or migration guidance shortly before travel."
         }
       ]
     },
     "sidebar": {
       "help_title": "Need Turkmenistan Visa Help?",
-      "help_text": "Tell us your nationality, travel dates, route idea and entry point. We will help you understand the practical visa and invitation planning steps.",
+      "help_text": "Tell us your nationality, passport country, travel dates, entry point, exit point and preferred route. We can explain the practical tourist LOI and trip-planning steps for your itinerary.",
       "help_button": "Ask Consultant",
       "help_slug": "/contact",
       "recommended_title": "Recommended Tours",
       "recommended_tours": [
         {
           "title": "Turkmenistan Highlights Tour",
-          "label": "7 days from $850",
-          "slug": "/tour-turkmenistan-highlights"
+          "label": "7 days from $1,345",
+          "slug": "/tours/turkmenistan-highlights-tour"
         },
         {
           "title": "Uzbekistan & Turkmenistan Tour",
-          "label": "12 days from $1680",
-          "slug": "/tour-uzbekistan-turkmenistan"
+          "label": "11 days from $2,580",
+          "slug": "/tours/uzbekistan-turkmenistan-tour"
         },
         {
           "title": "Five Stans Central Asia Tour",
-          "label": "15 days from $2950",
+          "label": "14 days from $3,940",
           "slug": "/tours/five-stans-central-asia-tour"
         }
       ]
     },
     "cta": {
-      "title": "Need Help With Turkmenistan Visa Planning?",
-      "text": "Share your nationality, travel dates, group size and preferred route. We will help you plan the invitation, visa steps and Turkmenistan travel route.",
+      "title": "Planning a Tourist Visa and LOI for Turkmenistan?",
+      "text": "Send us your nationality, travel dates, entry and exit points, group size and route idea. We will help you understand the tour and invitation-planning steps before confirmation.",
       "button": "Ask About Turkmenistan Visa",
       "slug": "/contact"
-    }
+    },
+    "updated_at": "2026-08-17"
   }
 ]
