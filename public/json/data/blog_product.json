@@ -13,6 +13,15 @@
       },
       {
         "id": 2,
+        "slug": "/turkmenistan-tour-cost",
+        "title": "Turkmenistan Tour Cost Guide",
+        "short_des": "See real 2026 Turkmenistan tour price examples, including 3-day, 4-day and 7-day routes, group pricing, inclusions and extra costs.",
+        "image": "/assets/images/blog-turkmenistan-itinerary-main-img.jpg",
+        "alt": "Turkmenistan tour cost and price guide",
+        "date": "Price Guide"
+      },
+      {
+        "id": 3,
         "slug": "/darvaza-gas-crater-guide",
         "title": "Darvaza Gas Crater Guide",
         "short_des": "Learn how to visit Darvaza Gas Crater, when to go, whether to stay overnight and how to include it in your Turkmenistan route.",
@@ -21,7 +30,7 @@
         "date": "Turkmenistan"
       },
       {
-        "id": 3,
+        "id": 4,
         "slug": "/best-time-to-visit-central-asia",
         "title": "Best Time to Visit Central Asia",
         "short_des": "Choose the best season for Silk Road cities, desert routes, mountain landscapes, Pamir Highway and multi-country Central Asia tours.",
@@ -30,7 +39,7 @@
         "date": "Travel Tips"
       },
       {
-        "id": 4,
+        "id": 5,
         "slug": "/uzbekistan-silk-road-guide",
         "title": "Uzbekistan Silk Road Guide",
         "short_des": "Plan a classic Uzbekistan route through Tashkent, Samarkand, Bukhara and Khiva with practical timing and travel tips.",
@@ -39,7 +48,7 @@
         "date": "Destination Guide"
       },
       {
-        "id": 5,
+        "id": 6,
         "slug": "/kazakhstan-travel-guide",
         "title": "Kazakhstan Travel Guide",
         "short_des": "Explore Kazakhstan route ideas with Almaty, Charyn Canyon, Kolsai Lakes, Kaindy Lake, Astana and mountain landscapes.",
@@ -48,7 +57,7 @@
         "date": "Destination Guide"
       },
       {
-        "id": 6,
+        "id": 7,
         "slug": "/kyrgyzstan-travel-guide",
         "title": "Kyrgyzstan Travel Guide",
         "short_des": "Plan a Kyrgyzstan journey through Bishkek, Issyk-Kul Lake, Karakol, Song-Kul Lake, yurt stays and nomadic mountain culture.",
@@ -57,7 +66,7 @@
         "date": "Destination Guide"
       },
       {
-        "id": 7,
+        "id": 8,
         "slug": "/tajikistan-travel-guide",
         "title": "Tajikistan Travel Guide",
         "short_des": "Discover Tajikistan travel routes with Dushanbe, Iskanderkul, Fann Mountains, Pamir Highway, Wakhan Valley and mountain roads.",
@@ -66,7 +75,7 @@
         "date": "Destination Guide"
       },
       {
-        "id": 8,
+        "id": 9,
         "slug": "/central-asia-visa-guide",
         "title": "Central Asia Visa Guide",
         "short_des": "Understand practical visa planning for Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan multi-country routes.",
@@ -75,7 +84,7 @@
         "date": "Visa Guide"
       },
       {
-        "id": 9,
+        "id": 10,
         "slug": "/silk-road-travel-guide",
         "title": "Silk Road Travel Guide",
         "short_des": "Plan a Silk Road journey through Uzbekistan, Turkmenistan and wider Central Asia with route ideas, timing and travel tips.",
@@ -84,7 +93,7 @@
         "date": "Silk Road"
       },
       {
-        "id": 10,
+        "id": 11,
         "slug": "/turkmenistan-visa-guide",
         "title": "Turkmenistan Visa Guide",
         "short_des": "Learn how Turkmenistan visa planning works, including Letter of Invitation, tourist visa steps, border planning and route timing.",
@@ -93,7 +102,7 @@
         "date": "Visa Guide"
       },
       {
-        "id": 11,
+        "id": 12,
         "slug": "/how-to-plan-five-stans-tour",
         "title": "How to Plan a Five Stans Tour",
         "short_des": "Learn how to plan a complete Central Asia route through Kazakhstan, Kyrgyzstan, Tajikistan, Uzbekistan and Turkmenistan.",
@@ -102,7 +111,7 @@
         "date": "Planning Guide"
       },
       {
-        "id": 12,
+        "id": 13,
         "slug": "/is-central-asia-safe",
         "title": "Is Central Asia Safe?",
         "short_des": "A practical safety guide for first-time travelers covering cities, borders, mountain routes, desert travel and local planning tips.",
@@ -111,7 +120,7 @@
         "date": "Safety Guide"
       },
       {
-        "id": 13,
+        "id": 14,
         "slug": "/uzbekistan-to-turkmenistan-border-guide",
         "title": "Uzbekistan to Turkmenistan Border Guide",
         "short_des": "Plan a cross-border Silk Road route from Uzbekistan to Turkmenistan, including Khiva, Bukhara, Darvaza, Ashgabat and visa tips.",
@@ -120,7 +129,7 @@
         "date": "Border Guide"
       },
       {
-        "id": 14,
+        "id": 15,
         "slug": "/best-places-to-visit-turkmenistan",
         "title": "Best Places to Visit in Turkmenistan",
         "short_des": "Explore Turkmenistan’s top places, including Ashgabat, Darvaza Gas Crater, Ancient Merv, Yangykala Canyon and Silk Road routes.",

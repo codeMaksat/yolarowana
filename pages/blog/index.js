@@ -45,8 +45,7 @@ const collectionPageSchema = {
     "@id": `${siteUrl}/#website`,
   },
   publisher: {
-    "@type": "Organization",
-    "@id": `${siteUrl}/#organization`,
+    "@id": `${siteUrl}/#travelagency`,
   },
 };
 

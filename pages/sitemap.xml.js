@@ -51,6 +51,7 @@ function generateSiteMap(
     .map((page) =>
       generateUrlEntry({
         loc: `${SITE_URL}${page.path}`,
+        lastmod: page.lastmod || "",
       })
     )
     .join("");
@@ -160,10 +161,17 @@ export async function getServerSideProps({
 
     {
       path: "/turkmenistan-itinerary",
+      lastmod: "2026-08-17",
+    },
+
+    {
+      path: "/turkmenistan-tour-cost",
+      lastmod: "2026-08-17",
     },
 
     {
       path: "/turkmenistan-visa-guide",
+      lastmod: "2026-08-17",
     },
 
     {
