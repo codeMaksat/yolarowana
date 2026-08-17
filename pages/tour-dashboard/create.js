@@ -3,6 +3,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "@/utils/supabaseClient";
+import AdminSidebar from "@/component/AdminSidebar";
+import { submitIndexNow } from "@/utils/indexnowClient";
 
 const defaultTourImage = "/assets/images/tour-product-detail-img.jpg";
 
@@ -255,16 +257,24 @@ export default function CreateTourPage() {
       return;
     }
 
+    if (data.status === "published") {
+      try {
+        await submitIndexNow([
+          `/tours/${data.slug}`,
+          "/tour",
+        ]);
+      } catch (indexNowError) {
+        console.warn(
+          "Tour created, but IndexNow notification failed:",
+          indexNowError
+        );
+      }
+    }
+
     setSaving(false);
 
     router.push(`/tour-dashboard/edit/${data.slug}`);
   };
-
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push("/belet-admin");
-  };
-
   if (checkingAuth) {
     return (
       <div className="py-20 text-center">
@@ -280,57 +290,7 @@ export default function CreateTourPage() {
       <div className="bg-gray-200 mb-10 md:mb-14 py-10 md:py-0">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">
           <div className="md:flex">
-            <div className="md:max-w-[220px] w-full shrink-0 py-6 md:py-10 px-4 md:px-5 bg-white">
-              <ul className="dashboard-list">
-                <li>
-                  <Link href="/booking-dashboard">
-                    <span>
-                      <img src="/assets/images/dashboard.svg" alt="dashboard" />
-                    </span>
-                    Inquiries
-                  </Link>
-                </li>
-
-                <li className="active">
-                  <Link href="/tour-dashboard">
-                    <span>
-                      <img src="/assets/images/hiking-icon-1.svg" alt="tours" />
-                    </span>
-                    Tours
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tour-dashboard/travel-mates">
-                    <span>
-                      <img src="/assets/images/group-user-icon.svg" alt="travel mates" />
-                    </span>
-                    Travel Mates
-                  </Link>
-                </li>
-
-                <li>
-                  <Link href="/">
-                    <span>
-                      <img src="/assets/images/logout.svg" alt="home" />
-                    </span>
-                    Back to website
-                  </Link>
-                </li>
-
-                <li>
-                  <button
-                    type="button"
-                    onClick={handleLogout}
-                    className="w-full text-left flex items-center gap-3"
-                  >
-                    <span>
-                      <img src="/assets/images/logout.svg" alt="logout" />
-                    </span>
-                    Logout
-                  </button>
-                </li>
-              </ul>
-            </div>
+                        <AdminSidebar />
 
             <div className="pt-8 mb-0 md:py-8 md:pb-14 md:px-5 xl:px-8 w-full md:w-[calc(100%-220px)]">
               <div className="mb-7 flex flex-wrap items-center justify-between gap-4">

@@ -3,6 +3,8 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "@/utils/supabaseClient";
+import AdminSidebar from "@/component/AdminSidebar";
+import { submitIndexNow } from "@/utils/indexnowClient";
 
 const defaultTour = {
     title: "",
@@ -200,6 +202,11 @@ export default function EditTourPage() {
     const [jsonText, setJsonText] = useState(buildJsonText(defaultTour));
     const [allTours, setAllTours] = useState([]);
     const [selectedRelatedSlug, setSelectedRelatedSlug] = useState("");
+    const [originalPublicState, setOriginalPublicState] = useState({
+        slug: "",
+        status: "draft",
+        is_featured: false,
+    });
 
     const importFileInputRef = useRef(null);
     const imageImportFileInputRef = useRef(null);
@@ -278,6 +285,11 @@ export default function EditTourPage() {
 
             setTour(normalizedTour);
             setJsonText(buildJsonText(normalizedTour));
+            setOriginalPublicState({
+                slug: normalizedTour.slug,
+                status: normalizedTour.status,
+                is_featured: normalizedTour.is_featured === true,
+            });
             setLoading(false);
         };
 
@@ -717,19 +729,62 @@ export default function EditTourPage() {
             return;
         }
 
+        let saveMessage = "Tour saved successfully.";
+
+        const wasPublished = originalPublicState.status === "published";
+        const isPublished = tour.status === "published";
+
+        if (wasPublished || isPublished) {
+            const indexNowUrls = new Set();
+
+            if (wasPublished && originalPublicState.slug) {
+                indexNowUrls.add(`/tours/${originalPublicState.slug}`);
+            }
+
+            if (isPublished && tour.slug) {
+                indexNowUrls.add(`/tours/${tour.slug}`);
+            }
+
+            // The all-tours page can change when a public tour is edited,
+            // published, unpublished, archived, renamed or moved.
+            indexNowUrls.add("/tour");
+
+            // Featured public tours also affect the homepage Popular Tours
+            // and the navbar Tours dropdown.
+            if (
+                originalPublicState.is_featured === true ||
+                tour.is_featured === true
+            ) {
+                indexNowUrls.add("/");
+            }
+
+            try {
+                await submitIndexNow([...indexNowUrls]);
+                saveMessage += " IndexNow was notified.";
+            } catch (indexNowError) {
+                console.warn(
+                    "Tour saved, but IndexNow notification failed:",
+                    indexNowError
+                );
+
+                saveMessage +=
+                    " IndexNow notification could not be sent, but the tour changes are saved.";
+            }
+        }
+
+        setOriginalPublicState({
+            slug: tour.slug,
+            status: tour.status,
+            is_featured: tour.is_featured === true,
+        });
+
         setSaving(false);
-        alert("Tour saved successfully.");
+        alert(saveMessage);
 
         if (tour.slug !== slug) {
             router.push(`/tour-dashboard/edit/${tour.slug}`);
         }
     };
-
-    const handleLogout = async () => {
-        await supabase.auth.signOut();
-        router.push("/belet-admin");
-    };
-
     if (checkingAuth || loading) {
         return (
             <div className="py-20 text-center">
@@ -745,60 +800,9 @@ export default function EditTourPage() {
             <div className="bg-gray-200 mb-10 md:mb-14 py-10 md:py-0">
                 <div className="max-w-[1600px] mx-auto px-4 md:px-6">
                     <div className="md:flex">
-                        <div className="md:max-w-[220px] w-full shrink-0 py-6 md:py-10 px-4 md:px-5 bg-white">
-                            <ul className="dashboard-list">
-                                <li>
-                                    <Link href="/booking-dashboard">
-                                        <span>
-                                            <img src="/assets/images/dashboard.svg" alt="dashboard" />
-                                        </span>
-                                        Inquiries
-                                    </Link>
-                                </li>
+                                    <AdminSidebar />
 
-                                <li className="active">
-                                    <Link href="/tour-dashboard">
-                                        <span>
-                                            <img src="/assets/images/hiking-icon-1.svg" alt="tours" />
-                                        </span>
-                                        Tours
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link href="/tour-dashboard/travel-mates">
-                                        <span>
-                                            <img src="/assets/images/group-user-icon.svg" alt="travel mates" />
-                                        </span>
-                                        Travel Mates
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link href="/">
-                                        <span>
-                                            <img src="/assets/images/logout.svg" alt="home" />
-                                        </span>
-                                        Back to website
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <button
-                                        type="button"
-                                        onClick={handleLogout}
-                                        className="w-full text-left flex items-center gap-3"
-                                    >
-                                        <span>
-                                            <img src="/assets/images/logout.svg" alt="logout" />
-                                        </span>
-                                        Logout
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="pt-8 mb-0 md:py-8 md:pb-14 md:px-5 xl:px-8 w-full md:w-[calc(100%-220px)]">
+            <div className="pt-8 mb-0 md:py-8 md:pb-14 md:px-5 xl:px-8 w-full md:w-[calc(100%-220px)]">
                             <div className="mb-7 flex flex-wrap items-center justify-between gap-4">
                                 <div>
                                     <h2 className="text-xl md:text-25 mb-2">Edit Tour</h2>

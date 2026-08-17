@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useMemo, useState } from "react";
 import { supabase } from "@/utils/supabaseClient";
 import AdminSidebar from "@/component/AdminSidebar";
+import { submitIndexNow } from "@/utils/indexnowClient";
 
 const DEFAULT_ORDER = 999;
 
@@ -223,7 +224,27 @@ export default function TourOrderPage() {
     );
 
     setDirty(false);
-    setMessage("Tour display order saved successfully.");
+
+    try {
+      await submitIndexNow([
+        "/",
+        "/tour",
+      ]);
+
+      setMessage(
+        "Tour display order saved successfully. IndexNow was notified."
+      );
+    } catch (indexNowError) {
+      console.warn(
+        "Tour order saved, but IndexNow notification failed:",
+        indexNowError
+      );
+
+      setMessage(
+        "Tour display order saved successfully. IndexNow notification could not be sent, but your website changes are saved."
+      );
+    }
+
     setSaving(false);
   };
 
