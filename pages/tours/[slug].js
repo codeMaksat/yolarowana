@@ -34,6 +34,9 @@ function formatTourForPage(data) {
             meta_image: data?.meta_image || "",
             route: data?.route || "",
             duration: data?.duration || "",
+            travel_style: data?.travel_style || "",
+            support_label: data?.support_label || "",
+            price_tiers: Array.isArray(data?.price_tiers) ? data.price_tiers : [],
             icon: data?.icon || "fa-solid fa-location-dot",
             icon_label: data?.icon_label || data?.route || "",
             image: data?.hero_image || "/assets/images/tour-product-detail-img.jpg",
@@ -189,6 +192,149 @@ function buildTourBreadcrumbSchema(tour, slug, siteUrl) {
     };
 }
 
+function getOverviewDescription(tour) {
+    if (tour?.meta_description) {
+        return tour.meta_description;
+    }
+
+    const overviewSections = Array.isArray(tour?.detail?.[0]?.overview)
+        ? tour.detail[0].overview
+        : [];
+
+    for (const section of overviewSections) {
+        const labels = Array.isArray(section?.labels) ? section.labels : [];
+
+        for (const item of labels) {
+            if (item?.label) {
+                return String(item.label).trim();
+            }
+        }
+    }
+
+    if (tour?.route) {
+        return `Explore ${tour.title} with Belet Travel along the route ${tour.route}.`;
+    }
+
+    return `Explore ${tour?.title || "this tour"} with Belet Travel.`;
+}
+
+function getTourStartingPrice(priceTiers = []) {
+    if (!Array.isArray(priceTiers) || priceTiers.length === 0) {
+        return null;
+    }
+
+    const validTiers = priceTiers.filter((tier) => {
+        const price = Number(tier?.price);
+        return Number.isFinite(price) && price > 0;
+    });
+
+    if (!validTiers.length) {
+        return null;
+    }
+
+    const defaultTier = validTiers.find((tier) => tier?.default === true);
+
+    if (defaultTier) {
+        return Number(defaultTier.price);
+    }
+
+    return Math.min(...validTiers.map((tier) => Number(tier.price)));
+}
+
+function getTripOrigin(route = "") {
+    const cleanRoute = String(route || "").trim();
+
+    if (!cleanRoute) return "";
+
+    const firstPart = cleanRoute
+        .split(/\s*(?:→|–|—)\s*/)
+        .map((part) => part.trim())
+        .filter(Boolean)[0];
+
+    return firstPart || "";
+}
+
+function buildTourItinerarySchema(itinerary = []) {
+    if (!Array.isArray(itinerary)) return null;
+
+    const dayItems = itinerary.flatMap((section) =>
+        Array.isArray(section?.details) ? section.details : []
+    );
+
+    if (!dayItems.length) return null;
+
+    return {
+        "@type": "ItemList",
+        itemListElement: dayItems.map((day, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: day?.title
+                ? `Day ${day?.day || index + 1}: ${day.title}`
+                : `Day ${day?.day || index + 1}`,
+            ...(day?.content
+                ? { description: String(day.content).trim() }
+                : {}),
+        })),
+    };
+}
+
+function buildTouristTripSchema(tour, slug, siteUrl, siteMeta) {
+    if (!tour?.title || !slug) return null;
+
+    const cleanSiteUrl = String(siteUrl || "https://belettravel.com").replace(
+        /\/$/,
+        ""
+    );
+
+    const tourUrl = `${cleanSiteUrl}/tours/${slug}`;
+    const description = getOverviewDescription(tour);
+    const startingPrice = getTourStartingPrice(tour?.price_tiers);
+    const tripOrigin = getTripOrigin(tour?.route);
+    const itinerary = buildTourItinerarySchema(tour?.itinerary);
+
+    const socialLinks = Object.values(siteMeta?.social_links || {}).filter(
+        Boolean
+    );
+
+    const provider = {
+        "@type": "TravelAgency",
+        "@id": `${cleanSiteUrl}/#travelagency`,
+        name: siteMeta?.site_name || "Belet Travel",
+        url: cleanSiteUrl,
+        ...(socialLinks.length ? { sameAs: socialLinks } : {}),
+    };
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "@id": `${tourUrl}#touristtrip`,
+        name: tour.title,
+        description,
+        url: tourUrl,
+        ...(tour?.image ? { image: tour.image } : {}),
+        provider,
+        ...(tripOrigin
+            ? {
+                  tripOrigin: {
+                      "@type": "Place",
+                      name: tripOrigin,
+                  },
+              }
+            : {}),
+        ...(itinerary ? { itinerary } : {}),
+        ...(startingPrice
+            ? {
+                  offers: {
+                      "@type": "Offer",
+                      url: tourUrl,
+                      priceCurrency: "USD",
+                      price: startingPrice,
+                  },
+              }
+            : {}),
+    };
+}
+
 export default function DynamicTourPage({ initialTour = null }) {
     const router = useRouter();
     const { slug, preview } = router.query;
@@ -312,6 +458,13 @@ export default function DynamicTourPage({ initialTour = null }) {
         siteMetaData.http_url
     );
 
+    const touristTripSchema = buildTouristTripSchema(
+        currentTour,
+        currentSlug,
+        siteMetaData.http_url,
+        siteMetaData
+    );
+
     if (loading) {
         return (
             <>
@@ -351,9 +504,10 @@ export default function DynamicTourPage({ initialTour = null }) {
             <Head_Meta
                 meta_data={seoMeta}
                 comman_meta={siteMetaData}
-                structuredData={
-                    breadcrumbSchema ? [breadcrumbSchema] : []
-                }
+                structuredData={[
+                    ...(breadcrumbSchema ? [breadcrumbSchema] : []),
+                    ...(touristTripSchema ? [touristTripSchema] : []),
+                ]}
             />
 
             <Comman_Hero initialValues={heroData} />
