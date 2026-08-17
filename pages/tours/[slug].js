@@ -292,6 +292,12 @@ function buildTouristTripSchema(tour, slug, siteUrl, siteMeta) {
     const tripOrigin = getTripOrigin(tour?.route);
     const itinerary = buildTourItinerarySchema(tour?.itinerary);
 
+    const tourImage = tour?.image
+        ? /^https?:\/\//i.test(tour.image)
+            ? tour.image
+            : `${cleanSiteUrl}${tour.image.startsWith("/") ? tour.image : `/${tour.image}`}`
+        : "";
+
     const socialLinks = Object.values(siteMeta?.social_links || {}).filter(
         Boolean
     );
@@ -311,7 +317,7 @@ function buildTouristTripSchema(tour, slug, siteUrl, siteMeta) {
         name: tour.title,
         description,
         url: tourUrl,
-        ...(tour?.image ? { image: tour.image } : {}),
+        ...(tourImage ? { image: tourImage } : {}),
         provider,
         ...(tripOrigin
             ? {

@@ -93,32 +93,72 @@ const Head_Meta = ({
   const serializeJsonLd = value =>
     JSON.stringify(value).replace(/</g, "\\u003c");
 
-  const organizationId = `${siteUrl}/#organization`;
+  const travelAgencyId = `${siteUrl}/#travelagency`;
   const websiteId = `${siteUrl}/#website`;
 
-  const homepageSchemas =
-    !shouldNoIndex && cleanPath === "/"
-      ? [
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": organizationId,
-            name: siteName,
-            url: `${siteUrl}/`,
-            image,
+  const socialLinks = Object.values(
+    comman_meta.social_links || {}
+  ).filter(Boolean);
+
+  const travelAgencySchema = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "@id": travelAgencyId,
+    name: siteName,
+    url: `${siteUrl}/`,
+    image,
+    email: "info@belettravel.com",
+    telephone: "+99363229627",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Ashgabat",
+      addressCountry: "TM",
+    },
+    areaServed: [
+      {
+        "@type": "Country",
+        name: "Turkmenistan",
+      },
+      {
+        "@type": "Country",
+        name: "Uzbekistan",
+      },
+      {
+        "@type": "Country",
+        name: "Kazakhstan",
+      },
+      {
+        "@type": "Country",
+        name: "Kyrgyzstan",
+      },
+      {
+        "@type": "Country",
+        name: "Tajikistan",
+      },
+    ],
+    ...(socialLinks.length ? { sameAs: socialLinks } : {}),
+  };
+
+  const websiteSchema =
+    cleanPath === "/"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": websiteId,
+          url: `${siteUrl}/`,
+          name: siteName,
+          publisher: {
+            "@id": travelAgencyId,
           },
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "@id": websiteId,
-            url: `${siteUrl}/`,
-            name: siteName,
-            publisher: {
-              "@id": organizationId,
-            },
-          },
-        ]
-      : [];
+        }
+      : null;
+
+  const baseSchemas = shouldNoIndex
+    ? []
+    : [
+        travelAgencySchema,
+        ...(websiteSchema ? [websiteSchema] : []),
+      ];
 
   const extraSchemas = Array.isArray(structuredData)
     ? structuredData.filter(Boolean)
@@ -128,7 +168,7 @@ const Head_Meta = ({
 
   const schemas = shouldNoIndex
     ? []
-    : [...homepageSchemas, ...extraSchemas];
+    : [...baseSchemas, ...extraSchemas];
 
   return (
     <>
