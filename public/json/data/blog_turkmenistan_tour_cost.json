@@ -189,21 +189,31 @@
       "help_text": "Send us your dates, number of travelers, preferred route and hotel level. We will check the services and prepare a current quotation.",
       "help_button": "Ask for a Quote",
       "help_slug": "/contact",
-      "recommended_title": "Tour Price Examples",
+      "recommended_title": "Related Turkmenistan Guides & Tours",
       "recommended_tours": [
         {
-          "title": "Khiva Gateway to Ashgabat via Darvaza",
-          "label": "3 days from $450 for 2 travelers",
-          "slug": "/tours/khiva-gateway-to-ashgabat-via-darvaza"
+          "title": "Turkmenistan Itinerary Guide",
+          "label": "3, 5, 7 & 10 day route ideas",
+          "slug": "/turkmenistan-itinerary"
         },
         {
-          "title": "Ashgabat to Khiva via Darvaza",
-          "label": "3 days from $600 for 2 travelers",
-          "slug": "/tours/ashgabat-to-khiva-via-darvaza"
+          "title": "Turkmenistan Visa & LOI Guide",
+          "label": "Tourist visa, LOI and entry planning",
+          "slug": "/turkmenistan-visa-guide"
+        },
+        {
+          "title": "Best Places to Visit in Turkmenistan",
+          "label": "Ashgabat, Darvaza, Merv, Yangykala & more",
+          "slug": "/best-places-to-visit-turkmenistan"
+        },
+        {
+          "title": "Darvaza Gas Crater Guide",
+          "label": "How to visit and plan an overnight",
+          "slug": "/darvaza-gas-crater-guide"
         },
         {
           "title": "Turkmenistan Highlights Tour",
-          "label": "7 days from $1,345 for 2 travelers",
+          "label": "7-day Belet Travel itinerary",
           "slug": "/tours/turkmenistan-highlights-tour"
         }
       ]
