@@ -19,7 +19,7 @@
         "details": "Belet Travel creates private and small group journeys across Central Asia — from Silk Road cities and desert routes to mountain roads, nomad culture, and local experiences.",
         "icons": [
           {
-            "slug": "https://www.facebook.com/",
+            "slug": "https://www.facebook.com/belettravel",
             "icon": "fa-brands fa-facebook"
           },
           {
@@ -27,11 +27,11 @@
             "icon": "fa-brands fa-twitter"
           },
           {
-            "slug": "https://www.youtube.com/",
+            "slug": "https://www.youtube.com/@BeletTravel",
             "icon": "fa-brands fa-youtube"
           },
           {
-            "slug": "https://www.instagram.com/",
+            "slug": "https://www.instagram.com/belettravel",
             "icon": "fa-brands fa-instagram"
           }
         ]

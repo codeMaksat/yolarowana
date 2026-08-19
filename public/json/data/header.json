@@ -6,15 +6,15 @@
         "media": [
           {
             "icon": "fa-brands fa-facebook",
-            "slug": "#"
+            "slug": "https://www.facebook.com/belettravel"
           },
           {
             "icon": "fa-brands fa-instagram",
-            "slug": "#"
+            "slug": "https://www.instagram.com/belettravel"
           },
           {
             "icon": "fa-brands fa-youtube",
-            "slug": "#"
+            "slug": "https://www.youtube.com/@BeletTravel"
           }
         ],
         "call_slug": "https://wa.me/99363229627",
